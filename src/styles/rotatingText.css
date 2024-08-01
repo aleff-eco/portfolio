@@ -1,0 +1,33 @@
+
+.rotating-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: slideIn 1s forwards, slideOut 1s forwards 1s; /* Animaciones de entrada y salida */
+}
+
+.rotating-text.hidden {
+  opacity: 0;
+  transform: translateY(20px); /* Se oculta hacia abajo */
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
