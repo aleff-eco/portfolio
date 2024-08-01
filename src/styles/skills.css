@@ -1,0 +1,22 @@
+/* Agregar en tu archivo CSS */
+@keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .skill-item {
+    opacity: 0;
+    animation: slideIn 0.3s forwards;
+  }
+  
+  .skill-bar {
+    height: 60px;
+    background-color: var(--primary-color);
+  }
+  

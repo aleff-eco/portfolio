@@ -3,16 +3,17 @@ import Link from "next/link"
 import { Input } from "@/components/input"
 import { Textarea } from "@/components/textarea"
 import { Button } from "@/components/button"
-import { Skills } from "./skills";
 import { BsGithub, BsGitlab, BsLinkedin } from 'react-icons/bs';
 import { VscAccount } from "react-icons/vsc";
+import { Skills } from "./skills";
+import { Projects } from "./projects";
 //import { RotatingText } from '@/styles/rotatingText';
 
 export function Portfolio() {
   return (
     (<div className="flex flex-col min-h-dvh bg-background text-foreground">
       <header
-        className="flex items-center justify-between px-4 py-3 sm:px-6 lg:px-8 bg-primary text-primary-foreground border-b">
+        className="flex items-center justify-between px-4 py-5 sm:px-6 lg:px-10 bg-primary text-primary-foreground border-b">
         <Link href="#" className="flex items-center gap-2" prefetch={false}>
           <VscAccount  className="w-6 h-6" />
           <span className="font-semibold text-lg">Aleff Espinosa Cordova</span>
@@ -128,72 +129,13 @@ export function Portfolio() {
             </div>
           </div>
         </section>
-        <section id="projects" className="py-12 md:py-16 lg:py-20 bg-muted">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold mb-8 text-center">Mis proyectos</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-background rounded-lg overflow-hidden shadow-lg">
-                <img
-                  
-                  alt="Project 1"
-                  className="w-full h-48 object-cover" />
-                <div className="p-4">
-                  <h3 className="text-xl font-bold mb-2">LIA Chat</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Un chat bot con inteligencia artificial basada en Llama 3.5.
-                  </p>
-                  <Link
-                    href="#"
-                    className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                    prefetch={false}>
-                    Ver proyecto
-                  </Link>
-                </div>
-              </div>
-              <div className="bg-background rounded-lg overflow-hidden shadow-lg">
-                <img
-                  //src="/placeholder.svg"
-                  alt="Project 2"
-                  className="w-full h-48 object-cover" />
-                <div className="p-4">
-                  <h3 className="text-xl font-bold mb-2">IA Agricola</h3>
-                  <p className="text-muted-foreground mb-4">Un modelo de inteligencia artificial para uso en el sector agricola para identificar el estado de maduracion del mango ataulfo.</p>
-                  <Link
-                    href="#"
-                    className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                    prefetch={false}>
-                    Ver proyecto
-                  </Link>
-                </div>
-              </div>
-              <div className="bg-background rounded-lg overflow-hidden shadow-lg">
-                <img
-                  //src="/placeholder.svg"
-                  alt="Project 3"
-                  className="w-full h-48 object-cover" />
-                <div className="p-4">
-                  <h3 className="text-xl font-bold mb-2">Proyecto 3</h3>
-                  <p className="text-muted-foreground mb-4">
-                    A social media platform for connecting with friends and family.
-                  </p>
-                  <Link
-                    href="#"
-                    className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                    prefetch={false}>
-                    View Project
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
+        <Projects />
         <Skills />
         <section id="experience" className="py-12 md:py-16 lg:py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold mb-8 text-center">Experiencia</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
+              <div className="card left aos-init aos-animate">
                 <h3 className="text-xl font-bold mb-2">Desarrollador Back-End</h3>
                 <p className="text-muted-foreground mb-4">HIGHTECH Process Counselours. | 2024  - Actualmente</p>
                 
