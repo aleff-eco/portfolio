@@ -48,7 +48,7 @@ export function Navbar() {
                 </button>
             </div>
             {isOpen && (
-                <div className="lg:hidden absolute top-0 right-0 min-w-[180px]  h-auto bg-primary bg-opacity-90 flex justify-start transition-transform duration-300 ease-in-out transform translate-x-0">
+                <div className="lg:hidden absolute top-0 right-0 min-w-[180px]  h-auto bg-primary bg-opacity-90 flex transition-transform duration-300 ease-in-out transform translate-x-0">
                     <div className="bg-primary p-6 w-full h-full">
                         <div className="flex justify-end mb-4 mt-1/3 bg-opacity-50">
                             <button className="text-primary-foreground hover:text-foreground" onClick={() => setIsOpen(false)}>
