@@ -44,7 +44,7 @@ export function Projects() {
             >
                 <a href="#" className="group block bg-black relative rounded-lg overflow-hidden w-full max-w-[500px] max-h-[320px] flex-shrink-0">
                     <img
-                        src="/profilePicture.jpeg"
+                        src="/844x1500.png"
                         alt=""
                         className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
                     />

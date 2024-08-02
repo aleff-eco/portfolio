@@ -3,84 +3,15 @@ import Link from "next/link"
 import { Input } from "@/components/input"
 import { Textarea } from "@/components/textarea"
 import { Button } from "@/components/button"
-import { BsGithub, BsGitlab, BsLinkedin } from 'react-icons/bs';
-import { VscAccount } from "react-icons/vsc";
 import { Skills } from "./skills";
 import { Projects } from "./projects";
+import { Navbar } from "./navbar";
 //import { RotatingText } from '@/styles/rotatingText';
 
 export function Portfolio() {
   return (
     (<div className="flex flex-col min-h-dvh bg-background text-foreground">
-      <header
-        className="flex items-center justify-between px-4 py-5 sm:px-6 lg:px-10 bg-primary text-primary-foreground border-b">
-        <Link href="#" className="flex items-center gap-2" prefetch={false}>
-          <VscAccount  className="w-6 h-6" />
-          <span className="font-semibold text-lg">Aleff Espinosa Cordova</span>
-        </Link>
-        <nav className="hidden lg:flex items-center gap-6">
-          <Link
-            href="#"
-            className="font-medium hover:underline underline-offset-4"
-            prefetch={false}>
-            Home
-          </Link>
-          <Link
-            href="#"
-            className="font-medium hover:underline underline-offset-4"
-            prefetch={false}>
-            About Me
-          </Link>
-          <Link
-            href="#"
-            className="font-medium hover:underline underline-offset-4"
-            prefetch={false}>
-            Projects
-          </Link>
-          <Link
-            href="#"
-            className="font-medium hover:underline underline-offset-4"
-            prefetch={false}>
-            Skills
-          </Link>
-          <Link
-            href="#"
-            className="font-medium hover:underline underline-offset-4"
-            prefetch={false}>
-            Experience
-          </Link>
-          <Link
-            href="#"
-            className="font-medium hover:underline underline-offset-4"
-            prefetch={false}>
-            Contact
-          </Link>
-        </nav>
-        <div className="flex items-center gap-4">
-          <Link
-            href="https://www.linkedin.com/in/aleff-espinosa-cordova-59b997296/"
-            target="_blank"
-            className="text-primary-foreground hover:text-foreground"
-            prefetch={false}>
-            <BsLinkedin className="w-5 h-5" />
-          </Link>
-          <Link
-            href="https://gitlab.com/dev.aleffec"
-            target="_blank"
-            className="text-primary-foreground hover:text-foreground"
-            prefetch={false}>
-            <BsGitlab  className="w-5 h-5" />
-          </Link>
-          <Link
-            href="https://github.com/"
-            target="_blank"
-            className="text-primary-foreground hover:text-foreground"
-            prefetch={false}
-          >
-            <BsGithub className="w-5 h-5" />
-          </Link>
-        </div>
-      </header>
+      <Navbar />
       <main className="flex-1">
       <section
         id="hero"

@@ -5,12 +5,12 @@ import '../styles/GitHubProjects.css';
 const GitHubProjects = () => {
     const [repos, setRepos] = useState([]);
     const [isOpen, setIsOpen] = useState(false);
-    const minStars = 1;
+    const minStars = 2;
 
     useEffect(() => {
         const fetchRepos = async () => {
             try {
-                const response = await fetch('https://api.github.com/users/Aleff-Espinosa-Cordova/repos');
+                const response = await fetch('https://api.github.com/users/aleff-eco/repos');
                 const data = await response.json();
                 const popularRepos = data.filter(repo => repo.stargazers_count >= minStars);
                 setRepos(popularRepos);
