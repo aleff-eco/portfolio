@@ -1,0 +1,90 @@
+/* NotificationButton.css */
+
+.notification-button {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .icon-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.875rem; /* text-sm */
+    color: #6b7280; /* text-gray-500 */
+    transition: color 0.3s ease;
+  }
+  
+  .icon-button:hover {
+    color: #1f2937; /* text-gray-900 */
+  }
+  
+  .notification-badge {
+    position: absolute;
+    top: -0.25rem; /* -top-1 */
+    right: -0.5rem; /* -right-2 */
+    width: 1.5rem; /* w-6 */
+    height: 1.5rem; /* h-6 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px; /* rounded-full */
+    background-color: #ef4444; /* bg-red-500 */
+    color: white; /* text-white */
+    font-size: 1rem; /* text-base */
+  }
+  
+  .notification-dropdown {
+    position: absolute;
+    right: 0;
+    margin-top: 0.5rem; /* mt-2 */
+    width: 16rem; /* w-64 */
+    background-color: #f9fafb; /* bg-white */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* shadow */
+    overflow: hidden;
+  }
+  
+  .notification-dropdown .header {
+    padding: 0.5rem 1rem; /* px-4 py-2 */
+    font-weight: 500; /* font-medium */
+    color: #374151; /* text-gray-700 */
+    background-color: #e5e7eb; /* bg-gray-50 */
+    text-align: center;
+  }
+  
+  .notification-dropdown .content {
+    border-top: 1px solid #e5e7eb; /* divide-y divide-gray-100 */
+  }
+  
+  .notification-dropdown .item {
+    padding: 0.75rem 1rem; /* px-4 py-3 */
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .notification-dropdown .item:hover {
+    background-color: #f3f4f6; /* hover:bg-gray-100 */
+  }
+  
+  .notification-dropdown .see-all {
+    padding: 0.5rem 1rem; /* py-2 */
+    font-size: 0.875rem; /* text-sm */
+    text-align: center;
+    background-color: #989999; /* bg-gray-50 */
+    color: #111827; /* text-gray-900 */
+    border-top: 1px solid #e5e7eb; /* rounded-b-lg */
+  }
+  
+  @media (max-width: 640px) { /* sm */
+    .notification-dropdown {
+      width: 14rem; /* Ajusta según sea necesario */
+    }
+  }
+  
+  @media (max-width: 480px) { /* xs */
+    .notification-dropdown {
+      width: 12rem; /* Ajusta según sea necesario */
+    }
+  }
+  

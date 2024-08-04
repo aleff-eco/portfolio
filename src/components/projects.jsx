@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import NotificationButton from "./githubalert";
 import GitHubProjects from "./gihub";
 
 export function Projects() {
@@ -65,6 +66,7 @@ export function Projects() {
             </div>
             
             <GitHubProjects />
+            <NotificationButton />
         </section>
     );
 }
