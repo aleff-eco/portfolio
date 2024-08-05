@@ -1,0 +1,130 @@
+.profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #fff;
+    position: relative;
+    padding: 0 1rem; /* Agrega un pequeño padding para asegurar que el contenido no toque los bordes de la pantalla */
+  }
+  
+  .profile-container {
+    text-align: center;
+    height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    margin-top: -10%; /* Mueve el contenedor hacia arriba. Ajusta según sea necesario */
+  }
+  
+  .profile-image {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .profile-image {
+      display: none; /* Oculta la imagen en dispositivos móviles */
+    }
+  }
+  
+  .profile-container h2, 
+  .profile-container h1, 
+  .profile-container p, 
+  .connect-button {
+    margin: 10px 0;
+  }
+  
+  .profile-container h2 {
+    font-size: 2rem;
+  }
+  
+  .profile-container h1 {
+    font-size: 2.5rem;
+  }
+  
+  .profile-container {
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Alinea los elementos al centro horizontalmente */
+    margin-top: -10%; /* Ajusta si es necesario */
+  }
+  
+  .connect-button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center; /* Alinea el texto dentro del botón al centro */
+    font-size: .8rem;
+    transition: background-color 0.3s;
+    display: inline-flex; /* Permite centrar el contenido dentro del botón */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+  }
+  
+  
+  .connect-button:hover {
+    background-color: #333;
+  }
+  
+  .scroll-down-container {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #333;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .scroll-down-container.hidden {
+    opacity: 0;
+    pointer-events: none; /* Asegura que el contenedor no pueda ser interactuado cuando está oculto */
+  }
+  
+  .mouse-icon {
+    width: 16px;
+    height: 24px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    margin: 10px auto 0;
+    position: relative;
+  }
+  
+  .mouse-wheel {
+    width: 4px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll 1.5s infinite;
+  }
+  
+  @keyframes scroll {
+    0% {
+      top: 4px;
+    }
+    50% {
+      top: 12px;
+    }
+    100% {
+      top: 4px;
+    }
+  }
+  
