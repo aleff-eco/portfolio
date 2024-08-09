@@ -7,6 +7,7 @@ import { Footer } from "./footer";
 import { Experience } from "./experience";
 import { Contact } from "./contact";
 import { ProfileComponent} from "./profileComponent";
+import { AboutMe } from './aboutMe';
 //import { RotatingText } from '@/styles/rotatingText';
 
 export function Portfolio() {
@@ -15,7 +16,7 @@ export function Portfolio() {
       <Navbar />
       <main className="flex-1">
         <ProfileComponent />
-
+        <AboutMe />
         <Projects />
         <Experience />
         <Contact />
