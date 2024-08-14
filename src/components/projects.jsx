@@ -20,7 +20,6 @@ export function Projects() {
 
     return (
         <section id="projects" className="p-16 mt-8 mb-12 relative text-center py-12 md:py-16 lg:py-20">
-            {/* Mover la sección de notificaciones a la parte superior derecha */}
             <div className="absolute mt-4 mr-6 right-4 z-20">
                 <NotificationButton />
             </div>
