@@ -16,23 +16,30 @@ import {
   FaReact as ReactIcon,
   FaBootstrap as BootstrapIcon,
   FaLaravel as LaravelIcon,
+  FaWindows as WindowsIcon,
+  FaBitbucket as BitbucketIcon
 } from 'react-icons/fa';
+import { RiTailwindCssFill as TailwindIcon } from "react-icons/ri";
 
 const technicalSkills = [
-  { name: 'JavaScript', icon: <JavascriptIcon className="w-8 h-8" />, level: '90%', category: 'language' },
-  { name: 'Python', icon: <PythonIcon className="w-8 h-8" />, level: '85%', category: 'language' },
+  { name: 'JavaScript', icon: <JavascriptIcon className="w-8 h-8" />, level: '95%', category: 'language' },
+  { name: 'Python', icon: <PythonIcon className="w-8 h-8" />, level: '95%', category: 'language' },
   { name: 'PHP', icon: <PHPIcon className="w-8 h-8" />, level: '80%', category: 'language' },
-  { name: 'Java', icon: <JavaIcon className="w-8 h-8" />, level: '75%', category: 'language' },
-  { name: 'GitHub', icon: <GitHubIcon className="w-8 h-8" />, level: '85%', category: 'tool' },
-  { name: 'GitLab', icon: <GitLabIcon className="w-8 h-8" />, level: '75%', category: 'tool' },
-  { name: 'Node.js', icon: <NodejsIcon className="w-8 h-8" />, level: '85%', category: 'technology' },
-  { name: 'Docker', icon: <DockerIcon className="w-8 h-8" />, level: '70%', category: 'technology' },
-  { name: 'Linux', icon: <LinuxIcon className="w-8 h-8" />, level: '75%', category: 'os' },
-  { name: 'SQL', icon: <SqlIcon className="w-8 h-8" />, level: '80%', category: 'technology' },
-  { name: 'CSS', icon: <CSSIcon className="w-8 h-8" />, level: '80%', category: 'technology' },
+  { name: 'Java', icon: <JavaIcon className="w-8 h-8" />, level: '70%', category: 'language' },
+  { name: 'GitHub', icon: <GitHubIcon className="w-8 h-8" />, level: '90%', category: 'tool' },
+  { name: 'GitLab', icon: <GitLabIcon className="w-8 h-8" />, level: '90%', category: 'tool' },
+  { name: 'Node.js', icon: <NodejsIcon className="w-8 h-8" />, level: '80%', category: 'technology' },
+  { name: 'Docker', icon: <DockerIcon className="w-8 h-8" />, level: '90%', category: 'technology' },
+  { name: 'Linux', icon: <LinuxIcon className="w-8 h-8" />, level: '90%', category: 'os' },
+  { name: 'SQL', icon: <SqlIcon className="w-8 h-8" />, level: '90%', category: 'technology' },
+  { name: 'CSS', icon: <CSSIcon className="w-8 h-8" />, level: '75%', category: 'technology' },
   { name: 'React', icon: <ReactIcon className="w-8 h-8" />, level: '85%', category: 'framework' },
   { name: 'Bootstrap', icon: <BootstrapIcon className="w-8 h-8" />, level: '75%', category: 'framework' },
-  { name: 'Laravel', icon: <LaravelIcon className="w-8 h-8" />, level: '85%', category: 'framework' },
+  { name: 'Laravel', icon: <LaravelIcon className="w-8 h-8" />, level: '80%', category: 'framework' },
+  { name: 'MySQL', icon: <SqlIcon className="w-8 h-8" />, level: '80%', category: 'technology' },
+  { name: 'Windows', icon: <WindowsIcon className="w-8 h-8" />, level: '100%', category: 'os' },
+  { name: 'Tailwind', icon: <TailwindIcon className="w-8 h-8" />, level: '75%', category: 'technology' },
+  { name: 'Bitbucket', icon: <BitbucketIcon className="w-8 h-8" />, level: '80%', category: 'tool' },
 ];
 
 const softSkills = [
