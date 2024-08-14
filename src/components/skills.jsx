@@ -51,11 +51,11 @@ export function Skills() {
     : skillsData;
 
   return (
-    <section id="skills" className="md:py-12 lg:py-16">
+    <section id="skills" className="md:p-10 lg:py-16">
       <div className="container mx-auto sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-8  md:text-3xl lg:py-20 text-center">Mis habilidades</h2>
+        <h2 className="text-3xl font-bold md:text-3xl lg:py-16 text-center">Mis habilidades</h2>
         
-        <div className="mb-8 text-center mt-10">
+        <div className="m-4 pb-8 text-center mt-10">
           {categories.map(category => (
             <Link
               key={category.key}
@@ -75,13 +75,13 @@ export function Skills() {
           ))}
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 ml-6">
           {filteredSkills.map(skill => (
-            <div key={skill.name} className="flex items-center gap-4">
+            <div key={skill.name} className="flex items-center gap-3 mt-4">
               {skill.icon}
               <div>
                 <div className="text-lg font-bold">{skill.name}</div>
-                <div className="w-40 bg-muted rounded-full h-2">
+                <div className=" bg-muted rounded-full h-2 min-w-24">
                   <div
                     className="bg-primary h-2 rounded-full"
                     style={{

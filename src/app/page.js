@@ -7,6 +7,7 @@ import { Footer } from "../components/footer";
 import { Experience } from "../components/experience";
 import { Contact } from "../components/contact";
 import { ProfileComponent} from "../components/profileComponent";
+import { AboutMe } from '../components/aboutMe';
 
 function Home() {
   return (

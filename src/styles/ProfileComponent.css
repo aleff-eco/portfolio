@@ -54,28 +54,28 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Alinea los elementos al centro horizontalmente */
-    margin-top: -10%; /* Ajusta si es necesario */
+    align-items: center;
+    margin-top: -10%;
   }
   
   .connect-button {
-    background-color: #292929;
+    background-color: #202020;
     color: #fff;
     padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-align: center; /* Alinea el texto dentro del botón al centro */
+    text-align: center;
     font-size: .8rem;
     transition: background-color 0.3s;
-    display: inline-flex; /* Permite centrar el contenido dentro del botón */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
   }
   
   
   .connect-button:hover {
-    background-color: #333;
+    background-color: #414141;
   }
   
   .scroll-down-container {
