@@ -28,7 +28,7 @@ const GitHubProjects = () => {
     };
 
     return (
-        <div className="container mx-auto px-4 pt-6">
+        <div loading="lazy" className="container mx-auto px-4 pt-6">
             <h2 className="text-3xl font-bold mb-4 text-center">My Popular GitHub Projects</h2>
             <button
                 onClick={handleToggle}

@@ -1,35 +1,60 @@
+import React, { useState } from 'react';
 
 export function Experience() {
+    const [showMore, setShowMore] = useState(false);
+
+    const categories = [
+        {
+            title: 'Bitters hashtag waistcoat fashion axe chia unicorn',
+            date: '12 Jun 2019',
+            description: 'Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.'
+        },
+        {
+            title: 'Meditation bushwick direct trade taxidermy shaman',
+            date: '12 Jun 2019',
+            description: 'Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.'
+        },
+        {
+            title: 'Woke master cleanse drinking vinegar salvia',
+            date: '12 Jun 2019',
+            description: 'Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.'
+        }
+    ];
+
     return (
-        <section id="experience" className="py-12 md:py-16 lg:py-20">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold mb-8 text-center">Experiencia</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="card left aos-init aos-animate">
-                <h3 className="text-xl font-bold mb-2">Desarrollador Back-End</h3>
-                <p className="text-muted-foreground mb-4">HIGHTECH Process Counselours. | 2024  - Actualmente</p>
-                
-                <p className="text-muted-foreground mb-3 text-sm" >Tecnologías Utilizadas: PHP, Laravel, JavaScript, MySQL</p>
-                <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                  <li>Lidere la Implementación de funcionalidades en los sistemas backend, resolví errores operativos y optimicé el rendimiento del sistema, obteniendo una mejora del 30% en la velocidad de los procesos.</li>
-                  <li>Trabajé en entornos locales y dockerizados, aplicando el modelo MVC y la arquitectura de 3 capas.</li>
-                  <li>Realicé pruebas y documentación con Postman, reduciendo el tiempo de resolución de errores.</li>
-                  <li>Gestioné actividades y objetivos diarios con Trello, y participé activamente en reuniones diarias (Dailys).</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Practicante de Desarrollador Full-Stack</h3>
-                <p className="text-muted-foreground mb-4">WAX Revolution. | 2023 - 2023</p>
-                <p className="text-muted-foreground mb-3 text-sm" >Tecnologías Utilizadas: PHP, Laravel, JavaScript, MySQL</p>
-                <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                  <li>Mantuve y desarrollé proyectos existentes, asegurando su correcta operación y optimizando su desempeño.</li>
-                  <li>Planeé e integré servicios, expandiendo las capacidades, el alcance y mejorando la experiencia de usuario.</li>
-                  <li>Optimicé funcionalidades, contribuyendo significativamente a la eficiencia y escalabilidad del sistema, 
-                    logrando un aumento del 10% en el rendimiento sin comprometer la seguridad.</li>
-                </ul>
-              </div>
+        <section className=" body-font overflow-hidden">
+            <div className="container px-5 py-24 mx-auto">
+                <h2 className="text-3xl font-bold mb-8 text-center">Experiencia</h2>
+                <div className="-my-8 divide-y-2 divide-gray-100">
+                    {categories.slice(0, showMore ? categories.length : 2).map((category, index) => (
+                        <div key={index} className="py-20 flex flex-wrap md:flex-nowrap fade-in">
+                            <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                                <span className="font-semibold title-font text-gray-700">CATEGORY</span>
+                                <span className="mt-1 text-gray-500 text-sm">{category.date}</span>
+                            </div>
+                            <div className="md:flex-grow">
+                                <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">{category.title}</h2>
+                                <p className="leading-relaxed">{category.description}</p>
+                                <a className="text-indigo-500 inline-flex items-center mt-4">
+                                    Learn More
+                                    <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M5 12h14"></path>
+                                        <path d="M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <div className="text-center mt-8 fade-in">
+                    <button
+                        className="bg-indigo-500 text-white py-2 px-4 rounded transition-transform duration-500 ease-in-out hover:scale-105"
+                        onClick={() => setShowMore(!showMore)}
+                    >
+                        {showMore ? 'Ver menos' : 'Ver más'}
+                    </button>
+                </div>
             </div>
-          </div>
         </section>
     );
 }

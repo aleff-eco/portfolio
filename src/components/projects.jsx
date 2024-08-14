@@ -19,21 +19,26 @@ export function Projects() {
     };
 
     return (
-        <section id="projects" className="p-16 mt-8 mb-12 relative text-center py-12 md:py-16 lg:py-20 bg-muted">
+        <section id="projects" className="p-16 mt-8 mb-12 relative text-center py-12 md:py-16 lg:py-20">
+            {/* Mover la sección de notificaciones a la parte superior derecha */}
+            <div className="absolute mt-4 mr-6 right-4 z-20">
+                <NotificationButton />
+            </div>
+            
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Proyectos</h2>
             <p className="text-lg text-gray-600 mb-12">Proyectos.</p>
             
             <button
                 id="scroll-left"
                 onClick={scrollLeft}
-                className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-pYellow text-white p-2 rounded-full z-10"
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white p-2 rounded-full z-10"
             >
                 <FaChevronLeft />
             </button>
             <button
                 id="scroll-right"
                 onClick={scrollRight}
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-pYellow text-white p-2 rounded-full z-10"
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white p-2 rounded-full z-10"
             >
                 <FaChevronRight />
             </button>
@@ -41,7 +46,7 @@ export function Projects() {
                 id="scroll-container"
                 ref={scrollContainerRef}
                 className="flex overflow-hidden space-x-10"
-                style={{ width: 'calc(100% - 10px)' }} // Ajusta el ancho según el espacio ocupado por los botones
+                style={{ width: 'calc(100% - 10px)' }}
             >
                 <a href="#" className="group block bg-black relative rounded-lg overflow-hidden w-full max-w-[500px] max-h-[320px] flex-shrink-0">
                     <img
@@ -64,9 +69,6 @@ export function Projects() {
                 </a>
                 {/* Agrega más proyectos aquí si es necesario */}
             </div>
-            
-            <GitHubProjects />
-            <NotificationButton />
         </section>
     );
 }

@@ -16,7 +16,7 @@ export function Portfolio() {
       <main className="flex-1">
         <ProfileComponent />
 
-        <Projects />
+
         <Experience />
         <Contact />
       </main>

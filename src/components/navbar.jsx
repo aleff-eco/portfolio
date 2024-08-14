@@ -9,7 +9,7 @@ export function Navbar() {
     return (
         <header className="top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-5 sm:px-6 lg:px-10 bg-primary text-primary-foreground border-b">
             <div className="flex items-center gap-6">
-                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FUvPvsX9oMlMWs%2Fgiphy.gif&f=1&nofb=1&ipt=e1929405b5f16b6667bce49dde41e9e1c8a8b2edf52003b7b9c22355526f0484&ipo=images" alt="GIF" className="w-8 h-8" />
+                <img loading="lazy" src="./navbarGif.gif" alt="GIF" className="w-8 h-8" />
             </div>
             <nav className="hidden lg:flex items-center justify-center flex-grow">
                 <Link href="#inicio" className="font-medium hover:underline underline-offset-4 hover:scale-110 transition-transform duration-200 mx-4" prefetch={false}>

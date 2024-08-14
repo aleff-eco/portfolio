@@ -3,8 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
-    background-color: #fff;
+    height: 90vh;
     position: relative;
     padding: 0 1rem; /* Agrega un pequeño padding para asegurar que el contenido no toque los bordes de la pantalla */
   }
@@ -60,7 +59,7 @@
   }
   
   .connect-button {
-    background-color: #000;
+    background-color: #292929;
     color: #fff;
     padding: 10px;
     border: none;

@@ -64,15 +64,15 @@
   }
 }
 
-/* styles/globals.css */
+/* styles/globals.css 
 .hide-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, and Opera */
-}
+  display: none; 
+} */
 
 #hero {
   display: flex;
@@ -101,6 +101,22 @@
   height: 2px;
   background-color: var(--card-background);
   margin: 5.5rem 0;
+}
+
+.category {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 /* 
