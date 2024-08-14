@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../styles/ProfileComponent.css'; // Asegúrate de crear y ajustar este archivo CSS
+import '../styles/ProfileComponent.css';
 
 export function ProfileComponent() {
     const [scrollY, setScrollY] = useState(0);
