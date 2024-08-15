@@ -1,67 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Skills.css';
-import { FaComments as CommunicationIcon, FaUsers as TeamworkIcon, FaLightbulb as LeadershipIcon, FaPalette as CreativityIcon, FaCogs as ProblemSolvingIcon, FaSyncAlt as AdaptabilityIcon, FaClock as TimeManagementIcon, FaBrain as CriticalThinkingIcon } from 'react-icons/fa';
-
-import {
-  FaJs as JavascriptIcon,
-  FaPython as PythonIcon,
-  FaPhp as PHPIcon,
-  FaJava as JavaIcon,
-  FaGithub as GitHubIcon,
-  FaGitlab as GitLabIcon,
-  FaNodeJs as NodejsIcon,
-  FaDocker as DockerIcon,
-  FaLinux as LinuxIcon,
-  FaDatabase as SqlIcon,
-  FaCss3 as CSSIcon,
-  FaReact as ReactIcon,
-  FaBootstrap as BootstrapIcon,
-  FaLaravel as LaravelIcon,
-  FaWindows as WindowsIcon,
-  FaBitbucket as BitbucketIcon
-} from 'react-icons/fa';
-import { RiTailwindCssFill as TailwindIcon } from "react-icons/ri";
-
-const technicalSkills = [
-  { name: 'JavaScript', icon: <JavascriptIcon className="w-8 h-8" />, level: '95%', category: 'language' },
-  { name: 'Python', icon: <PythonIcon className="w-8 h-8" />, level: '95%', category: 'language' },
-  { name: 'PHP', icon: <PHPIcon className="w-8 h-8" />, level: '80%', category: 'language' },
-  { name: 'Java', icon: <JavaIcon className="w-8 h-8" />, level: '70%', category: 'language' },
-  { name: 'GitHub', icon: <GitHubIcon className="w-8 h-8" />, level: '90%', category: 'tool' },
-  { name: 'GitLab', icon: <GitLabIcon className="w-8 h-8" />, level: '90%', category: 'tool' },
-  { name: 'Node.js', icon: <NodejsIcon className="w-8 h-8" />, level: '80%', category: 'technology' },
-  { name: 'Docker', icon: <DockerIcon className="w-8 h-8" />, level: '90%', category: 'technology' },
-  { name: 'Linux', icon: <LinuxIcon className="w-8 h-8" />, level: '90%', category: 'os' },
-  { name: 'SQL', icon: <SqlIcon className="w-8 h-8" />, level: '90%', category: 'technology' },
-  { name: 'CSS', icon: <CSSIcon className="w-8 h-8" />, level: '75%', category: 'technology' },
-  { name: 'React', icon: <ReactIcon className="w-8 h-8" />, level: '85%', category: 'framework' },
-  { name: 'Bootstrap', icon: <BootstrapIcon className="w-8 h-8" />, level: '75%', category: 'framework' },
-  { name: 'Laravel', icon: <LaravelIcon className="w-8 h-8" />, level: '80%', category: 'framework' },
-  { name: 'MySQL', icon: <SqlIcon className="w-8 h-8" />, level: '80%', category: 'technology' },
-  { name: 'Windows', icon: <WindowsIcon className="w-8 h-8" />, level: '100%', category: 'os' },
-  { name: 'Tailwind', icon: <TailwindIcon className="w-8 h-8" />, level: '75%', category: 'technology' },
-  { name: 'Bitbucket', icon: <BitbucketIcon className="w-8 h-8" />, level: '80%', category: 'tool' },
-];
-
-const softSkills = [
-  { name: 'Comunicación', icon: <CommunicationIcon className="w-8 h-8" /> },
-  { name: 'Trabajo en equipo', icon: <TeamworkIcon className="w-8 h-8" /> },
-  { name: 'Liderazgo', icon: <LeadershipIcon className="w-8 h-8" /> },
-  { name: 'Creatividad', icon: <CreativityIcon className="w-8 h-8" /> },
-  { name: 'Resolución de problemas', icon: <ProblemSolvingIcon className="w-8 h-8" /> },
-  { name: 'Adaptabilidad', icon: <AdaptabilityIcon className="w-8 h-8" /> },
-  { name: 'Gestión del tiempo', icon: <TimeManagementIcon className="w-8 h-8" /> },
-  { name: 'Pensamiento crítico', icon: <CriticalThinkingIcon className="w-8 h-8" /> },
-];
-
-const categories = [
-  { name: 'Todo', key: '' },
-  { name: 'Lenguajes', key: 'language' },
-  { name: 'Tecnologías', key: 'technology' },
-  { name: 'Frameworks', key: 'framework' },
-  { name: 'Sistemas Operativos', key: 'os' },
-  { name: 'Herramientas', key: 'tool' },
-];
+import { technicalSkills, softSkills, categories } from '../data/information';
 
 export function Skills() {
   const [selectedSkillType, setSelectedSkillType] = useState('technical');
