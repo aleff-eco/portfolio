@@ -1,3 +1,31 @@
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(-10deg); }
+  20% { transform: rotate(10deg); }
+  30% { transform: rotate(-10deg); }
+  40% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+  60% { transform: rotate(10deg); }
+  70% { transform: rotate(-10deg); }
+  80% { transform: rotate(10deg); }
+  90% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.icon-wrapper {
+  transition: transform 0.3s ease;
+}
+
+.icon-wrapper:hover {
+  animation: shake 0.6s ease;
+}
+
+button {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
 button.active-skill::after {
   content: '';
   position: absolute;

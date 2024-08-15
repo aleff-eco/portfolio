@@ -59,7 +59,7 @@ export function ProfileComponent() {
         <p className="text-sm md:text-base lg:text-lg mb-4 w-3/4">
           Ingeniero de software con 2 años de experiencia en el desarrollo web, me dedico a crear experiencias y desarrollar soluciones a la medida.
         </p>
-        <button className="connect-button text-white py-2 px-4 rounded transition">
+        <button href="#contact" className="connect-button text-white py-2 px-4 rounded transition">
           Contactame
         </button>
         <div className={`scroll-down-container ${scrollY > 10 ? 'hidden' : ''} mt-4`}>

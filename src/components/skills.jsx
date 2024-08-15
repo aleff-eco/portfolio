@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/Skills.css';
+import '../styles/Skills.css'; // Importa el CSS
 import { technicalSkills, softSkills, categories } from '../data/information';
 
 export function Skills() {
@@ -52,14 +52,16 @@ export function Skills() {
           </div>
         )}
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 ml-6">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 justify-center m-8 lg:pl-20">
           {selectedSkillType === 'technical'
             ? filteredTechnicalSkills.map(skill => (
-              <div key={skill.name} className="flex items-center gap-3 mt-4">
-                {skill.icon}
+              <div key={skill.name} className="flex items-center gap-4 mt-4">
+                <div className="icon-wrapper">
+                  {skill.icon}
+                </div>
                 <div>
                   <div className="text-lg font-bold">{skill.name}</div>
-                  <div className=" bg-muted rounded-full h-2 min-w-24">
+                  <div className="bg-muted rounded-full h-2 w-24">
                     <div
                       className="bg-primary h-2 rounded-full"
                       style={{
@@ -73,8 +75,8 @@ export function Skills() {
             ))
             : softSkills.map(skill => (
               <div key={skill.name} className="flex flex-col items-center gap-2 mt-8">
-                <div className="bg-muted rounded-md flex items-center justify-center w-12 h-12">
-                  {skill.icon} {/* Aquí se muestra el ícono */}
+                <div className="bg-muted rounded-md flex items-center justify-center w-12 h-12 icon-wrapper">
+                  {skill.icon}
                 </div>
                 <span className="text-sm font-medium">{skill.name}</span>
               </div>

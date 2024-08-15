@@ -6,19 +6,15 @@
   height: 90vh;
   position: relative;
   padding: 0 1rem;
-  /* Agrega un pequeño padding para asegurar que el contenido no toque los bordes de la pantalla */
 }
 
 .profile-container {
   text-align: center;
   height: 100%;
-  /* Asegura que el contenedor ocupe toda la altura disponible */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* Centra verticalmente */
   margin-top: -10%;
-  /* Mueve el contenedor hacia arriba. Ajusta según sea necesario */
 }
 
 .profile-image {
@@ -34,7 +30,6 @@
 @media (max-width: 768px) {
   .profile-image {
     display: none;
-    /* Oculta la imagen en dispositivos móviles */
   }
 }
 
@@ -97,7 +92,6 @@
 .scroll-down-container.hidden {
   opacity: 0;
   pointer-events: none;
-  /* Asegura que el contenedor no pueda ser interactuado cuando está oculto */
 }
 
 .mouse-icon {

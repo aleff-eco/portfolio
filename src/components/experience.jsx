@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import { experience } from '../data/information';
+import '../styles/Experience.css';
 
 export function Experience() {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <section id="experience" className=" body-font overflow-hidden">
+    <section id="experience" className="body-font overflow-hidden">
       <div className="container px-24 py-24 mx-auto">
         <h2 className="text-3xl font-bold mb-8 text-center">Experiencia</h2>
         <div className="-my-8 divide-y-2 divide-gray-100">
-          {experience.slice(0, showMore ? experience.length : 2).map((category, index) => (
-            <div key={index} className="py-20 flex flex-wrap md:flex-nowrap fade-in">
+          {experience.map((category, index) => (
+            <div 
+              key={index} 
+              className={`experience-item py-20 flex flex-wrap md:flex-nowrap fade-in ${showMore || index < (window.innerWidth < 768 ? 1 : 2) ? 'show' : 'hide'}`}
+            >
               <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
                 <span className="font-semibold title-font text-gray-700">CATEGORY</span>
                 <span className="mt-1 text-gray-500 text-sm">{category.date}</span>
@@ -34,7 +38,15 @@ export function Experience() {
             className="bg-indigo-500 text-white py-2 px-4 rounded transition-transform duration-500 ease-in-out hover:scale-105"
             onClick={() => setShowMore(!showMore)}
           >
-            {showMore ? 'Ver menos' : 'Ver más'}
+            {showMore ? 'Ver menos' : (
+              <>
+                Ver más <span className="dot-bouncing">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </>
+            )}
           </button>
         </div>
       </div>
