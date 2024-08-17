@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../styles/Skills.css'; // Importa el CSS
-import { technicalSkills, softSkills, categories } from '../data/information';
+import '../styles/Skills.css';
+import { technicalSkills, softSkills, categories } from '@/data/information';
 
 export function Skills() {
   const [selectedSkillType, setSelectedSkillType] = useState('technical');
