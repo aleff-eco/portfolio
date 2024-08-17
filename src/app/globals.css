@@ -64,15 +64,6 @@
   }
 }
 
-/* styles/globals.css 
-.hide-scrollbar {
-  -ms-overflow-style: none; 
-  scrollbar-width: none; 
-}
-
-.hide-scrollbar::-webkit-scrollbar {
-  display: none; 
-} */
 
 #hero {
   display: flex;
@@ -117,4 +108,58 @@
 .fade-out {
   opacity: 0;
   transform: translateY(20px);
+}
+
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(-10deg); }
+  20% { transform: rotate(10deg); }
+  30% { transform: rotate(-10deg); }
+  40% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+  60% { transform: rotate(10deg); }
+  70% { transform: rotate(-10deg); }
+  80% { transform: rotate(10deg); }
+  90% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.icon-wrapper {
+  transition: transform 0.3s ease;
+}
+
+.icon-wrapper:hover {
+  animation: shake 0.6s ease;
+}
+
+button {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+button.active-skill::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: black;
+  transform: scaleX(1);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+button:not(.active-skill)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: transparent;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
 }

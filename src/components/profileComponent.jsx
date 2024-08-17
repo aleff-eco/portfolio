@@ -50,7 +50,7 @@ export function ProfileComponent() {
         <img
           src="./profilePic.jpeg"
           alt="Profile"
-          className="profile-image w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full mb-4"
+          className="profile-image w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full mb-4"
         />
         <h2 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2">¡Hola! Soy Aleff.</h2>
         <div className="w-full h-12 flex justify-center items-center">

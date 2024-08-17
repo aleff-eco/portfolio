@@ -29,7 +29,8 @@
 
 @media (max-width: 768px) {
   .profile-image {
-    display: none;
+    width: 120px;
+    height: 120px;
   }
 }
 
