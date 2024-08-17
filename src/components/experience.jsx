@@ -1,9 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { experience } from '../data/information';
 import '../styles/Experience.css';
 
 export function Experience() {
   const [showMore, setShowMore] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(0);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    setIsClient(true);
+
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  if (!isClient) {
+    return null;
+  }
 
   return (
     <section id="experience" className="body-font overflow-hidden">
@@ -13,7 +29,7 @@ export function Experience() {
           {experience.map((category, index) => (
             <div 
               key={index} 
-              className={`experience-item py-20 flex flex-wrap md:flex-nowrap fade-in ${showMore || index < (window.innerWidth < 768 ? 1 : 2) ? 'show' : 'hide'}`}
+              className={`experience-item py-20 flex flex-wrap md:flex-nowrap fade-in ${showMore || index < (windowWidth < 768 ? 1 : 2) ? 'show' : 'hide'}`}
             >
               <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
                 <span className="font-semibold title-font text-gray-700">CATEGORY</span>

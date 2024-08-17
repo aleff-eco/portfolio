@@ -211,28 +211,28 @@ export const projects = [
   {
     title: 'Sitio Web de E-commerce',
     description: 'Creación de una plataforma de comercio electrónico con integración de pagos, carritos de compras, y administración de productos. Desarrollado con React, Node.js, y MongoDB.',
-    imageUrl: '/images/ecommerce.png',
+    imageUrl: 'projects/reactCalculator.png',
     link: 'https://github.com/usuario/ecommerce_project',
     category: 'Desarrollo Web'
   },
   {
     title: 'Aplicación de Gestión de Tareas',
     description: 'Aplicación multiplataforma para la gestión de tareas diarias. Incluye funcionalidades de notificación, categorización de tareas, y sincronización en la nube. Desarrollado con Flutter y Firebase.',
-    imageUrl: '/images/task_manager.png',
+    imageUrl: 'projects/reactCalculator.png',
     link: 'https://github.com/usuario/task_manager',
     category: 'Aplicaciones Móviles'
   },
   {
     title: 'Sistema de Control de Versiones Personalizado',
     description: 'Desarrollo de un sistema de control de versiones ligero para proyectos pequeños y medianos. Implementado en Python con un enfoque en simplicidad y eficiencia.',
-    imageUrl: '/images/version_control.png',
+    imageUrl: 'projects/reactCalculator.png',
     link: 'https://github.com/usuario/version_control',
     category: 'Herramientas de Desarrollo'
   },
   {
     title: 'Portfolio Personal',
     description: 'Mi sitio web personal que presenta mi trayectoria profesional, proyectos destacados y habilidades. Desarrollado con Next.js y Tailwind CSS.',
-    imageUrl: '/images/portfolio.png',
+    imageUrl: 'projects/reactCalculator.png',
     link: 'https://miportfolio.com',
     category: 'Desarrollo Web'
   }
@@ -242,43 +242,43 @@ export const companies = [
   {
     name: 'Company 1',
     jobTitle : 'Software Engineer',
-    imageUrl: '/images/company1.png',
+    imageUrl: '/experience/htpro.svg',
     link: 'https://company1.com'
   },
   {
     name: 'Company 2',
     jobTitle : 'Software Engineer',
-    imageUrl: '/images/company2.png',
+    imageUrl: '/experience/htpro.svg',
     link: 'https://company2.com'
   },
   {
     name: 'Company 3',
     jobTitle : 'Software Engineer',
-    imageUrl: '/images/company3.png',
+    imageUrl: '/experience/htpro.svg',
     link: 'https://company3.com'
   },
   {
     name: 'Company 2',
     jobTitle : 'Software Engineer',
-    imageUrl: '/images/company2.png',
+    imageUrl: '/experience/htpro.svg',
     link: 'https://company2.com'
   },
   {
     name: 'Company 3',
     jobTitle : 'Software Engineer',
-    imageUrl: '/images/company3.png',
+    imageUrl: '/experience/htpro.svg',
     link: 'https://company3.com'
   },
   {
     name: 'Company 2',
     jobTitle : 'Software Engineer',
-    imageUrl: '/images/company2.png',
+    imageUrl: '/experience/htpro.svg',
     link: 'https://company2.com'
   },
   {
     name: 'Company 3',
     jobTitle : 'Software Engineer',
-    imageUrl: '/images/company3.png',
+    imageUrl: '/experience/htpro.svg',
     link: 'https://company3.com'
   }
 ];

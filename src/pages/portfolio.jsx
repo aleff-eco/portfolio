@@ -5,12 +5,11 @@ import { Navbar } from "../components/navbar";
 import { Footer } from "../components/footer";
 import { Experience } from "../components/experience";
 import { Contact } from "../components/contact";
-import { ProfileComponent} from "../components/profileComponent";
+import { ProfileComponent } from "../components/profileComponent";
 import { Companies } from "../components/companies";
 
-export function Portfolio() {
+export default function Portfolio() {
   return (
-    (
     <div className="flex flex-col bg-background text-foreground">
       <Navbar />
       <main className="flex-1">
@@ -23,6 +22,5 @@ export function Portfolio() {
       </main>
       <Footer />
     </div>
-    )
   );
 }

@@ -118,27 +118,3 @@
   opacity: 0;
   transform: translateY(20px);
 }
-
-/* 
-  ESTILOS DE ANIMACION DE SCROLL
-@keyframes show {
-  from {
-    opacity: 0;
-    scale: 25%;
-  }
-  to {
-    opacity: 1;
-    scale: 100%;
-
-  }
-  
-}
-
-img{
-  view-timeline-name: --image;
-  view-timeline-axis: block;
-  animation-timeline: --image;
-  animation-name: show;
-  animation-range: entry 30% cover 50%;
-  animation-fill-mode: both;
-} */
