@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/Skills.css';
+//import '../styles/Skills.css';
 import { technicalSkills, softSkills, categories } from '@/data/information';
 
 export function Skills() {
