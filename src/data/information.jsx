@@ -204,8 +204,8 @@ export const projects = [
   {
     title: 'Proyecto de Inteligencia Artificial',
     description: 'Desarrollo de un sistema de reconocimiento facial utilizando redes neuronales y aprendizaje profundo. Implementado en Python con TensorFlow y Keras.',
-    imageUrl: '/images/ai_project.png',
-    link: 'https://github.com/usuario/ai_project',
+    imageUrl: 'projects/reactCalculator.png',
+    link: 'https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png',
     category: 'Inteligencia Artificial'
   },
   {
@@ -235,5 +235,50 @@ export const projects = [
     imageUrl: '/images/portfolio.png',
     link: 'https://miportfolio.com',
     category: 'Desarrollo Web'
+  }
+];
+
+export const companies = [
+  {
+    name: 'Company 1',
+    jobTitle : 'Software Engineer',
+    imageUrl: '/images/company1.png',
+    link: 'https://company1.com'
+  },
+  {
+    name: 'Company 2',
+    jobTitle : 'Software Engineer',
+    imageUrl: '/images/company2.png',
+    link: 'https://company2.com'
+  },
+  {
+    name: 'Company 3',
+    jobTitle : 'Software Engineer',
+    imageUrl: '/images/company3.png',
+    link: 'https://company3.com'
+  },
+  {
+    name: 'Company 2',
+    jobTitle : 'Software Engineer',
+    imageUrl: '/images/company2.png',
+    link: 'https://company2.com'
+  },
+  {
+    name: 'Company 3',
+    jobTitle : 'Software Engineer',
+    imageUrl: '/images/company3.png',
+    link: 'https://company3.com'
+  },
+  {
+    name: 'Company 2',
+    jobTitle : 'Software Engineer',
+    imageUrl: '/images/company2.png',
+    link: 'https://company2.com'
+  },
+  {
+    name: 'Company 3',
+    jobTitle : 'Software Engineer',
+    imageUrl: '/images/company3.png',
+    link: 'https://company3.com'
   }
 ];

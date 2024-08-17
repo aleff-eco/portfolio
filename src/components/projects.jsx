@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import NotificationButton from "./githubalert";
-import { projects } from "../data/information"; // Importa la información de proyectos
+import { projects } from "../data/information";
 
 export function Projects() {
   const scrollContainerRef = useRef(null);
@@ -52,22 +52,20 @@ export function Projects() {
           <a
             key={index}
             href={project.link}
-            className="group block bg-black relative rounded-lg overflow-hidden w-full max-w-[500px] max-h-[320px] flex-shrink-0"
+            className="group block bg-black relative rounded-lg overflow-hidden w-full max-w-[500px] flex-shrink-0"
           >
-            <img
-              src={project.imageUrl}
-              alt={project.title}
-              className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
-            />
-            <div className="relative p-4 sm:p-6 lg:p-8">
-              <p className="text-sm font-medium uppercase tracking-widest text-red-400">{project.category}</p>
-              <p className="text-xl font-bold text-white sm:text-2xl">{project.title}</p>
-              <div className="mt-40 sm:mt-15 lg:mt-54">
-                <div className="translate-y-0 transform opacity-0 transition-all group-hover:-translate-y-6 group-hover:opacity-100">
-                  <p className="text-sm text-gray-200">
-                    {project.description}
-                  </p>
-                </div>
+            <div className="relative sm:p-8 lg:p-8 group">
+              <p className="text-sm font-medium uppercase tracking-widest text-red-400 mb-2">{project.category}</p>
+              <p className="text-xl font-bold text-white sm:text-2xl mb-4">{project.title}</p>
+              <img
+                src={project.imageUrl}
+                alt={project.title}
+                className="h-[280px] w-full object-cover rounded-md transition-opacity group-hover:opacity-40"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 transition-opacity group-hover:opacity-100">
+                <p className="text-xs sm:text-sm font-bold text-black bg-black bg-opacity-70 p-2 rounded-md mx-2 sm:mx-12 mb-4 sm:mb-12">
+                  {project.description}
+                </p>
               </div>
             </div>
           </a>

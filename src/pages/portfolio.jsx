@@ -6,6 +6,7 @@ import { Footer } from "../components/footer";
 import { Experience } from "../components/experience";
 import { Contact } from "../components/contact";
 import { ProfileComponent} from "../components/profileComponent";
+import { Companies } from "../components/companies";
 
 export function Portfolio() {
   return (
@@ -16,6 +17,7 @@ export function Portfolio() {
         <ProfileComponent />
         <Skills />
         <Projects />
+        <Companies />
         <Experience />
         <Contact />
       </main>
