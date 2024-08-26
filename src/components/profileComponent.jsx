@@ -33,7 +33,6 @@ export function ProfileComponent() {
       const updatedText = isDeleting
         ? fullText.substring(0, text.length - 1)
         : fullText.substring(0, text.length + 1);
-
       setText(updatedText);
 
       setTypingSpeed(isDeleting ? 100 : 150);
