@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/ProfileComponent.css';
 import { words } from '@/data/information';
 
@@ -43,6 +43,15 @@ export function ProfileComponent() {
     return () => clearTimeout(typingTimeout);
   }, [text, isDeleting, loopNum]);
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      const yOffset = -80; // Margen superior
+      const yPosition = contactSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: yPosition, behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="profile-section min-100vh flex flex-col justify-center items-center bg-gray-100">
       <div className="profile-container text-center md:pt-8 lg:pt-12">
@@ -53,12 +62,12 @@ export function ProfileComponent() {
         />
         <h2 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2">¡Hola! Soy Aleff.</h2>
         <div className="w-full h-12 flex justify-center items-center">
-          <h2 id="typewriter" className="text-xl font-bold ">{text}</h2>
+          <h2 id="typewriter" className="text-xl font-bold">{text}</h2>
         </div>
         <p className="text-sm md:text-base lg:text-lg mb-4 w-3/4">
           Ingeniero de software con 2 años de experiencia en el desarrollo web, me dedico a crear experiencias y desarrollar soluciones a la medida.
         </p>
-        <button href="#contact" className="connect-button text-white py-2 px-4 rounded transition">
+        <button onClick={scrollToContact} className="connect-button text-white py-2 px-4 rounded transition">
           Contactame
         </button>
         <div className={`scroll-down-container ${scrollY > 10 ? 'hidden' : ''} mt-4`}>
