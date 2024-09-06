@@ -20,7 +20,8 @@ export function Projects() {
 
   return (
     <section
-      className="p-12 mt-8 mb-0 relative text-center" /* Eliminamos el mb-12 */
+      id="projects"
+      className=" mt-8 mb-0 relative text-center" /* Eliminamos el mb-12 */
       style={{ backgroundColor: 'transparent' }}
     >
       <div className="absolute mt-4 mr-6 right-4 z-20">
@@ -33,14 +34,14 @@ export function Projects() {
       <button
         id="scroll-left"
         onClick={scrollLeft}
-        className="absolute left-2 top-1/2 transform -translate-y-1/2 text-white p-2 bg-gray-600 bg-opacity-70 rounded-full z-10"
+        className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white p-2 bg-gray-600 rounded-full z-10"
       >
         <FaChevronLeft />
       </button>
       <button
         id="scroll-right"
         onClick={scrollRight}
-        className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white p-2 bg-gray-600 bg-opacity-70 rounded-full z-10"
+        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white p-2 bg-gray-600 rounded-full z-10"
       >
         <FaChevronRight />
       </button>

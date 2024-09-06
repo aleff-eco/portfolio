@@ -1,12 +1,34 @@
 import { Input } from "@/components/input"
 import { Textarea } from "@/components/textarea"
 import { Button } from "@/components/button"
+import { FaLinkedin, FaTwitter, FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa"
 
 export function Contact() {
   return (
-    <section id="contact" className="py-12 md:py-16 lg:py-20 bg-muted">
+    <section id="contact" className="py-12 md:py-16 lg:py-20 bg-muted text-center">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-8 tex  t-center">Contactame</h2>
+        <h2 className="text-3xl font-bold mb-8">Contáctame</h2>
+        <p className="text-lg text-muted-foreground mb-8 max-w-[600px] mx-auto">
+          Siempre estoy emocionado de conectarme con nuevas personas. No dudes en contactarme a través de cualquiera de los canales a continuación.
+        </p>
+        <div className="flex justify-center space-x-6 mb-12">
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+            <FaTwitter size={28} />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+            <FaLinkedin size={28} />
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+            <FaGithub size={28} />
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+            <FaInstagram size={28} />
+          </a>
+          <a href="mailto:example@example.com" className="text-muted-foreground hover:text-primary transition-colors">
+            <FaEnvelope size={28} />
+          </a>
+        </div>
+        
         <div className="max-w-md mx-auto">
           <form>
             <div className="mb-4">
@@ -17,7 +39,7 @@ export function Contact() {
             </div>
             <div className="mb-4">
               <label htmlFor="email" className="block text-muted-foreground font-medium mb-2">
-                Correo
+                Correo Electrónico
               </label>
               <Input id="email" type="email" placeholder="Ingrese su correo" />
             </div>
@@ -29,8 +51,8 @@ export function Contact() {
               </label>
               <Textarea id="message" rows={5} placeholder="Escriba su mensaje" />
             </div>
-            <Button type="submit" className="w-full">
-              Enviar
+            <Button type="submit" className="w-full hover:bg-primary-dark transition-colors">
+              Enviar Mensaje
             </Button>
           </form>
         </div>
