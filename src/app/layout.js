@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Aleff Espinosa Cordova - Portfolio",
-  description: "Portfolio showcasing my projects and skills in web development.",
+  description: "Mi sitio web personal que presenta mi trayectoria profesional, proyectos destacados y habilidades. Desarrollado con Next.js y Tailwind CSS.",
 };
 
 export default function RootLayout({ children }) {
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="description" content={metadata.description} />
-        <meta name="keywords" content="web development, portfolio, projects, Aleff Espinosa Cordova" />
+        <meta name="keywords" content="web development, portfolio, projects, Aleff Espinosa Cordova, developer, software engineer, software, engineering" />
         <meta name="author" content="Aleff Espinosa Cordova" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:title" content={metadata.title} />
