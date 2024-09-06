@@ -21,7 +21,7 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className=" mt-8 mb-0 relative text-center" /* Eliminamos el mb-12 */
+      className="mt-8 mb-0 relative text-center" /* Eliminamos el mb-12 */
       style={{ backgroundColor: 'transparent' }}
     >
       <div className="absolute mt-4 mr-6 right-4 z-20">

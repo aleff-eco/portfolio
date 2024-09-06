@@ -47,7 +47,7 @@ export function Companies() {
         <div
           className="flex w-full overflow-x-auto snap-x snap-mandatory scrollbar-hide"
           ref={scrollRef}
-          style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch', width: '100vw' }}
+          style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch', width: '99vw' }}
         >
           <div className="flex pt-6 gap-6 px-4 md:gap-8 md:px-6 h-48 w-full">
             {[...companies, ...companies].map((company, index) => (
