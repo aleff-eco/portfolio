@@ -1,18 +1,23 @@
 import { useState, useEffect } from 'react';
-import { FaGithub, FaHeart } from 'react-icons/fa';
-import '../styles/NotificationButton.css'; // Importa el archivo CSS
+import { FaGithub, FaHeart, FaStar } from 'react-icons/fa';
+import '../styles/NotificationButton.css';
 
 export default function NotificationButton() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [repositories, setRepositories] = useState([]);
+  const [totalStars, setTotalStars] = useState(0);
 
   useEffect(() => {
     const fetchPopularRepositories = async () => {
       try {
         const response = await fetch('https://api.github.com/users/aleff-eco/repos');
         const data = await response.json();
-        const filteredRepos = data.filter(repo => repo.stargazers_count >= 2);
+        const filteredRepos = data
+          .filter(repo => repo.stargazers_count >= 3)
+          .sort((a, b) => b.stargazers_count - a.stargazers_count);
         setRepositories(filteredRepos);
+        const total = filteredRepos.reduce((acc, repo) => acc + repo.stargazers_count, 0);
+        setTotalStars(total);
       } catch (error) {
         console.error('Error fetching repositories:', error);
       }
@@ -29,33 +34,38 @@ export default function NotificationButton() {
         className="icon-button"
         type="button"
       >
-        <FaGithub className="w-10 h-10" />
-        <div className="notification-badge">
+        <FaGithub className="w-10 h-10 text-gray-800" />
+        <div className="notification-badge bg-black text-white">
           <span>{repositories.length}</span>
         </div>
       </button>
       {dropdownOpen && (
         <div
           id="dropdownNotification"
-          className="notification-dropdown"
+          className="notification-dropdown bg-white shadow-lg"
           aria-labelledby="dropdownNotificationButton"
         >
-          <div className="header">
+          <div className="header text-black font-bold py-2 px-4 border-b">
             Mis proyectos populares:
           </div>
           <div className="content">
             {repositories.length === 0 ? (
-              <div className="text-gray-500 text-sm">
+              <div className="text-gray-500 text-sm px-4 py-2">
                 No hay proyectos populares cargados.
               </div>
             ) : (
               repositories.map(repo => (
-                <a href={repo.html_url} target="_blank" className="item" key={repo.id}>
+                <a
+                  href={repo.html_url}
+                  target="_blank"
+                  className="item block py-2 px-4 border-b hover:bg-gray-100"
+                  key={repo.id}
+                >
                   <div className="w-full text-left">
                     <div className="font-semibold text-gray-900">
                       {repo.name}
                     </div>
-                    <div className="text-gray-500 text-xs m-2">
+                    <div className="text-gray-500 text-xs my-1">
                       {repo.description || 'No description'}
                     </div>
                     <div className="flex items-center text-gray-500 text-sm">
@@ -69,20 +79,10 @@ export default function NotificationButton() {
           <a
             href="https://github.com/aleff-eco"
             target="_blank"
-            className="footer w-full h-12 text-sm"
+            className="footer w-full h-12 text-sm flex justify-center items-center bg-gray-800 text-white hover:bg-gray-900"
           >
-            <div className="inline-flex items-center py-1 bg-muted-">
-              <svg
-                className="w-4 h-4 mr-2 text-gray-500"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 25 14"
-              >
-                <path d="M10 0C4.612 0 0 5.336 0 7c0 1.742 3.546 7 10 7 6.454 0 10-5.258 10-7 0-1.664-4.612-7-10-7Zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" />
-              </svg>
-              Ver más
-            </div>
+            <FaStar className="mr-2" />
+            Ver más ({totalStars} estrellas)
           </a>
         </div>
       )}
