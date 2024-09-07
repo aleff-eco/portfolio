@@ -16,7 +16,9 @@ export default function NotificationButton() {
           .filter(repo => repo.stargazers_count >= 3)
           .sort((a, b) => b.stargazers_count - a.stargazers_count);
         setRepositories(filteredRepos);
-        const total = filteredRepos.reduce((acc, repo) => acc + repo.stargazers_count, 0);
+        
+        // Aquí debes hacer el reduce sobre 'data', no 'response'
+        const total = data.reduce((acc, repo) => acc + repo.stargazers_count, 0);
         setTotalStars(total);
       } catch (error) {
         console.error('Error fetching repositories:', error);

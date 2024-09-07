@@ -323,7 +323,7 @@ export const companies = [
     name: 'San Ángel',
     title: 'Grupo Dental ',
     imageUrl: '/experience/dental.png',
-    link: 'https://www.facebook.com/profile.php?id=61563780462775'
+    link: 'https://www.instagram.com/grupodentalsanangel?igsh=bzA1M2R6NWlxdGd5'
   },
   {
     name: 'D BeefMax',

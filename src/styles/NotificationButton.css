@@ -8,12 +8,13 @@
   display: inline-flex;
   align-items: center;
   font-size: 0.875rem;
-  color: #1f2937;
+  color: #6b7280;
+ 
   transition: color 0.3s ease;
 }
 
 .icon-button:hover {
-  color: #6b7280;
+  color: #1f2937;
 }
 
 .notification-badge {
@@ -35,7 +36,7 @@
   position: absolute;
   right: 0;
   margin-top: 0.5rem;
-  width: 19rem;
+  width: 22rem;
   max-height: 28rem;
   background-color: #f9fafb;
   border-radius: 0.5rem;

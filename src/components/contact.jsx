@@ -12,19 +12,19 @@ export function Contact() {
           Siempre estoy emocionado de conectarme con nuevas personas. No dudes en contactarme a través de cualquiera de los canales a continuación.
         </p>
         <div className="flex justify-center space-x-6 mb-12">
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="icon-wrapper text-muted-foreground hover:text-primary transition-colors">
+          {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="icon-wrapper text-muted-foreground hover:text-primary transition-colors">
             <FaTwitter size={28} />
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="icon-wrapper text-muted-foreground hover:text-primary transition-colors">
+          </a> */}
+          <a href="https://www.linkedin.com/in/aleff-espinosa-cordova/" target="_blank" rel="noopener noreferrer" className="icon-wrapper text-muted-foreground hover:text-primary transition-colors">
             <FaLinkedin size={28} />
           </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="icon-wrapper text-muted-foreground hover:text-primary transition-colors">
+          <a href="https://github.com/aleff-eco" target="_blank" rel="noopener noreferrer" className="icon-wrapper text-muted-foreground hover:text-primary transition-colors">
             <FaGithub size={28} />
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="icon-wrapper text-muted-foreground hover:text-primary transition-colors">
+          <a href="https://www.instagram.com/ale.legasov?igsh=eHY1bDNhM3F5NjVx" target="_blank" rel="noopener noreferrer" className="icon-wrapper text-muted-foreground hover:text-primary transition-colors">
             <FaInstagram size={28} />
           </a>
-          <a href="mailto:example@example.com" className="icon-wrapper text-muted-foreground hover:text-primary transition-colors">
+          <a href="mailto:dev.aleffec.com" className="icon-wrapper text-muted-foreground hover:text-primary transition-colors">
             <FaEnvelope size={28} />
           </a>
         </div>
