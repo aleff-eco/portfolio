@@ -86,12 +86,12 @@
 
 @media (max-width: 640px) {
   .notification-dropdown {
-    width: 14rem;
+    width: 16rem;
   }
 }
 
 @media (max-width: 480px) {
   .notification-dropdown {
-    width: 12rem;
+    width: 16rem;
   }
 }
