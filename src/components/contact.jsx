@@ -12,19 +12,19 @@ export function Contact() {
           Siempre estoy emocionado de conectarme con nuevas personas. No dudes en contactarme a través de cualquiera de los canales a continuación.
         </p>
         <div className="flex justify-center space-x-6 mb-12">
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="icon-wrapper text-muted-foreground hover:text-primary transition-colors">
             <FaTwitter size={28} />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="icon-wrapper text-muted-foreground hover:text-primary transition-colors">
             <FaLinkedin size={28} />
           </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="icon-wrapper text-muted-foreground hover:text-primary transition-colors">
             <FaGithub size={28} />
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="icon-wrapper text-muted-foreground hover:text-primary transition-colors">
             <FaInstagram size={28} />
           </a>
-          <a href="mailto:example@example.com" className="text-muted-foreground hover:text-primary transition-colors">
+          <a href="mailto:example@example.com" className="icon-wrapper text-muted-foreground hover:text-primary transition-colors">
             <FaEnvelope size={28} />
           </a>
         </div>

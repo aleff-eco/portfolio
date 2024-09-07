@@ -296,39 +296,39 @@ export const projects = [
 
 export const companies = [
   {
-    name: 'Company 1',
-    jobTitle: 'Software Engineer',
+    name: 'HitechPro',
+    title: 'Consultor TI',
     imageUrl: '/experience/htpro.svg',
-    link: 'https://company1.com'
+    link: 'https://htpro.dev/'
   },
   {
-    name: 'Company 2',
-    jobTitle: 'Software Engineer',
+    name: 'CYBAC',
+    title: 'Hosting - Soluciones TI',
     imageUrl: '/experience/cybac.svg',
-    link: 'https://company2.com'
+    link: 'https://grupocybac.com/'
   },
   {
-    name: 'Company 3',
-    jobTitle: 'Software Engineer',
+    name: 'Rufino Tamayo',
+    title: 'Centro educativo',
     imageUrl: '/experience/rufino.png',
-    link: 'https://company3.com'
+    link: 'https://www.rufinotamayo.edu.mx/'
   },
   {
-    name: 'Company 2',
-    jobTitle: 'Software Engineer',
+    name: 'Wax Revolution',
+    title: 'Centro de belleza - Spa',
     imageUrl: '/experience/wax.avif',
-    link: 'https://company2.com'
+    link: 'https://waxrevolution.com/'
   },
   {
-    name: 'Company 3',
-    jobTitle: 'Software Engineer',
+    name: 'San Ángel',
+    title: 'Grupo Dental ',
     imageUrl: '/experience/dental.png',
-    link: 'https://company3.com'
+    link: 'https://www.facebook.com/profile.php?id=61563780462775'
   },
   {
-    name: 'Company 2',
-    jobTitle: 'Software Engineer',
-    imageUrl: '/experience/htpro.svg',
-    link: 'https://company2.com'
+    name: 'D BeefMax',
+    title: 'Tienda de carnes',
+    imageUrl: '/experience/dbeef.png',
+    link: 'https://www.facebook.com/profile.php?id=61563282854180'
   },
 ];

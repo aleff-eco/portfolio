@@ -12,10 +12,9 @@ export function Companies() {
 
     const autoScroll = () => {
       if (!isHovered && scrollElement) {
+        scrollElement.scrollLeft += scrollSpeed;
         if (scrollElement.scrollLeft >= scrollElement.scrollWidth / 2) {
           scrollElement.scrollLeft = 0;
-        } else {
-          scrollElement.scrollLeft += scrollSpeed;
         }
       }
     };
@@ -48,16 +47,19 @@ export function Companies() {
           className="flex w-full overflow-x-auto snap-x snap-mandatory scrollbar-hide"
           ref={scrollRef}
           style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch', width: '99vw' }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           <div className="flex pt-6 gap-6 px-4 md:gap-8 md:px-6 h-48 w-full">
-            {[...companies, ...companies].map((company, index) => (
+            {/* Repetir el contenido más de una vez para simular scroll infinito */}
+            {[...companies, ...companies, ...companies, ...companies].map((company, index) => (
               <div
                 key={index}
                 className="flex-shrink-0 group"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
-                <div className="relative py-4 px-8 h-32 w-64 overflow-hidden rounded-lg bg-muted transition-all duration-300 transform group-hover:scale-110 group-hover:shadow-lg group-hover:rounded-lg flex justify-center items-center"> {/* rounded-lg remains here */}
+                <div className="relative py-4 px-8 h-32 w-64 overflow-hidden rounded-lg bg-muted transition-all duration-300 transform group-hover:scale-110 group-hover:shadow-lg group-hover:rounded-lg flex justify-center items-center">
                   <img
                     src={company.imageUrl}
                     alt={`${company.name} Logo`}
@@ -65,7 +67,7 @@ export function Companies() {
                   />
                   <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-background/80 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     <h4 className="text-lg font-semibold">{company.name}</h4>
-                    <p className="text-sm text-muted-foreground">{company.jobTitle}</p>
+                    <p className="text-sm text-muted-foreground">{company.title}</p>
                   </div>
                 </div>
               </div>

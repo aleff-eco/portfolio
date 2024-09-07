@@ -46,8 +46,8 @@ export function ProfileComponent() {
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
-      const yOffset = -80; // Margen superior
-      const yPosition = contactSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      const yOffset = 30; // Margen superior
+      const yPosition = contactSection.getBoundingClientRect().top + yOffset;
       window.scrollTo({ top: yPosition, behavior: 'smooth' });
     }
   };
