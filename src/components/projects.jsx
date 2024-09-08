@@ -18,21 +18,6 @@ export function Projects() {
     }
   };
 
-  const handleTouchStart = (e) => {
-    const touchStartX = e.touches[0].clientX;
-    scrollContainerRef.current.touchStartX = touchStartX;
-  };
-
-  const handleTouchMove = (e) => {
-    const touchMoveX = e.touches[0].clientX;
-    const touchDeltaX = touchMoveX - scrollContainerRef.current.touchStartX;
-
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: -touchDeltaX, behavior: "smooth" });
-      scrollContainerRef.current.touchStartX = touchMoveX;
-    }
-  };
-
   return (
     <section
       id="projects"
@@ -45,12 +30,11 @@ export function Projects() {
 
       <h2 className="text-3xl font-bold text-gray-800 mb-4">Proyectos</h2>
       <p className="text-lg text-gray-600 mb-4">Proyectos.</p>
-
       <button
         id="scroll-left"
         onClick={scrollLeft}
-        className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white p-3 rounded-sm z-10 shadow-sm focus:outline-none transition-transform duration-300 hover:scale-110"
-        style={{ backgroundColor: "rgba(128, 128, 128, 0.3)" }}
+        className="absolute left-3 top-[60%] transform -translate-y-1/2 text-white p-2 rounded-sm z-10 shadow-sm focus:outline-none transition-transform duration-300 hover:scale-110"
+        style={{ backgroundColor: "rgba(128, 128, 128, 0.5)" }}
       >
         <FaChevronLeft size={24} />
       </button>
@@ -58,19 +42,16 @@ export function Projects() {
       <button
         id="scroll-right"
         onClick={scrollRight}
-        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white p-3 rounded-sm z-10 shadow-sm focus:outline-none transition-transform duration-300 hover:scale-110"
-        style={{ backgroundColor: "rgba(128, 128, 128, 0.3)" }}
+        className="absolute right-3 top-[60%] transform -translate-y-1/2 text-white p-2 rounded-sm z-10 shadow-sm focus:outline-none transition-transform duration-300 hover:scale-110"
+        style={{ backgroundColor: "rgba(128, 128, 128, 0.5)" }}
       >
         <FaChevronRight size={24} />
       </button>
-
       <div
         id="scroll-container"
         ref={scrollContainerRef}
-        className="flex overflow-x-auto scroll-smooth space-x-10 touch-pan-x"
-        style={{ width: "100%", scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' }}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
+        className="flex overflow-hidden space-x-10"
+        style={{ width: "100%" }}
       >
         {projects.map((project, index) => (
           <a
@@ -87,7 +68,7 @@ export function Projects() {
               </p>
               {project.image}
               <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 transition-opacity group-hover:opacity-100">
-                <p className="text-xs sm:text-sm font-bold text-black bg-black bg-opacity-20 p-2 rounded-md mx-2 sm:mx-12 mb-4 sm:mb-12">
+                <p className="text-xs sm:text-sm font-bold text-black bg-black bg-opacity-70 p-2 rounded-md mx-2 sm:mx-12 mb-4 sm:mb-12">
                   {project.description}
                 </p>
               </div>
