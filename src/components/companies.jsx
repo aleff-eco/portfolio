@@ -46,12 +46,11 @@ export function Companies() {
         <div
           className="flex w-full overflow-x-auto snap-x snap-mandatory scrollbar-hide"
           ref={scrollRef}
-          style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch', width: '99vw' }}
+          style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch', width: '98.8vw' }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
           <div className="flex pt-6 gap-6 px-4 md:gap-8 md:px-6 h-48 w-full">
-            {/* Repetir el contenido más de una vez para simular scroll infinito */}
             {[...companies, ...companies, ...companies, ...companies].map((company, index) => (
               <div
                 key={index}

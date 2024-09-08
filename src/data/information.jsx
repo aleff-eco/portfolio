@@ -204,7 +204,7 @@ export const experience = [
 export const projects = [
   {
     title: 'Proyecto de Inteligencia Artificial',
-    description: 'Desarrollo de un sistema de reconocimiento facial utilizando redes neuronales y aprendizaje profundo. Implementado en Python con TensorFlow y Keras.',
+    description: 'Desarrollo de un sistema de inteligencia artificial que resuelve problemas de programación lineal. Implementado en Python con un enfoque en simplicidad y eficiencia.',
     image: (
       <div className="img-container flex justify-center items-center">
         <img 
