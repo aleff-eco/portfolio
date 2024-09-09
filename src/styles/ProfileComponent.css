@@ -37,6 +37,7 @@
 .profile-container h2,
 .profile-container h1,
 .profile-container p,
+
 .connect-button {
   margin: 10px 0;
 }
@@ -63,6 +64,7 @@
   background-color: #202020;
   color: #fff;
   padding: 10px;
+  margin-top: 30px;
   border: none;
   border-radius: 5px;
   cursor: pointer;

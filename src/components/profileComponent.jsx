@@ -47,8 +47,28 @@ export function ProfileComponent() {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
       const yOffset = 30; // Margen superior
-      const yPosition = contactSection.getBoundingClientRect().top + yOffset;
-      window.scrollTo({ top: yPosition, behavior: 'smooth' });
+      const targetPosition = contactSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      const startPosition = window.pageYOffset;
+      const distance = targetPosition - startPosition;
+      const duration = 4000; // Duración en milisegundos para hacer el movimiento más suave
+      let startTime = null;
+
+      const easeInOutCubic = (time, start, distance, duration) => {
+        time /= duration / 2;
+        if (time < 1) return (distance / 2) * time * time * time + start;
+        time -= 2;
+        return (distance / 2) * (time * time * time + 2) + start;
+      };
+
+      const animation = (currentTime) => {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = easeInOutCubic(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+      };
+
+      requestAnimationFrame(animation);
     }
   };
 
@@ -57,7 +77,7 @@ export function ProfileComponent() {
       <div className="profile-container text-center md:pt-8 lg:pt-12">
         <img
           src="./profilePic.jpeg"
-          alt="Profile"
+          alt="Foto de perfil"
           className="profile-image w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full mb-4"
         />
         <h2 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2">¡Hola! Soy Aleff.</h2>
@@ -65,10 +85,10 @@ export function ProfileComponent() {
           <h2 id="typewriter" className="text-xl font-bold">{text}</h2>
         </div>
         <p className="text-sm md:text-base lg:text-lg mb-4 w-3/4">
-          Ingeniero de software con 2 años de experiencia en el desarrollo web, me dedico a crear experiencias y desarrollar soluciones a la medida.
+          Ingeniero de software con 2 años de experiencia en desarrollo web. Me especializo en crear experiencias únicas y soluciones personalizadas.
         </p>
         <button onClick={scrollToContact} className="connect-button text-white py-2 px-4 rounded transition">
-          Contactame
+          Contáctame
         </button>
         <div className={`scroll-down-container ${scrollY > 10 ? 'hidden' : ''} mt-4`}>
           <p className="text-sm">Deslizar</p>
