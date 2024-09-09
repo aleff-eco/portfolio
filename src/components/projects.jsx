@@ -34,7 +34,7 @@ export function Projects() {
         id="scroll-left"
         onClick={scrollLeft}
         className="absolute left-3 top-[60%] transform -translate-y-1/2 text-white p-2 rounded-sm z-10 shadow-sm focus:outline-none transition-transform duration-300 hover:scale-110"
-        style={{ backgroundColor: "rgba(128, 128, 128, 0.5)" }}
+        style={{ backgroundColor: "rgba(128, 128, 128, 0.7)" }}
       >
         <FaChevronLeft size={24} />
       </button>
@@ -43,21 +43,21 @@ export function Projects() {
         id="scroll-right"
         onClick={scrollRight}
         className="absolute right-3 top-[60%] transform -translate-y-1/2 text-white p-2 rounded-sm z-10 shadow-sm focus:outline-none transition-transform duration-300 hover:scale-110"
-        style={{ backgroundColor: "rgba(128, 128, 128, 0.5)" }}
+        style={{ backgroundColor: "rgba(128, 128, 128, 0.7)" }}
       >
         <FaChevronRight size={24} />
       </button>
       <div
         id="scroll-container"
         ref={scrollContainerRef}
-        className="flex overflow-hidden space-x-10"
-        style={{ width: "100%" }}
+        className="flex overflow-x-scroll scroll-snap-x snap-mandatory space-x-10"
+        style={{ width: "100%", scrollbarWidth: 'none', }}
       >
         {projects.map((project, index) => (
           <a
             key={index}
             href={project.link}
-            className="group block bg-black relative rounded-lg overflow-hidden w-full max-w-[500px] flex-shrink-0"
+            className="group block bg-black relative rounded-lg overflow-hidden w-full max-w-[500px] flex-shrink-0 snap-center"
           >
             <div className="relative sm:p-8 lg:p-8 group">
               <p className="text-sm font-medium uppercase tracking-widest text-red-400 mb-2">

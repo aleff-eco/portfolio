@@ -210,13 +210,20 @@ export const projects = [
         <img 
           src="projects/reinaPepiada.webp" 
           alt="Proyecto de Inteligencia Artificial" 
-          className="rounded-lg shadow-lg hover:opacity-80"
+          className="rounded-lg shadow-lg hover:opacity-80 transition-opacity duration-300"
+          style={{
+            display: 'block',
+            width: 'calc(100% - 30px)',
+            marginLeft: '15px',
+            marginRight: '15px'
+          }}
         />
       </div>
     ),
     link: 'https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png',
     category: 'Inteligencia Artificial'
-  },
+  }
+  ,  
   {
     title: 'Proyecto de CRM',
     description: 'Desarrollo de un sistema de gestión de relaciones con clientes (CRM) personalizado para empresas. Implementado con Django y React.',
