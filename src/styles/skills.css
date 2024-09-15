@@ -64,14 +64,7 @@ button.active-skill::after {
   right: 50%;
   bottom: 0;
   height: 3px;
-  background-color: hsl(var(--foreground));
-  /* Color negro por defecto para modo claro */
   transform: translateX(-50%);
   width: 100%;
   transition: background-color 0.3s ease, width 0.3s ease;
-}
-
-.dark button.active-skill::after {
-  background-color: hsl(var(--primary-foreground));
-  /* Color blanco en modo oscuro */
 }
