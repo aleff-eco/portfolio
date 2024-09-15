@@ -1,34 +1,45 @@
-import { Inter } from "next/font/google";
+import { Chakra_Petch } from "next/font/google"; // Importar la fuente Chakra Petch
 import "./globals.css";
-import Head from "next/head";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const inter = Inter({ subsets: ["latin"] });
+// Importar Chakra Petch con los pesos disponibles
+const chakraPetch = Chakra_Petch({
+  subsets: ["latin"],
+  weight: ['300', '400', '500', '600', '700'], // Pesos de Chakra Petch
+  style: ['normal', 'italic'],
+});
 
 export const metadata = {
   title: "Aleff Espinosa Cordova - Portfolio",
   description: "Mi sitio web personal que presenta mi trayectoria profesional, proyectos destacados y habilidades. Desarrollado con Next.js y Tailwind CSS.",
+  keywords: "web development, portfolio, projects, Aleff Espinosa Cordova, developer, software engineer, software, engineering",
+  author: "Aleff Espinosa Cordova",
+  openGraph: {
+    title: "Aleff Espinosa Cordova - Portfolio",
+    description: "Mi sitio web personal que presenta mi trayectoria profesional, proyectos destacados y habilidades. Desarrollado con Next.js y Tailwind CSS.",
+    url: "https://aleff.vercel.app/",
+    siteName: "Aleff Espinosa Cordova",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://aleff.vercel.app/",
+  },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <SpeedInsights/>
-      <Head>
-        <meta charSet="UTF-8" />
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content="web development, portfolio, projects, Aleff Espinosa Cordova, developer, software engineer, software, engineering" />
-        <meta name="author" content="Aleff Espinosa Cordova" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content={metadata.title} />
-        <meta property="og:description" content={metadata.description} />
-        <meta property="og:url" content="https://aleff.vercel.app/" />
-        <meta property="og:site_name" content="Aleff Espinosa Cordova" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://aleff.vercel.app/" />
-      </Head>
-      <body className={inter.className}>{children}</body>
+      <SpeedInsights />
+      {/* Aplicar la fuente Chakra Petch globalmente */}
+      <body className={chakraPetch.className}>{children}</body>
     </html>
   );
 }

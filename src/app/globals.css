@@ -4,21 +4,15 @@
 
 @layer base {
   :root {
-    --background: 0 0% 98%; /* White */
+    --background: 0 0% 98%; /* Soft White */
     --foreground: 0 0% 20%; /* Dark Gray */
-    --card: 0 0% 100%; /* White */
+    --card: 0 0% 100%; /* Pure White */
     --card-foreground: 0 0% 20%; /* Dark Gray */
-    --popover: 0 0% 100%; /* White */
-    --popover-foreground: 0 0% 20%; /* Dark Gray */
     --primary: 0 0% 10%; /* Almost Black */
     --primary-foreground: 0 0% 98%; /* White */
     --secondary: 0 0% 90%; /* Light Gray */
-    --secondary-foreground: 0 0% 10%; /* Almost Black */
-    --muted: 0 0% 90%; /* Light Gray */
-    --muted-foreground: 0 0% 40%; /* Gray */
-    --accent: 0 0% 90%; /* Light Gray */
-    --accent-foreground: 0 0% 10%; /* Almost Black */
-    --destructive: 0 72% 51%; /* Red */
+    --secondary-foreground: 0 0% 10%; /* Dark Gray */
+    --destructive: 0 72% 51%; /* Bright Red */
     --destructive-foreground: 0 0% 98%; /* White */
     --border: 0 0% 85%; /* Light Gray */
     --input: 0 0% 85%; /* Light Gray */
@@ -27,30 +21,19 @@
   }
 
   .dark {
-    --background: 0 0% 10%; /* Almost Black */
-    --foreground: 0 0% 98%; /* White */
+    --background: 0 0% 15%; /* Almost Black */
+    --foreground: 0 0% 92%; /* White */
     --card: 0 0% 15%; /* Dark Gray */
-    --card-foreground: 0 0% 98%; /* White */
-    --popover: 0 0% 15%; /* Dark Gray */
-    --popover-foreground: 0 0% 98%; /* White */
+    --card-foreground: 0 0% 70%; /* White */
     --primary: 0 0% 98%; /* White */
     --primary-foreground: 0 0% 10%; /* Almost Black */
-    --secondary: 0 0% 25%; /* Gray */
+    --secondary: 0 0% 25%; /* Medium Gray */
     --secondary-foreground: 0 0% 98%; /* White */
-    --muted: 0 0% 25%; /* Gray */
-    --muted-foreground: 0 0% 80%; /* Light Gray */
-    --accent: 0 0% 25%; /* Gray */
-    --accent-foreground: 0 0% 98%; /* White */
     --destructive: 0 62.8% 30.6%; /* Dark Red */
     --destructive-foreground: 0 0% 98%; /* White */
-    --border: 0 0% 25%; /* Gray */
-    --input: 0 0% 25%; /* Gray */
+    --border: 0 0% 25%; /* Dark Gray */
+    --input: 0 0% 25%; /* Dark Gray */
     --ring: 0 0% 40%; /* Dark Gray */
-    --chart-1: 0 0% 50%; /* Medium Gray */
-    --chart-2: 0 0% 60%; /* Lighter Gray */
-    --chart-3: 0 0% 70%; /* Even Lighter Gray */
-    --chart-4: 0 0% 80%; /* Light Gray */
-    --chart-5: 0 0% 90%; /* Very Light Gray */
   }
 }
 
@@ -87,11 +70,9 @@
   }
 }
 
-
 section {
   scroll-margin-top: 15vh; /* Ajusta según la altura de tu navbar */
 }
-
 
 .division {
   width: 100%;
@@ -115,7 +96,6 @@ section {
   opacity: 0;
   transform: translateY(20px);
 }
-
 
 @keyframes shake {
   0% { transform: rotate(0deg); }

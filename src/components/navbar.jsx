@@ -1,10 +1,26 @@
-import { useState } from 'react';
-import { BsGithub, BsGitlab, BsLinkedin } from 'react-icons/bs';
-import { FaBars, FaTimes } from "react-icons/fa";
+import { useState, useEffect } from 'react';
+import { FaBars, FaTimes, FaSun, FaMoon } from "react-icons/fa";
 import Link from "next/link";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+      setTheme(storedTheme);
+      document.documentElement.classList.add(storedTheme);
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    document.documentElement.classList.remove(theme);
+    document.documentElement.classList.add(newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
 
   return (
     <header className="top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-5 sm:px-6 lg:px-10 bg-primary text-primary-foreground border-b">
@@ -29,15 +45,14 @@ export function Navbar() {
         </Link>
       </nav>
       <div className="flex items-center gap-6">
-        <Link href="https://www.linkedin.com/in/aleff-espinosa-cordova-59b997296/" target="_blank" className="text-primary-foreground hover:text-foreground hover:scale-140 transition-transform duration-200" prefetch={false}>
-          <BsLinkedin className="w-5 h-5" />
-        </Link>
-        <Link href="https://gitlab.com/dev.aleffec" target="_blank" className="text-primary-foreground hover:text-foreground hover:scale-140 transition-transform duration-200" prefetch={false}>
-          <BsGitlab className="w-5 h-5" />
-        </Link>
-        <Link href="https://github.com/aleff-eco/" target="_blank" className="text-primary-foreground hover:text-foreground hover:scale-140 transition-transform duration-200" prefetch={false}>
-          <BsGithub className="w-5 h-5" />
-        </Link>
+        {/* Botón de modo oscuro */}
+        <button
+          onClick={toggleTheme}
+          className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 transition-all duration-300 transform hover:scale-110"
+        >
+          {theme === 'light' ? <FaMoon className="w-6 h-6" /> : <FaSun className="w-6 h-6" />}
+        </button>
+        {/* Botón para abrir/cerrar menú en pantallas pequeñas */}
         <button className="lg:hidden text-primary-foreground hover:text-foreground" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <FaTimes className="w-6 h-6" /> : <FaBars className="w-6 h-6" />}
         </button>
