@@ -74,7 +74,7 @@ export function ProfileComponent() {
 
   return (
     <section className="profile-section min-100vh flex flex-col justify-center items-center bg-gray-100">
-      <div className="profile-container text-center md:pt-8 lg:pt-12">
+      <div className="profile-container text-center pt-20 lg:pt-40">
         <img
           src="./profilePic.jpeg"
           alt="Foto de perfil"

@@ -1,5 +1,5 @@
 // src\data\information.jsx
-
+import Image from 'next/image';
 
 import {
   FaComments as CommunicationIcon,
@@ -200,106 +200,51 @@ export const experience = [
   }
 ];
 
-
 export const projects = [
   {
     title: 'Proyecto de Inteligencia Artificial',
-    description: 'Desarrollo de un sistema de inteligencia artificial que resuelve problemas de programación lineal. Implementado en Python con un enfoque en simplicidad y eficiencia.',
-    image: (
-      <div className="img-container flex justify-center items-center">
-        <img 
-          src="projects/reinaPepiada.webp" 
-          alt="Proyecto de Inteligencia Artificial" 
-          className="rounded-lg shadow-lg hover:opacity-80 transition-opacity duration-300"
-          style={{
-            display: 'block',
-            width: 'calc(100% - 30px)',
-            marginLeft: '15px',
-            marginRight: '15px'
-          }}
-        />
-      </div>
-    ),
+    imageSrc: "/projects/reinaPepiada.webp",
+    imageAlt: "Proyecto de Inteligencia Artificial",
     link: 'https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png',
     category: 'Inteligencia Artificial'
-  }
-  ,  
+  },
   {
     title: 'Proyecto de CRM',
-    description: 'Desarrollo de un sistema de gestión de relaciones con clientes (CRM) personalizado para empresas. Implementado con Django y React.',
-    image: (
-      <div className="img-container flex justify-center items-center">
-        <img 
-          src="projects/crmUser.png" 
-          alt="Proyecto de CRM" 
-          className="rounded-lg shadow-lg hover:opacity-80"
-        />
-      </div>
-    ),
+    imageSrc: "/projects/crmUser.png",
+    imageAlt: "Proyecto de CRM",
     link: 'https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png',
     category: 'Inteligencia Artificial'
   },
   {
     title: 'Sitio Web de E-commerce',
-    description: 'Creación de una plataforma de comercio electrónico con integración de pagos, carritos de compras, y administración de productos. Desarrollado con React, Node.js, y MongoDB.',
-    image: (
-      <div className="img-container flex justify-center items-center">
-        <img 
-          src="projects/quoware.webp" 
-          alt="Sitio Web de E-commerce" 
-          className="rounded-lg shadow-lg hover:opacity-80"
-        />
-      </div>
-    ),
+    imageSrc: "/projects/quoware.webp",
+    imageAlt: "Sitio Web de E-commerce",
     link: 'https://github.com/usuario/ecommerce_project',
     category: 'Desarrollo Web'
   },
   {
     title: 'Aplicación de Gestión de Tareas',
-    description: 'Aplicación multiplataforma para la gestión de tareas diarias. Incluye funcionalidades de notificación, categorización de tareas, y sincronización en la nube. Desarrollado con Flutter y Firebase.',
-    image: (
-      <div className="img-container flex justify-center items-center">
-        <img 
-          src="projects/analizador.png" 
-          alt="Aplicación de Gestión de Tareas" 
-          className="rounded-lg shadow-lg hover:opacity-80"
-        />
-      </div>
-    ),
+    imageSrc: "/projects/analizador.png",
+    imageAlt: "Aplicación de Gestión de Tareas",
     link: 'https://github.com/usuario/task_manager',
     category: 'Aplicaciones Móviles'
   },
   {
     title: 'Sistema de Control de Versiones',
-    description: 'Desarrollo de un sistema de control de versiones ligero para proyectos pequeños y medianos. Implementado en Python con un enfoque en simplicidad y eficiencia.',
-    image: (
-      <div className="img-container flex justify-center items-center">
-        <img 
-          src="projects/automata2.png" 
-          alt="Sistema de Control de Versiones" 
-          className="rounded-lg shadow-lg hover:opacity-80"
-        />
-      </div>
-    ),
+    imageSrc: "/projects/automata2.png",
+    imageAlt: "Sistema de Control de Versiones",
     link: 'https://github.com/usuario/version_control',
     category: 'Herramientas de Desarrollo'
   },
   {
     title: 'Portfolio Personal',
-    description: 'Mi sitio web personal que presenta mi trayectoria profesional, proyectos destacados y habilidades. Desarrollado con Next.js y Tailwind CSS.',
-    image: (
-      <div className="img-container flex justify-center items-center">
-        <img 
-          src="projects/reactCalculator.png" 
-          alt="Portfolio Personal" 
-          className="rounded-lg shadow-lg hover:opacity-80"
-        />
-      </div>
-    ),
+    imageSrc: "/projects/reactCalculator.png",
+    imageAlt: "Portfolio Personal",
     link: 'https://miportfolio.com',
     category: 'Desarrollo Web'
   }
 ];
+
 
 export const companies = [
   {

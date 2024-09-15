@@ -1,80 +1,73 @@
-import React, { useRef } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import Image from "next/image";
 import NotificationButton from "./githubalert";
 import { projects } from "../data/information";
 
 export function Projects() {
-  const scrollContainerRef = useRef(null);
-
-  const scrollLeft = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: -200, behavior: "smooth" });
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: 200, behavior: "smooth" });
-    }
-  };
-
   return (
     <section
       id="projects"
-      className="mt-8 mb-0 relative text-center"
-      style={{ backgroundColor: "transparent" }}
+      className="relative py-20 bg-slate-900 mx-auto"
+      style={{ width: "85%", zIndex: 1 }}
     >
-      <div className="absolute mt-4 mr-6 right-4 z-20">
-        <NotificationButton />
-      </div>
+      <div className="relative max-w-full mx-auto px-8">
+        <div className="transition duration-500 ease-in-out transform scale-100 translate-x-0 translate-y-0 opacity-100">
+          <div className="mb-12 space-y-5 md:mb-16 relative">
+            <h1 className="text-3xl font-semibold text-white md:text-5xl text-center items-center">
+              Algunos de mis proyectos
+            </h1>
+            <p className="text-xl text-gray-100 md:text-2xl text-center">
+              Esto es un poco de las cosas que hago en mis tiempos libres:
+            </p>
+          </div>
+        </div>
 
-      <h2 className="text-3xl font-bold text-gray-800 mb-4">Proyectos</h2>
-      <p className="text-lg text-gray-600 mb-4">Proyectos.</p>
-      <button
-        id="scroll-left"
-        onClick={scrollLeft}
-        className="absolute left-3 top-[60%] transform -translate-y-1/2 text-white p-2 rounded-sm z-10 shadow-sm focus:outline-none transition-transform duration-300 hover:scale-110"
-        style={{ backgroundColor: "rgba(128, 128, 128, 0.7)" }}
-      >
-        <FaChevronLeft size={24} />
-      </button>
-
-      <button
-        id="scroll-right"
-        onClick={scrollRight}
-        className="absolute right-3 top-[60%] transform -translate-y-1/2 text-white p-2 rounded-sm z-10 shadow-sm focus:outline-none transition-transform duration-300 hover:scale-110"
-        style={{ backgroundColor: "rgba(128, 128, 128, 0.7)" }}
-      >
-        <FaChevronRight size={24} />
-      </button>
-      <div
-        id="scroll-container"
-        ref={scrollContainerRef}
-        className="flex overflow-x-scroll scroll-snap-x snap-mandatory space-x-10"
-        style={{ width: "100%", scrollbarWidth: 'none', }}
-      >
-        {projects.map((project, index) => (
-          <a
-            key={index}
-            href={project.link}
-            className="group block bg-black relative rounded-lg overflow-hidden w-full max-w-[500px] flex-shrink-0 snap-center"
-          >
-            <div className="relative sm:p-8 lg:p-8 group">
-              <p className="text-sm font-medium uppercase tracking-widest text-red-400 mb-2">
-                {project.category}
-              </p>
-              <p className="text-xl font-bold text-white sm:text-2xl mb-4">
-                {project.title}
-              </p>
-              {project.image}
-              <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 transition-opacity group-hover:opacity-100">
-                <p className="text-xs sm:text-sm font-bold text-black bg-black bg-opacity-70 p-2 rounded-md mx-2 sm:mx-12 mb-4 sm:mb-12">
-                  {project.description}
-                </p>
-              </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center z-10">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="bg-white px-6 py-6 rounded-lg h-auto transform transition-transform duration-300 hover:scale-110 hover:z-50 project-card"
+              style={{
+                transition: "transform 0.3s ease, opacity 0.3s ease",
+              }}
+              onMouseEnter={() => {
+                document.querySelectorAll(".project-card").forEach((el, i) => {
+                  if (i !== index) {
+                    el.style.opacity = "0.6";
+                  }
+                });
+              }}
+              onMouseLeave={() => {
+                document.querySelectorAll(".project-card").forEach((el) => {
+                  el.style.opacity = "1";
+                });
+              }}
+            >
+              <a href={project.link} className="block">
+                <div>
+                  <h3 className="text-lg font-semibold text-black">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 text-md">{project.category}</p>
+                </div>
+                <div className="mt-4 flex justify-center">
+                  <Image
+                    src={project.imageSrc}
+                    alt={project.imageAlt}
+                    width={450}
+                    height={250}
+                    className="rounded-lg"
+                  />
+                </div>
+              </a>
             </div>
-          </a>
-        ))}
+          ))}
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <button className="px-6 py-2 font-semibold border-2 rounded-lg duration-300 hover:bg-gray-200 dark:hover:bg-gray-800 dark:border-white border-black dark:text-white text-black hover:scale-105 transform transition-transform">
+            Ver más
+          </button>
+        </div>
       </div>
     </section>
   );

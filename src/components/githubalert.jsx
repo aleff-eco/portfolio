@@ -28,28 +28,28 @@ export default function NotificationButton() {
   }, []);
 
   return (
-    <div className="notification-button">
+    <div className="notification-button fixed top-4 right-4 z-[9999]">
       <button
         id="dropdownNotificationButton"
         onClick={() => setDropdownOpen(!dropdownOpen)}
-        className="icon-button"
+        className="icon-button relative"
         type="button"
       >
         <FaGithub className="w-10 h-10 text-gray-800 dark:text-gray-200" />
-        <div className="notification-badge bg-black dark:bg-white text-white dark:text-black">
+        <div className="notification-badge bg-black dark:bg-white text-white dark:text-black absolute top-0 right-0 transform translate-x-2 -translate-y-2">
           <span>{repositories.length}</span>
         </div>
       </button>
       {dropdownOpen && (
         <div
           id="dropdownNotification"
-          className="notification-dropdown bg-white dark:bg-gray-800 shadow-lg"
+          className="notification-dropdown bg-white dark:bg-gray-800 shadow-lg absolute right-0 mt-2 w-64 z-[9999]"
           aria-labelledby="dropdownNotificationButton"
         >
           <div className="header text-black dark:text-white font-bold py-2 px-4">
             Mis proyectos populares:
           </div>
-          <div className="content">
+          <div className="content max-h-64 overflow-y-auto">
             {repositories.length === 0 ? (
               <div className="text-gray-500 dark:text-gray-400 text-sm px-4 py-2">
                 No hay proyectos populares cargados.
@@ -80,7 +80,7 @@ export default function NotificationButton() {
           <a
             href="https://github.com/aleff-eco"
             target="_blank"
-            className="w-full h-12 text-sm flex justify-center items-center text-white"
+            className="w-full h-12 text-sm flex justify-center items-center text-white bg-black dark:bg-gray-700"
           >
             <FaStar className="mr-2" />
             Ver más ({totalStars} estrellas)
