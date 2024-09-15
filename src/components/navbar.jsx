@@ -23,7 +23,7 @@ export function Navbar() {
   };
 
   return (
-    <header className="top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-5 sm:px-6 lg:px-10 bg-primary text-primary-foreground border-b">
+    <header className="top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-5 sm:px-6 lg:px-10 bg-primary text-primary-foreground ">
       <div className="flex items-center gap-6">
         <img loading="lazy" src="./navbarGif.gif" alt="GIF" className="w-8 h-8" />
       </div>

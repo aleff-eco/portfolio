@@ -37,7 +37,6 @@
 .profile-container h2,
 .profile-container h1,
 .profile-container p,
-
 .connect-button {
   margin: 10px 0;
 }
@@ -61,33 +60,41 @@
 }
 
 .connect-button {
-  background-color: #202020;
-  color: #fff;
+  background-color: hsl(var(--primary)); /* Usa el color primario definido */
+  color: hsl(var(--primary-foreground)); /* Usa el color de texto primario definido */
   padding: 10px;
   margin-top: 30px;
   border: none;
-  border-radius: 5px;
+  border-radius: var(--radius); /* Usa el radio global */
   cursor: pointer;
   text-align: center;
-  font-size: .8rem;
+  font-size: 0.8rem;
   transition: background-color 0.3s;
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
 
-
 .connect-button:hover {
-  background-color: #414141;
+  background-color: hsl(var(--secondary)); /* Usa el color secundario al hacer hover */
 }
 
+/* Modificación para el modo oscuro: gris mucho más claro */
+.dark .connect-button {
+  background-color: hsl(0 0% 60%); /* Gris mucho más claro en modo oscuro */
+  color: hsl(var(--primary-foreground)); /* Mantiene el color del texto */
+}
+
+.dark .connect-button:hover {
+  background-color: hsl(0 0% 75%); /* Un gris aún más claro en hover en modo oscuro */
+}
 .scroll-down-container {
   position: fixed;
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  color: #333;
+  color: hsl(var(--foreground)); /* Usa el color de texto */
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
@@ -100,7 +107,7 @@
 .mouse-icon {
   width: 16px;
   height: 24px;
-  border: 2px solid #333;
+  border: 2px solid hsl(var(--foreground)); /* Usa el color de borde */
   border-radius: 8px;
   margin: 10px auto 0;
   position: relative;
@@ -109,7 +116,7 @@
 .mouse-wheel {
   width: 4px;
   height: 4px;
-  background-color: #333;
+  background-color: hsl(var(--foreground)); /* Usa el color de fondo del mouse */
   border-radius: 50%;
   position: absolute;
   top: 4px;

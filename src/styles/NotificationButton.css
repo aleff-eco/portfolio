@@ -8,13 +8,12 @@
   display: inline-flex;
   align-items: center;
   font-size: 0.875rem;
-  color: #6b7280;
- 
+  color: hsl(var(--foreground)); /* Usando la variable foreground */
   transition: color 0.3s ease;
 }
 
 .icon-button:hover {
-  color: #1f2937;
+  color: hsl(var(--primary)); /* Usando la variable primary para el hover */
 }
 
 .notification-badge {
@@ -27,8 +26,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
-  background-color: #ef4444;
-  color: white;
+  background-color: hsl(var(--destructive)); /* Usando la variable destructive */
+  color: hsl(var(--destructive-foreground)); /* Usando la variable destructive-foreground */
   font-size: 1rem;
 }
 
@@ -38,8 +37,8 @@
   margin-top: 0.5rem;
   width: 22rem;
   max-height: 28rem;
-  background-color: #f9fafb;
-  border-radius: 0.5rem;
+  background-color: hsl(var(--card)); /* Usando la variable card */
+  border-radius: var(--radius); /* Usando el radio definido */
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
@@ -47,13 +46,13 @@
 .notification-dropdown .header {
   padding: 0.5rem 1rem;
   font-weight: 500;
-  color: #374151;
-  background-color: #e5e7eb;
+  color: hsl(var(--card-foreground)); /* Usando la variable card-foreground */
+  background-color: hsl(var(--secondary)); /* Usando la variable secondary */
   text-align: center;
 }
 
 .notification-dropdown .content {
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid hsl(var(--border)); /* Usando la variable border */
   max-height: 18rem;
   overflow-y: auto;
 }
@@ -63,7 +62,9 @@
   display: flex;
   flex-direction: column;
   transition: background-color 0.3s ease;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid hsl(var(--border)); /* Usando la variable border */
+  background-color: hsl(var(--card)); /* Usando la variable card */
+  color: hsl(var(--card-foreground)); /* Usando la variable card-foreground */
   white-space: normal;
   word-wrap: break-word;
 }
@@ -73,16 +74,16 @@
 }
 
 .notification-dropdown .item:hover {
-  background-color: #f3f4f6;
+  background-color: hsl(var(--secondary)); /* Usando la variable secondary para hover */
 }
 
 .notification-dropdown .see-all {
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
   text-align: center;
-  background-color: #989999;
-  color: #111827;
-  border-top: 1px solid #e5e7eb;
+  background-color: hsl(var(--secondary)); /* Usando la variable secondary */
+  color: hsl(var(--secondary-foreground)); /* Usando la variable secondary-foreground */
+  border-top: 1px solid hsl(var(--border)); /* Usando la variable border */
 }
 
 @media (max-width: 640px) {

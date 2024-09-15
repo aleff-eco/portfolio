@@ -17,7 +17,6 @@ export default function NotificationButton() {
           .sort((a, b) => b.stargazers_count - a.stargazers_count);
         setRepositories(filteredRepos);
         
-        // Aquí debes hacer el reduce sobre 'data', no 'response'
         const total = data.reduce((acc, repo) => acc + repo.stargazers_count, 0);
         setTotalStars(total);
       } catch (error) {
@@ -36,23 +35,23 @@ export default function NotificationButton() {
         className="icon-button"
         type="button"
       >
-        <FaGithub className="w-10 h-10 text-gray-800" />
-        <div className="notification-badge bg-black text-white">
+        <FaGithub className="w-10 h-10 text-gray-800 dark:text-gray-200" />
+        <div className="notification-badge bg-black dark:bg-white text-white dark:text-black">
           <span>{repositories.length}</span>
         </div>
       </button>
       {dropdownOpen && (
         <div
           id="dropdownNotification"
-          className="notification-dropdown bg-white shadow-lg"
+          className="notification-dropdown bg-white dark:bg-gray-800 shadow-lg"
           aria-labelledby="dropdownNotificationButton"
         >
-          <div className="header text-black font-bold py-2 px-4 border-b">
+          <div className="header text-black dark:text-white font-bold py-2 px-4">
             Mis proyectos populares:
           </div>
           <div className="content">
             {repositories.length === 0 ? (
-              <div className="text-gray-500 text-sm px-4 py-2">
+              <div className="text-gray-500 dark:text-gray-400 text-sm px-4 py-2">
                 No hay proyectos populares cargados.
               </div>
             ) : (
@@ -60,17 +59,17 @@ export default function NotificationButton() {
                 <a
                   href={repo.html_url}
                   target="_blank"
-                  className="item block py-2 px-4 border-b hover:bg-gray-100"
+                  className="item block py-2 px-4 border-b border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700"
                   key={repo.id}
                 >
                   <div className="w-full text-left">
-                    <div className="font-semibold text-gray-900">
+                    <div className="font-semibold text-gray-900 dark:text-gray-200">
                       {repo.name}
                     </div>
-                    <div className="text-gray-500 text-xs my-1">
+                    <div className="text-gray-500 dark:text-gray-400 text-xs my-1">
                       {repo.description || 'No description'}
                     </div>
-                    <div className="flex items-center text-gray-500 text-sm">
+                    <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
                       <FaHeart className="mr-1 text-red-500" /> {repo.stargazers_count}
                     </div>
                   </div>
@@ -81,7 +80,7 @@ export default function NotificationButton() {
           <a
             href="https://github.com/aleff-eco"
             target="_blank"
-            className="footer w-full h-12 text-sm flex justify-center items-center bg-gray-800 text-white hover:bg-gray-900"
+            className="w-full h-12 text-sm flex justify-center items-center text-white"
           >
             <FaStar className="mr-2" />
             Ver más ({totalStars} estrellas)

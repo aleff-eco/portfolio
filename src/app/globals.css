@@ -4,36 +4,37 @@
 
 @layer base {
   :root {
-    --background: 0 0% 98%; /* Soft White */
-    --foreground: 0 0% 20%; /* Dark Gray */
+    --background: 220 10% 90%; /* Soft Cool Gray */
+    --foreground: 220 22% 20%; /* Darker Cool Gray */
     --card: 0 0% 100%; /* Pure White */
-    --card-foreground: 0 0% 20%; /* Dark Gray */
-    --primary: 0 0% 10%; /* Almost Black */
+    --card-foreground: 220 15% 15%; /* Cool Gray for Cards */
+    --primary: 0 0% 25%; /* Elegant Dark Gray */
     --primary-foreground: 0 0% 98%; /* White */
-    --secondary: 0 0% 90%; /* Light Gray */
-    --secondary-foreground: 0 0% 10%; /* Dark Gray */
+    --secondary: 0 0% 50%; /* Neutral Gray */
+    --secondary-foreground: 0 0% 98%; /* White */
     --destructive: 0 72% 51%; /* Bright Red */
     --destructive-foreground: 0 0% 98%; /* White */
-    --border: 0 0% 85%; /* Light Gray */
-    --input: 0 0% 85%; /* Light Gray */
-    --ring: 0 0% 10%; /* Almost Black */
+    --border: 220 15% 80%; /* Light Cool Gray */
+    --input: 220 15% 90%; /* Light Cool Gray for Inputs */
+    --ring: 0 0% 40%; /* Darker Cool Gray for Focus Rings */
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 0 0% 15%; /* Almost Black */
-    --foreground: 0 0% 92%; /* White */
-    --card: 0 0% 15%; /* Dark Gray */
-    --card-foreground: 0 0% 70%; /* White */
-    --primary: 0 0% 98%; /* White */
-    --primary-foreground: 0 0% 10%; /* Almost Black */
-    --secondary: 0 0% 25%; /* Medium Gray */
-    --secondary-foreground: 0 0% 98%; /* White */
-    --destructive: 0 62.8% 30.6%; /* Dark Red */
+    --background: 220 22% 13%; /* Darker background for dark mode */
+    --foreground: 0 0% 90%; /* Much lighter gray for text in dark mode */
+    --card: 220 15% 25%; /* Dark Gray for cards in dark mode */
+    --card-foreground: 0 0% 90%; /* Lighter Gray for text in dark mode */
+    --primary: 0 0% 10%; /* Lighter gray for primary elements in dark mode */
+    --primary-foreground: 0 0% 98%; /* White foreground for primary elements */
+    --secondary: 0 0% 60%; /* Much lighter gray for secondary elements in dark mode */
+    --secondary-foreground: 0 0% 98%; /* White for secondary foreground */
+    --destructive: 0 65% 42%; /* Darker Red */
     --destructive-foreground: 0 0% 98%; /* White */
-    --border: 0 0% 25%; /* Dark Gray */
-    --input: 0 0% 25%; /* Dark Gray */
-    --ring: 0 0% 40%; /* Dark Gray */
+    --border: 0 0% 40%; /* Darker gray for borders */
+    --input: 0 0% 40%; /* Darker gray for inputs */
+    --ring: 0 0% 60%; /* Lighter gray for focus rings */
+    --light-gray: 0 0% 75%; /* New light gray for reuse in dark mode */
   }
 }
 

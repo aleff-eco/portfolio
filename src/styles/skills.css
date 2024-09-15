@@ -1,16 +1,47 @@
-
 @keyframes shake {
-  0% { transform: rotate(0deg); }
-  10% { transform: rotate(-10deg); }
-  20% { transform: rotate(10deg); }
-  30% { transform: rotate(-10deg); }
-  40% { transform: rotate(10deg); }
-  50% { transform: rotate(-10deg); }
-  60% { transform: rotate(10deg); }
-  70% { transform: rotate(-10deg); }
-  80% { transform: rotate(10deg); }
-  90% { transform: rotate(-10deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(-10deg);
+  }
+
+  20% {
+    transform: rotate(10deg);
+  }
+
+  30% {
+    transform: rotate(-10deg);
+  }
+
+  40% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  60% {
+    transform: rotate(10deg);
+  }
+
+  70% {
+    transform: rotate(-10deg);
+  }
+
+  80% {
+    transform: rotate(10deg);
+  }
+
+  90% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .icon-wrapper {
@@ -29,25 +60,18 @@ button {
 button.active-skill::after {
   content: '';
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 50%;
+  right: 50%;
   bottom: 0;
-  height: 2px;
-  background-color: black;
-  transform: scaleX(1);
-  transform-origin: center;
-  transition: transform 0.3s ease;
+  height: 3px;
+  background-color: hsl(var(--foreground));
+  /* Color negro por defecto para modo claro */
+  transform: translateX(-50%);
+  width: 100%;
+  transition: background-color 0.3s ease, width 0.3s ease;
 }
 
-button:not(.active-skill)::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 2px;
-  background-color: transparent;
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.3s ease;
+.dark button.active-skill::after {
+  background-color: hsl(var(--primary-foreground));
+  /* Color blanco en modo oscuro */
 }
