@@ -43,7 +43,7 @@ export function Skills() {
             className={`relative text-base font-medium transition-transform duration-300 pb-2 ${
               selectedSkillType === "technical"
                 ? "text-[hsl(var(--light-gray))] border-b-2 border-[hsl(var(--foreground))]"
-                : "text-gray-600"
+                : "text-[hsl(var(--light-gray))]"
             } hover:scale-105`}
           >
             Técnicas
@@ -53,7 +53,7 @@ export function Skills() {
             className={`relative text-base font-medium transition-transform duration-300 pb-2 ${
               selectedSkillType === "soft"
                 ? "text-[hsl(var(--light-gray))] border-b-2 border-[hsl(var(--foreground))]"
-                : "text-gray-600"
+                : "text-[hsl(var(--light-gray))]"
             } hover:scale-105`}
           >
             Blandas
@@ -66,14 +66,10 @@ export function Skills() {
               <button
                 key={category.key}
                 onClick={() => handleCategoryClick(category.key)}
-                className={`inline-flex items-center justify-center rounded-md px-4 py-2 m-2 text-sm font-medium shadow-sm underline-offset-4 transition-all duration-200 transform ${
+                className={`inline-flex items-center justify-center rounded-md px-4 py-2 m-2 text-sm font-medium shadow-2xl border-2 border-transparent hover:underline-offset-4 transition-all duration-200 transform ${
                   selectedCategory === category.key
-                    ? "border-2 text-[hsl(var(--foreground))] border-[hsl(var(--foreground))] bg-transparent scale-105 shadow-lg"
-                    : "bg-gray-500 text-white hover:bg-gray-400 hover:scale-105"
-                } dark:${
-                  selectedCategory === category.key
-                    ? "border-2 text-[hsl(var(--primary-foreground))] border-[hsl(var(--primary-foreground))] bg-transparent scale-105 shadow-lg"
-                    : "bg-gray-700 text-white hover:bg-gray-600 hover:scale-105"
+                    ? "border-2 text-[hsl(var(--foreground))] border-[hsl(var(--foreground))] bg-[hsl(var(--background))] scale-105 "
+                    : ""
                 }`}
               >
                 {category.name}
@@ -99,7 +95,7 @@ export function Skills() {
                       <div className="text-lg font-bold">{skill.name}</div>
                       <div className="bg-muted rounded-full h-2 w-24">
                         <div
-                          className="bg-[hsl(var(--light-gray))] h-2 rounded-full"
+                          className="bg-[hsl(var(--foreground))] h-2 rounded-full"
                           style={{ width: skill.level, maxWidth: "100%" }}
                         />
                       </div>

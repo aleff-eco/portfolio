@@ -34,7 +34,7 @@
     --border: 0 0% 40%; /* Darker gray for borders */
     --input: 0 0% 40%; /* Darker gray for inputs */
     --ring: 0 0% 60%; /* Lighter gray for focus rings */
-    --light-gray: 0 0% 75%; /* New light gray for reuse in dark mode */
+    --light-gray: 0 0% 95%; /* New light gray for reuse in dark mode */
   }
 }
 
