@@ -27,7 +27,7 @@ export function Navbar() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-5 bg-[hsl(var(--navbar))] dark:bg-[hsl(var(--navbar))] text-primary-foreground shadow-lg transition-all duration-300">
+    <header className="top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-5 bg-[hsl(var(--navbar))] dark:bg-[hsl(var(--navbar))] text-primary-foreground shadow-lg transition-all duration-300">
       <div className="flex items-center gap-6">
         <img loading="lazy" src="./navbarGif.gif" alt="GIF" className="w-8 h-8" />
       </div>
