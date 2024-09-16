@@ -28,7 +28,7 @@ export default function NotificationButton() {
   }, []);
 
   return (
-    <div className="notification-button fixed top-4 right-4 z-[9999]">
+    <div className="notification-button fixed top-2 right-2 z-[9999]">
       <button
         id="dropdownNotificationButton"
         onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -46,7 +46,7 @@ export default function NotificationButton() {
           className="notification-dropdown bg-white dark:bg-gray-800 shadow-lg absolute right-0 mt-2 w-64 z-[9999]"
           aria-labelledby="dropdownNotificationButton"
         >
-          <div className="header text-black dark:text-white font-bold py-2 px-4">
+          <div className="header flex justify-center items-center text-black dark:text-white font-bold h-12 py-4 px-4">
             Mis proyectos populares:
           </div>
           <div className="content max-h-64 overflow-y-auto">
@@ -80,7 +80,7 @@ export default function NotificationButton() {
           <a
             href="https://github.com/aleff-eco"
             target="_blank"
-            className="w-full h-12 text-sm flex justify-center items-center text-white bg-black dark:bg-gray-700"
+            className="header w-full h-10 text-sm flex justify-center items-center text-white bg-black dark:bg-gray-700"
           >
             <FaStar className="mr-2" />
             Ver más ({totalStars} estrellas)

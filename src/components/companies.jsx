@@ -64,13 +64,13 @@ export function Companies() {
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <div className="relative py-4 px-8 h-32 w-64 overflow-hidden rounded-lg bg-muted transition-all duration-300 transform group-hover:scale-110 group-hover:shadow-lg group-hover:rounded-lg flex justify-center items-center">
+                  <div className="relative py-4 px-8 h-32 w-64 overflow-hidden rounded-lg bg-card/70 transition-all duration-300 transform group-hover:scale-110 group-hover:shadow-lg group-hover:rounded-lg flex justify-center items-center">
                     <img
                       src={company.imageUrl}
                       alt={`${company.name} Logo`}
                       className="object-contain h-full max-w-full"
                     />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-background/80 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-card/80 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                       <h4 className="text-lg font-semibold">{company.name}</h4>
                       <p className="text-sm text-muted-foreground">
                         {company.title}

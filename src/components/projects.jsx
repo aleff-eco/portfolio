@@ -20,17 +20,17 @@ export function Projects({ children }) {
       <div className="relative max-w-full mx-auto px-8">
         <div className="transition duration-500 ease-in-out transform scale-100 translate-x-0 translate-y-0 opacity-100 relative z-30">
           <div className="mb-12 space-y-5 md:mb-16 relative">
-            <h1 className="text-3xl font-semibold text-white md:text-5xl text-center">
+            <h1 className="text-3xl font-semibold text-white md:text-5xl text-center px-2 m-4">
               Algunos de mis proyectos
             </h1>
             <p className="text-xl text-gray-100 md:text-2xl text-center">
               Esto es un poco de las cosas que hago en mis tiempos libres:
             </p>
           </div>
+        </div>
 
-          <div className="fixed top-5 right-5 z-50">
-            <NotificationButton />
-          </div>
+        <div className="absolute top-0 right-0 pl-6 z-50">
+          <NotificationButton />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center z-10">
@@ -39,7 +39,7 @@ export function Projects({ children }) {
               key={index}
               className="bg-white px-6 py-6 rounded-lg h-auto transform transition duration-300 project-card relative z-20"
               style={{
-                opacity: hoveredIndex === null || hoveredIndex === index ? 1 : 0.5,
+                opacity: hoveredIndex === null || hoveredIndex === index ? 1 : 0.65,
               }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}

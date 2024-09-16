@@ -202,47 +202,47 @@ export const experience = [
 
 export const projects = [
   {
-    title: 'Proyecto de Inteligencia Artificial',
+    title: 'Landing Page para un restaurante', 
     imageSrc: "/projects/reinaPepiada.webp",
-    imageAlt: "Proyecto de Inteligencia Artificial",
+    imageAlt: "Proyecto React creando una calculadora",
     link: 'https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png',
-    category: 'Inteligencia Artificial'
+    category: 'Diseño Web'
   },
   {
-    title: 'Proyecto de CRM',
+    title: 'CRM de usuarios',
     imageSrc: "/projects/crmUser.png",
-    imageAlt: "Proyecto de CRM",
+    imageAlt: "Proyecto de CRM pra gestion de usuarios",
     link: 'https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png',
-    category: 'Inteligencia Artificial'
+    category: 'Desarrollo Fullstack'
   },
   {
-    title: 'Sitio Web de E-commerce',
+    title: 'QUOWARE para la gestion de Negocios',
     imageSrc: "/projects/quoware.webp",
-    imageAlt: "Sitio Web de E-commerce",
+    imageAlt: "Aplicacion ",
     link: 'https://github.com/usuario/ecommerce_project',
-    category: 'Desarrollo Web'
+    category: 'Desarrollo Mobile | Disponible en Playstore'
   },
   {
-    title: 'Aplicación de Gestión de Tareas',
+    title: 'Analizador lexico, sintactico y semantico',
     imageSrc: "/projects/analizador.png",
-    imageAlt: "Aplicación de Gestión de Tareas",
+    imageAlt: "Analizador lexico, sintactico y semantico, con consola de depuración.",
     link: 'https://github.com/usuario/task_manager',
-    category: 'Aplicaciones Móviles'
+    category: 'Desarrollo Fullstack'
   },
   {
-    title: 'Sistema de Control de Versiones',
+    title: 'Automata verificador de placas vehiculares',
     imageSrc: "/projects/automata2.png",
     imageAlt: "Sistema de Control de Versiones",
     link: 'https://github.com/usuario/version_control',
     category: 'Herramientas de Desarrollo'
   },
   {
-    title: 'Portfolio Personal',
+    title: 'React creando una calculadora',
     imageSrc: "/projects/reactCalculator.png",
-    imageAlt: "Portfolio Personal",
-    link: 'https://miportfolio.com',
-    category: 'Desarrollo Web'
-  }
+    imageAlt: "Proyecto React creando una calculadora",
+    link: 'https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png',
+    category: 'Diseño Web'
+  },
 ];
 
 
