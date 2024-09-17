@@ -74,17 +74,19 @@ export function ProfileComponent() {
 
   return (
     <section className="profile-section min-100vh flex flex-col justify-center items-center bg-gray-100">
-      <div className="profile-container text-center ">
+      <div className="profile-container text-center p-4">
         <img
           src="./profilePic.jpeg"
           alt="Foto de perfil"
-          className="profile-image w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full mb-4"
+          className="profile-image w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 xl:w-72 xl:h-72 rounded-full mb-4"
         />
-        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2">¡Hola! Soy Aleff.</h2>
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2">
+          ¡Hola! Soy Aleff.
+        </h2>
         <div className="w-full h-12 flex justify-center items-center">
-          <h2 id="typewriter" className="text-xl font-semibold">{text}</h2>
+          <h2 id="typewriter" className="text-lg sm:text-xl md:text-2xl font-semibold">{text}</h2>
         </div>
-        <p className="text-md md:text-base lg:text-lg mb-4 lg:max-w-[750px] font-normal">
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-4 lg:max-w-[750px] font-normal">
           Ingeniero de software con 2 años de experiencia en desarrollo web. Me especializo en crear experiencias únicas y soluciones personalizadas.
         </p>
         <button onClick={scrollToContact} className="connect-button text-white py-2 px-4 rounded transition">

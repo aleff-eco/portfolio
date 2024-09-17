@@ -66,7 +66,7 @@ export function Skills() {
               <button
                 key={category.key}
                 onClick={() => handleCategoryClick(category.key)}
-                className={`inline-flex items-center justify-center rounded-md px-4 py-2 m-2 text-sm md:text-md font-medium shadow-2xl border-2 border-transparent hover:underline-offset-4 transition-all duration-200 transform ${
+                className={`inline-flex items-center justify-center rounded-md px-4 py-2 m-2 text-sm md:text-md font-medium shadow-2xl border-2 border-transparent hover:underline-offset-4 transition-all duration-200 hover:scale-105 transform ${
                   selectedCategory === category.key
                     ? "border-2 text-[hsl(var(--foreground))] border-[hsl(var(--foreground))] bg-[hsl(var(--background))] scale-105 "
                     : ""

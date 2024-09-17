@@ -250,7 +250,7 @@ export const projects = [
   },
   {
     title: "Aplicacion movil para consumo de una API",
-    imageSrc: "/projects/mangoAnalyzer2.png",
+    imageSrc: "/projects/mangoAnalyzer.png",
     imageAlt:
       "Aplicacion movil para consumo de una API para el analisis del mango ataulfo",
     link: "https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png",

@@ -7,10 +7,10 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="py-12 md:py-16 lg:py-20 bg-muted text-center"
+      className="py-12 md:py-16 lg:py-20 bg-background text-center"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-8">Contáctame</h2>
+        <h2 className="text-3xl font-bold mb-8 text-foreground">Contáctame</h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-[600px] mx-auto">
           Siempre estoy emocionado de conectarme con nuevas personas. No dudes
           en contactarme a través de cualquiera de los canales a continuación.
@@ -61,7 +61,7 @@ export function Contact() {
                 id="name"
                 type="text"
                 placeholder="Ingrese su nombre"
-                className="w-full p-3 border border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:border-primary dark:focus:border-primary-light rounded-lg"
+                className="w-full p-3 border border-border dark:border-border bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-200 placeholder-gray-600 dark:placeholder-light-gray focus:outline-none focus:border-primary dark:focus:border-primary-light rounded-lg"
               />
             </div>
             <div className="mb-4">
@@ -75,7 +75,7 @@ export function Contact() {
                 id="email"
                 type="email"
                 placeholder="Ingrese su correo"
-                className="w-full p-3 border border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:border-primary dark:focus:border-primary-light rounded-lg"
+                className="w-full p-3 border border-border dark:border-border bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-200 placeholder-gray-600 dark:placeholder-light-gray focus:outline-none focus:border-primary dark:focus:border-primary-light rounded-lg"
               />
             </div>
             <div className="mb-4">
@@ -89,12 +89,12 @@ export function Contact() {
                 id="message"
                 rows={5}
                 placeholder="Escriba su mensaje"
-                className="w-full p-3 border border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:border-primary dark:focus:border-primary-light rounded-lg"
+                className="w-full p-3 border border-border bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-200 placeholder-gray-600 dark:placeholder-light-gray focus:outline-none focus:border-primary dark:focus:border-primary-light rounded-lg"
               />
             </div>
             <Button
               type="submit"
-              className="w-full hover:bg-primary-dark transition-colors rounded-lg"
+              className="inline-flex items-center justify-center rounded-md px-20 py-4 m-4 text-sm md:text-md font-medium shadow-2xl border-2 border-transparent bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-primary hover:underline-offset-4 transition-all duration-200 hover:scale-105 transform"
             >
               Enviar Mensaje
             </Button>
