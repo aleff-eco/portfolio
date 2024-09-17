@@ -31,7 +31,7 @@ export function Skills() {
     : technicalSkills;
 
   return (
-    <section id="skills" className="md:py-12 lg:py-16 mb-32">
+    <section id="skills" className="md:py-12 lg:py-16">
       <div className="container mx-auto sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold md:text-3xl text-center">
           Mis habilidades
