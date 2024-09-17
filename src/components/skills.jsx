@@ -40,7 +40,7 @@ export function Skills() {
         <div className="flex justify-center space-x-8 text-center mt-6">
           <button
             onClick={() => handleSkillTypeClick("technical")}
-            className={`relative text-base font-medium transition-transform duration-300 pb-2 ${
+            className={`relative text-xl font-medium transition-transform duration-300 pb-2 ${
               selectedSkillType === "technical"
                 ? "text-[hsl(var(--light-gray))] border-b-2 border-[hsl(var(--foreground))]"
                 : "text-[hsl(var(--light-gray))]"
@@ -50,7 +50,7 @@ export function Skills() {
           </button>
           <button
             onClick={() => handleSkillTypeClick("soft")}
-            className={`relative text-base font-medium transition-transform duration-300 pb-2 ${
+            className={`relative text-xl font-medium transition-transform duration-300 pb-2 ${
               selectedSkillType === "soft"
                 ? "text-[hsl(var(--light-gray))] border-b-2 border-[hsl(var(--foreground))]"
                 : "text-[hsl(var(--light-gray))]"
@@ -66,7 +66,7 @@ export function Skills() {
               <button
                 key={category.key}
                 onClick={() => handleCategoryClick(category.key)}
-                className={`inline-flex items-center justify-center rounded-md px-4 py-2 m-2 text-sm font-medium shadow-2xl border-2 border-transparent hover:underline-offset-4 transition-all duration-200 transform ${
+                className={`inline-flex items-center justify-center rounded-md px-4 py-2 m-2 text-sm md:text-md font-medium shadow-2xl border-2 border-transparent hover:underline-offset-4 transition-all duration-200 transform ${
                   selectedCategory === category.key
                     ? "border-2 text-[hsl(var(--foreground))] border-[hsl(var(--foreground))] bg-[hsl(var(--background))] scale-105 "
                     : ""

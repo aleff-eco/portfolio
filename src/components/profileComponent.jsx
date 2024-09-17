@@ -74,17 +74,17 @@ export function ProfileComponent() {
 
   return (
     <section className="profile-section min-100vh flex flex-col justify-center items-center bg-gray-100">
-      <div className="profile-container text-center lg:pt-20">
+      <div className="profile-container text-center ">
         <img
           src="./profilePic.jpeg"
           alt="Foto de perfil"
           className="profile-image w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full mb-4"
         />
-        <h2 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2">¡Hola! Soy Aleff.</h2>
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2">¡Hola! Soy Aleff.</h2>
         <div className="w-full h-12 flex justify-center items-center">
-          <h2 id="typewriter" className="text-xl font-bold">{text}</h2>
+          <h2 id="typewriter" className="text-xl font-semibold">{text}</h2>
         </div>
-        <p className="text-sm md:text-base lg:text-lg mb-4 w-3/4">
+        <p className="text-md md:text-base lg:text-lg mb-4 lg:max-w-[750px] font-normal">
           Ingeniero de software con 2 años de experiencia en desarrollo web. Me especializo en crear experiencias únicas y soluciones personalizadas.
         </p>
         <button onClick={scrollToContact} className="connect-button text-white py-2 px-4 rounded transition">

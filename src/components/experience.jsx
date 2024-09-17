@@ -31,13 +31,26 @@ export function Experience() {
               key={index} 
               className={`experience-item py-20 flex flex-wrap md:flex-nowrap fade-in ${showMore || index < (windowWidth < 768 ? 1 : 2) ? 'show' : 'hide'}`}
             >
-              <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                <span className="font-semibold title-font text-gray-700">CATEGORY</span>
-                <span className="mt-1 text-gray-500 text-sm">{category.date}</span>
+              <div className="md:w-64 md:mb-0 mb-10 flex-shrink-0 flex flex-col">
+                <a 
+                  href={category.companyUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="font-semibold title-font text-xl text-gray-700 hover:underline"
+                >
+                  {category.company}
+                </a>
+                
+                <span className="mt-8 text-gray-500 text-sm">{category.date}</span>
               </div>
+
               <div className="md:flex-grow">
-                <h3 className="text-lg font-medium text-gray-900 title-font mb-2">{category.title}</h3>
-                <p className="leading-relaxed text-sm">{category.description}</p>
+                <h3 className="text-lg font-bold text-gray-900 title-font mb-2">
+                  {category.title}
+                </h3>
+                <p className="leading-relaxed text-sm">
+                  {category.description}
+                </p>
                 <a className="text-indigo-500 text-sm inline-flex items-center mt-4">
                   Learn More
                   <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">

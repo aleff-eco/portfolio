@@ -1,5 +1,5 @@
 // src\data\information.jsx
-import Image from 'next/image';
+import Image from "next/image";
 
 import {
   FaComments as CommunicationIcon,
@@ -31,15 +31,13 @@ import {
   FaBitbucket as BitbucketIcon,
 } from "react-icons/fa";
 
-import {
-  RiTailwindCssFill as TailwindIcon
-} from "react-icons/ri";
+import { RiTailwindCssFill as TailwindIcon } from "react-icons/ri";
 
 export const words = [
   "Ingeniero de software!",
   "Desarrollador web!",
   "Desarrollador Full-Stack!",
-  "(⌐■_■)"
+  "(⌐■_■)",
 ];
 
 export const technicalSkills = [
@@ -182,105 +180,135 @@ export const categories = [
   { name: "Herramientas", key: "tool" },
 ];
 
-export const experience = [
+export const companies = [
   {
-    title: 'Bitters hashtag waistcoat fashion axe chia unicorn',
-    date: '12 Jun 2019',
-    description: 'Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.'
+    name: "HitechPro",
+    title: "Consultor TI",
+    imageUrl: "/experience/htpro.svg",
+    link: "https://htpro.dev/",
   },
   {
-    title: 'Meditation bushwick direct trade taxidermy shaman',
-    date: '12 Jun 2019',
-    description: 'Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.'
+    name: "CYBAC",
+    title: "Hosting - Soluciones TI",
+    imageUrl: "/experience/cybac.svg",
+    link: "https://grupocybac.com/",
   },
   {
-    title: 'Woke master cleanse drinking vinegar salvia',
-    date: '12 Jun 2019',
-    description: 'Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.'
-  }
+    name: "Rufino Tamayo",
+    title: "Centro educativo",
+    imageUrl: "/experience/rufino.png",
+    link: "https://www.rufinotamayo.edu.mx/",
+  },
+  {
+    name: "Wax Revolution",
+    title: "Centro de belleza - Spa",
+    imageUrl: "/experience/wax.avif",
+    link: "https://waxrevolution.com/",
+  },
+  {
+    name: "San Ángel",
+    title: "Grupo Dental ",
+    imageUrl: "/experience/dental.png",
+    link: "https://www.instagram.com/grupodentalsanangel?igsh=bzA1M2R6NWlxdGd5",
+  },
+  {
+    name: "D BeefMax",
+    title: "Tienda de carnes",
+    imageUrl: "/experience/dbeef.png",
+    link: "https://www.facebook.com/profile.php?id=61563282854180",
+  },
 ];
 
 export const projects = [
   {
-    title: 'Landing Page para un restaurante', 
+    title: "Landing Page para un restaurante",
     imageSrc: "/projects/reinaPepiada.webp",
     imageAlt: "Proyecto React creando una calculadora",
-    link: 'https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png',
-    category: 'Diseño Web'
+    link: "https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png",
+    category: "Diseño Web",
   },
   {
-    title: 'CRM de usuarios',
+    title: "CRM de usuarios",
     imageSrc: "/projects/crmUser.png",
     imageAlt: "Proyecto de CRM pra gestion de usuarios",
-    link: 'https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png',
-    category: 'Desarrollo Fullstack'
+    link: "https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png",
+    category: "Desarrollo Fullstack",
   },
   {
-    title: 'QUOWARE para la gestion de Negocios',
+    title: "QUOWARE para la gestion de Negocios",
     imageSrc: "/projects/quoware.webp",
     imageAlt: "Aplicacion ",
-    link: 'https://github.com/usuario/ecommerce_project',
-    category: 'Desarrollo Mobile | Disponible en Playstore'
+    link: "https://github.com/usuario/ecommerce_project",
+    category: "Desarrollo Mobile | Disponible en Playstore",
   },
   {
-    title: 'Analizador lexico, sintactico y semantico',
+    title: "Red neuronal para clasificación de imagenes",
+    imageSrc: "/projects/redNeuronal.png",
+    imageAlt: "Red neuronal para clasificación del mango ataulfo",
+    link: "https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png",
+    category: "Desarrollo Backend | IA",
+  },
+  {
+    title: "Aplicacion movil para consumo de una API",
+    imageSrc: "/projects/mangoAnalyzer2.png",
+    imageAlt:
+      "Aplicacion movil para consumo de una API para el analisis del mango ataulfo",
+    link: "https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png",
+    category: "Diseño Mobile",
+  },
+  {
+    title: "Analizador lexico, sintactico y semantico",
     imageSrc: "/projects/analizador.png",
-    imageAlt: "Analizador lexico, sintactico y semantico, con consola de depuración.",
-    link: 'https://github.com/usuario/task_manager',
-    category: 'Desarrollo Fullstack'
+    imageAlt:
+      "Analizador lexico, sintactico y semantico, con consola de depuración.",
+    link: "https://github.com/usuario/task_manager",
+    category: "Desarrollo Fullstack",
   },
   {
-    title: 'Automata verificador de placas vehiculares',
+    title: "Automata verificador de placas vehiculares",
     imageSrc: "/projects/automata2.png",
     imageAlt: "Sistema de Control de Versiones",
-    link: 'https://github.com/usuario/version_control',
-    category: 'Herramientas de Desarrollo'
+    link: "https://github.com/usuario/version_control",
+    category: "Herramientas de Desarrollo",
   },
   {
-    title: 'React creando una calculadora',
+    title: "React creando una calculadora",
     imageSrc: "/projects/reactCalculator.png",
     imageAlt: "Proyecto React creando una calculadora",
-    link: 'https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png',
-    category: 'Diseño Web'
+    link: "https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png",
+    category: "Diseño Web",
   },
 ];
 
-
-export const companies = [
+export const experience = [
   {
-    name: 'HitechPro',
-    title: 'Consultor TI',
-    imageUrl: '/experience/htpro.svg',
-    link: 'https://htpro.dev/'
+    company: "High-Tech",
+    companyUrl: "https://htpro.dev/",
+    title: "Desarrollador Backend",
+    date: "Mar 2024 - Actualmente",
+    description: "Desarrollé con PHP, Laravel, Docker, MySQL y JavaScript.",
   },
   {
-    name: 'CYBAC',
-    title: 'Hosting - Soluciones TI',
-    imageUrl: '/experience/cybac.svg',
-    link: 'https://grupocybac.com/'
+    company: "High-Tech",
+    companyUrl: "https://htpro.dev/",
+    title: "Desarrollador Full-Stack",
+    date: "2023",
+    description: "Desarrollé con PHP, Laravel, MySQL, JavaScript y React."
   },
   {
-    name: 'Rufino Tamayo',
-    title: 'Centro educativo',
-    imageUrl: '/experience/rufino.png',
-    link: 'https://www.rufinotamayo.edu.mx/'
+    company: "High-Tech",
+    companyUrl: "https://htpro.dev/",
+    title: "Desarrollador Full-Stack",
+    date: "2023",
+    description:
+      "Desarrollé con PHP, Laravel, MySQL, JavaScript y React. Di mantenimiento y mejoré el proyecto, asegurando funcionalidad y rendimiento. Desarrollé e integré servicios. Expandí las capacidades del proyecto y mejoré la experiencia del usuario. Implementé y optimicé funcionalidades. Contribuí a la eficiencia y escalabilidad del sistema.",
   },
   {
-    name: 'Wax Revolution',
-    title: 'Centro de belleza - Spa',
-    imageUrl: '/experience/wax.avif',
-    link: 'https://waxrevolution.com/'
-  },
-  {
-    name: 'San Ángel',
-    title: 'Grupo Dental ',
-    imageUrl: '/experience/dental.png',
-    link: 'https://www.instagram.com/grupodentalsanangel?igsh=bzA1M2R6NWlxdGd5'
-  },
-  {
-    name: 'D BeefMax',
-    title: 'Tienda de carnes',
-    imageUrl: '/experience/dbeef.png',
-    link: 'https://www.facebook.com/profile.php?id=61563282854180'
+    company: "High-Tech",
+    companyUrl: "https://htpro.dev/",
+    title: "Desarrollador Full-Stack",
+    date: "2023",
+    description:
+      "Desarrollé con PHP, Laravel, MySQL, JavaScript y React. Di mantenimiento y mejoré el proyecto, asegurando funcionalidad y rendimiento. Desarrollé e integré servicios. Expandí las capacidades del proyecto y mejoré la experiencia del usuario. Implementé y optimicé funcionalidades. Contribuí a la eficiencia y escalabilidad del sistema.",
   },
 ];

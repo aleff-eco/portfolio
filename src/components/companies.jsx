@@ -39,7 +39,7 @@ export function Companies() {
           <h2 className="text-3xl font-bold tracking-tight sm:text-2xl md:text-3xl">
             Compañías a las que he aportado valor
           </h2>
-          <p className="lg:max-w-[700px] p-2 text-muted-foreground md:text-lg/relaxed text-center">
+          <p className="lg:max-w-[750px] p-2 text-xl text-muted-foreground text-center">
             He tenido el privilegio de trabajar con estas increíbles empresas y
             aportarles valor.
           </p>
@@ -55,7 +55,7 @@ export function Companies() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="flex pt-6 gap-6 px-4 md:gap-8 md:px-6 w-full">
+          <div className="flex py-6 gap-6 px-4 md:gap-8 md:px-6 w-full">
             {[...companies, ...companies, ...companies, ...companies].map(
               (company, index) => (
                 <div
