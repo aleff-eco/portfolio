@@ -15,7 +15,7 @@ import 'aos/dist/aos.css'; // Importa los estilos de AOS
 export default function Portfolio() {
   useEffect(() => {
     AOS.init({
-      offset: 200,
+      offset: 250,
       duration: 600,
       easing: 'ease-in-out-sine',
     });

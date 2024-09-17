@@ -55,7 +55,7 @@ export function Companies() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="flex pt-6 gap-6 px-4 md:gap-8 md:px-6 h-48 w-full">
+          <div className="flex pt-6 gap-6 px-4 md:gap-8 md:px-6 w-full">
             {[...companies, ...companies, ...companies, ...companies].map(
               (company, index) => (
                 <div

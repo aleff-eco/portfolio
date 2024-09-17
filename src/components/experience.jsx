@@ -23,9 +23,9 @@ export function Experience() {
 
   return (
     <section id="experience" className="body-font overflow-hidden">
-      <div className="container px-24 py-24 mx-auto">
-        <h2 className="text-3xl font-bold mb-8 text-center">Experiencia</h2>
-        <div className="-my-8 divide-y-2 divide-gray-100">
+      <div className="container px-20 py-20 mx-auto">
+        <h2 className="text-3xl font-bold mt-12 text-center">Experiencia</h2>
+        <div className=" divide-y-2 divide-gray-100">
           {experience.map((category, index) => (
             <div 
               key={index} 
@@ -49,9 +49,9 @@ export function Experience() {
             </div>
           ))}
         </div>
-        <div className="text-center mt-8 fade-in">
+        <div className="text-center mt-2 fade-in">
           <button
-            className="bg-indigo-500 text-white py-2 px-4 rounded transition-transform duration-500 ease-in-out hover:scale-105"
+            className="bg-indigo-500 text-white px-4 rounded transition-transform duration-500 ease-in-out hover:scale-105"
             onClick={() => setShowMore(!showMore)}
           >
             {showMore ? 'Ver menos' : (
