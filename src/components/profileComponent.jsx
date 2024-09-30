@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import '../styles/ProfileComponent.css';
-import { words } from '@/data/information';
+import React, { useState, useEffect } from "react";
+import "../styles/ProfileComponent.css";
+import { words } from "@/data/information";
 
 export function ProfileComponent() {
   const [scrollY, setScrollY] = useState(0);
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
@@ -14,8 +14,8 @@ export function ProfileComponent() {
       setScrollY(window.scrollY);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export function ProfileComponent() {
 
       if (!isDeleting && text === fullText) {
         setTimeout(() => setIsDeleting(true), 1000);
-      } else if (isDeleting && text === '') {
+      } else if (isDeleting && text === "") {
         setIsDeleting(false);
         setLoopNum(loopNum + 1);
       }
@@ -44,10 +44,13 @@ export function ProfileComponent() {
   }, [text, isDeleting, loopNum]);
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById('contact');
+    const contactSection = document.getElementById("contact");
     if (contactSection) {
       const yOffset = 30; // Margen superior
-      const targetPosition = contactSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      const targetPosition =
+        contactSection.getBoundingClientRect().top +
+        window.pageYOffset +
+        yOffset;
       const startPosition = window.pageYOffset;
       const distance = targetPosition - startPosition;
       const duration = 4000; // Duración en milisegundos para hacer el movimiento más suave
@@ -63,7 +66,12 @@ export function ProfileComponent() {
       const animation = (currentTime) => {
         if (startTime === null) startTime = currentTime;
         const timeElapsed = currentTime - startTime;
-        const run = easeInOutCubic(timeElapsed, startPosition, distance, duration);
+        const run = easeInOutCubic(
+          timeElapsed,
+          startPosition,
+          distance,
+          duration
+        );
         window.scrollTo(0, run);
         if (timeElapsed < duration) requestAnimationFrame(animation);
       };
@@ -78,21 +86,35 @@ export function ProfileComponent() {
         <img
           src="./profilePic.jpeg"
           alt="Foto de perfil"
-          className="profile-image w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 xl:w-72 xl:h-72 rounded-full mb-4"
+          className="profile-image w-24 h-24 sm:w-32 sm:h-32 lg:w-48 lg:h-48 rounded-full "
         />
         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2">
           ¡Hola! Soy Aleff.
         </h2>
         <div className="w-full h-12 flex justify-center items-center">
-          <h2 id="typewriter" className="text-lg sm:text-xl md:text-2xl font-semibold">{text}</h2>
+          <h2
+            id="typewriter"
+            className="text-lg sm:text-xl md:text-2xl font-semibold"
+          >
+            {text}
+          </h2>
         </div>
-        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-4 lg:max-w-[750px] font-normal">
-          Ingeniero de software con 2 años de experiencia en desarrollo web. Me especializo en crear experiencias únicas y soluciones personalizadas.
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-2 lg:max-w-[750px] font-normal">
+          Ingeniero de software con 2 años de experiencia en desarrollo web. Me
+          especializo en crear experiencias únicas y soluciones personalizadas.
         </p>
-        <button onClick={scrollToContact} className="connect-button text-white py-2 px-4 rounded transition">
+        <button
+          onClick={scrollToContact}
+          className="connect-button text-white px-4 rounded transition"
+        >
           Contáctame
         </button>
-        <div className={`scroll-down-container ${scrollY > 10 ? 'hidden' : ''} mt-4`}>
+
+        <div
+          className={`scroll-down-container ${
+            scrollY > 10 ? "hidden" : ""
+          } mt-4`}
+        >
           <p className="text-sm">Deslizar</p>
           <div className="mouse-icon mt-2">
             <div className="mouse-wheel w-4 h-8 bg-gray-600 rounded"></div>

@@ -10,11 +10,6 @@
 
 .profile-container {
   text-align: center;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: -10%;
 }
 
 .profile-image {
@@ -29,8 +24,8 @@
 
 @media (max-width: 768px) {
   .profile-image {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
   }
 }
 
@@ -38,7 +33,7 @@
 .profile-container h1,
 .profile-container p,
 .connect-button {
-  margin: 10px 0;
+  margin: 8px 0;
 }
 
 .profile-container h2 {
@@ -56,16 +51,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -10%;
 }
 
 .connect-button {
-  background-color: hsl(var(--primary)); /* Usa el color primario definido */
-  color: hsl(var(--primary-foreground)); /* Usa el color de texto primario definido */
-  padding: 10px;
-  margin-top: 30px;
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  padding: 12px;
+  margin-top: 10%;
   border: none;
-  border-radius: var(--radius); /* Usa el radio global */
+  border-radius: var(--radius);
   cursor: pointer;
   text-align: center;
   font-size: 0.8rem;
@@ -76,25 +70,25 @@
 }
 
 .connect-button:hover {
-  background-color: hsl(var(--secondary)); /* Usa el color secundario al hacer hover */
+  background-color: hsl(var(--secondary));
 }
 
-/* Modificación para el modo oscuro: gris mucho más claro */
 .dark .connect-button {
-  background-color: hsl(0 0% 60%); /* Gris mucho más claro en modo oscuro */
-  color: hsl(var(--primary-foreground)); /* Mantiene el color del texto */
+  background-color: hsl(0 0% 60%);
+  color: hsl(var(--primary-foreground));
 }
 
 .dark .connect-button:hover {
-  background-color: hsl(0 0% 75%); /* Un gris aún más claro en hover en modo oscuro */
+  background-color: hsl(0 0% 75%);
 }
+
 .scroll-down-container {
   position: fixed;
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  color: hsl(var(--foreground)); /* Usa el color de texto */
+  color: hsl(var(--foreground));
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
@@ -107,7 +101,7 @@
 .mouse-icon {
   width: 16px;
   height: 24px;
-  border: 2px solid hsl(var(--foreground)); /* Usa el color de borde */
+  border: 2px solid hsl(var(--foreground));
   border-radius: 8px;
   margin: 10px auto 0;
   position: relative;
@@ -116,7 +110,7 @@
 .mouse-wheel {
   width: 4px;
   height: 4px;
-  background-color: hsl(var(--foreground)); /* Usa el color de fondo del mouse */
+  background-color: hsl(var(--foreground));
   border-radius: 50%;
   position: absolute;
   top: 4px;

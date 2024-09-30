@@ -45,12 +45,12 @@ export function Companies() {
           </p>
         </div>
         <div
-          className="flex w-full overflow-x-auto snap-x snap-mandatory scrollbar-hide"
+          className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide"
           ref={scrollRef}
           style={{
             scrollbarWidth: "none",
             WebkitOverflowScrolling: "touch",
-            width: "98.8vw",
+            width: "98.6vw",
           }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
