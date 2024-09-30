@@ -55,7 +55,7 @@ export default function NotificationButton() {
       {dropdownOpen && (
         <div
           id="dropdownNotification"
-          className="notification-dropdown bg-[hsl(var(--background))] dark:bg-gray-800 shadow-lg absolute right-0 mt-2 w-64 z-[9999]"
+          className="notification-dropdown bg-[hsl(var(--background))] dark:bg-gray-800 shadow-lg absolute right-0 mt-2 lg:w-64 sm:w-44 z-[9999]"
           aria-labelledby="dropdownNotificationButton"
         >
           <div className="header bg-navbar text-primary-foreground flex justify-center items-center font-bold h-12 py-4 px-4">
