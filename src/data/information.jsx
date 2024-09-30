@@ -224,14 +224,14 @@ export const projects = [
     title: "Landing Page para un restaurante",
     imageSrc: "/projects/reinaPepiada.webp",
     imageAlt: "Proyecto React creando una calculadora",
-    link: "https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png",
+    link: "https://github.com/aleff-eco/reina_pepiada",
     category: "Diseño Web",
   },
   {
     title: "CRM de usuarios",
     imageSrc: "/projects/crmUser.png",
     imageAlt: "Proyecto de CRM pra gestion de usuarios",
-    link: "https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png",
+    link: "https://github.com/aleff-eco/Crud-PHP-Laravel",
     category: "Desarrollo Fullstack",
   },
   {
@@ -245,7 +245,7 @@ export const projects = [
     title: "Red neuronal para clasificación de imagenes",
     imageSrc: "/projects/redNeuronal.png",
     imageAlt: "Red neuronal para clasificación del mango ataulfo",
-    link: "https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png",
+    link: "https://github.com/aleff-eco/Red-neuronal-Clasificadora",
     category: "Desarrollo Backend | IA",
   },
   {
@@ -253,7 +253,7 @@ export const projects = [
     imageSrc: "/projects/mangoAnalyzer.png",
     imageAlt:
       "Aplicacion movil para consumo de una API para el analisis del mango ataulfo",
-    link: "https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png",
+    link: "https://github.com/aleff-eco/Mobile-App-Ataulfo",
     category: "Diseño Mobile",
   },
   {

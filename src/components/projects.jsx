@@ -69,7 +69,7 @@ export function Projects({ children }) {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <a href={project.link} className="block">
+              <a href={project.link} target="_blank" className="block">
                 <div>
                   <h3 className="text-lg font-semibold text-black">
                     {project.title}

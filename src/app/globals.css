@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --navbar:  220 22% 22%;
+    --navbar:  220 22% 12%;
     --background: 220 15% 95%; /* Soft Cool Gray */
     --foreground: 220 22% 20%; /* Darker Cool Gray */
     --card: 0 0% 100%; /* Pure White */
