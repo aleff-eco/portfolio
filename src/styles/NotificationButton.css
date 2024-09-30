@@ -51,7 +51,7 @@
 }
 
 .notification-dropdown .header {
-  background-color: hsl(var(--navbar));
+  background-color: hsl(var(--primary));
 }
 
 .notification-dropdown .footer {
@@ -83,12 +83,12 @@
 
 @media (max-width: 640px) {
   .notification-dropdown {
-    width: 16rem; /* Medium screens (tablets, small desktops) */
+    width: 18rem; /* Medium screens (tablets, small desktops) */
   }
 }
 
 @media (max-width: 480px) {
   .notification-dropdown {
-    width: 14rem; /* Small screens (phones) */
+    width: 16rem; /* Small screens (phones) */
   }
 }

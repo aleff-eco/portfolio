@@ -58,7 +58,7 @@ export default function NotificationButton() {
           className="notification-dropdown bg-[hsl(var(--background))] dark:bg-gray-800 shadow-lg absolute right-0 mt-2 lg:w-64 sm:w-44 z-[9999]"
           aria-labelledby="dropdownNotificationButton"
         >
-          <div className="header bg-navbar text-primary-foreground flex justify-center items-center font-bold h-12 py-4 px-4">
+          <div className="header bg-[hsl(var(--navbar))] dark:bg-[hsl(var(--navbar))] text-primary-foreground flex justify-center items-center font-bold h-12 py-4 px-4">
             Mis proyectos populares:
           </div>
           <div className="content max-h-64 overflow-y-auto">
