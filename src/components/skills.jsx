@@ -105,7 +105,7 @@ export function Skills() {
               : softSkills.map((skill) => (
                   <div
                     key={skill.name}
-                    className="flex flex-col items-center gap-2 mt-8"
+                    className="flex flex-col items-center gap-2 mt-8 text-center justify-center"
                   >
                     <div className="bg-muted rounded-md flex items-center justify-center w-12 h-12 icon-wrapper">
                       {skill.icon}

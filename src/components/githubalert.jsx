@@ -1,26 +1,32 @@
-import { useState, useEffect } from 'react';
-import { FaGithub, FaHeart, FaStar } from 'react-icons/fa';
-import '../styles/NotificationButton.css';
+import { useState, useEffect } from "react";
+import { FaGithub, FaHeart, FaStar } from "react-icons/fa";
+import "../styles/NotificationButton.css";
 
 export default function NotificationButton() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [repositories, setRepositories] = useState([]);
   const [totalStars, setTotalStars] = useState(0);
+  const [hovered, setHovered] = useState(false); // Estado para hover
 
   useEffect(() => {
     const fetchPopularRepositories = async () => {
       try {
-        const response = await fetch('https://api.github.com/users/aleff-eco/repos');
+        const response = await fetch(
+          "https://api.github.com/users/aleff-eco/repos"
+        );
         const data = await response.json();
         const filteredRepos = data
-          .filter(repo => repo.stargazers_count >= 3)
+          .filter((repo) => repo.stargazers_count >= 3)
           .sort((a, b) => b.stargazers_count - a.stargazers_count);
         setRepositories(filteredRepos);
-        
-        const total = data.reduce((acc, repo) => acc + repo.stargazers_count, 0);
+
+        const total = data.reduce(
+          (acc, repo) => acc + repo.stargazers_count,
+          0
+        );
         setTotalStars(total);
       } catch (error) {
-        console.error('Error fetching repositories:', error);
+        console.error("Error fetching repositories:", error);
       }
     };
 
@@ -34,28 +40,34 @@ export default function NotificationButton() {
         onClick={() => setDropdownOpen(!dropdownOpen)}
         className="icon-button relative"
         type="button"
+        onMouseEnter={() => setHovered(true)} // Evento onMouseEnter
+        onMouseLeave={() => setHovered(false)} // Evento onMouseLeave
       >
-        <FaGithub className="w-10 h-10 text-gray-800 dark:text-gray-200" />
-        <div className="notification-badge bg-black dark:bg-white text-white dark:text-black absolute top-0 right-0 transform translate-x-2 -translate-y-2">
+        <FaGithub
+          className={`w-10 h-10 text-foreground dark:text-foreground ${
+            hovered ? "hovered-github" : ""
+          }`}
+        />
+        <div className="notification-badge absolute top-0 right-0 transform translate-x-2 -translate-y-2">
           <span>{repositories.length}</span>
         </div>
       </button>
       {dropdownOpen && (
         <div
           id="dropdownNotification"
-          className="notification-dropdown bg-white dark:bg-gray-800 shadow-lg absolute right-0 mt-2 w-64 z-[9999]"
+          className="notification-dropdown bg-[hsl(var(--background))] dark:bg-gray-800 shadow-lg absolute right-0 mt-2 w-64 z-[9999]"
           aria-labelledby="dropdownNotificationButton"
         >
-          <div className="header flex justify-center items-center text-black dark:text-white font-bold h-12 py-4 px-4">
+          <div className="header bg-navbar text-primary-foreground flex justify-center items-center font-bold h-12 py-4 px-4">
             Mis proyectos populares:
           </div>
           <div className="content max-h-64 overflow-y-auto">
             {repositories.length === 0 ? (
-              <div className="text-gray-500 dark:text-gray-400 text-sm px-4 py-2">
+              <div className="text-primary-foreground text-sm px-4 py-2">
                 No hay proyectos populares cargados.
               </div>
             ) : (
-              repositories.map(repo => (
+              repositories.map((repo) => (
                 <a
                   href={repo.html_url}
                   target="_blank"
@@ -63,14 +75,15 @@ export default function NotificationButton() {
                   key={repo.id}
                 >
                   <div className="w-full text-left">
-                    <div className="font-semibold text-gray-900 dark:text-gray-200">
+                    <div className="font-semibold text-[hsl(var(--foreground))]">
                       {repo.name}
                     </div>
-                    <div className="text-gray-500 dark:text-gray-400 text-xs my-1">
-                      {repo.description || 'No description'}
+                    <div className="text-[hsl(var(--foreground))] text-xs my-1">
+                      {repo.description || "No description"}
                     </div>
-                    <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
-                      <FaHeart className="mr-1 text-red-500" /> {repo.stargazers_count}
+                    <div className="flex items-center text-[hsl(var(--foreground))] text-sm">
+                      <FaHeart className="mr-1 text-destructive" />{" "}
+                      {repo.stargazers_count}
                     </div>
                   </div>
                 </a>
@@ -80,7 +93,7 @@ export default function NotificationButton() {
           <a
             href="https://github.com/aleff-eco"
             target="_blank"
-            className="header w-full h-10 text-sm flex justify-center items-center text-white bg-black dark:bg-gray-700"
+            className="footer w-full h-10 text-sm flex justify-center items-center bg-primary text-primary-foreground"
           >
             <FaStar className="mr-2" />
             Ver más ({totalStars} estrellas)

@@ -8,12 +8,12 @@
   display: inline-flex;
   align-items: center;
   font-size: 0.875rem;
-  color: hsl(var(--foreground));
   transition: color 0.3s ease;
 }
 
-.icon-button:hover {
-  color: hsl(var(--primary));
+.hovered-github {
+  opacity: 0.6;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .notification-badge {
@@ -46,13 +46,16 @@
 .notification-dropdown .header {
   padding: 0.5rem 1rem;
   font-weight: 500;
-  color: hsl(var(--card-foreground));
-  background-color: hsl(var(--secondary));
+  text-align: center;
+}
+
+.notification-dropdown .footer {
+  padding: 0.5rem 1rem;
+  font-weight: 500;
   text-align: center;
 }
 
 .notification-dropdown .content {
-  border-top: 1px solid hsl(var(--border));
   max-height: 18rem;
   overflow-y: auto;
 }
@@ -62,9 +65,6 @@
   display: flex;
   flex-direction: column;
   transition: background-color 0.3s ease;
-  border-bottom: 1px solid hsl(var(--border)); 
-  background-color: hsl(var(--card)); 
-  color: hsl(var(--card-foreground)); 
   white-space: normal;
   word-wrap: break-word;
 }
@@ -81,9 +81,6 @@
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
   text-align: center;
-  background-color: hsl(var(--secondary));
-  color: hsl(var(--secondary-foreground));
-  border-top: 1px solid hsl(var(--border));
 }
 
 @media (max-width: 640px) {
@@ -98,30 +95,33 @@
   }
 }
 
-.notification-dropdown .content {
-  border-top: 1px solid hsl(var(--border));
-  max-height: 18rem;
-  overflow-y: auto;
-  
-  scrollbar-width: thin; /* Para Firefox */
-  scrollbar-color: #888 #f1f1f1; /* Para Firefox */
+.notification-dropdown {
+  position: absolute;
+  right: 0;
+  margin-top: 0.5rem;
+  width: 22rem;
+  max-height: 28rem;
+  background-color: hsl(var(--background)); /* Soft Cool Gray */
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-.notification-dropdown .content::-webkit-scrollbar {
-  width: 8px; 
+.notification-dropdown .header {
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  text-align: center;
+  background-color: hsl(var(--navbar));
 }
 
-.notification-dropdown .content::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
+.notification-dropdown .footer {
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  text-align: center;
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
 }
 
-.notification-dropdown .content::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 10px;
-  border: 2px solid #f1f1f1;
-}
-
-.notification-dropdown .content::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
+.notification-dropdown .item:hover {
+  background-color: hsl(var(--secondary));
 }
