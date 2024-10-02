@@ -1,0 +1,26 @@
+input,
+textarea {
+    color: rgb(37, 37, 37) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgb(37, 37, 37) !important;
+}
+
+input,
+textarea {
+    background-color: white !important;
+    border-color: rgb(37, 37, 37) !important;
+}
+
+.dark input,
+.dark textarea {
+    color:  220 22% 12% !important;
+    background-color: white !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+    color: rgb(37, 37, 37) !important;
+}

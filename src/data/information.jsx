@@ -235,7 +235,7 @@ export const companies = [
   {
     name: "REICHSTAG",
     title: "Edificaciones",
-    imageUrl: "/experience/reichstag.jpeg",
+    imageUrl: "/experience/reichstag.png",
     link: "https://reichstag.com.mx/",
   },
 ];
