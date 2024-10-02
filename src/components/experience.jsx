@@ -35,7 +35,7 @@ export function Experience() {
                   : "hide"
               }`}
             >
-              <div className="md:w-64 md:mb-0 mb-10 flex-shrink-0 flex flex-col overflow-hidden">
+              <div className="md:w-1/4 md:mb-0 mb-10 flex-shrink-0 flex flex-col overflow-hidden">
                 <div className="flex items-center">
                   <span className="icon-wrapper pr-2">{category.icon}</span>
                   <a

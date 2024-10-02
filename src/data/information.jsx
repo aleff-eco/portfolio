@@ -361,7 +361,7 @@ export const experience = [
   {
     icon: <LuSchool className="w-6 h-6" />,
     company: "Universidad Politécnica de Chiapas",
-    companyUrl: "https://upchiapas.edu.mx/",
+    companyUrl: "https://www.upchiapas.edu.mx/",
     title: "Ingeniera en Software",
     date: "2020 - 2023",
     description:

@@ -46,6 +46,20 @@
     display: none;
   }
   
+  @media (max-width: 768px) {
+    .experience-item {
+      flex-direction: column; /* Fuerza que los elementos se apilen verticalmente en pantallas pequeñas */
+    }
+  
+    .icon-wrapper {
+      margin-bottom: 10px; /* Agrega espacio entre el ícono y el texto en pantallas pequeñas */
+    }
+  
+    a.title-font {
+      white-space: normal; /* Asegura que el texto no se corte y se ajuste a varias líneas */
+    }
+  }
+  
   @media (max-width: 767px) {
     .experience-item.show {
       display: flex;
@@ -61,3 +75,14 @@
       display: flex;
     }
   }
+
+  .title-font {
+    white-space: normal; /* Permite que el texto ocupe varias líneas si es necesario */
+    word-wrap: break-word; /* Rompe las palabras largas si es necesario */
+  }
+  
+  .truncate {
+    white-space: normal; /* Esto también ayudará a evitar el truncamiento */
+    overflow: visible; /* Asegura que el texto no se corte */
+  }
+  
