@@ -33,7 +33,7 @@
 .profile-container h1,
 .profile-container p,
 .connect-button {
-  margin: 8px 0;
+  margin: 0 0;
 }
 
 .profile-container h2 {
@@ -57,7 +57,7 @@
   background-color: hsl(var(--primary));
   color: hsl(var(--primary-foreground));
   padding: 12px;
-  margin-top: 10%;
+  margin-top: 4%;
   border: none;
   border-radius: var(--radius);
   cursor: pointer;
