@@ -1,6 +1,7 @@
 import { Chakra_Petch } from "next/font/google"; // Importar la fuente Chakra Petch
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react"
 
 // Importar Chakra Petch con los pesos disponibles
 const chakraPetch = Chakra_Petch({
@@ -37,6 +38,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
+      <Analytics/>
       <SpeedInsights />
       {/* Aplicar la fuente Chakra Petch globalmente */}
       <body className={chakraPetch.className}>{children}</body>
