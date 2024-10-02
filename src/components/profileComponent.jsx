@@ -100,7 +100,7 @@ export function ProfileComponent() {
           </h2>
         </div>
         <p className="text-sm sm:text-base md:text-md lg:text-md xl:text-2xl lg:max-w-[750px] font-normal">
-          Ingeniero de software con más de 2 años de experiencia en el
+          Ingeniero de software con más de 2 años de trayectoria en el
           desarrollo web. Me especializo en crear experiencias únicas y
           soluciones personalizadas.
         </p>

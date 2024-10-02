@@ -35,6 +35,10 @@ import { SiNextdotjs as NextjsIcon } from "react-icons/si";
 
 import { RiTailwindCssFill as TailwindIcon } from "react-icons/ri";
 
+import { RiHomeOfficeLine } from "react-icons/ri";
+
+import { MdOutlineWork } from "react-icons/md";
+
 export const words = [
   "¡Ingeniero de software!",
   "¡Desarrollador web!",
@@ -303,28 +307,57 @@ export const projects = [
 
 export const experience = [
   {
-    company: "High-Tech",
-    companyUrl: "https://htpro.dev/",
-    title: "Desarrollador Backend",
-    date: "Mar 2024 - Actualmente",
-    description: "Desarrollé con PHP, Laravel, Docker, MySQL y JavaScript.",
+    icon: <MdOutlineWork className="w-6 h-6" />,
+    company: "CYBAC - TI",
+    companyUrl: "https://grupocybac.com/",
+    title: "Desarrollador full-stack",
+    date: "julio 2024 - Actualmente",
+    descriptionTitle: "Desarrollador Backend",
+    descriptionTech: "Desarrollé con: PHP, Laravel, Docker, MySQL y JavaScript.",
+    descriptionPoints: [
+      "Implementé funcionalidades en los sistemas backend.",
+      "Resolví errores operativos y optimicé el rendimiento del sistema.",
+      "Trabajé en entornos locales y dockerizados, aplicando el modelo MVC y arquitectura de 3 capas.",
+      "Realicé pruebas y documentación con Postman.",
+      "Aseguré código de calidad, escalable y mantenible.",
+      "Gestioné actividades con Trello, logrando objetivos diarios.",
+      "Asistí y participé en reuniones diarias (Dailys)."
+    ]
   },
   {
+    icon: <RiHomeOfficeLine className="w-6 h-6" />,
     company: "High-Tech",
     companyUrl: "https://htpro.dev/",
     title: "Desarrollador Full-Stack",
-    date: "2023",
-    description: "Desarrollé con PHP, Laravel, MySQL, JavaScript y React."
-  },
+    date: "Marzo 2024 - julio 2024",
+    descriptionTitle: "Desarrollador Full-Stack",
+    descriptionTech: "Desarrollé con: PHP, Laravel, MySQL, JavaScript y React.",
+    descriptionPoints: [
+      "Di mantenimiento y mejoré el proyecto, asegurando funcionalidad y rendimiento.",
+      "Desarrollé e integré servicios.",
+      "Expandí las capacidades del proyecto y mejoré la experiencia del usuario.",
+      "Implementé y optimicé funcionalidades.",
+      "Contribuí a la eficiencia y escalabilidad del sistema."
+    ]
+  },  
   {
-    company: "High-Tech",
-    companyUrl: "https://htpro.dev/",
+    icon: <RiHomeOfficeLine className="w-6 h-6" />,
+    company: "Unity.com.mx",
+    companyUrl: "https://unity.com.mx/",
     title: "Desarrollador Full-Stack",
     date: "2023",
-    description:
-      "Desarrollé con PHP, Laravel, MySQL, JavaScript y React. Di mantenimiento y mejoré el proyecto, asegurando funcionalidad y rendimiento. Desarrollé e integré servicios. Expandí las capacidades del proyecto y mejoré la experiencia del usuario. Implementé y optimicé funcionalidades. Contribuí a la eficiencia y escalabilidad del sistema.",
-  },
+    descriptionTitle: "Desarrollador Full-Stack",
+    descriptionTech: "Desarrollé con: WordPress, PHP, MySQL y JavaScript.",
+    descriptionPoints: [
+      "Integré sistemas de seguridad en WordPress para proteger la infraestructura del sitio.",
+      "Desarrollé e integré plugins personalizados para mejorar la funcionalidad del sistema.",
+      "Realicé cambios en las vistas del frontend, asegurando una mejor experiencia de usuario.",
+      "Implementé prácticas de ocultación (hide) para asegurar información sensible.",
+      "Mantuve y optimicé la funcionalidad general del sitio, mejorando su rendimiento."
+    ]
+  },  
   {
+    icon: <RiHomeOfficeLine className="w-6 h-6" />,
     company: "High-Tech",
     companyUrl: "https://htpro.dev/",
     title: "Desarrollador Full-Stack",

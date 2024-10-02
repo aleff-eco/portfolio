@@ -42,7 +42,7 @@ export function Navbar() {
           Proyectos
         </Link>
         <Link href="#experience" className="font-medium hover:underline underline-offset-4 hover:scale-110 transition-transform duration-200 mx-4">
-          Experiencia
+          Trayectoria
         </Link>
         <Link href="#contact" className="font-medium hover:underline underline-offset-4 hover:scale-110 transition-transform duration-200 mx-4">
           Contacto
@@ -84,7 +84,7 @@ export function Navbar() {
             Proyectos
           </Link>
           <Link href="#experience" onClick={toggleMenu} className="block py-4 font-medium text-primary-foreground hover:underline underline-offset-4 hover:scale-110 transition-transform duration-200">
-            Experiencia
+            Trayectoria
           </Link>
           <Link href="#contact" onClick={toggleMenu} className="block py-4 font-medium text-primary-foreground hover:underline underline-offset-4 hover:scale-110 transition-transform duration-200">
             Contacto
