@@ -39,6 +39,8 @@ import { RiHomeOfficeLine } from "react-icons/ri";
 
 import { MdOutlineWork } from "react-icons/md";
 
+import { LuSchool } from "react-icons/lu";
+
 export const words = [
   "¡Ingeniero de software!",
   "¡Desarrollador web!",
@@ -345,7 +347,7 @@ export const experience = [
     company: "Unity.com.mx",
     companyUrl: "https://unity.com.mx/",
     title: "Desarrollador Full-Stack",
-    date: "2023",
+    date: "2023 - 2023",
     descriptionTitle: "Desarrollador Full-Stack",
     descriptionTech: "Desarrollé con: WordPress, PHP, MySQL y JavaScript.",
     descriptionPoints: [
@@ -357,12 +359,12 @@ export const experience = [
     ]
   },  
   {
-    icon: <RiHomeOfficeLine className="w-6 h-6" />,
-    company: "High-Tech",
-    companyUrl: "https://htpro.dev/",
-    title: "Desarrollador Full-Stack",
-    date: "2023",
+    icon: <LuSchool className="w-6 h-6" />,
+    company: "Universidad Politécnica de Chiapas",
+    companyUrl: "https://upchiapas.edu.mx/",
+    title: "Ingeniera en Software",
+    date: "2020 - 2023",
     description:
-      "Desarrollé con PHP, Laravel, MySQL, JavaScript y React. Di mantenimiento y mejoré el proyecto, asegurando funcionalidad y rendimiento. Desarrollé e integré servicios. Expandí las capacidades del proyecto y mejoré la experiencia del usuario. Implementé y optimicé funcionalidades. Contribuí a la eficiencia y escalabilidad del sistema.",
-  },
+      "Cursé la Ingeniería de Software en la Universidad Politécnica de Chiapas, donde adquirí sólidas habilidades en desarrollo de software utilizando tecnologías como PHP, Laravel, MySQL, JavaScript y React. Participé en proyectos integrales, donde diseñé, desarrollé y mantuve aplicaciones web, optimizando su rendimiento y escalabilidad. Además, integré servicios de backend y frontend, mejorando la experiencia del usuario. Durante este periodo, también implementé prácticas ágiles y participé en el ciclo completo de desarrollo de software.",
+  }
 ];

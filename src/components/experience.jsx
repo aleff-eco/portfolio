@@ -35,14 +35,14 @@ export function Experience() {
                   : "hide"
               }`}
             >
-              <div className="md:w-64 md:mb-0 mb-10 flex-shrink-0 flex flex-col">
+              <div className="md:w-64 md:mb-0 mb-10 flex-shrink-0 flex flex-col overflow-hidden">
                 <div className="flex items-center">
                   <span className="icon-wrapper pr-2">{category.icon}</span>
                   <a
                     href={category.companyUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-semibold title-font text-xl text-gray-700 hover:underline"
+                    className="font-semibold title-font text-xl text-gray-700 hover:underline pr-6 truncate max-w-full"
                   >
                     {category.company}
                   </a>
@@ -51,7 +51,6 @@ export function Experience() {
                   {category.date}
                 </span>
               </div>
-
               <div className="md:flex-grow pt-6">
                 <h3 className="text-lg font-bold text-gray-900 title-font mb-2">
                   {category.title}
@@ -74,9 +73,9 @@ export function Experience() {
             </div>
           ))}
         </div>
-        <div className="text-center mt-2 fade-in">
+        <div className="text-center mt-2 fade-in dark:border-white border-black">
           <button
-            className="bg-indigo-500 text-white px-4 rounded transition-transform duration-500 ease-in-out hover:scale-105"
+            className="bg-indigo-500 text-white px-4 py-2 font-semibold border-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 dark:border-white border-black dark:text-white text-black"
             onClick={() => setShowMore(!showMore)}
           >
             {showMore ? (
