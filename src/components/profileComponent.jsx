@@ -46,14 +46,14 @@ export function ProfileComponent() {
   const scrollToContact = () => {
     const contactSection = document.getElementById("contact");
     if (contactSection) {
-      const yOffset = 0; // Margen superior
+      const yOffset = -80; // Margen superior
       const targetPosition =
         contactSection.getBoundingClientRect().top +
         window.pageYOffset +
         yOffset;
       const startPosition = window.pageYOffset;
       const distance = targetPosition - startPosition;
-      const duration = 4200; // Duración en milisegundos para hacer el movimiento más suave
+      const duration = 4800; // Duración en milisegundos para hacer el movimiento más suave
       let startTime = null;
 
       const easeInOutCubic = (time, start, distance, duration) => {
@@ -82,7 +82,7 @@ export function ProfileComponent() {
 
   return (
     <section className="profile-section min-100vh flex flex-col justify-center items-center bg-gray-100">
-      <div className="profile-container text-center p-4">
+      <div className="profile-container text-center px-2">
         <img
           src="./profilePic.jpeg"
           alt="Foto de perfil"

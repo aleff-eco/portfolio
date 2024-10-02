@@ -31,13 +31,16 @@ import {
   FaBitbucket as BitbucketIcon,
 } from "react-icons/fa";
 
+import { SiNextdotjs as NextjsIcon } from "react-icons/si";
+
 import { RiTailwindCssFill as TailwindIcon } from "react-icons/ri";
 
 export const words = [
-  "Ingeniero de software!",
-  "Desarrollador web!",
-  "Desarrollador Full-Stack!",
+  "¡Ingeniero de software!",
+  "¡Desarrollador web!",
+  "¡Desarrollador Full-Stack!",
   "(⌐■_■)",
+  "Amante de los gatos y la carpintería",
 ];
 
 export const technicalSkills = [
@@ -78,6 +81,12 @@ export const technicalSkills = [
     category: "tool",
   },
   {
+    name: "Bitbucket",
+    icon: <BitbucketIcon className="w-8 h-8" />,
+    level: "80%",
+    category: "tool",
+  },
+  {
     name: "Node.js",
     icon: <NodejsIcon className="w-8 h-8" />,
     level: "80%",
@@ -90,15 +99,21 @@ export const technicalSkills = [
     category: "technology",
   },
   {
-    name: "Linux",
-    icon: <LinuxIcon className="w-8 h-8" />,
-    level: "90%",
-    category: "os",
-  },
-  {
     name: "SQL",
     icon: <SqlIcon className="w-8 h-8" />,
     level: "90%",
+    category: "technology",
+  },
+  {
+    name: "MySQL",
+    icon: <SqlIcon className="w-8 h-8" />,
+    level: "80%",
+    category: "technology",
+  },
+  {
+    name: "SQLite",
+    icon: <SqlIcon className="w-8 h-8" />,
+    level: "70%",
     category: "technology",
   },
   {
@@ -126,28 +141,28 @@ export const technicalSkills = [
     category: "framework",
   },
   {
-    name: "MySQL",
-    icon: <SqlIcon className="w-8 h-8" />,
-    level: "80%",
-    category: "technology",
+    name: "Tailwind",
+    icon: <TailwindIcon className="w-8 h-8" />,
+    level: "75%",
+    category: "framework",
+  },
+  {
+    name: "Next.js",
+    icon: <NextjsIcon className="w-8 h-8" />,
+    level: "85%",
+    category: "framework",
+  },
+  {
+    name: "Linux",
+    icon: <LinuxIcon className="w-8 h-8" />,
+    level: "90%",
+    category: "os",
   },
   {
     name: "Windows",
     icon: <WindowsIcon className="w-8 h-8" />,
     level: "100%",
     category: "os",
-  },
-  {
-    name: "Tailwind",
-    icon: <TailwindIcon className="w-8 h-8" />,
-    level: "75%",
-    category: "technology",
-  },
-  {
-    name: "Bitbucket",
-    icon: <BitbucketIcon className="w-8 h-8" />,
-    level: "80%",
-    category: "tool",
   },
 ];
 
@@ -174,10 +189,10 @@ export const softSkills = [
 export const categories = [
   { name: "Todo", key: "" },
   { name: "Lenguajes", key: "language" },
-  { name: "Tecnologías", key: "technology" },
-  { name: "Frameworks", key: "framework" },
-  { name: "Sistemas Operativos", key: "os" },
   { name: "Herramientas", key: "tool" },
+  { name: "Frameworks y Librerías", key: "framework" },
+  { name: "Tecnologías", key: "technology" },
+  { name: "Sistemas Operativos", key: "os" },
 ];
 
 export const companies = [
