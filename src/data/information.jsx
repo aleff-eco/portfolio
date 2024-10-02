@@ -217,6 +217,12 @@ export const companies = [
     imageUrl: "/experience/dbeef.png",
     link: "https://www.facebook.com/profile.php?id=61563282854180",
   },
+  {
+    name: "REICHSTAG",
+    title: "Edificaciones",
+    imageUrl: "/experience/reichstag.jpeg",
+    link: "https://reichstag.com.mx/",
+  },
 ];
 
 export const projects = [

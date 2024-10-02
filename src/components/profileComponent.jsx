@@ -46,14 +46,14 @@ export function ProfileComponent() {
   const scrollToContact = () => {
     const contactSection = document.getElementById("contact");
     if (contactSection) {
-      const yOffset = 30; // Margen superior
+      const yOffset = 0; // Margen superior
       const targetPosition =
         contactSection.getBoundingClientRect().top +
         window.pageYOffset +
         yOffset;
       const startPosition = window.pageYOffset;
       const distance = targetPosition - startPosition;
-      const duration = 4000; // Duración en milisegundos para hacer el movimiento más suave
+      const duration = 4200; // Duración en milisegundos para hacer el movimiento más suave
       let startTime = null;
 
       const easeInOutCubic = (time, start, distance, duration) => {
@@ -99,9 +99,10 @@ export function ProfileComponent() {
             {text}
           </h2>
         </div>
-        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-2 lg:max-w-[750px] font-normal">
-          Ingeniero de software con 2 años de experiencia en desarrollo web. Me
-          especializo en crear experiencias únicas y soluciones personalizadas.
+        <p className="text-sm sm:text-base md:text-md lg:text-md xl:text-2xl lg:max-w-[750px] font-normal">
+          Ingeniero de software con más de 2 años de experiencia en el
+          desarrollo web. Me especializo en crear experiencias únicas y
+          soluciones personalizadas.
         </p>
         <button
           onClick={scrollToContact}

@@ -71,7 +71,14 @@ export function Companies() {
                       className="object-contain h-full max-w-full"
                     />
                     <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-card/80 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                      <h4 className="text-lg font-semibold">{company.name}</h4>
+                      <a
+                        href={company.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-lg font-semibold hover:underline"
+                      >
+                        {company.name}
+                      </a>
                       <p className="text-sm text-muted-foreground">
                         {company.title}
                       </p>
