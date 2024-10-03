@@ -1,5 +1,5 @@
 // src\data\information.jsx
-import Image from "next/image";
+import { CiStar } from "react-icons/ci";
 
 import {
   FaComments as CommunicationIcon,
@@ -10,7 +10,12 @@ import {
   FaSyncAlt as AdaptabilityIcon,
   FaClock as TimeManagementIcon,
   FaBrain as CriticalThinkingIcon,
+  FaUserCheck as SelfManagementIcon, // Autogestión
+  FaCheckCircle as ResponsibilityIcon, // Responsabilidad
+  AiFillPushpin as CommitmentIcon, // Compromiso
 } from "react-icons/fa";
+
+import { FaPaintbrush as AttentionToDetailIcon } from "react-icons/fa6";
 
 import {
   FaJs as JavascriptIcon,
@@ -21,13 +26,11 @@ import {
   FaGitlab as GitLabIcon,
   FaNodeJs as NodejsIcon,
   FaDocker as DockerIcon,
-  FaLinux as LinuxIcon,
   FaDatabase as SqlIcon,
   FaCss3 as CSSIcon,
   FaReact as ReactIcon,
   FaBootstrap as BootstrapIcon,
   FaLaravel as LaravelIcon,
-  FaWindows as WindowsIcon,
   FaBitbucket as BitbucketIcon,
 } from "react-icons/fa";
 
@@ -55,120 +58,136 @@ export const technicalSkills = [
     icon: <JavascriptIcon className="w-8 h-8" />,
     level: "95%",
     category: "language",
+    subcategory: "frontend",
+    favorite: true,
   },
   {
     name: "Python",
     icon: <PythonIcon className="w-8 h-8" />,
     level: "95%",
     category: "language",
+    subcategory: "backend",
+    favorite: false,
   },
   {
     name: "PHP",
     icon: <PHPIcon className="w-8 h-8" />,
-    level: "80%",
+    level: "90%",
     category: "language",
+    subcategory: "backend",
+    favorite: true,
   },
   {
     name: "Java",
     icon: <JavaIcon className="w-8 h-8" />,
-    level: "70%",
+    level: "65%",
     category: "language",
+    subcategory: "backend",
+    favorite: false,
   },
   {
     name: "GitHub",
     icon: <GitHubIcon className="w-8 h-8" />,
-    level: "90%",
+    level: "100%",
     category: "tool",
+    subcategory: "version control",
+    favorite: true,
   },
   {
     name: "GitLab",
     icon: <GitLabIcon className="w-8 h-8" />,
-    level: "90%",
+    level: "100%",
     category: "tool",
+    subcategory: "version control",
+    favorite: false,
   },
   {
     name: "Bitbucket",
     icon: <BitbucketIcon className="w-8 h-8" />,
-    level: "80%",
+    level: "100%",
     category: "tool",
+    subcategory: "version control",
+    favorite: false,
   },
   {
     name: "Node.js",
     icon: <NodejsIcon className="w-8 h-8" />,
-    level: "80%",
+    level: "90%",
     category: "technology",
+    subcategory: "backend",
+    favorite: true,
   },
   {
     name: "Docker",
     icon: <DockerIcon className="w-8 h-8" />,
     level: "90%",
     category: "technology",
-  },
-  {
-    name: "SQL",
-    icon: <SqlIcon className="w-8 h-8" />,
-    level: "90%",
-    category: "technology",
+    subcategory: "containerization",
+    favorite: true,
   },
   {
     name: "MySQL",
     icon: <SqlIcon className="w-8 h-8" />,
-    level: "80%",
+    level: "100%",
     category: "technology",
+    subcategory: "database",
+    favorite: true,
   },
   {
     name: "SQLite",
     icon: <SqlIcon className="w-8 h-8" />,
-    level: "70%",
+    level: "90%",
     category: "technology",
+    subcategory: "database",
+    favorite: false,
   },
   {
     name: "CSS",
     icon: <CSSIcon className="w-8 h-8" />,
-    level: "75%",
+    level: "80%",
     category: "technology",
+    subcategory: "frontend",
+    favorite: true,
   },
   {
     name: "React",
     icon: <ReactIcon className="w-8 h-8" />,
     level: "85%",
     category: "framework",
+    subcategory: "frontend",
+    favorite: true,
   },
   {
     name: "Bootstrap",
     icon: <BootstrapIcon className="w-8 h-8" />,
-    level: "75%",
+    level: "80%",
     category: "framework",
+    subcategory: "frontend",
+    favorite: false,
   },
   {
     name: "Laravel",
     icon: <LaravelIcon className="w-8 h-8" />,
-    level: "80%",
+    level: "85%",
     category: "framework",
+    subcategory: "backend",
+    favorite: true,
   },
   {
     name: "Tailwind",
     icon: <TailwindIcon className="w-8 h-8" />,
-    level: "75%",
+    level: "90%",
     category: "framework",
+    subcategory: "frontend",
+    favorite: true,
   },
   {
     name: "Next.js",
     icon: <NextjsIcon className="w-8 h-8" />,
-    level: "85%",
+    level: "80%",
     category: "framework",
-  },
-  {
-    name: "Linux",
-    icon: <LinuxIcon className="w-8 h-8" />,
-    level: "90%",
-    category: "os",
-  },
-  {
-    name: "Windows",
-    icon: <WindowsIcon className="w-8 h-8" />,
-    level: "100%",
-    category: "os",
+    subcategory: "frontend",
+    favorite: false,
   },
 ];
 
@@ -190,15 +209,24 @@ export const softSkills = [
     name: "Pensamiento crítico",
     icon: <CriticalThinkingIcon className="w-8 h-8" />,
   },
+  {
+    name: "Atención al detalle",
+    icon: <AttentionToDetailIcon className="w-8 h-8" />,
+  },
+  { name: "Responsabilidad", icon: <ResponsibilityIcon className="w-8 h-8" /> },
+
+  { name: "Autogestión", icon: <SelfManagementIcon className="w-8 h-8" /> },
 ];
 
 export const categories = [
   { name: "Todo", key: "" },
+  { name: "⭐ Favoritos", key: "favorites" },
+  { name: "Frontend", key: "frontend" },
+  { name: "Backend", key: "backend" },
   { name: "Lenguajes", key: "language" },
   { name: "Herramientas", key: "tool" },
   { name: "Frameworks y Librerías", key: "framework" },
   { name: "Tecnologías", key: "technology" },
-  { name: "Sistemas Operativos", key: "os" },
 ];
 
 export const companies = [
@@ -313,9 +341,28 @@ export const experience = [
     company: "CYBAC - TI",
     companyUrl: "https://grupocybac.com/",
     title: "Desarrollador full-stack",
-    date: "julio 2024 - Actualmente",
+    date: "Julio 2024 - Actualmente",
     descriptionTitle: "Desarrollador Backend",
-    descriptionTech: "Desarrollé con: PHP, Laravel, Docker, MySQL y JavaScript.",
+    descriptionTech:
+      "Desarrollé con: PHP, Laravel, MySQL, JavaScript, Livewire, Tailwind y Viu.",
+    descriptionPoints: [
+      "Lideré el desarrollo de proyectos web como 'reina pepiada,' 'dbeefmax,' y 'reichstag'.",
+      "Asesoré, revisé y evalué a más de 10 pasantes, asegurando la entrega de soluciones de alta calidad.",
+      "Desplegué y mantuve aplicaciones asegurando excelente rendimiento, SEO y seguridad.",
+      "Implementé funcionalidades en los sistemas backend, optimizando el rendimiento y corrigiendo errores.",
+      "Realicé pruebas y documentación técnica de cada proyecto.",
+      "Aseguré la calidad del código, garantizando su escalabilidad y mantenibilidad.",
+    ],
+  },
+  {
+    icon: <RiHomeOfficeLine className="w-6 h-6" />,
+    company: "HIGH - TECH",
+    companyUrl: "https://htpro.dev/",
+    title: "Desarrollador Backend",
+    date: "Marzo 2024 - Julio 2024",
+    descriptionTitle: "Desarrollador Backend",
+    descriptionTech:
+      "Desarrollé con: PHP, Laravel, Docker, MySQL y JavaScript.",
     descriptionPoints: [
       "Implementé funcionalidades en los sistemas backend.",
       "Resolví errores operativos y optimicé el rendimiento del sistema.",
@@ -323,41 +370,60 @@ export const experience = [
       "Realicé pruebas y documentación con Postman.",
       "Aseguré código de calidad, escalable y mantenible.",
       "Gestioné actividades con Trello, logrando objetivos diarios.",
-      "Asistí y participé en reuniones diarias (Dailys)."
-    ]
+      "Asistí y participé en reuniones diarias (Dailys).",
+    ],
   },
-  {
-    icon: <RiHomeOfficeLine className="w-6 h-6" />,
-    company: "High-Tech",
-    companyUrl: "https://htpro.dev/",
-    title: "Desarrollador Full-Stack",
-    date: "Marzo 2024 - julio 2024",
-    descriptionTitle: "Desarrollador Full-Stack",
-    descriptionTech: "Desarrollé con: PHP, Laravel, MySQL, JavaScript y React.",
-    descriptionPoints: [
-      "Di mantenimiento y mejoré el proyecto, asegurando funcionalidad y rendimiento.",
-      "Desarrollé e integré servicios.",
-      "Expandí las capacidades del proyecto y mejoré la experiencia del usuario.",
-      "Implementé y optimicé funcionalidades.",
-      "Contribuí a la eficiencia y escalabilidad del sistema."
-    ]
-  },  
   {
     icon: <RiHomeOfficeLine className="w-6 h-6" />,
     company: "Unity.com.mx",
     companyUrl: "https://unity.com.mx/",
     title: "Desarrollador Full-Stack",
-    date: "2023 - 2023",
+    date: "Febrero 2023 - Agosto 2023",
     descriptionTitle: "Desarrollador Full-Stack",
     descriptionTech: "Desarrollé con: WordPress, PHP, MySQL y JavaScript.",
     descriptionPoints: [
       "Integré sistemas de seguridad en WordPress para proteger la infraestructura del sitio.",
       "Desarrollé e integré plugins personalizados para mejorar la funcionalidad del sistema.",
       "Realicé cambios en las vistas del frontend, asegurando una mejor experiencia de usuario.",
-      "Implementé prácticas de ocultación (hide) para asegurar información sensible.",
-      "Mantuve y optimicé la funcionalidad general del sitio, mejorando su rendimiento."
-    ]
-  },  
+      "Implementé prácticas para asegurar información sensible.",
+      "Mantuve y optimicé la funcionalidad general del sitio, mejorando su rendimiento.",
+      "Realice actualizaciones y mejoras por parte del servidor, asegurando la estabilidad del sitio.",
+    ],
+  },
+  {
+    icon: <RiHomeOfficeLine className="w-6 h-6" />,
+    company: "Wax Revolution",
+    companyUrl: "",
+    title: "Desarrollador Full-Stack",
+    date: "Fecha 1 - Fecha 2",
+    descriptionTitle: "Desarrollador Full-Stack",
+    descriptionTech: "Desarrollé con: PHP, MySQL, JavaScript.",
+    descriptionPoints: [
+      "Realicé mantenimiento de sistemas existentes para asegurar la estabilidad y funcionalidad continua.",
+      "Implementé nuevas funcionalidades para optimizar la experiencia del usuario y mejorar el flujo de trabajo interno.",
+      "Desarrollé mejoras en el backend utilizando PHP y MySQL.",
+      "Optimicé el rendimiento del sistema, reduciendo tiempos de carga y mejorando la eficiencia del procesamiento de datos.",
+      "Apliqué correcciones de errores y realicé mejoras en el código para asegurar un funcionamiento fluido del sistema.",
+      "Colaboré con diferentes equipos para asegurar la integración de nuevas funcionalidades sin interrumpir el servicio.",
+    ],
+  },
+  {
+    icon: <RiHomeOfficeLine className="w-6 h-6" />,
+    company: "Wax Revolution",
+    companyUrl: "",
+    title: "Desarrollador Full-Stack",
+    date: "Fecha 1 - Fecha 2",
+    descriptionTitle: "Desarrollador Full-Stack",
+    descriptionTech: "Desarrollé con: PHP, MySQL, JavaScript.",
+    descriptionPoints: [
+      "Realicé mantenimiento de sistemas existentes para asegurar la estabilidad y funcionalidad continua.",
+      "Implementé nuevas funcionalidades para optimizar la experiencia del usuario y mejorar el flujo de trabajo interno.",
+      "Desarrollé mejoras en el backend utilizando PHP y MySQL.",
+      "Optimicé el rendimiento del sistema, reduciendo tiempos de carga y mejorando la eficiencia del procesamiento de datos.",
+      "Apliqué correcciones de errores y realicé mejoras en el código para asegurar un funcionamiento fluido del sistema.",
+      "Colaboré con diferentes equipos para asegurar la integración de nuevas funcionalidades sin interrumpir el servicio.",
+    ],
+  },
   {
     icon: <LuSchool className="w-6 h-6" />,
     company: "Universidad Politécnica de Chiapas",
@@ -366,5 +432,5 @@ export const experience = [
     date: "2020 - 2023",
     description:
       "Cursé la Ingeniería de Software en la Universidad Politécnica de Chiapas, donde adquirí sólidas habilidades en desarrollo de software utilizando tecnologías como PHP, Laravel, MySQL, JavaScript y React. Participé en proyectos integrales, donde diseñé, desarrollé y mantuve aplicaciones web, optimizando su rendimiento y escalabilidad. Además, integré servicios de backend y frontend, mejorando la experiencia del usuario. Durante este periodo, también implementé prácticas ágiles y participé en el ciclo completo de desarrollo de software.",
-  }
+  },
 ];

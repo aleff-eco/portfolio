@@ -27,7 +27,16 @@ export function Skills() {
   };
 
   const filteredTechnicalSkills = selectedCategory
-    ? technicalSkills.filter((skill) => skill.category === selectedCategory)
+    ? technicalSkills.filter((skill) => {
+        if (selectedCategory === "favorites") {
+          return skill.favorite; // Mostrar todas las skills con favorite: true
+        } else if (selectedCategory === "frontend") {
+          return skill.subcategory === "frontend";
+        } else if (selectedCategory === "backend") {
+          return skill.subcategory === "backend";
+        }
+        return skill.category === selectedCategory;
+      })
     : technicalSkills;
 
   return (
@@ -93,11 +102,17 @@ export function Skills() {
                     <div className="icon-wrapper">{skill.icon}</div>
                     <div>
                       <div className="text-lg font-bold">{skill.name}</div>
-                      <div className="bg-muted rounded-full h-2 w-24">
-                        <div
-                          className="bg-[hsl(var(--foreground))] h-2 rounded-full"
-                          style={{ width: skill.level, maxWidth: "100%" }}
-                        />
+                      <div className="flex items-center">
+                        {/* Porcentaje al lado izquierdo */}
+                        <span className="text-sm font-medium mr-2">
+                          {skill.level}
+                        </span>
+                        <div className="bg-muted rounded-full h-2 w-24 relative">
+                          <div
+                            className="bg-[hsl(var(--foreground))] h-2 rounded-full"
+                            style={{ width: skill.level, maxWidth: "100%" }}
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
