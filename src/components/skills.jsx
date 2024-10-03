@@ -103,11 +103,10 @@ export function Skills() {
                     <div>
                       <div className="text-lg font-bold">{skill.name}</div>
                       <div className="flex items-center">
-                        {/* Porcentaje al lado izquierdo */}
                         <span className="text-sm font-medium mr-2">
                           {skill.level}
                         </span>
-                        <div className="bg-muted rounded-full h-2 w-24 relative">
+                        <div className="bg-muted rounded-full h-2 w-14 relative">
                           <div
                             className="bg-[hsl(var(--foreground))] h-2 rounded-full"
                             style={{ width: skill.level, maxWidth: "100%" }}
