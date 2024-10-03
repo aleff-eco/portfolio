@@ -15,6 +15,7 @@ import {
   AiFillPushpin as CommitmentIcon, // Compromiso
 } from "react-icons/fa";
 
+import { SiPostman as PostmanIcon } from "react-icons/si";
 import { FaPaintbrush as AttentionToDetailIcon } from "react-icons/fa6";
 
 import {
@@ -58,7 +59,7 @@ export const technicalSkills = [
     icon: <JavascriptIcon className="w-8 h-8" />,
     level: "95%",
     category: "language",
-    subcategory: "frontend",
+    subcategory: "backend",
     favorite: true,
   },
   {
@@ -107,6 +108,14 @@ export const technicalSkills = [
     level: "100%",
     category: "tool",
     subcategory: "version control",
+    favorite: false,
+  },
+  {
+    name: "PostMan",
+    icon: <PostmanIcon className="w-8 h-8" />,
+    level: "90%",
+    category: "tool",
+    subcategory: "testing",
     favorite: false,
   },
   {
