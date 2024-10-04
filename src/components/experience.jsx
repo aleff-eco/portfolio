@@ -57,11 +57,11 @@ export function Experience() {
                 </h3>
                 {category.descriptionTitle && (
                   <>
-                    <h4 className="font-semibold">
+                    {/* <h4 className="font-semibold">
                       {category.descriptionTitle}
-                    </h4>
-                    <p>{category.descriptionTech}</p>
-                    <ul className="list-disc ml-5">
+                    </h4> */}
+                    <p className="mb-2 tracking-wide"><strong>{category.descriptionTech}</strong></p>
+                    <ul className="list-disc ml-5 tracking-normal">
                       {category.descriptionPoints?.map((point, i) => (
                         <li key={i}>{point}</li>
                       ))}

@@ -41,7 +41,7 @@ import { RiTailwindCssFill as TailwindIcon } from "react-icons/ri";
 
 import { RiHomeOfficeLine } from "react-icons/ri";
 
-import { MdOutlineWork } from "react-icons/md";
+import { MdOutlineWork, MdLanguage } from "react-icons/md";
 
 import { LuSchool } from "react-icons/lu";
 
@@ -111,7 +111,7 @@ export const technicalSkills = [
     favorite: false,
   },
   {
-    name: "PostMan",
+    name: "Postman",
     icon: <PostmanIcon className="w-8 h-8" />,
     level: "90%",
     category: "tool",
@@ -198,6 +198,22 @@ export const technicalSkills = [
     subcategory: "frontend",
     favorite: false,
   },
+  {
+    name: "Español",
+    icon: <MdLanguage className="w-8 h-8" />,
+    level: "100%",
+    category: "idioma",
+    subcategory: "idioma",
+    favorite: false,
+  },
+  {
+    name: "Inglés",
+    icon: <MdLanguage className="w-8 h-8" />,
+    level: "85%",
+    category: "idioma",
+    subcategory: "idioma",
+    favorite: false,
+  },
 ];
 
 export const softSkills = [
@@ -228,10 +244,11 @@ export const softSkills = [
 ];
 
 export const categories = [
-  { name: "Todo", key: "" },
+  { name: "🌌 Todo", key: "" },
   { name: "⭐ Favoritos", key: "favorites" },
-  { name: "Frontend", key: "frontend" },
-  { name: "Backend", key: "backend" },
+  { name: "🖼️ Frontend", key: "frontend" },
+  { name: "⚙️ Backend", key: "backend" },
+  { name: "🌐 Idiomas", key: "idioma" },
   { name: "Lenguajes", key: "language" },
   { name: "Herramientas", key: "tool" },
   { name: "Frameworks y Librerías", key: "framework" },
@@ -240,8 +257,8 @@ export const categories = [
 
 export const companies = [
   {
-    name: "HitechPro",
-    title: "Consultor TI",
+    name: "HighTech Pro",
+    title: "Consultoría TI",
     imageUrl: "/experience/htpro.svg",
     link: "https://htpro.dev/",
   },
@@ -253,19 +270,19 @@ export const companies = [
   },
   {
     name: "Rufino Tamayo",
-    title: "Centro educativo",
+    title: "Institución educativa",
     imageUrl: "/experience/rufino.png",
     link: "https://www.rufinotamayo.edu.mx/",
   },
   {
     name: "Wax Revolution",
-    title: "Centro de belleza - Spa",
+    title: "Centro de belleza, Spa",
     imageUrl: "/experience/wax.avif",
     link: "https://waxrevolution.com/",
   },
   {
     name: "San Ángel",
-    title: "Grupo Dental ",
+    title: "Grupo de salud dental",
     imageUrl: "/experience/dental.png",
     link: "https://www.instagram.com/grupodentalsanangel?igsh=bzA1M2R6NWlxdGd5",
   },
@@ -285,23 +302,30 @@ export const companies = [
 
 export const projects = [
   {
-    title: "Landing Page para un restaurante",
-    imageSrc: "/projects/reinaPepiada.webp",
-    imageAlt: "Proyecto React creando una calculadora",
+    title: "Aplicaciones Web para una carniceria",
+    imageSrc: "/projects/dbeefmax.png",
+    imageAlt: "Desarrollo de un sitio web para una carniceria con panel administrativo en PHP", 
     link: "https://github.com/aleff-eco/reina_pepiada",
-    category: "Diseño Web",
+    category: "Desarrollo Web fullstack",
+  },
+  {
+    title: "Sitio web para un restaurante",
+    imageSrc: "/projects/reinaPepiada.webp",
+    imageAlt: "Un sitio web para un restaurante de comida venezolana",
+    link: "https://github.com/aleff-eco/reina_pepiada",
+    category: "Desarrollo Web frontend",
   },
   {
     title: "CRM de usuarios",
     imageSrc: "/projects/crmUser.png",
-    imageAlt: "Proyecto de CRM pra gestion de usuarios",
+    imageAlt: "Proyecto CRM para gestión de usuarios",
     link: "https://github.com/aleff-eco/Crud-PHP-Laravel",
-    category: "Desarrollo Fullstack",
+    category: "Desarrollo web Fullstack",
   },
   {
     title: "QUOWARE para la gestion de Negocios",
     imageSrc: "/projects/quoware.webp",
-    imageAlt: "Aplicacion ",
+    imageAlt: "Aplicación móvil",
     link: "https://github.com/usuario/ecommerce_project",
     category: "Desarrollo Mobile | Disponible en Playstore",
   },
@@ -316,9 +340,9 @@ export const projects = [
     title: "Aplicacion movil para consumo de una API",
     imageSrc: "/projects/mangoAnalyzer.png",
     imageAlt:
-      "Aplicacion movil para consumo de una API para el analisis del mango ataulfo",
+      "Aplicación móvil para consumir una API destinada al análisis del mango ataulfo",
     link: "https://github.com/aleff-eco/Mobile-App-Ataulfo",
-    category: "Diseño Mobile",
+    category: "Aplicación móvil ",
   },
   {
     title: "Analizador lexico, sintactico y semantico",
@@ -333,14 +357,14 @@ export const projects = [
     imageSrc: "/projects/automata2.png",
     imageAlt: "Sistema de Control de Versiones",
     link: "https://github.com/usuario/version_control",
-    category: "Herramientas de Desarrollo",
+    category: "Herramientas de análisis",
   },
   {
     title: "React creando una calculadora",
     imageSrc: "/projects/reactCalculator.png",
     imageAlt: "Proyecto React creando una calculadora",
     link: "https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png",
-    category: "Diseño Web",
+    category: "Frontend",
   },
 ];
 
@@ -356,11 +380,12 @@ export const experience = [
       "Desarrollé con: PHP, Laravel, MySQL, JavaScript, Livewire, Tailwind y Viu.",
     descriptionPoints: [
       "Lideré el desarrollo de proyectos web como 'reina pepiada,' 'dbeefmax,' y 'reichstag'.",
-      "Asesoré, revisé y evalué a más de 10 pasantes, asegurando la entrega de soluciones de alta calidad.",
+      "Asesoré, revisé y evalué a más de 10 pasantes, asegurando la entrega de soluciones de excelente calidad",
       "Desplegué y mantuve aplicaciones asegurando excelente rendimiento, SEO y seguridad.",
       "Implementé funcionalidades en los sistemas backend, optimizando el rendimiento y corrigiendo errores.",
       "Realicé pruebas y documentación técnica de cada proyecto.",
-      "Aseguré la calidad del código, garantizando su escalabilidad y mantenibilidad.",
+      "Aseguré la calidad del código, garantizando su escalabilidad y fácil mantenimiento",
+      "Hice uso de Github y Bitbucket para el control de versiones.",
     ],
   },
   {
@@ -373,11 +398,12 @@ export const experience = [
     descriptionTech:
       "Desarrollé con: PHP, Laravel, Docker, MySQL y JavaScript.",
     descriptionPoints: [
-      "Implementé funcionalidades en los sistemas backend.",
-      "Resolví errores operativos y optimicé el rendimiento del sistema.",
+      "Hice entrega de la primera y segunda version del proyecto 'Tareas Pro'.",
+      "Cree más de 30 funcionalidades nuevas para mejorar la experiencia del usuario.",
+      "Resolví errores operativos y optimicé el rendimiento del proyecto.",
       "Trabajé en entornos locales y dockerizados, aplicando el modelo MVC y arquitectura de 3 capas.",
       "Realicé pruebas y documentación con Postman.",
-      "Aseguré código de calidad, escalable y mantenible.",
+      "Aseguré código de calidad, escalable y mantenible, siguiendo las mejores practicas.",
       "Gestioné actividades con Trello, logrando objetivos diarios.",
       "Asistí y participé en reuniones diarias (Dailys).",
     ],
