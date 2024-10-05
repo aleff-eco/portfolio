@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../app/globals.css";
 import { technicalSkills, softSkills, categories } from "@/data/information";
+import { PiLineVerticalBold } from "react-icons/pi";
 
 export function Skills() {
   const [selectedSkillType, setSelectedSkillType] = useState("technical");
@@ -99,19 +100,17 @@ export function Skills() {
                     key={skill.name}
                     className="flex items-center gap-4 mt-4"
                   >
-                    <div className="icon-wrapper">{skill.icon}</div>
+                    <div className="icon-wrapper ">{skill.icon}</div>
                     <div>
                       <div className="text-lg font-bold">{skill.name}</div>
                       <div className="flex items-center">
-                        <span className="text-sm font-medium mr-2">
+                        <span className="text-sm font-medium mr-1 underline-offset-4">
                           {skill.level}
                         </span>
-                        <div className="bg-muted rounded-full h-2 w-14 relative">
-                          <div
-                            className="bg-[hsl(var(--foreground))] h-2 rounded-full"
-                            style={{ width: skill.level, maxWidth: "100%" }}
-                          />
-                        </div>
+                        {/* <PiLineVerticalBold />
+                        <span className="text-sm font-medium ml-1">
+                          {skill.years}
+                        </span> */}
                       </div>
                     </div>
                   </div>

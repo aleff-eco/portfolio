@@ -33,7 +33,7 @@ export function Companies() {
   };
 
   return (
-    <section className="w-full py-12 lg:py-20 flex justify-center items-center">
+    <section className="w-full pt-12 lg:py-20 flex justify-center items-center">
       <div className="container flex flex-col items-center gap-8">
         <div className="grid gap-2 text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-2xl md:text-3xl">
@@ -64,7 +64,7 @@ export function Companies() {
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <div className="relative py-4 px-8 h-32 w-64 overflow-hidden rounded-lg bg-card/70 transition-all duration-300 transform group-hover:scale-110 group-hover:shadow-lg group-hover:rounded-lg flex justify-center items-center">
+                  <div className="relative py-4 px-8 h-32 w-64 overflow-hidden rounded-lg bg-card/95 transition-all duration-300 transform group-hover:scale-110 group-hover:shadow-lg group-hover:rounded-lg flex justify-center items-center">
                     <img
                       src={company.imageUrl}
                       alt={`${company.name} Logo`}

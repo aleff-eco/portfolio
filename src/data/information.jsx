@@ -50,14 +50,14 @@ export const words = [
   "¡Desarrollador web!",
   "¡Desarrollador Full-Stack!",
   "(⌐■_■)",
-  "Amante de los gatos y la carpintería",
 ];
 
 export const technicalSkills = [
   {
     name: "JavaScript",
     icon: <JavascriptIcon className="w-8 h-8" />,
-    level: "95%",
+    level: "Avanzado",
+    years: "4 años",
     category: "language",
     subcategory: "backend",
     favorite: true,
@@ -65,7 +65,8 @@ export const technicalSkills = [
   {
     name: "Python",
     icon: <PythonIcon className="w-8 h-8" />,
-    level: "95%",
+    level: "Intermedio",
+    years: "4 años",
     category: "language",
     subcategory: "backend",
     favorite: false,
@@ -73,7 +74,8 @@ export const technicalSkills = [
   {
     name: "PHP",
     icon: <PHPIcon className="w-8 h-8" />,
-    level: "90%",
+    level: "Avanzado",
+    years: "4 años",
     category: "language",
     subcategory: "backend",
     favorite: true,
@@ -81,7 +83,8 @@ export const technicalSkills = [
   {
     name: "Java",
     icon: <JavaIcon className="w-8 h-8" />,
-    level: "65%",
+    level: "Intermedio",
+    years: "4 años",
     category: "language",
     subcategory: "backend",
     favorite: false,
@@ -89,7 +92,8 @@ export const technicalSkills = [
   {
     name: "GitHub",
     icon: <GitHubIcon className="w-8 h-8" />,
-    level: "100%",
+    level: "Avanzado",
+    years: "4 años",
     category: "tool",
     subcategory: "version control",
     favorite: true,
@@ -97,7 +101,8 @@ export const technicalSkills = [
   {
     name: "GitLab",
     icon: <GitLabIcon className="w-8 h-8" />,
-    level: "100%",
+    level: "Avanzado",
+    years: "4 años",
     category: "tool",
     subcategory: "version control",
     favorite: false,
@@ -105,7 +110,8 @@ export const technicalSkills = [
   {
     name: "Bitbucket",
     icon: <BitbucketIcon className="w-8 h-8" />,
-    level: "100%",
+    level: "Avanzado",
+    years: "4 años",
     category: "tool",
     subcategory: "version control",
     favorite: false,
@@ -113,7 +119,8 @@ export const technicalSkills = [
   {
     name: "Postman",
     icon: <PostmanIcon className="w-8 h-8" />,
-    level: "90%",
+    level: "Avanzado",
+    years: "4 años",
     category: "tool",
     subcategory: "testing",
     favorite: false,
@@ -121,7 +128,8 @@ export const technicalSkills = [
   {
     name: "Node.js",
     icon: <NodejsIcon className="w-8 h-8" />,
-    level: "90%",
+    level: "Avanzado",
+    years: "4 años",
     category: "technology",
     subcategory: "backend",
     favorite: true,
@@ -129,31 +137,26 @@ export const technicalSkills = [
   {
     name: "Docker",
     icon: <DockerIcon className="w-8 h-8" />,
-    level: "90%",
+    level: "Avanzado",
+    years: "4 años",
     category: "technology",
     subcategory: "containerization",
     favorite: true,
   },
   {
-    name: "MySQL",
+    name: "SQL",
     icon: <SqlIcon className="w-8 h-8" />,
-    level: "100%",
+    level: "Avanzado",
+    years: "4 años",
     category: "technology",
     subcategory: "database",
     favorite: true,
   },
   {
-    name: "SQLite",
-    icon: <SqlIcon className="w-8 h-8" />,
-    level: "90%",
-    category: "technology",
-    subcategory: "database",
-    favorite: false,
-  },
-  {
     name: "CSS",
     icon: <CSSIcon className="w-8 h-8" />,
-    level: "80%",
+    level: "Intermedio",
+    years: "4 años",
     category: "technology",
     subcategory: "frontend",
     favorite: true,
@@ -161,7 +164,8 @@ export const technicalSkills = [
   {
     name: "React",
     icon: <ReactIcon className="w-8 h-8" />,
-    level: "85%",
+    level: "Intermedio",
+    years: "4 años",
     category: "framework",
     subcategory: "frontend",
     favorite: true,
@@ -169,7 +173,8 @@ export const technicalSkills = [
   {
     name: "Bootstrap",
     icon: <BootstrapIcon className="w-8 h-8" />,
-    level: "80%",
+    level: "Intermedio",
+    years: "4 años",
     category: "framework",
     subcategory: "frontend",
     favorite: false,
@@ -177,7 +182,8 @@ export const technicalSkills = [
   {
     name: "Laravel",
     icon: <LaravelIcon className="w-8 h-8" />,
-    level: "85%",
+    level: "Avanzado",
+    years: "4 años",
     category: "framework",
     subcategory: "backend",
     favorite: true,
@@ -185,7 +191,8 @@ export const technicalSkills = [
   {
     name: "Tailwind",
     icon: <TailwindIcon className="w-8 h-8" />,
-    level: "90%",
+    level: "Avanzado",
+    years: "4 años",
     category: "framework",
     subcategory: "frontend",
     favorite: true,
@@ -193,7 +200,8 @@ export const technicalSkills = [
   {
     name: "Next.js",
     icon: <NextjsIcon className="w-8 h-8" />,
-    level: "80%",
+    level: "Intermedio",
+    years: "4 años",
     category: "framework",
     subcategory: "frontend",
     favorite: false,
@@ -201,7 +209,8 @@ export const technicalSkills = [
   {
     name: "Español",
     icon: <MdLanguage className="w-8 h-8" />,
-    level: "100%",
+    level: "Nativo",
+    years: "4 años",
     category: "idioma",
     subcategory: "idioma",
     favorite: false,
@@ -209,7 +218,8 @@ export const technicalSkills = [
   {
     name: "Inglés",
     icon: <MdLanguage className="w-8 h-8" />,
-    level: "85%",
+    level: "Avanzado",
+    years: "4 años",
     category: "idioma",
     subcategory: "idioma",
     favorite: false,
@@ -302,17 +312,24 @@ export const companies = [
 
 export const projects = [
   {
-    title: "Aplicaciones Web para una carniceria",
-    imageSrc: "/projects/dbeefmax.png",
-    imageAlt: "Desarrollo de un sitio web para una carniceria con panel administrativo en PHP", 
-    link: "https://github.com/aleff-eco/reina_pepiada",
+    title: "Aplicacion Web para REICHSTAG",
+    imageSrc: "/projects/reichstag.png",
+    imageAlt: "Desarrollo de un sitio web con next.js para reichstag.com.mx", 
+    link: "https://reichstag.com.mx/",
     category: "Desarrollo Web fullstack",
   },
   {
-    title: "Sitio web para un restaurante",
+    title: "Aplicacion Web para D BeefMax",
+    imageSrc: "/projects/dbeefmax.png",
+    imageAlt: "Desarrollo de un sitio web para una carniceria con panel administrativo en PHP", 
+    link: "https://dbeefmaxboutique.com/",
+    category: "Desarrollo Web fullstack",
+  },
+  {
+    title: "Sitio web para REINA PEPIADA",
     imageSrc: "/projects/reinaPepiada.webp",
     imageAlt: "Un sitio web para un restaurante de comida venezolana",
-    link: "https://github.com/aleff-eco/reina_pepiada",
+    link: "https://reinapepiada.com.mx/",
     category: "Desarrollo Web frontend",
   },
   {
