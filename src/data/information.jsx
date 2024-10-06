@@ -410,7 +410,7 @@ export const experience = [
     company: "HIGH - TECH",
     companyUrl: "https://htpro.dev/",
     title: "Desarrollador Backend",
-    date: "Marzo 2024 - Agosto 2024",
+    date: "Marzo 2024 - Julio 2024",
     descriptionTitle: "Desarrollador Backend",
     descriptionTech:
       "Desarrollé con: PHP, Laravel, Docker, MySQL y JavaScript.",
