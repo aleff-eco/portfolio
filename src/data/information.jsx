@@ -397,6 +397,7 @@ export const experience = [
       "Desarrollé con: PHP, Laravel, MySQL, JavaScript, Livewire, Tailwind, Vue.",
     descriptionPoints: [
       "Lideré el desarrollo de proyectos web como 'reina pepiada,' 'dbeefmax,' y 'reichstag'.",
+      "Mantuve reuniones con los clientes, asegurando tiempos de entrega y soluciones a la medida.",
       "Asesoré, revisé y evalué a más de 10 pasantes, asegurando la entrega de soluciones de excelente calidad",
       "Desplegué y mantuve aplicaciones asegurando excelente rendimiento, SEO y seguridad.",
       "Implementé funcionalidades en los sistemas backend, optimizando el rendimiento y corrigiendo errores.",

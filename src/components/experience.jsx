@@ -24,7 +24,7 @@ export function Experience() {
   return (
     <section id="experience" className="body-font overflow-hidden">
       <div className="container max-w-7xl sm:max-w-full px-20 pt-10 pb-20 mx-auto md:max-w-[80%]">
-        <h2 className="text-3xl font-bold mt-12 text-center">Trayectoria</h2>
+        <h2 className="text-3xl font-bold mt-12 text-center pt-10">Trayectoria</h2>
         <div className=" divide-y-2 divide-gray-100">
           {experience.map((category, index) => (
             <div
