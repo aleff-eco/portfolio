@@ -394,7 +394,7 @@ export const experience = [
     date: "Julio 2024 - Actualmente",
     descriptionTitle: "Desarrollador Backend",
     descriptionTech:
-      "Desarrollé con: PHP, Laravel, MySQL, JavaScript, Livewire, Tailwind y Viu.",
+      "Desarrollé con: PHP, Laravel, MySQL, JavaScript, Livewire, Tailwind, Vue.",
     descriptionPoints: [
       "Lideré el desarrollo de proyectos web como 'reina pepiada,' 'dbeefmax,' y 'reichstag'.",
       "Asesoré, revisé y evalué a más de 10 pasantes, asegurando la entrega de soluciones de excelente calidad",
