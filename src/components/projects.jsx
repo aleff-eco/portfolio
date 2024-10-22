@@ -64,7 +64,7 @@ export function Projects({ children }) {
           {visibleProjects.map((project, index) => (
             <div
               key={index}
-              className="bg-white px-6 py-6 rounded-lg h-auto transform transition duration-300 project-card relative z-20"
+              className="bg-white px-6 rounded-lg h-auto transform transition duration-300 project-card relative z-20"
               style={{
                 opacity:
                   hoveredIndex === null || hoveredIndex === index ? 1 : 0.65,
@@ -87,6 +87,30 @@ export function Projects({ children }) {
                     height={250}
                     className="rounded-lg"
                   />
+                </div>
+                <div className="relative">
+                  {/* Este div se oculta al hacer hover */}
+                  <div
+                    className={`${
+                      hoveredIndex === index ? "hidden" : "block"
+                    } absolute inset-0 flex justify-center items-center sm:mt-0`}
+                  >
+                    <p className="text-center font-semibold">Saber más</p>
+                  </div>
+
+                  {/* Información adicional que aparece con hover */}
+                  <div
+                    className={`mt-3 transition-opacity duration-500 ease-in-out ${
+                      hoveredIndex === index ? "opacity-100" : "opacity-0"
+                    }`}
+                  >
+                    <p className="text-sm text-gray-800 mx-4 my-2 sm:my-0">
+                      <strong>Cargo: </strong> {project.occupation}
+                    </p>
+                    <p className="text-sm text-gray-800 mx-4 mt-1 hidden sm:block">
+                      <strong>Descripción: </strong> {project.description}
+                    </p>
+                  </div>
                 </div>
               </a>
             </div>

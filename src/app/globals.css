@@ -159,6 +159,7 @@ button:not(.active-skill)::after {
 
 ::-webkit-scrollbar {
   width: 8px;
+  /* padding-right: 1px; */
 }
 
 ::-webkit-scrollbar-track {
@@ -179,5 +180,5 @@ button:not(.active-skill)::after {
 /* Para Firefox */
 html {
   scrollbar-width: thin;
-  scrollbar-color: #888 #f1f1f1;
+  scrollbar-color: #9c9c9c #f1f1f1;
 }

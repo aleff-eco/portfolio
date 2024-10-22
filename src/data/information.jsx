@@ -314,16 +314,21 @@ export const projects = [
   {
     title: "Aplicacion Web para REICHSTAG",
     imageSrc: "/projects/reichstag.png",
-    imageAlt: "Desarrollo de un sitio web con next.js para reichstag.com.mx", 
+    imageAlt: "Desarrollo de un sitio web con next.js para reichstag.com.mx",
     link: "https://reichstag.com.mx/",
     category: "Desarrollo Web fullstack",
+    occupation: "Lider de equipo de desarrollo - Desarrollador Full-Stack",
+    description: "",
   },
   {
     title: "Aplicacion Web para D BeefMax",
     imageSrc: "/projects/dbeefmax.png",
-    imageAlt: "Desarrollo de un sitio web para una carniceria con panel administrativo en PHP", 
+    imageAlt:
+      "Desarrollo de un sitio web para una carniceria con panel administrativo en PHP",
     link: "https://dbeefmaxboutique.com/",
     category: "Desarrollo Web fullstack",
+    occupation: "Desarrollador Full-Stack",
+    description: "",
   },
   {
     title: "Sitio web para REINA PEPIADA",
@@ -331,6 +336,8 @@ export const projects = [
     imageAlt: "Un sitio web para un restaurante de comida venezolana",
     link: "https://reinapepiada.com.mx/",
     category: "Desarrollo Web frontend",
+    occupation: "Lider de equipo de desarrollo - Desarrollador Full-Stack",
+    description: "",
   },
   {
     title: "CRM de usuarios",
@@ -338,6 +345,8 @@ export const projects = [
     imageAlt: "Proyecto CRM para gestión de usuarios",
     link: "https://github.com/aleff-eco/Crud-PHP-Laravel",
     category: "Desarrollo web Fullstack",
+    occupation: "Desarrollador Full-Stack",
+    description: "",
   },
   {
     title: "QUOWARE para la gestion de Negocios",
@@ -345,6 +354,8 @@ export const projects = [
     imageAlt: "Aplicación móvil",
     link: "https://github.com/usuario/ecommerce_project",
     category: "Desarrollo Mobile | Disponible en Playstore",
+    occupation: "Lider del proyecto - Desarrollador Full-Stack",
+    description: "",
   },
   {
     title: "Red neuronal para clasificación de imagenes",
@@ -352,6 +363,8 @@ export const projects = [
     imageAlt: "Red neuronal para clasificación del mango ataulfo",
     link: "https://github.com/aleff-eco/Red-neuronal-Clasificadora",
     category: "Desarrollo Backend | IA",
+    occupation: "Desarrollador Full-Stack",
+    description: "",
   },
   {
     title: "Aplicacion movil para consumo de una API",
@@ -360,6 +373,8 @@ export const projects = [
       "Aplicación móvil para consumir una API destinada al análisis del mango ataulfo",
     link: "https://github.com/aleff-eco/Mobile-App-Ataulfo",
     category: "Aplicación móvil ",
+    occupation: "Desarrollador Frontend",
+    description: "",
   },
   {
     title: "Analizador lexico, sintactico y semantico",
@@ -368,6 +383,8 @@ export const projects = [
       "Analizador lexico, sintactico y semantico, con consola de depuración.",
     link: "https://github.com/usuario/task_manager",
     category: "Desarrollo Fullstack",
+    occupation: "Desarrollador Full-Stack",
+    description: "",
   },
   {
     title: "Automata verificador de placas vehiculares",
@@ -375,6 +392,8 @@ export const projects = [
     imageAlt: "Sistema de Control de Versiones",
     link: "https://github.com/usuario/version_control",
     category: "Herramientas de análisis",
+    occupation: "Desarrollador Full-Stack",
+    description: "",
   },
   {
     title: "React creando una calculadora",
@@ -382,6 +401,8 @@ export const projects = [
     imageAlt: "Proyecto React creando una calculadora",
     link: "https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png",
     category: "Frontend",
+    occupation: "Desarrollador Frontend",
+    description: "",
   },
 ];
 
