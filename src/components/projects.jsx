@@ -104,10 +104,10 @@ export function Projects({ children }) {
                       hoveredIndex === index ? "opacity-100" : "opacity-0"
                     }`}
                   >
-                    <p className="text-sm text-gray-800 mx-4 my-2 sm:my-0">
+                    <p className="text-sm mx-4 my-2 sm:my-0">
                       <strong>Cargo: </strong> {project.occupation}
                     </p>
-                    <p className="text-sm text-gray-800 mx-4 mt-1 hidden sm:block">
+                    <p className="text-sm mx-4 mt-1 hidden sm:block">
                       <strong>Descripción: </strong> {project.description}
                     </p>
                   </div>
