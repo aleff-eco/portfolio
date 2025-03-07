@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../app/globals.css";
 import { technicalSkills, softSkills, categories } from "@/data/information";
 import { PiLineVerticalBold } from "react-icons/pi";
@@ -7,8 +7,46 @@ export function Skills() {
   const [selectedSkillType, setSelectedSkillType] = useState("technical");
   const [selectedCategory, setSelectedCategory] = useState("");
   const [isTransitioning, setIsTransitioning] = useState(false);
-
   const [hasInteracted, setHasInteracted] = useState(false);
+
+  const [isInView, setIsInView] = useState(false);
+
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    let intervalId;
+
+    if (!hasInteracted && isInView) {
+      intervalId = setInterval(() => {
+        toggleSkillType();
+      }, 5000);
+    }
+
+    return () => {
+      if (intervalId) clearInterval(intervalId);
+    };
+  }, [hasInteracted, isInView]);
 
   const toggleSkillType = () => {
     setIsTransitioning(true);
@@ -20,7 +58,7 @@ export function Skills() {
   };
 
   const handleSkillTypeClick = (type) => {
-    setHasInteracted(true); // Marcamos que el usuario ha interactuado
+    setHasInteracted(true);
     if (selectedSkillType !== type) {
       setIsTransitioning(true);
       setTimeout(() => {
@@ -31,18 +69,8 @@ export function Skills() {
     }
   };
 
-  useEffect(() => {
-    if (!hasInteracted) {
-      const intervalId = setInterval(() => {
-        toggleSkillType();
-      }, 5000);
-
-      return () => clearInterval(intervalId);
-    }
-  }, [hasInteracted]); 
-
   const handleCategoryClick = (categoryKey) => {
-    setHasInteracted(true); // Marcamos que el usuario ha interactuado
+    setHasInteracted(true);
     setIsTransitioning(true);
     setTimeout(() => {
       setSelectedCategory(categoryKey);
@@ -64,11 +92,13 @@ export function Skills() {
     : technicalSkills;
 
   return (
-    <section id="skills" className="md:py-12 lg:py-16">
+    <section
+      id="skills"
+      ref={sectionRef}
+      className="md:py-12 lg:py-16"
+    >
       <div className="container mx-auto sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold md:text-3xl text-center">
-          Mis habilidades
-        </h2>
+        <h2 className="text-3xl font-bold md:text-3xl text-center">Mis habilidades</h2>
 
         <div className="flex justify-center space-x-8 text-center mt-6">
           <button

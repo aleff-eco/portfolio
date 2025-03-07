@@ -458,7 +458,6 @@ export const experience = [
       "Desarrollé, desplegué y di mantenimiento a aplicaciones web, optimizando el rendimiento, el SEO y la seguridad.",
       "Definí arquitecturas, diseñé bases de datos, realicé revisiones de código, gestioné riesgos técnicos, colaboré con otros departamentos, brindé mentorías y capacitaciones, y supervisé implementaciones y pruebas.",
       "Gestioné la asignación, revisión y actualización de actividades mediante Jira.",
-      "Realicé pruebas unitarias y elaboré documentación técnica para mejorar los tiempos de resolución de tickets.",
       "Utilicé GitHub y Bitbucket para administrar el código fuente junto con los equipos de desarrollo.",
     ],
   },
