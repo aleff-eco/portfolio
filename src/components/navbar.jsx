@@ -27,7 +27,8 @@ export function Navbar() {
   };
 
   return (
-    <header className="top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-5 bg-[hsl(var(--navbar))] dark:bg-[hsl(var(--navbar))] text-primary-foreground shadow-lg transition-all duration-300">
+    // Se añade "fixed" para que el navbar permanezca en la parte superior.
+    <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-5 bg-[hsl(var(--navbar))] dark:bg-[hsl(var(--navbar))] text-primary-foreground shadow-lg transition-all duration-300">
       <div className="flex items-center gap-6">
         <img loading="lazy" src="./navbarGif.gif" alt="GIF" className="w-8 h-8" />
       </div>
@@ -65,7 +66,6 @@ export function Navbar() {
       </div>
       <div className={`fixed inset-0 bg-primary bg-opacity-95 lg:hidden transform ${isOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 ease-in-out`}>
         <div className="relative w-full h-full flex flex-col items-center justify-center p-6">
-          {/* Botón para cerrar el menú */}
           <button
             className="absolute top-4 right-4 p-2 text-primary-foreground hover:text-foreground transition-transform duration-300"
             onClick={toggleMenu}
@@ -73,7 +73,6 @@ export function Navbar() {
           >
             <FaTimes className="w-8 h-8" />
           </button>
-
           <Link href="#inicio" onClick={toggleMenu} className="block py-4 font-medium text-primary-foreground hover:underline underline-offset-4 hover:scale-110 transition-transform duration-200">
             Inicio
           </Link>

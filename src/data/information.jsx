@@ -246,10 +246,10 @@ export const categories = [
   { name: "🖼️ Frontend", key: "frontend" },
   { name: "⚙️ Backend", key: "backend" },
   { name: "🌐 Idiomas", key: "idioma" },
-  { name: "Lenguajes", key: "language" },
-  { name: "Herramientas", key: "tool" },
-  { name: "Frameworks y Librerías", key: "framework" },
-  { name: "Tecnologías", key: "technology" },
+  // { name: "Lenguajes", key: "language" },
+  // { name: "Herramientas", key: "tool" },
+  // { name: "Frameworks y Librerías", key: "framework" },
+  // { name: "Tecnologías", key: "technology" },
 ];
 
 export const companies = [
@@ -264,6 +264,18 @@ export const companies = [
     title: "Comercio y Negocios internacionales",
     imageUrl: "/experience/bni-chiapas.png",
     link: "https://bnimexico.com/es-MX/index",
+  },
+  {
+    name: "FLDCH",
+    title: "Universidad",
+    imageUrl: "/experience/FLDCH.png",
+    link: "http://inef.edu.mx/",
+  },
+  {
+    name: "INEF",
+    title: "Universidad",
+    imageUrl: "/experience/INEF-BLACK.png",
+    link: "http://inef.edu.mx/",
   },
   {
     name: "HighTech Pro",
@@ -310,13 +322,39 @@ export const companies = [
 ];
 
 export const projects = [
+  // {
+  //   title: "Aplicación web INEF (EN PROCESO DE DESPLIEGUE)",
+  //   imageSrc: "/projects/development.jpg",
+  //   imageAlt: "Desarrollo full-stack de un gestor de contenidos para las universidades FLDCH-INEF",
+  //   link: "",
+  //   category: "Líder Técnico - Desarrollador Full-Stack",
+  //   description: 'Lideré el sitio para la Universidad Facultad Libre de Derecho de Chiapas (FLDCH), desarrollando además el 80% del proyecto e implementando las mejores prácticas de SEO.',
+  // },
+  {
+    title: "Aplicación web FLDCH (EN PROCESO DE DESPLIEGUE)",
+    imageSrc: "/projects/fldch.png",
+    imageAlt: "Desarrollo full-stack de un gestor de contenidos para las universidades FLDCH-INEF",
+    link: "",
+    category: "Desarrollo Web fullstack",
+    occupation: "Líder Técnico - Desarrollador Full-Stack",
+    description: 'Lideré el sitio para la Universidad Facultad Libre de Derecho de Chiapas (FLDCH), desarrollando además el 80% del proyecto e implementando las mejores prácticas de SEO.',
+  },
+  {
+    title: "Gestor de contenidos FLDCH - INEF (EN PROCESO DE DESPLIEGUE)",
+    imageSrc: "/projects/fldch-inef.png",
+    imageAlt: "Desarrollo full-stack de un gestor de contenidos para las universidades FLDCH-INEF",
+    link: "",
+    category: "Desarrollo Web fullstack",
+    occupation: "Líder Técnico - Desarrollador Full-Stack",
+    description: 'Desarrollé un gestor de contenidos para las universidades FLDCH-INEF, con el objetivo de facilitar la administración de los contenidos en sus sitios web.',
+  },  
   {
     title: "Sistema administrativo BNI Chiapas",
     imageSrc: "/projects/bni.png",
     imageAlt: "Desarrollo fullstack de un sistema administrativo y de ventas para BNI Chiapas",
     link: "https://bnimexico.com/es-MX/index",
     category: "Desarrollo Web fullstack",
-    occupation: "Líder de equipo de desarrollo - Desarrollador Full-Stack",
+    occupation: "Líder Técnico - Desarrollador Full-Stack",
     description: 'Lideré el desarrollo del proyecto "BNI Chiapas". Encargado del desarrollo y despliegue del proyecto. Finalizando la entrega con una exposición ante el equipo BNI.'
   },
   {
@@ -325,7 +363,7 @@ export const projects = [
     imageAlt: "Desarrollo de un sitio web con Next.js para reichstag.com.mx",
     link: "https://reichstag.com.mx/",
     category: "Desarrollo Web fullstack",
-    occupation: "Líder de equipo de desarrollo - Desarrollador Full-Stack",
+    occupation: "Líder Técnico - Desarrollador Full-Stack",
     description: 'Dirigí el desarrollo y despliegue del proyecto "REICHSTAG" siendo también el desarrollador principal.',
   },
   {
@@ -352,7 +390,7 @@ export const projects = [
     imageAlt: "Desarrollo de un sitio web para una carnicería con panel administrativo en PHP",
     link: "https://dbeefmaxboutique.com/",
     category: "Desarrollo Web fullstack",
-    occupation: "Desarrollador Full-Stack - Lider del desarrollo",
+    occupation: "Líder Técnico - Desarrollador Full-Stack",
     description: 'Me encargué del desarrollo, despligue y mantenimiento del proyecto "D BeefMax", siendo el desarrollador principal del proyecto en sus dos versiones.',
   },
   {
@@ -361,7 +399,7 @@ export const projects = [
     imageAlt: "Sitio web para un restaurante de comida venezolana",
     link: "https://reinapepiada.com.mx/",
     category: "Desarrollo Web frontend",
-    occupation: "Líder de equipo de desarrollo - Desarrollador Full-Stack",
+    occupation: "Líder Técnico - Desarrollador Full-Stack",
     description: 'Desarrollé el proyecto "REINA PEPIADA", junto a un equipo de 4 estudiantes que realizaban su servicio social.',
   },
   {
@@ -388,17 +426,8 @@ export const projects = [
     imageAlt: "Aplicación móvil",
     link: "https://github.com/usuario/ecommerce_project",
     category: "Desarrollo Mobile | Disponible en PlayStore",
-    occupation: "Líder del proyecto - Desarrollador Full-Stack",
+    occupation: "Líder Técnico - Desarrollador Full-Stack",
     description: 'Lideré un equipo de desarrollo y un equipo de diseñadores. Para crear el proyecto "QUOWARE", lanzado en PlayStore.',
-  },
-  {
-    title: "Red neuronal clasificadora",
-    imageSrc: "/projects/redNeuronal.png",
-    imageAlt: "Red neuronal para clasificación del mango ataulfo",
-    link: "https://github.com/aleff-eco/Red-neuronal-Clasificadora",
-    category: "Desarrollo Backend | IA",
-    occupation: "Desarrollador Full-Stack",
-    description: "Desarrollé un modelo de inteligencia artificial para la clasificación del estado de maduración del mango a nivel industrial.",
   },
   {
     title: "Aplicación móvil",
@@ -406,36 +435,9 @@ export const projects = [
     imageAlt: "Aplicación móvil para consumir una API destinada al análisis del mango ataulfo",
     link: "https://github.com/aleff-eco/Mobile-App-Ataulfo",
     category: "Aplicación móvil",
-    occupation: "Desarrollador Frontend",
+    occupation: "Desarrollador Full-Stack",
     description: 'Desarrollé una aplicación móvil enfocada en el análisis del mango ataulfo, con tiempos de respuesta cortos y óptimo rendimiento.'
   },
-  {
-    title: "Analizador léxico, sintáctico y semántico",
-    imageSrc: "/projects/analizador.png",
-    imageAlt: "Analizador léxico, sintáctico y semántico, con consola de depuración",
-    link: "https://github.com/usuario/task_manager",
-    category: "Desarrollo Fullstack",
-    occupation: "Desarrollador Full-Stack",
-    description: "Desarrollé un proyecto Fullstack para un analizador léxico, sintáctico y semántico con consola de depuración.",
-  },
-  // {
-  //   title: "Autómata verificador de placas vehiculares",
-  //   imageSrc: "/projects/automata2.png",
-  //   imageAlt: "Sistema de verificación de placas vehiculares",
-  //   link: "https://github.com/usuario/version_control",
-  //   category: "Tecnologías de análisis",
-  //   occupation: "Desarrollador Full-Stack",
-  //   description: "Creé un autómata para validar placas vehiculares.",
-  // },
-  // {
-  //   title: "React calculadora",
-  //   imageSrc: "/projects/reactCalculator.png",
-  //   imageAlt: "Proyecto en React creando una calculadora",
-  //   link: "https://github.com/aleff-eco/Calculator-React/blob/Ale-Develop/project-image/React-calculator.png",
-  //   category: "Frontend",
-  //   occupation: "Desarrollador Frontend",
-  //   description: "Desarrollé el proyecto de una calculadora usando lo aprendido en un curso de diseño UX & UI.",
-  // },
 ];
 
 export const experience = [
@@ -449,14 +451,15 @@ export const experience = [
     descriptionTech:
       "Tecnologías: PHP, Laravel, MySQL, JavaScript, Livewire, Tailwind, Vue.",
     descriptionPoints: [
-      'Dirigí el desarrollo de proyectos web, como: “BNI Chiapas”, “Reichstag”, “DBeefMax”, “Reina Pepiada”. Logrando además aumentar un 100% su alcance con las mejores prácticas de SEO y el mejor rendimiento.',
-      "Evalué a más de 15 pasantes, brindando conferencias y asesoramientos asegurando la calidad de sus entregas y apoyando a su crecimiento profesional.",
-      "Coordiné reuniones estratégicas con clientes, garantizando entregas puntuales y soluciones a la medida de la mejor calidad el 100% de las veces.",
-      "Dirigí equipos multidisciplinarios, mejorando la eficiencia en un 50% mediante metodologías ágiles.",
-      "Desplegué y mantuve aplicaciones web, optimizando su rendimiento, SEO y seguridad.",
-      "Implementé funcionalidades avanzadas en los sistemas back-end y front-end, mejorando el rendimiento en un 60%.",
+      'Dirigí el desarrollo de proyectos web, tales como “Universidad FLDCH - INEF”, “BNI Chiapas”, “DBeefMax” y “Reina Pepiada”.',
+      'Desempeñé el rol de desarrollador principal en proyectos como “Rufino Tamayo”, “Romo Tours” y “Reichstag”.',
+      "Evalué a 4 grupos de pasantes, impartí diversas charlas y asesorías, asegurando la calidad de sus entregas y fomentando su crecimiento profesional.",
+      "Dirigí equipos de desarrollo, incrementando la eficiencia en un 100% mediante la implementación de metodologías ágiles.",
+      "Desarrollé, desplegué y di mantenimiento a aplicaciones web, optimizando el rendimiento, el SEO y la seguridad.",
+      "Definí arquitecturas, diseñé bases de datos, realicé revisiones de código, gestioné riesgos técnicos, colaboré con otros departamentos, brindé mentorías y capacitaciones, y supervisé implementaciones y pruebas.",
+      "Gestioné la asignación, revisión y actualización de actividades mediante Jira.",
       "Realicé pruebas unitarias y elaboré documentación técnica para mejorar los tiempos de resolución de tickets.",
-      "Utilicé GitHub y Bitbucket para gestionar el código fuente y colaborar eficientemente con los equipos de desarrollo.",
+      "Utilicé GitHub y Bitbucket para administrar el código fuente junto con los equipos de desarrollo.",
     ],
   },
   {
@@ -479,23 +482,23 @@ export const experience = [
       'Contribuí en dailys, aportando soluciones, apoyando en la resolución de dudas y trabajando en equipo.',
     ],
   },
-  {
-    icon: <RiHomeOfficeLine className="w-6 h-6" />,
-    company: "Unity.com.mx",
-    companyUrl: "https://unity.com.mx/",
-    title: "Desarrollador Full-Stack",
-    date: "Febrero 2023 - Agosto 2023",
-    descriptionTitle: "Desarrollador Full-Stack",
-    descriptionTech: "Tecnologías: WordPress, PHP, MySQL y JavaScript.",
-    descriptionPoints: [
-      "Implementé sistemas de seguridad que protegieron la infraestructura y redujeron los incidentes en un 80%.",
-      "Desarrollé e integré plugins, ampliando la funcionalidad del sitio web y mejorando la experiencia del usuario.",
-      "Realicé mejoras en el diseño y optimicé la interfaz de usuario, aumentando el tiempo de permanencia en el sitio.",
-      "Implementé prácticas avanzadas para la seguridad de datos, cumpliendo con estándares y regulaciones de protección.",
-      "Mantuve y optimicé la funcionalidad general del sitio, incrementando su rendimiento en un 70%.",
-      "Efectué actualizaciones y mejoras a nivel de servidor, asegurando la estabilidad del sistema.",
-    ],
-  },  
+  // {
+  //   icon: <RiHomeOfficeLine className="w-6 h-6" />,
+  //   company: "Unity.com.mx",
+  //   companyUrl: "https://unity.com.mx/",
+  //   title: "Desarrollador Full-Stack",
+  //   date: "Febrero 2023 - Agosto 2023",
+  //   descriptionTitle: "Desarrollador Full-Stack",
+  //   descriptionTech: "Tecnologías: WordPress, PHP, MySQL y JavaScript.",
+  //   descriptionPoints: [
+  //     "Implementé sistemas de seguridad que protegieron la infraestructura y redujeron los incidentes en un 80%.",
+  //     "Desarrollé e integré plugins, ampliando la funcionalidad del sitio web y mejorando la experiencia del usuario.",
+  //     "Realicé mejoras en el diseño y optimicé la interfaz de usuario, aumentando el tiempo de permanencia en el sitio.",
+  //     "Implementé prácticas avanzadas para la seguridad de datos, cumpliendo con estándares y regulaciones de protección.",
+  //     "Mantuve y optimicé la funcionalidad general del sitio, incrementando su rendimiento en un 70%.",
+  //     "Efectué actualizaciones y mejoras a nivel de servidor, asegurando la estabilidad del sistema.",
+  //   ],
+  // },  
   {
     icon: <RiHomeOfficeLine className="w-6 h-6" />,
     company: "Wax Revolution",
@@ -505,13 +508,12 @@ export const experience = [
     descriptionTitle: "Desarrollador Full-Stack - Pasante",
     descriptionTech: "Tecnologías: PHP, MySQL, JavaScript.",
     descriptionPoints: [
-      "Implementé nuevas funcionalidades para optimizar la experiencia del usuario y mejorar el flujo de trabajo interno.",
-      "Desarrollé mejoras en el backend para mejorar la eficiencia y la escalabilidad del sistema.",
-      "Optimicé el rendimiento del sistema, reduciendo tiempos de consultas y mejorando la eficiencia del procesamiento de datos.",
-      "Apliqué correcciones de errores y realicé mejoras en el código para asegurar un funcionamiento fluido del sistema.",
-      "Colaboré con diferentes equipos para asegurar la integración de nuevas funcionalidades sin interrumpir el servicio.",
+      "Desarrollé e implementé nuevos módulos para la gestión de inventarios, incorporando validaciones y corrigiendo incidencias.",
+      "Optimizé el rendimiento de la base de datos mediante la mejora de consultas y la aplicación de buenas prácticas en la administración de datos.",
+      "Administré el control de versiones a través de GitHub, facilitando la colaboración efectiva y el seguimiento del desarrollo en equipo.",
+      "Realicé la corrección de errores críticos e implementé mejoras continuas para asegurar un rendimiento óptimo del sistema."
     ],
-  },
+  },  
   {
     icon: <LuSchool className="w-6 h-6" />,
     company: "Universidad Politécnica de Chiapas",

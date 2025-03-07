@@ -7,7 +7,8 @@
     --navbar:  220 22% 12%;
     --background: 220 15% 95%; /* Soft Cool Gray */
     --foreground: 220 22% 20%; /* Darker Cool Gray */
-    --card: 0 0% 100%; /* Pure White */
+    --card: 0 0% 100%;  /* Pure White */
+    --secondary-card: 0 0% 100%;
     --card-foreground: 220 15% 15%; /* Cool Gray for Cards */
     --primary: 0 0% 25%; /* Elegant Dark Gray */
     --primary-foreground: 0 0% 98%; /* White */
@@ -26,6 +27,7 @@
     --background: 220 22% 13%; /* Darker background for dark mode */
     --foreground: 0 0% 90%; /* Much lighter gray for text in dark mode */
     --card: 220 15% 25%; /* Dark Gray for cards in dark mode */
+    --secondary-card: 220 20% 90%;
     --card-foreground: 0 0% 90%; /* Lighter Gray for text in dark mode */
     --primary: 0 0% 10%; /* Lighter gray for primary elements in dark mode */
     --primary-foreground: 0 0% 98%; /* White foreground for primary elements */

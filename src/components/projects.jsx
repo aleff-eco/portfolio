@@ -45,7 +45,7 @@ export function Projects({ children }) {
     >
       {children}
 
-      <div className="relative max-w-full mx-auto px-8">
+      <div className="relative max-w-full mx-auto px-2">
         <div className="transition duration-500 ease-in-out transform scale-100 translate-x-0 translate-y-0 opacity-100 relative z-30 flex justify-center items-center">
           <div className="mb-12 md:mb-16 flex flex-col justify-center items-center">
             <h1 className="text-3xl font-bold text-white md:text-3xl text-center px-2 m-4">
@@ -117,7 +117,12 @@ export function Projects({ children }) {
               className="px-6 py-2 font-semibold border-2 rounded-lg duration-300 hover:bg-gray-200 dark:hover:bg-gray-800 dark:border-white border-black dark:text-white text-black hover:scale-105 transform"
               onClick={() => setShowAll(true)}
             >
-              Ver más
+              Ver más {" "}
+              <span className="dot-bouncing">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </span>
             </button>
           ) : (
             <button

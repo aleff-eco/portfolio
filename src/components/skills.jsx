@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../app/globals.css";
 import { technicalSkills, softSkills, categories } from "@/data/information";
 import { PiLineVerticalBold } from "react-icons/pi";
@@ -8,7 +8,19 @@ export function Skills() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [isTransitioning, setIsTransitioning] = useState(false);
 
+  const [hasInteracted, setHasInteracted] = useState(false);
+
+  const toggleSkillType = () => {
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setSelectedSkillType((prev) => (prev === "technical" ? "soft" : "technical"));
+      setIsTransitioning(false);
+      setSelectedCategory("");
+    }, 200);
+  };
+
   const handleSkillTypeClick = (type) => {
+    setHasInteracted(true); // Marcamos que el usuario ha interactuado
     if (selectedSkillType !== type) {
       setIsTransitioning(true);
       setTimeout(() => {
@@ -19,7 +31,18 @@ export function Skills() {
     }
   };
 
+  useEffect(() => {
+    if (!hasInteracted) {
+      const intervalId = setInterval(() => {
+        toggleSkillType();
+      }, 5000);
+
+      return () => clearInterval(intervalId);
+    }
+  }, [hasInteracted]); 
+
   const handleCategoryClick = (categoryKey) => {
+    setHasInteracted(true); // Marcamos que el usuario ha interactuado
     setIsTransitioning(true);
     setTimeout(() => {
       setSelectedCategory(categoryKey);
@@ -30,7 +53,7 @@ export function Skills() {
   const filteredTechnicalSkills = selectedCategory
     ? technicalSkills.filter((skill) => {
         if (selectedCategory === "favorites") {
-          return skill.favorite; // Mostrar todas las skills con favorite: true
+          return skill.favorite;
         } else if (selectedCategory === "frontend") {
           return skill.subcategory === "frontend";
         } else if (selectedCategory === "backend") {
@@ -93,25 +116,13 @@ export function Skills() {
             isTransitioning ? "opacity-0" : "opacity-100"
           }`}
         >
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 justify-center m-8 lg:pl-20">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-center m-8 lg:pl-20">
             {selectedSkillType === "technical"
               ? filteredTechnicalSkills.map((skill) => (
-                  <div
-                    key={skill.name}
-                    className="flex items-center gap-4 mt-4"
-                  >
-                    <div className="icon-wrapper ">{skill.icon}</div>
+                  <div key={skill.name} className="flex items-center gap-4 mt-4">
+                    <div className="icon-wrapper">{skill.icon}</div>
                     <div>
                       <div className="text-lg font-bold">{skill.name}</div>
-                      <div className="flex items-center">
-                        <span className="text-sm font-medium mr-1 underline-offset-4">
-                          {skill.level}
-                        </span>
-                        {/* <PiLineVerticalBold />
-                        <span className="text-sm font-medium ml-1">
-                          {skill.years}
-                        </span> */}
-                      </div>
                     </div>
                   </div>
                 ))
