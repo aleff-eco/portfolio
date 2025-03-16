@@ -323,7 +323,7 @@ export const companies = [
 
 export const projects = [
   // {
-  //   title: "Aplicación web INEF (EN PROCESO DE DESPLIEGUE)",
+  //   title: "Aplicación web INEF",
   //   imageSrc: "/projects/development.jpg",
   //   imageAlt: "Desarrollo full-stack de un gestor de contenidos para las universidades FLDCH-INEF",
   //   link: "",
@@ -331,16 +331,16 @@ export const projects = [
   //   description: 'Lideré el sitio para la Universidad Facultad Libre de Derecho de Chiapas (FLDCH), desarrollando además el 80% del proyecto e implementando las mejores prácticas de SEO.',
   // },
   {
-    title: "Aplicación web FLDCH (EN PROCESO DE DESPLIEGUE)",
+    title: "Aplicación web FLDCH",
     imageSrc: "/projects/fldch.png",
     imageAlt: "Desarrollo full-stack de un gestor de contenidos para las universidades FLDCH-INEF",
-    link: "",
+    link: "https://fldch.edu.mx/",
     category: "Desarrollo Web fullstack",
     occupation: "Líder Técnico - Desarrollador Full-Stack",
     description: 'Lideré el sitio para la Universidad Facultad Libre de Derecho de Chiapas (FLDCH), desarrollando además el 80% del proyecto e implementando las mejores prácticas de SEO.',
   },
   {
-    title: "Gestor de contenidos FLDCH - INEF (EN PROCESO DE DESPLIEGUE)",
+    title: "Gestor de contenidos FLDCH - INEF",
     imageSrc: "/projects/fldch-inef.png",
     imageAlt: "Desarrollo full-stack de un gestor de contenidos para las universidades FLDCH-INEF",
     link: "",
