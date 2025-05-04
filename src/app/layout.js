@@ -1,10 +1,12 @@
-import { Chakra_Petch } from "next/font/google"; // Importar la fuente Chakra Petch
+import { Inter } from "next/font/google"
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import MouseMoveEffect from "@/components/MouseMoveEffect";
+
 
 // Importar Chakra Petch con los pesos disponibles
-const chakraPetch = Chakra_Petch({
+const InterPetch = Inter({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   style: ["normal", "italic"],
@@ -44,8 +46,8 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <Analytics />
       <SpeedInsights />
-      {/* Aplicar la fuente Chakra Petch globalmente */}
-      <body className={chakraPetch.className}>{children}</body>
+      <MouseMoveEffect />
+      <body className={InterPetch.className}>{children}</body>
     </html>
   );
 }

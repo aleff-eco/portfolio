@@ -24,7 +24,7 @@ export default function Portfolio() {
   
 
   return (
-    <div className="flex flex-col bg-background text-foreground">
+    <div className="flex flex-col text-foreground">
       <Navbar />
       <main className="flex-1">
         <div>
