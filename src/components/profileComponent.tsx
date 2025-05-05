@@ -125,6 +125,14 @@ export function ProfileComponent() {
           </motion.button>
         </motion.div>
       </div>
+      {scrollY <= 10 && (
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center z-10">
+          <p className="text-sm">{t.profile.scrollIndicator}</p>
+          <div className="mouse-icon mt-2">
+            <div className="mouse-wheel w-4 h-8 bg-gray-600 rounded" />
+          </div>
+        </div>
+      )}
     </motion.section>
   );
 }

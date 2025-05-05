@@ -4,6 +4,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import MouseMoveEffect from "@/components/MouseMoveEffect";
 import { LanguageProvider } from "@/context/LanguageContext";
+import ScrollToTop from "@/components/ScrollToTop";
+
 
 // Importar Chakra Petch con los pesos disponibles
 const InterPetch = Inter({
@@ -51,6 +53,7 @@ export default function RootLayout({ children }) {
         <LanguageProvider>
           {children}
         </LanguageProvider>
+        <ScrollToTop />
       </body>
     </html>
   );
