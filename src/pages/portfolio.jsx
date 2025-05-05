@@ -1,4 +1,5 @@
 "use client";
+
 import { Skills } from "../components/skills";
 import { Projects } from "../components/projects";
 import { Navbar } from "../components/navbar";
