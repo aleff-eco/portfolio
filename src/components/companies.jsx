@@ -40,7 +40,9 @@ export function Companies() {
             Compañías con las que he colaborado
           </h2>
           <p className="lg:max-w-[750px] p-2 text-xl text-muted-foreground text-center">
-            Ha sido un honor contribuir al crecimiento de estas destacadas empresas mediante la aportación de soluciones y la generación de valor en cada proyecto.
+            Ha sido un honor contribuir al crecimiento de estas destacadas
+            empresas mediante la aportación de soluciones y la generación de
+            valor en cada proyecto.
           </p>
         </div>
         <div
@@ -74,11 +76,12 @@ export function Companies() {
                         href={company.link}
                         target="_blank"
                         rel="noopener noreferrer"
+                        style={{ color: "#000" }} 
                         className="text-lg font-semibold hover:underline"
                       >
                         {company.name}
                       </a>
-                      <p className="text-sm text-muted-foreground">
+                      <p style={{ color: "#000" }} className="text-sm">
                         {company.title}
                       </p>
                     </div>
