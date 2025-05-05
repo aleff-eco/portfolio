@@ -1,24 +1,24 @@
-"use client";
+'use client';
 
 import "../app/globals.css";
 import "../styles/ProfileComponent.css";
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { Download } from "lucide-react";
-import { useTranslations } from "@/hooks/useTranslations";
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Download } from 'lucide-react';
+import { useTranslations } from '@/hooks/useTranslations';
 
 export function ProfileComponent() {
   const t = useTranslations();
   const words = t.words;
 
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [speed, setSpeed] = useState(150);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     const fullText = words[loopNum % words.length];
-
     let timeoutId: ReturnType<typeof setTimeout>;
 
     if (!isDeleting && text.length < fullText.length) {
@@ -26,18 +26,13 @@ export function ProfileComponent() {
       timeoutId = setTimeout(() => {
         setText(fullText.slice(0, text.length + 1));
       }, speed);
-
     } else if (!isDeleting && text.length === fullText.length) {
-      timeoutId = setTimeout(() => {
-        setIsDeleting(true);
-      }, 1000);
-
+      timeoutId = setTimeout(() => setIsDeleting(true), 1000);
     } else if (isDeleting && text.length > 0) {
       setSpeed(100);
       timeoutId = setTimeout(() => {
         setText(fullText.slice(0, text.length - 1));
       }, speed);
-
     } else if (isDeleting && text.length === 0) {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
@@ -46,13 +41,19 @@ export function ProfileComponent() {
     return () => clearTimeout(timeoutId);
   }, [text, isDeleting, loopNum, words, speed]);
 
+  useEffect(() => {
+    const onScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   const scrollToContact = () => {
-    const section = document.getElementById("contact");
-    section?.scrollIntoView({ behavior: "smooth", block: "start" });
+    const section = document.getElementById('contact');
+    section?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   const handleDownloadCV = () => {
-    window.open("./Aleff_Espinosa_Cordova.pdf", "_blank");
+    window.open('./Aleff_Espinosa_Cordova.pdf', '_blank');
   };
 
   return (
@@ -125,6 +126,7 @@ export function ProfileComponent() {
           </motion.button>
         </motion.div>
       </div>
+
       {scrollY <= 10 && (
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center z-10">
           <p className="text-sm">{t.profile.scrollIndicator}</p>

@@ -1,11 +1,26 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/react";
-import MouseMoveEffect from "@/components/MouseMoveEffect";
-import { LanguageProvider } from "@/context/LanguageContext";
-import ScrollToTop from "@/components/ScrollToTop";
+import dynamic from "next/dynamic";
 
+// 1. Dynamic imports de clientes
+const Analytics = dynamic(
+  () => import("@vercel/analytics/react").then((mod) => mod.Analytics),
+  { ssr: false }
+);
+const MouseMoveEffect = dynamic(
+  () => import("@/components/MouseMoveEffect"),
+  { ssr: false }
+);
+const LanguageProvider = dynamic(
+  () =>
+    import("@/context/LanguageContext").then((mod) => mod.LanguageProvider),
+  { ssr: false }
+);
+const ScrollToTop = dynamic(
+  () => import("@/components/ScrollToTop"),
+  { ssr: false }
+);
 
 // Importar Chakra Petch con los pesos disponibles
 const InterPetch = Inter({
@@ -49,6 +64,7 @@ export default function RootLayout({ children }) {
       <Analytics />
       <SpeedInsights />
       <MouseMoveEffect />
+
       <body className={InterPetch.className}>
         <LanguageProvider>
           {children}
