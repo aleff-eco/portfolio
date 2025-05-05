@@ -152,13 +152,6 @@ export function Navbar() {
               transition={{ duration: 0.2 }}
               className="fixed inset-0 z-40 flex flex-col bg-background pt-24 px-8"
             >
-              <button
-                onClick={() => setIsOpen(false)}
-                className="absolute top-6 right-6 rounded-full p-3 hover:bg-foreground/10 transition-colors"
-              >
-                <X className="h-6 w-6" />
-                <span className="sr-only">Cerrar menú</span>
-              </button>
 
               <ul className="flex flex-col gap-6">
                 {navItems.map(({ name, href }, i) => (
