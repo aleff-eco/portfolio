@@ -5,25 +5,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu as MenuIcon, X, Sun, Moon, Github, Linkedin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const navItems = [
-  { name: "Inicio", href: "#inicio" },
-  { name: "Habilidades", href: "#skills" },
-  { name: "Proyectos", href: "#projects" },
-  { name: "Trayectoria", href: "#experience" },
-  { name: "Contacto", href: "#contact" },
-];
-
-const socialLinks = [
-  { icon: Github, href: "https://github.com/aleff-eco", label: "GitHub" },
-  {
-    icon: Linkedin,
-    href: "https://www.linkedin.com/in/aleff-espinosa-cordova/",
-    label: "LinkedIn",
-  },
-];
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { useTranslations } from "../hooks/useTranslations";
 
 export function Navbar() {
+  const t = useTranslations();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScroll] = useState(false);
   const [theme, setTheme] = useState("light");
@@ -57,6 +43,23 @@ export function Navbar() {
     document.body.style.overflow = isOpen ? "hidden" : "";
   }, [isOpen]);
 
+  const navItems = [
+    { name: t.nav.inicio, href: "#inicio" },
+    { name: t.nav.habilidades, href: "#skills" },
+    { name: t.nav.proyectos, href: "#projects" },
+    { name: t.nav.trayectoria, href: "#experience" },
+    { name: t.nav.contacto, href: "#contact" },
+  ];
+
+  const socialLinks = [
+    { icon: Github, href: "https://github.com/aleff-eco", label: "GitHub" },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/aleff-espinosa-cordova/",
+      label: "LinkedIn",
+    },
+  ];
+
   return (
     <motion.header
       initial={{ y: -24, opacity: 0 }}
@@ -73,7 +76,7 @@ export function Navbar() {
           <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
             <img
               src="/logo.gif"
-              alt="Logo"
+              alt={t.nav.logoAlt}
               className="inline-block h-8 w-8 mr-2"
             />
           </span>
@@ -82,12 +85,12 @@ export function Navbar() {
         <div className="hidden lg:flex items-center gap-8">
           <ul className="flex gap-1">
             {navItems.map(({ name, href }) => (
-              <li key={name} className="relative">
+              <li key={href} className="relative">
                 <Link
                   href={href}
                   className={`py-2 px-5 hover:text-gray-50 hover:bg-foreground/10 transition-colors ${
                     pathname === href
-                      ? "text-foreground font-medium "
+                      ? "text-foreground font-medium"
                       : "text-foreground"
                   }`}
                 >
@@ -117,6 +120,8 @@ export function Navbar() {
               </a>
             ))}
 
+            <LanguageSwitcher />
+
             <button
               onClick={toggleTheme}
               className="ml-8 rounded-full p-2 hover:bg-foreground/10"
@@ -126,7 +131,7 @@ export function Navbar() {
               ) : (
                 <Sun className="h-4 w-4" />
               )}
-              <span className="sr-only">Cambiar tema</span>
+              <span className="sr-only">{t.nav.themeToggle}</span>
             </button>
           </div>
         </div>
@@ -140,7 +145,7 @@ export function Navbar() {
           ) : (
             <MenuIcon className="h-5 w-5" />
           )}
-          <span className="sr-only">Menú</span>
+          <span className="sr-only">{t.nav.menuToggle}</span>
         </button>
 
         <AnimatePresence>
@@ -152,11 +157,10 @@ export function Navbar() {
               transition={{ duration: 0.2 }}
               className="fixed inset-0 z-40 flex flex-col bg-background pt-24 px-8"
             >
-
               <ul className="flex flex-col gap-6">
                 {navItems.map(({ name, href }, i) => (
                   <motion.li
-                    key={name}
+                    key={href}
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -10 }}
@@ -192,6 +196,7 @@ export function Navbar() {
                   ))}
                 </div>
 
+                <LanguageSwitcher />
                 <button
                   onClick={toggleTheme}
                   className="px-8 rounded-full p-2 hover:bg-foreground/10 transition-colors"
@@ -209,27 +214,5 @@ export function Navbar() {
         </AnimatePresence>
       </div>
     </motion.header>
-  );
-}
-
-export function SectionHeading({ id, children }) {
-  return (
-    <motion.h2
-      id={id}
-      className="text-3xl font-semibold relative cursor-pointer"
-      initial="rest"
-      whileHover="hover"
-      animate="rest"
-    >
-      {children}
-      <motion.span
-        variants={{
-          rest: { scaleX: 0 },
-          hover: { scaleX: 1 },
-        }}
-        transition={{ duration: 0.25 }}
-        className="absolute left-0 -bottom-1 h-0.5 w-full origin-left bg-gradient-to-r from-purple-500 to-pink-500"
-      />
-    </motion.h2>
   );
 }

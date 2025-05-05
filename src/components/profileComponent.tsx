@@ -1,58 +1,59 @@
-// app/components/ProfileComponent.jsx
-"use client"
+"use client";
 
-import "../app/globals.css"
-import "../styles/ProfileComponent.css"
-import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
-import { words } from "@/data/information"
-import { Download, Mail } from "lucide-react"
+import "../app/globals.css";
+import "../styles/ProfileComponent.css";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Download } from "lucide-react";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export function ProfileComponent() {
-  const [scrollY, setScrollY] = useState(0)
-  const [text, setText] = useState("")
-  const [isDeleting, setIsDeleting] = useState(false)
-  const [loopNum, setLoopNum] = useState(0)
-  const [typingSpeed, setTypingSpeed] = useState(150)
+  const t = useTranslations();
+  const words = t.words;
 
-  // Detectar scroll para ocultar indicator
-  useEffect(() => {
-    const onScroll = () => setScrollY(window.scrollY)
-    window.addEventListener("scroll", onScroll)
-    return () => window.removeEventListener("scroll", onScroll)
-  }, [])
+  const [text, setText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [speed, setSpeed] = useState(150);
 
-  // Efecto typewriter
   useEffect(() => {
-    const handleType = () => {
-      const i = loopNum % words.length
-      const fullText = words[i]
-      if (!isDeleting && text === fullText) {
-        setTimeout(() => setIsDeleting(true), 1000)
-      } else if (isDeleting && text === "") {
-        setIsDeleting(false)
-        setLoopNum(loopNum + 1)
-      }
-      const updated = isDeleting
-        ? fullText.slice(0, text.length - 1)
-        : fullText.slice(0, text.length + 1)
-      setText(updated)
-      setTypingSpeed(isDeleting ? 100 : 150)
+    const fullText = words[loopNum % words.length];
+
+    let timeoutId: ReturnType<typeof setTimeout>;
+
+    if (!isDeleting && text.length < fullText.length) {
+      setSpeed(150);
+      timeoutId = setTimeout(() => {
+        setText(fullText.slice(0, text.length + 1));
+      }, speed);
+
+    } else if (!isDeleting && text.length === fullText.length) {
+      timeoutId = setTimeout(() => {
+        setIsDeleting(true);
+      }, 1000);
+
+    } else if (isDeleting && text.length > 0) {
+      setSpeed(100);
+      timeoutId = setTimeout(() => {
+        setText(fullText.slice(0, text.length - 1));
+      }, speed);
+
+    } else if (isDeleting && text.length === 0) {
+      setIsDeleting(false);
+      setLoopNum(loopNum + 1);
     }
-    const t = setTimeout(handleType, typingSpeed)
-    return () => clearTimeout(t)
-  }, [text, isDeleting, loopNum])
+
+    return () => clearTimeout(timeoutId);
+  }, [text, isDeleting, loopNum, words, speed]);
 
   const scrollToContact = () => {
-    const section = document.getElementById("contact")
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" })
-    }
-  }
+    const section = document.getElementById("contact");
+    section?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   const handleDownloadCV = () => {
-    window.open("./Aleff_Espinosa_Cordova.pdf", "_blank")
-  }
+    window.open("./Aleff_Espinosa_Cordova.pdf", "_blank");
+  };
 
   return (
     <motion.section
@@ -68,7 +69,7 @@ export function ProfileComponent() {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-600"
         >
-          ¡Hola! Soy Aleff.
+          {t.profile.greeting}
         </motion.h2>
 
         <motion.div
@@ -95,8 +96,7 @@ export function ProfileComponent() {
           transition={{ delay: 0.8, duration: 0.6 }}
           className="text-md sm:text-lg md:text-xl lg:text-xl font-medium text-gray-600 max-w-2xl mx-auto leading-relaxed"
         >
-          Ingeniero de software con 3 años de trayectoria en el desarrollo web. Me especializo en crear experiencias
-          únicas y soluciones a la medida.
+          {t.profile.description}
         </motion.p>
 
         <motion.div
@@ -111,7 +111,7 @@ export function ProfileComponent() {
             onClick={scrollToContact}
             className="connect-button px-6 py-3 rounded-full bg-gradient-to-r from-gray-700 to-gray-900 text-white font-medium shadow-lg flex items-center gap-2"
           >
-            Contactame
+            {t.profile.buttonContact}
           </motion.button>
 
           <motion.button
@@ -121,19 +121,10 @@ export function ProfileComponent() {
             className="download-button px-6 py-3 rounded-full bg-gradient-to-r from-gray-700 to-gray-900 text-white font-medium shadow-lg flex items-center gap-2"
           >
             <Download className="w-5 h-5" />
-            Descarga mi CV
+            {t.profile.buttonDownload}
           </motion.button>
         </motion.div>
       </div>
-
-      {scrollY <= 10 && (
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center z-10">
-          <p className="text-sm">Deslizar</p>
-          <div className="mouse-icon mt-2">
-            <div className="mouse-wheel w-4 h-8 bg-gray-600 rounded" />
-          </div>
-        </div>
-      )}
     </motion.section>
-  )
+  );
 }

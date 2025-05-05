@@ -42,7 +42,7 @@ export default function Portfolio() {
         <div data-aos="fade-up">
           <Experience />
         </div>
-        <div data-aos="fade-up">
+        <div data-aos="fade-up lg:fade-right">
           <Contact />
         </div>
       </main>

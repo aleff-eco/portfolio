@@ -1,94 +1,79 @@
-import { companies } from "../data/information";
-import { useEffect, useRef, useState } from "react";
+'use client';
+
+import React, { useRef, useEffect, useState } from 'react';
+import { companies } from '@/data/information';
+import { useTranslations } from '../hooks/useTranslations';
 
 export function Companies() {
+  const t = useTranslations();
+  const items = [...companies, ...companies, ...companies];
   const scrollRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    const scrollElement = scrollRef.current;
-    const scrollSpeed = 1; // Velocidad de desplazamiento
-    const scrollDelay = 20;
+    let frameId;
+    const speed = 0.5; // píxeles por frame
 
-    const autoScroll = () => {
-      if (!isHovered && scrollElement) {
-        scrollElement.scrollLeft += scrollSpeed;
-        if (scrollElement.scrollLeft >= scrollElement.scrollWidth / 2) {
-          scrollElement.scrollLeft = 0;
+    const step = () => {
+      const el = scrollRef.current;
+      if (el && !isHovered) {
+        el.scrollLeft += speed;
+        if (el.scrollLeft >= el.scrollWidth / 2) {
+          el.scrollLeft = 0;
         }
       }
+      frameId = requestAnimationFrame(step);
     };
 
-    const scrollInterval = setInterval(autoScroll, scrollDelay);
-
-    return () => clearInterval(scrollInterval);
+    frameId = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(frameId);
   }, [isHovered]);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
 
   return (
     <section className="w-full pt-12 lg:py-20 flex justify-center items-center">
       <div className="container flex flex-col items-center gap-8">
-        <div className="grid gap-2 text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-2xl md:text-3xl">
-            Compañías con las que he colaborado
-          </h2>
-          <p className="lg:max-w-[750px] p-2 text-xl text-muted-foreground text-center">
-            Ha sido un honor contribuir al crecimiento de estas destacadas
-            empresas mediante la aportación de soluciones y la generación de
-            valor en cada proyecto.
-          </p>
-        </div>
+        <h2 className="text-3xl font-bold text-center">
+          {t.companies.sectionTitle}
+        </h2>
+        <p className="text-xl text-muted-foreground text-center max-w-2xl">
+          {t.companies.description}
+        </p>
+
         <div
-          className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide"
           ref={scrollRef}
-          style={{
-            scrollbarWidth: "none",
-            WebkitOverflowScrolling: "touch",
-            width: "98.6vw",
-          }}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          className="w-[98vw] overflow-x-auto scrollbar-hide scroll-snap-x scroll-snap-mandatory"
         >
-          <div className="flex py-6 gap-6 px-4 md:gap-8 md:px-6 w-full">
-            {[...companies, ...companies, ...companies, ...companies].map(
-              (company, index) => (
+          <div className="flex gap-6 py-6 px-4 md:gap-8 md:px-6">
+            {items.map(({ key }, idx) => {
+              const data = t.companies[key];
+              return (
                 <div
-                  key={index}
-                  className="flex-shrink-0 group"
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
+                  key={`${key}-${idx}`}
+                  className="relative group flex-shrink-0 w-64 h-32 rounded-lg bg-[hsl(var(--secondary-card))] transition-transform duration-300 hover:scale-110 hover:shadow-lg snap-start"
                 >
-                  <div className="relative py-4 px-8 h-32 w-64 overflow-hidden rounded-lg bg-[hsl(var(--secondary-card))] transition-all duration-300 transform group-hover:scale-110 group-hover:shadow-lg group-hover:rounded-lg flex justify-center items-center">
-                    <img
-                      src={company.imageUrl}
-                      alt={`${company.name} Logo`}
-                      className="object-contain h-full max-w-full"
-                    />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-[hsl(var(--secondary-card))] p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                      <a
-                        href={company.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{ color: "#000" }} 
-                        className="text-lg font-semibold hover:underline"
-                      >
-                        {company.name}
-                      </a>
-                      <p style={{ color: "#000" }} className="text-sm">
-                        {company.title}
-                      </p>
-                    </div>
+                  <img
+                    src={data.imageUrl}
+                    alt={data.name}
+                    className="object-contain h-full w-full p-4"
+                  />
+                  <div className="absolute inset-0 flex flex-col items-center rounded-lg justify-center gap-2 bg-[hsl(var(--secondary-card))] p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <a
+                      href={data.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-lg font-semibold text-black hover:underline"
+                    >
+                      {data.name}
+                    </a>
+                    <p className="text-sm text-black mt-1">
+                      {data.title}
+                    </p>
                   </div>
                 </div>
-              )
-            )}
+              );
+            })}
           </div>
         </div>
       </div>

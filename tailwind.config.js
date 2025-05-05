@@ -7,8 +7,7 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-    },
+    extend: {},
     colors: {
       border: "hsl(var(--border))",
       input: "hsl(var(--input))",
@@ -68,5 +67,19 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({ addUtilities }) {
+      addUtilities({
+        ".scrollbar-hide": {
+          /* Chrome, Safari y Opera */
+          "&::-webkit-scrollbar": { display: "none" },
+          /* Firefox */
+          "scrollbar-width": "none",
+          /* IE 10+ */
+          "-ms-overflow-style": "none",
+        },
+      });
+    },
+  ],
 };

@@ -1,9 +1,9 @@
-import { Inter } from "next/font/google"
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import MouseMoveEffect from "@/components/MouseMoveEffect";
-
+import { LanguageProvider } from "@/context/LanguageContext";
 
 // Importar Chakra Petch con los pesos disponibles
 const InterPetch = Inter({
@@ -47,7 +47,11 @@ export default function RootLayout({ children }) {
       <Analytics />
       <SpeedInsights />
       <MouseMoveEffect />
-      <body className={InterPetch.className}>{children}</body>
+      <body className={InterPetch.className}>
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
   );
 }

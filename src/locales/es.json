@@ -1,0 +1,336 @@
+{
+  "nav": {
+    "inicio": "Inicio",
+    "habilidades": "Habilidades",
+    "proyectos": "Proyectos",
+    "trayectoria": "Trayectoria",
+    "contacto": "Contacto",
+    "logoAlt": "Logo de Aleff",
+    "themeToggle": "Cambiar tema",
+    "menuToggle": "Alternar menú"
+  },
+  "profile": {
+    "greeting": "¡Hola! Soy Aleff.",
+    "description": "Ingeniero de software con 3 años de trayectoria en el desarrollo web. Me especializo en crear experiencias únicas y soluciones a la medida.",
+    "buttonContact": "Contáctame",
+    "buttonDownload": "Descarga mi CV",
+    "scrollIndicator": "Deslizar"
+  },
+  "words": [
+    "¡Ingeniero de software!",
+    "¡Desarrollador web!",
+    "¡Desarrollador Full-Stack!",
+    "(⌐■_■)"
+  ],
+  "skills": {
+    "title": "Mis habilidades",
+    "technical": "Técnicas",
+    "soft": "Blandas"
+  },
+  "technicalSkills": {
+    "javascript": {
+      "name": "JavaScript",
+      "level": "Avanzado",
+      "years": "4 años"
+    },
+    "python": { "name": "Python", "level": "Intermedio", "years": "4 años" },
+    "php": { "name": "PHP", "level": "Avanzado", "years": "4 años" },
+    "java": { "name": "Java", "level": "Intermedio", "years": "4 años" },
+    "github": { "name": "GitHub", "level": "Avanzado", "years": "4 años" },
+    "gitlab": { "name": "GitLab", "level": "Avanzado", "years": "4 años" },
+    "bitbucket": {
+      "name": "Bitbucket",
+      "level": "Avanzado",
+      "years": "4 años"
+    },
+    "postman": { "name": "Postman", "level": "Avanzado", "years": "4 años" },
+    "nodejs": { "name": "Node.js", "level": "Avanzado", "years": "4 años" },
+    "docker": { "name": "Docker", "level": "Avanzado", "years": "4 años" },
+    "sql": { "name": "SQL", "level": "Avanzado", "years": "4 años" },
+    "css": { "name": "CSS", "level": "Intermedio", "years": "4 años" },
+    "react": { "name": "React", "level": "Intermedio", "years": "4 años" },
+    "bootstrap": {
+      "name": "Bootstrap",
+      "level": "Intermedio",
+      "years": "4 años"
+    },
+    "laravel": { "name": "Laravel", "level": "Avanzado", "years": "4 años" },
+    "tailwind": { "name": "Tailwind", "level": "Avanzado", "years": "4 años" },
+    "nextjs": { "name": "Next.js", "level": "Intermedio", "years": "4 años" },
+    "español": { "name": "Español", "level": "Nativo", "years": "4 años" },
+    "ingles": { "name": "Inglés", "level": "Avanzado", "years": "4 años" }
+  },
+  "softSkills": {
+    "leadership": "Liderazgo",
+    "teamwork": "Trabajo en equipo",
+    "problemSolving": "Resolución de problemas",
+    "responsibility": "Responsabilidad",
+    "communication": "Comunicación",
+    "creativity": "Creatividad",
+    "adaptability": "Adaptabilidad",
+    "timeManagement": "Gestión del tiempo",
+    "criticalThinking": "Pensamiento crítico",
+    "attentionToDetail": "Atención al detalle",
+    "selfManagement": "Autogestión"
+  },
+  "categories": {
+    "": "🌌 Todo",
+    "favorites": "⭐ Favoritos",
+    "frontend": "🖼️ Frontend",
+    "backend": "⚙️ Backend",
+    "idioma": "🌐 Idiomas"
+  },
+  "projects": {
+    "fldchWebApp": {
+      "imageSrc": "/projects/fldch.png",
+      "link": "https://fldch.edu.mx/",
+      "title": "Aplicación web FLDCH",
+      "imageAlt": "Desarrollo full-stack de un gestor de contenidos para las universidades FLDCH-INEF",
+      "description": "Lideré el sitio para la Universidad Facultad Libre de Derecho de Chiapas (FLDCH), desarrollando además el 80% del proyecto e implementando las mejores prácticas de SEO.",
+      "occupation": "Líder Técnico - Desarrollador Full-Stack"
+    },
+    "fldchCms": {
+      "imageSrc": "/projects/fldch-inef.png",
+      "link": "",
+      "title": "Gestor de contenidos FLDCH - INEF",
+      "imageAlt": "Desarrollo full-stack de un gestor de contenidos para las universidades FLDCH-INEF",
+      "description": "Desarrollé un gestor de contenidos para las universidades FLDCH-INEF, con el objetivo de facilitar la administración de los contenidos en sus sitios web.",
+      "occupation": "Líder Técnico - Desarrollador Full-Stack"
+    },
+    "bniAdmin": {
+      "imageSrc": "/projects/bni.png",
+      "link": "https://bnimexico.com/es-MX/index",
+      "title": "Sistema administrativo BNI Chiapas",
+      "imageAlt": "Desarrollo full-stack de un sistema administrativo y de ventas para BNI Chiapas",
+      "description": "Lideré el desarrollo del proyecto \"BNI Chiapas\". Encargado del desarrollo y despliegue del proyecto. Finalizando la entrega con una exposición ante el equipo BNI.",
+      "occupation": "Líder Técnico - Desarrollador Full-Stack"
+    },
+    "reichstagWebApp": {
+      "imageSrc": "/projects/reichstag.png",
+      "link": "https://reichstag.com.mx/",
+      "title": "Aplicación Web REICHSTAG",
+      "imageAlt": "Desarrollo de un sitio web con Next.js para reichstag.com.mx",
+      "description": "Dirigí el desarrollo y despliegue del proyecto \"REICHSTAG\" siendo también el desarrollador principal.",
+      "occupation": "Líder Técnico - Desarrollador Full-Stack"
+    },
+    "romoAdmin": {
+      "imageSrc": "/projects/romo-tours.png",
+      "link": "http://romotours.com/",
+      "title": "Sistema administrativo Romo Tours",
+      "imageAlt": "Desarrollo full-stack de un sistema administrativo Romo Tours",
+      "description": "Cumplí el rol de desarrollador encargado de construir el 3er sprint del proyecto \"Romo Tours\".",
+      "occupation": "Desarrollador Full-Stack"
+    },
+    "rufinoAdmin": {
+      "imageSrc": "/projects/rufino-tamayo.png",
+      "link": "https://www.rufinotamayo.edu.mx/",
+      "title": "Sistema administrativo Rufino Tamayo",
+      "imageAlt": "Desarrollo full-stack de un sistema administrativo Rufino Tamayo",
+      "description": "Tomé el rol de desarrollador encargado del mantenimiento e integración de nuevas funcionalidades para el sistema administrativo \"Rufino Tamayo\".",
+      "occupation": "Desarrollador Full-Stack"
+    },
+    "dBeefMaxWebApp": {
+      "imageSrc": "/projects/dbeefmax.png",
+      "link": "https://dbeefmaxboutique.com/",
+      "title": "Aplicación Web D BeefMax",
+      "imageAlt": "Desarrollo de un sitio web para una carnicería con panel administrativo en PHP",
+      "description": "Me encargué del desarrollo, despliegue y mantenimiento del proyecto \"D BeefMax\", siendo el desarrollador principal del proyecto en sus dos versiones.",
+      "occupation": "Líder Técnico - Desarrollador Full-Stack"
+    },
+    "reinaPepiada": {
+      "imageSrc": "/projects/reina-pepiada.png",
+      "link": "https://reinapepiada.com.mx/",
+      "title": "Sitio web REINA PEPIADA",
+      "imageAlt": "Sitio web para un restaurante de comida venezolana",
+      "description": "Desarrollé el proyecto \"REINA PEPIADA\", junto a un equipo de 4 estudiantes que realizaban su servicio social.",
+      "occupation": "Líder Técnico - Desarrollador Full-Stack"
+    },
+    "waxWebApp": {
+      "imageSrc": "/projects/wax-revolution.png",
+      "link": "https://waxrevolution.com/",
+      "title": "Aplicación web Wax Revolution",
+      "imageAlt": "Desarrollo backend de funcionalidades para el sistema Wax Revolution",
+      "description": "Cumplí el rol de desarrollador backend encargado de integrar nuevas funcionalidades para el sistema \"Wax Revolution\".",
+      "occupation": "Desarrollador Backend"
+    },
+    "userCrm": {
+      "imageSrc": "/projects/crmUser.png",
+      "link": "https://github.com/aleff-eco/Crud-PHP-Laravel",
+      "title": "CRM de usuarios",
+      "imageAlt": "Proyecto CRM para gestión de usuarios",
+      "description": "Desarrollé un sistema de gestión de usuarios como FreeLancer.",
+      "occupation": "Desarrollador Full-Stack"
+    },
+    "quoware": {
+      "imageSrc": "/projects/quoware.webp",
+      "link": "https://github.com/usuario/ecommerce_project",
+      "title": "QUOWARE gestor de negocios",
+      "imageAlt": "Aplicación móvil disponible en PlayStore",
+      "description": "Lideré un equipo de desarrollo y un equipo de diseñadores para crear el proyecto \"QUOWARE\", lanzado en PlayStore.",
+      "occupation": "Líder Técnico - Desarrollador Full-Stack"
+    },
+    "mangoApp": {
+      "imageSrc": "/projects/mangoAnalyzer.png",
+      "link": "https://github.com/aleff-eco/Mobile-App-Ataulfo",
+      "title": "Aplicación móvil",
+      "imageAlt": "Aplicación móvil para consumir una API destinada al análisis del mango ataulfo",
+      "description": "Desarrollé una aplicación móvil enfocada en el análisis del mango ataulfo, con tiempos de respuesta cortos y óptimo rendimiento.",
+      "occupation": "Desarrollador Full-Stack"
+    },
+    "sectionTitle": "Proyectos",
+    "showMore": "Ver más proyectos",
+    "showLess": "Ver menos proyectos"
+  },
+  "companies": {
+    "sectionTitle": "Empresas",
+    "description": "He colaborado con diversas organizaciones a lo largo de mi trayectoria.",
+    "romoTours": {
+      "imageUrl": "/experience/romo.png",
+      "link": "http://romotours.com/",
+      "name": "Romo Tours",
+      "title": "Transporte y Turismo"
+    },
+    "bniChiapas": {
+      "imageUrl": "/experience/bni-chiapas.png",
+      "link": "https://bnimexico.com/es-MX/index",
+      "name": "BNI Chiapas",
+      "title": "Comercio y Negocios internacionales"
+    },
+    "fldch": {
+      "imageUrl": "/experience/FLDCH.png",
+      "link": "http://inef.edu.mx/",
+      "name": "FLDCH",
+      "title": "Universidad"
+    },
+    "inef": {
+      "imageUrl": "/experience/INEF-BLACK.png",
+      "link": "http://inef.edu.mx/",
+      "name": "INEF",
+      "title": "Universidad"
+    },
+    "highTechPro": {
+      "imageUrl": "/experience/htpro.svg",
+      "link": "https://htpro.dev/",
+      "name": "HighTech Pro",
+      "title": "Consultora TI"
+    },
+    "cybac": {
+      "imageUrl": "/experience/cybac.svg",
+      "link": "https://grupocybac.com/",
+      "name": "CYBAC",
+      "title": "Hosting - Soluciones TI"
+    },
+    "rufinoTamayo": {
+      "imageUrl": "/experience/rufino.png",
+      "link": "https://www.rufinotamayo.edu.mx/",
+      "name": "Rufino Tamayo",
+      "title": "Institución educativa"
+    },
+    "waxRevolution": {
+      "imageUrl": "/experience/wax.avif",
+      "link": "https://waxrevolution.com/",
+      "name": "Wax Revolution",
+      "title": "Centro de belleza, Spa"
+    },
+    "sanAngel": {
+      "imageUrl": "/experience/dental.png",
+      "link": "https://www.instagram.com/grupodentalsanangel?igsh=bzA1M2R6NWlxdGd5",
+      "name": "San Ángel",
+      "title": "Grupo de salud dental"
+    },
+    "dBeefMax": {
+      "imageUrl": "/experience/dbeef.png",
+      "link": "https://www.facebook.com/profile.php?id=61563282854180",
+      "name": "D BeefMax",
+      "title": "Tienda de carnes"
+    },
+    "reichstag": {
+      "imageUrl": "/experience/reichstag.png",
+      "link": "https://reichstag.com.mx/",
+      "name": "REICHSTAG",
+      "title": "Edificaciones"
+    }
+  },
+  "experience": {
+    "sectionTitle": "Mi Trayectoria",
+    "showMore": "Ver más",
+    "showLess": "Ver menos",
+    "list": {
+      "cybac": {
+        "company": "CYBAC - TI",
+        "companyUrl": "https://grupocybac.com/",
+        "date": "Julio 2024 - Actualmente",
+        "title": "Líder Técnico - Desarrollador Full-Stack",
+        "descriptionPoints": [
+          "Dirigí el desarrollo de proyectos web como FLDCH, BNI Chiapas, DBeefMax y Reina Pepiada.",
+          "Rol de desarrollador principal en Rufino Tamayo, Romo Tours y Reichstag.",
+          "Mentoricé a 4 grupos de pasantes, dando charlas y asegurando calidad.",
+          "Dirigí equipos, duplicando eficiencia con metodologías ágiles.",
+          "Desarrollé, desplegué y mantuve apps, optimizando rendimiento, SEO y seguridad.",
+          "Diseñé arquitecturas, esquemas de BD, revisiones de código, gestión de riesgos, mentorías y pruebas.",
+          "Gestioné tareas con Jira y control de versiones con GitHub/Bitbucket."
+        ]
+      },
+      "highTech": {
+        "company": "HIGH - TECH",
+        "companyUrl": "https://htpro.dev/",
+        "date": "Marzo 2024 - Julio 2024",
+        "title": "Desarrollador Backend",
+        "descriptionPoints": [
+          "Entregué sprints 1 y 2 de Tareas Pro cumpliendo plazos.",
+          "Doble de funcionalidades, mejorando UX en 100%.",
+          "Solucioné bugs de seguridad y optimicé rendimiento en 80%.",
+          "Trabajé en entornos locales y Docker con MVC y arquitectura de tres capas.",
+          "Escribí tests y documenté APIs con Postman.",
+          "Código limpio y escalable según mejores prácticas.",
+          "Gestioné tickets en Trello, mejorando eficiencia en 100%.",
+          "Participé en dailies aportando soluciones."
+        ]
+      },
+      "waxIntern": {
+        "company": "Wax Revolution",
+        "companyUrl": "https://waxrevolution.com/",
+        "date": "2022 - 2023",
+        "title": "Desarrollador Full-Stack – Pasante",
+        "descriptionPoints": [
+          "Desarrollé módulos de inventarios con validaciones.",
+          "Optimicé consultas para mejorar rendimiento de BD.",
+          "Usé GitHub para control de versiones y colaboración.",
+          "Corrigí errores críticos e implementé mejoras continuas."
+        ]
+      },
+      "upChiapas": {
+        "company": "Universidad Politécnica de Chiapas",
+        "companyUrl": "https://www.upchiapas.edu.mx/",
+        "date": "2020 - 2023",
+        "title": "Ingeniería en Software",
+        "description": "Egresé en Software Engineering de la Universidad Politécnica de Chiapas, con sólidos conocimientos en PHP, Laravel, MySQL, JavaScript y React. Participé en proyectos integrales, aplicando metodologías ágiles desde la planificación hasta el despliegue."
+      }
+    }
+  },
+  "notification": {
+    "title": "Proyectos Populares",
+    "empty": "No hay repositorios populares.",
+    "noDescription": "Sin descripción",
+    "viewAll": "Ver más",
+    "starsIcon": "estrellas"
+  },
+  "contact": {
+    "sectionTitle": "Contáctame",
+    "intro1": "¿Te gustaría conocer más sobre mi trabajo o estás interesado en obtener una cotización para ese proyecto que tienes en mente?",
+    "intro2": "¡No dudes en contactarme! Estaré encantado de conversar contigo y hacer realidad tus ideas. 📨",
+    "alertSuccessTitle": "¡Éxito! ",
+    "alertSuccessMessage": "Tu mensaje ha sido enviado correctamente.",
+    "alertErrorTitle": "¡Error! ",
+    "alertErrorMessage": "Ocurrió un error al enviar tu mensaje. Inténtelo de nuevo.",
+    "form": {
+      "nameLabel": "Nombre",
+      "namePlaceholder": "Ingrese su nombre",
+      "emailLabel": "Correo Electrónico",
+      "emailPlaceholder": "Ingrese su correo",
+      "messageLabel": "Mensaje",
+      "messagePlaceholder": "Escriba su mensaje",
+      "submitButton": "Enviar Mensaje"
+    }
+  }
+}

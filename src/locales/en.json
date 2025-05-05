@@ -1,0 +1,341 @@
+{
+  "nav": {
+    "inicio": "Home",
+    "habilidades": "Skills",
+    "proyectos": "Projects",
+    "trayectoria": "Experience",
+    "contacto": "Contact",
+    "logoAlt": "Aleff's Logo",
+    "themeToggle": "Toggle theme",
+    "menuToggle": "Toggle menu"
+  },
+  "profile": {
+    "greeting": "Hi! I'm Aleff.",
+    "description": "Software engineer with 3 years of experience in web development. I specialize in creating unique experiences and tailor-made solutions.",
+    "buttonContact": "Contact me",
+    "buttonDownload": "Download my CV",
+    "scrollIndicator": "Scroll"
+  },
+  "words": [
+    "Software Engineer!",
+    "Web Developer!",
+    "Full-Stack Developer!",
+    "(⌐■_■)"
+  ],
+  "skills": {
+    "title": "Skills",
+    "technical": "Technical",
+    "soft": "Soft"
+  },
+  "technicalSkills": {
+    "javascript": {
+      "name": "JavaScript",
+      "level": "Advanced",
+      "years": "4 years"
+    },
+    "python": { "name": "Python", "level": "Intermediate", "years": "4 years" },
+    "php": { "name": "PHP", "level": "Advanced", "years": "4 years" },
+    "java": { "name": "Java", "level": "Intermediate", "years": "4 years" },
+    "github": { "name": "GitHub", "level": "Advanced", "years": "4 years" },
+    "gitlab": { "name": "GitLab", "level": "Advanced", "years": "4 years" },
+    "bitbucket": {
+      "name": "Bitbucket",
+      "level": "Advanced",
+      "years": "4 years"
+    },
+    "postman": { "name": "Postman", "level": "Advanced", "years": "4 years" },
+    "nodejs": { "name": "Node.js", "level": "Advanced", "years": "4 years" },
+    "docker": { "name": "Docker", "level": "Advanced", "years": "4 years" },
+    "sql": { "name": "SQL", "level": "Advanced", "years": "4 years" },
+    "css": { "name": "CSS", "level": "Intermediate", "years": "4 years" },
+    "react": { "name": "React", "level": "Intermediate", "years": "4 years" },
+    "bootstrap": {
+      "name": "Bootstrap",
+      "level": "Intermediate",
+      "years": "4 years"
+    },
+    "laravel": { "name": "Laravel", "level": "Advanced", "years": "4 years" },
+    "tailwind": { "name": "Tailwind", "level": "Advanced", "years": "4 years" },
+    "nextjs": {
+      "name": "Next.js",
+      "level": "Intermediate",
+      "years": "4 years"
+    },
+    "español": { "name": "Spanish", "level": "Native", "years": "4 years" },
+    "ingles": { "name": "English", "level": "Advanced", "years": "4 years" }
+  },
+  "softSkills": {
+    "leadership": "Leadership",
+    "teamwork": "Teamwork",
+    "problemSolving": "Problem Solving",
+    "responsibility": "Responsibility",
+    "communication": "Communication",
+    "creativity": "Creativity",
+    "adaptability": "Adaptability",
+    "timeManagement": "Time Management",
+    "criticalThinking": "Critical Thinking",
+    "attentionToDetail": "Attention to Detail",
+    "selfManagement": "Self-Management"
+  },
+  "categories": {
+    "": "🌌 All",
+    "favorites": "⭐ Favorites",
+    "frontend": "🖼️ Front-end",
+    "backend": "⚙️ Back-end",
+    "idioma": "🌐 Languages"
+  },
+  "projects": {
+    "fldchWebApp": {
+      "imageSrc": "/projects/fldch.png",
+      "link": "https://fldch.edu.mx/",
+      "title": "FLDCH Web App",
+      "imageAlt": "Full-stack development of a CMS for FLDCH-INEF universities",
+      "description": "I led the site for the Free Law Faculty of Chiapas (FLDCH), developing 80% of the project and implementing SEO best practices.",
+      "occupation": "Technical Lead - Full-Stack Developer"
+    },
+    "fldchCms": {
+      "imageSrc": "/projects/fldch-inef.png",
+      "link": "",
+      "title": "FLDCH-INEF CMS",
+      "imageAlt": "Full-stack development of a CMS for FLDCH-INEF universities",
+      "description": "Developed a content management system for FLDCH-INEF universities to streamline website content administration.",
+      "occupation": "Technical Lead - Full-Stack Developer"
+    },
+    "bniAdmin": {
+      "imageSrc": "/projects/bni.png",
+      "link": "https://bnimexico.com/es-MX/index",
+      "title": "BNI Chiapas Admin System",
+      "imageAlt": "Full-stack development of an admin and sales system for BNI Chiapas",
+      "description": "Led the development and deployment of the BNI Chiapas project, culminating in a presentation to the BNI team.",
+      "occupation": "Technical Lead - Full-Stack Developer"
+    },
+    "reichstagWebApp": {
+      "imageSrc": "/projects/reichstag.png",
+      "link": "https://reichstag.com.mx/",
+      "title": "REICHSTAG Web App",
+      "imageAlt": "Next.js website development for reichstag.com.mx",
+      "description": "Directed the development and deployment of the REICHSTAG project as the principal developer.",
+      "occupation": "Technical Lead - Full-Stack Developer"
+    },
+    "romoAdmin": {
+      "imageSrc": "/projects/romo-tours.png",
+      "link": "http://romotours.com/",
+      "title": "Romo Tours Admin System",
+      "imageAlt": "Full-stack development of the Romo Tours admin system",
+      "description": "Built the third sprint of the Romo Tours project as the responsible developer.",
+      "occupation": "Full-Stack Developer"
+    },
+    "rufinoAdmin": {
+      "imageSrc": "/projects/rufino-tamayo.png",
+      "link": "https://www.rufinotamayo.edu.mx/",
+      "title": "Rufino Tamayo Admin System",
+      "imageAlt": "Full-stack development of the Rufino Tamayo admin system",
+      "description": "Maintained and added new features to the Rufino Tamayo administrative system.",
+      "occupation": "Full-Stack Developer"
+    },
+    "dBeefMaxWebApp": {
+      "imageSrc": "/projects/dbeefmax.png",
+      "link": "https://dbeefmaxboutique.com/",
+      "title": "D BeefMax Web App",
+      "imageAlt": "Development of a butcher shop website with PHP admin panel",
+      "description": "Developed, deployed and maintained the D BeefMax project as lead developer in both versions.",
+      "occupation": "Technical Lead - Full-Stack Developer"
+    },
+    "reinaPepiada": {
+      "imageSrc": "/projects/reina-pepiada.png",
+      "link": "https://reinapepiada.com.mx/",
+      "title": "REINA PEPIADA Website",
+      "imageAlt": "Website for a Venezuelan cuisine restaurant",
+      "description": "Built the REINA PEPIADA restaurant site with a team of four social service students.",
+      "occupation": "Technical Lead - Full-Stack Developer"
+    },
+    "waxWebApp": {
+      "imageSrc": "/projects/wax-revolution.png",
+      "link": "https://waxrevolution.com/",
+      "title": "Wax Revolution Web App",
+      "imageAlt": "Backend development of new features for the Wax Revolution system",
+      "description": "Served as backend developer integrating new features for the Wax Revolution system.",
+      "occupation": "Backend Developer"
+    },
+    "userCrm": {
+      "imageSrc": "/projects/crmUser.png",
+      "link": "https://github.com/aleff-eco/Crud-PHP-Laravel",
+      "title": "User CRM",
+      "imageAlt": "User management CRM project",
+      "description": "Developed a user management system as a freelancer.",
+      "occupation": "Full-Stack Developer"
+    },
+    "quoware": {
+      "imageSrc": "/projects/quoware.webp",
+      "link": "https://github.com/usuario/ecommerce_project",
+      "title": "QUOWARE Business Manager",
+      "imageAlt": "Mobile app available on PlayStore",
+      "description": "Led development and design teams to create QUOWARE, released on PlayStore.",
+      "occupation": "Technical Lead - Full-Stack Developer"
+    },
+    "mangoApp": {
+      "imageSrc": "/projects/mangoAnalyzer.png",
+      "link": "https://github.com/aleff-eco/Mobile-App-Ataulfo",
+      "title": "Mango Analyzer App",
+      "imageAlt": "Mobile app for analyzing Ataulfo mango",
+      "description": "Developed a mobile app focused on Ataulfo mango analysis with fast responses and optimal performance.",
+      "occupation": "Full-Stack Developer"
+    },
+    "sectionTitle": "Projects",
+    "showMore": "Show more projects",
+    "showLess": "Show fewer projects"
+  },
+
+  "companies": {
+    "sectionTitle": "Companies",
+    "description": "I've worked with various organizations throughout my career.",
+    "romoTours": {
+      "imageUrl": "/experience/romo.png",
+      "link": "http://romotours.com/",
+      "name": "Romo Tours",
+      "title": "Transport & Tourism"
+    },
+    "bniChiapas": {
+      "imageUrl": "/experience/bni-chiapas.png",
+      "link": "https://bnimexico.com/es-MX/index",
+      "name": "BNI Chiapas",
+      "title": "Commerce & International Business"
+    },
+    "fldch": {
+      "imageUrl": "/experience/FLDCH.png",
+      "link": "http://inef.edu.mx/",
+      "name": "FLDCH",
+      "title": "University"
+    },
+    "inef": {
+      "imageUrl": "/experience/INEF-BLACK.png",
+      "link": "http://inef.edu.mx/",
+      "name": "INEF",
+      "title": "University"
+    },
+    "highTechPro": {
+      "imageUrl": "/experience/htpro.svg",
+      "link": "https://htpro.dev/",
+      "name": "HighTech Pro",
+      "title": "IT Consultancy"
+    },
+    "cybac": {
+      "imageUrl": "/experience/cybac.svg",
+      "link": "https://grupocybac.com/",
+      "name": "CYBAC",
+      "title": "Hosting & IT Solutions"
+    },
+    "rufinoTamayo": {
+      "imageUrl": "/experience/rufino.png",
+      "link": "https://www.rufinotamayo.edu.mx/",
+      "name": "Rufino Tamayo",
+      "title": "Educational Institution"
+    },
+    "waxRevolution": {
+      "imageUrl": "/experience/wax.avif",
+      "link": "https://waxrevolution.com/",
+      "name": "Wax Revolution",
+      "title": "Beauty & Spa Center"
+    },
+    "sanAngel": {
+      "imageUrl": "/experience/dental.png",
+      "link": "https://www.instagram.com/grupodentalsanangel?igsh=bzA1M2R6NWlxdGd5",
+      "name": "San Ángel",
+      "title": "Dental Health Group"
+    },
+    "dBeefMax": {
+      "imageUrl": "/experience/dbeef.png",
+      "link": "https://www.facebook.com/profile.php?id=61563282854180",
+      "name": "D BeefMax",
+      "title": "Meat Shop"
+    },
+    "reichstag": {
+      "imageUrl": "/experience/reichstag.png",
+      "link": "https://reichstag.com.mx/",
+      "name": "REICHSTAG",
+      "title": "Construction"
+    }
+  },
+  "experience": {
+    "sectionTitle": "Experience",
+    "showMore": "Show more",
+    "showLess": "Show fewer",
+    "list": {
+      "cybac": {
+        "company": "CYBAC - TI",
+        "companyUrl": "https://grupocybac.com/",
+        "date": "July 2024 – Present",
+        "title": "Technical Lead - Full-Stack Developer",
+        "descriptionPoints": [
+          "Led web projects like FLDCH, BNI Chiapas, DBeefMax and Reina Pepiada.",
+          "Served as principal developer on Rufino Tamayo, Romo Tours and Reichstag.",
+          "Mentored four intern groups, gave talks, ensured quality.",
+          "Directed teams, doubling efficiency with agile methodologies.",
+          "Built, deployed and maintained apps, optimizing performance, SEO and security.",
+          "Designed architectures, DB schemas, code reviews, risk management, mentoring and testing.",
+          "Managed tasks in Jira and used GitHub/Bitbucket for source control."
+        ]
+      },
+      "highTech": {
+        "company": "HIGH - TECH",
+        "companyUrl": "https://htpro.dev/",
+        "date": "March 2024 – July 2024",
+        "title": "Backend Developer",
+        "descriptionPoints": [
+          "Delivered sprints 1 & 2 of Tareas Pro under tight deadlines.",
+          "Doubled features, boosting UX by 100%.",
+          "Fixed security bugs and improved performance by 80%.",
+          "Worked locally and in Docker with MVC and three-tier architecture.",
+          "Wrote tests and documented APIs in Postman.",
+          "Produced clean, scalable code following best practices.",
+          "Managed Trello tickets, increasing efficiency by 100%.",
+          "Participated in dailies, offering solutions and support."
+        ]
+      },
+      "waxIntern": {
+        "company": "Wax Revolution",
+        "companyUrl": "https://waxrevolution.com/",
+        "date": "2022 – 2023",
+        "title": "Full-Stack Developer – Intern",
+        "descriptionPoints": [
+          "Built inventory modules with validations.",
+          "Optimized database queries for better performance.",
+          "Used GitHub for version control and team collaboration.",
+          "Fixed critical bugs and applied continuous improvements."
+        ]
+      },
+      "upChiapas": {
+        "company": "Universidad Politécnica de Chiapas",
+        "companyUrl": "https://www.upchiapas.edu.mx/",
+        "date": "2020 – 2023",
+        "title": "Software Engineering Degree",
+        "description": "Graduated in Software Engineering from Universidad Politécnica de Chiapas, with a solid foundation in PHP, Laravel, MySQL, JavaScript and React. Participated in full-cycle projects, applying agile methods from planning to deployment."
+      }
+    }
+  },
+  "notification": {
+    "title": "Popular Repos",
+    "empty": "No popular repositories.",
+    "noDescription": "No description",
+    "viewAll": "View all",
+    "starsIcon": "stars"
+  },
+  "contact": {
+    "sectionTitle": "Contact Me",
+    "intro1": "Would you like to learn more about my work or get a quote for your next project?",
+    "intro2": "Feel free to reach out! I’d love to chat and bring your ideas to life. 📨",
+    "alertSuccessTitle": "Success! ",
+    "alertSuccessMessage": "Your message has been sent successfully.",
+    "alertErrorTitle": "Error! ",
+    "alertErrorMessage": "There was an error sending your message. Please try again.",
+    "form": {
+      "nameLabel": "Name",
+      "namePlaceholder": "Enter your name",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "Enter your email",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Write your message",
+      "submitButton": "Send Message"
+    }
+  }
+}
