@@ -1,19 +1,20 @@
-"use client";
-
-import { Skills } from "../components/skills";
-import { Projects } from "../components/projects";
-import { Navbar } from "../components/navbar";
-import { Footer } from "../components/footer";
-import { Experience } from "../components/experience";
-import { Contact } from "../components/contact";
-import { ProfileComponent } from "../components/profileComponent";
-import { Companies } from "../components/companies";
+// src/app/portfolio/page.jsx
+'use client';
 
 import { useEffect } from 'react';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // Importa los estilos de AOS
+import 'aos/dist/aos.css';
 
-export default function Portfolio() {
+import { Navbar } from '@/components/navbar';
+import { ProfileComponent } from '@/components/profileComponent';
+import { Skills } from '@/components/skills';
+import { Projects } from '@/components/projects';
+import { Companies } from '@/components/companies';
+import { Experience } from '@/components/experience';
+import { Contact } from '@/components/contact';
+import { Footer } from '@/components/footer';
+
+export default function PortfolioPage() {
   useEffect(() => {
     AOS.init({
       offset: 200,
@@ -21,28 +22,29 @@ export default function Portfolio() {
       easing: 'ease-in-out-sine',
     });
   }, []);
-  
-  
 
   return (
     <div className="flex flex-col text-foreground">
       <Navbar />
       <main className="flex-1">
-        <div>
-          <ProfileComponent />
-        </div>
+        <ProfileComponent />
+
         <div data-aos="fade-up">
           <Skills />
         </div>
+
         <div data-aos="fade-up">
           <Projects />
         </div>
+
         <div data-aos="fade-up">
           <Companies />
         </div>
+
         <div data-aos="fade-up">
           <Experience />
         </div>
+
         <div data-aos="fade-up lg:fade-right">
           <Contact />
         </div>

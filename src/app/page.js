@@ -1,12 +1,13 @@
-'use client';
+"use client";
 
-import dynamic from 'next/dynamic';
+import PortfolioPage from "./portfolio/page";
 
-const Portfolio = dynamic(
-  () => import('@/pages/portfolio').then((mod) => mod.default || mod),
-  { ssr: false }
-);
-
-export default function Home() {
-  return <Portfolio />;
+function Home() {
+  return (
+    (
+      <PortfolioPage />
+    )
+  );
 }
+
+export default Home
