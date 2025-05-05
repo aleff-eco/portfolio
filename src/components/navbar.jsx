@@ -16,7 +16,11 @@ const navItems = [
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/aleff-eco", label: "GitHub" },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/aleff-espinosa-cordova/", label: "LinkedIn" },
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/aleff-espinosa-cordova/",
+    label: "LinkedIn",
+  },
 ];
 
 export function Navbar() {
@@ -57,7 +61,7 @@ export function Navbar() {
     <motion.header
       initial={{ y: -24, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.45, ease: [0.23, 0.86, 0.39, 0.96] }}
+      transition={{ duration: 0.4, ease: [0.23, 0.86, 0.39, 0.96] }}
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled || isOpen
           ? "bg-background/90 dark:bg-background/90 shadow-sm"
@@ -67,17 +71,21 @@ export function Navbar() {
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
         <Link href="/" className="text-xl font-bold relative z-20">
           <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-            {/* ¡Hola! */}
+            <img
+              src="/logo.gif"
+              alt="Logo"
+              className="inline-block h-8 w-8 mr-2"
+            />
           </span>
         </Link>
 
         <div className="hidden lg:flex items-center gap-8">
-          <ul className="flex gap-6">
+          <ul className="flex gap-1">
             {navItems.map(({ name, href }) => (
               <li key={name} className="relative">
                 <Link
                   href={href}
-                  className={`py-2 px-3 hover:bg-foreground/10 transition-colors ${
+                  className={`py-2 px-5 hover:text-gray-50 hover:bg-foreground/10 transition-colors ${
                     pathname === href
                       ? "text-foreground font-medium "
                       : "text-foreground"

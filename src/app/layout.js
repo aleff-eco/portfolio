@@ -14,7 +14,7 @@ const InterPetch = Inter({
 });
 
 export const metadata = {
-  title: "Aleff Espinosa Cordova - Portfolio",
+  title: "Aleff- Portfolio",
   description:
     "Mi sitio web personal que presenta mi trayectoria profesional, proyectos destacados y habilidades. Desarrollado con Next.js y Tailwind CSS.",
   keywords:
