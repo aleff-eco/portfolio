@@ -92,7 +92,7 @@ export function Projects({ children }: { children?: React.ReactNode }) {
           <motion.button
             onClick={() => setShowAll(!showAll)}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
+            className="px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
           >
             {showAll ? "Ver menos proyectos" : "Ver más proyectos"}
           </motion.button>

@@ -62,16 +62,13 @@ export function Experience() {
                 transition={{ delay: idx * 0.1, duration: 0.6 }}
                 className="relative"
               >
-                {/* Punto en la línea */}
                 <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-8 w-4 h-4 bg-indigo-500 rounded-full border-4 border-white dark:border-gray-900"></div>
 
-                {/* Contenedor de tarjeta alternante */}
                 <div
                   className={`flex flex-col md:flex-row items-start gap-8 ${
                     idx % 2 === 0 ? "md:flex-row-reverse" : ""
                   }`}
                 >
-                  {/* Bloque empresa y fecha */}
                   <div className={`md:w-1/2 flex ${idx % 2 === 0 ? "justify-start" : "justify-end"} md:px-12`}>
                     <div className="bg-white dark:bg-gray-800 p-2 rounded-lg shadow-lg border-l-4 border-indigo-500">
                       <div className="flex items-center justify-between mx-2">
@@ -93,7 +90,6 @@ export function Experience() {
                     </div>
                   </div>
 
-                  {/* Bloque titulo y descripcion */}
                   <div className="md:w-1/2">
                     <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
                       <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">
