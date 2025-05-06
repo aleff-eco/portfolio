@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useState, useEffect, useRef } from "react";
 import { FaGithub, FaStar } from "react-icons/fa";
@@ -43,7 +43,7 @@ export default function NotificationButton() {
     <div className="fixed top-4 md:top-8 lg:top-12 right-4 md:right-8 lg:right-16 z-50">
       <motion.button
         onClick={() => setOpen((o) => !o)}
-        className="relative w-16 h-16 flex items-center justify-center bg-gray-100 dark:bg-gray-800 focus:outline-none"
+        className="relative w-16 h-16 flex items-center justify-center bg-gray-100 dark:bg-gray-800 focus:outline-none rounded-full"
       >
         <motion.div
           animate={{ rotate: [0, 15, -15, 0] }}
@@ -69,8 +69,10 @@ export default function NotificationButton() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="absolute top-full mt-3 right-0 w-96 rounded-[20px] shadow-2xl overflow-hidden z-10"
-            style={{ backgroundColor: "rgba(255, 255, 255, 0.95)" }}
+            className={`
+              absolute top-full mt-3 right-0 w-96 rounded-[20px] shadow-2xl z-10
+              bg-[#f3f4f6]/90 dark:bg-[#1f2937]/90
+            `}
           >
             <div className="text-center text-lg bg-indigo-600 dark:bg-indigo-700 text-white font-bold px-4 py-3">
               {t.notification.title}

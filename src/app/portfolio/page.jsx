@@ -17,7 +17,7 @@ import { Footer } from '@/components/footer';
 export default function PortfolioPage() {
   useEffect(() => {
     AOS.init({
-      offset: 200,
+      offset: 100,
       duration: 400,
       easing: 'ease-in-out-sine',
     });

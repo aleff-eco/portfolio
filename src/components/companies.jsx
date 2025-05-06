@@ -63,11 +63,12 @@ export function Companies() {
                       href={data.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-lg font-semibold text-black hover:underline"
+                      className="text-lg font-bold text-black hover:underline"
+                      style = {{ color:'black'}}
                     >
                       {data.name}
                     </a>
-                    <p className="text-sm text-black mt-1">
+                    <p className="text-sm text-black mt-1" style={{ color: 'black' }}>
                       {data.title}
                     </p>
                   </div>
