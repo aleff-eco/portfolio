@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import { Input } from "@/components/input";
-import { Textarea } from "@/components/textarea";
-import { Button } from "@/components/button";
-import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
-import emailjs from "emailjs-com";
-import { useTranslations } from "../hooks/useTranslations";
-import "../styles/Contact.css";
+import React, { useState } from 'react';
+import { Input } from '@/components/input';
+import { Textarea } from '@/components/textarea';
+import { Button } from '@/components/button';
+import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import emailjs from 'emailjs-com';
+import { useTranslations } from '../hooks/useTranslations';
+import '../styles/Contact.css';
 
 export function Contact() {
   const t = useTranslations();
@@ -18,10 +18,10 @@ export function Contact() {
     const form = e.target;
     emailjs
       .sendForm(
-        "service_csqiijl",
-        "template_pn6h37g",
+        'service_csqiijl',
+        'template_pn6h37g',
         form,
-        "eS3eJmL0p51KdFT17"
+        'eS3eJmL0p51KdFT17'
       )
       .then(
         () => {
@@ -39,28 +39,36 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="py-12 md:py-16 lg:py-20 bg-background text-center"
+      className="py-12 md:py-16 lg:py-20 bg-background text-center relative overflow-hidden"
     >
+      {/* Pop-up de alerta */}
       {alert.show && (
         <div
-          className={`alert ${alert.success ? "alert-success" : "alert-error"}`}
+          className={`
+            fixed bottom-4 right-4 left-4 z-50 flex items-start space-x-3
+            px-4 py-6 rounded-lg shadow-lg 
+            ${alert.success
+              ? 'bg-[#22c55e]/90 text-white'
+              : 'bg-[#ef4444]/90 text-white'}
+            animate-slide-in
+          `}
           role="alert"
         >
-          <strong className="font-bold">
+          <strong className="font-semibold">
             {alert.success
               ? t.contact.alertSuccessTitle
               : t.contact.alertErrorTitle}
           </strong>
-          <span className="block sm:inline">
+          <span className="ml-2">
             {alert.success
               ? t.contact.alertSuccessMessage
               : t.contact.alertErrorMessage}
           </span>
           <button
-            className="alert-close"
+            className="ml-4 text-xl leading-none focus:outline-none"
             onClick={() => setAlert({ ...alert, show: false })}
           >
-            ✕
+            ×
           </button>
         </div>
       )}
