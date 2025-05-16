@@ -106,24 +106,6 @@ export function ProfileComponent() {
           transition={{ delay: 1, duration: 0.6 }}
           className="flex flex-wrap justify-center gap-4 mt-8"
         >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={scrollToContact}
-            className="connect-button px-6 py-3 rounded-full bg-gradient-to-r from-gray-700 to-gray-900 text-white font-medium shadow-lg flex items-center gap-2"
-          >
-            {t.profile.buttonContact}
-          </motion.button>
-
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={handleDownloadCV}
-            className="download-button px-6 py-3 rounded-full bg-gradient-to-r from-gray-700 to-gray-900 text-white font-medium shadow-lg flex items-center gap-2"
-          >
-            <Download className="w-5 h-5" />
-            {t.profile.buttonDownload}
-          </motion.button>
         </motion.div>
       </div>
 
