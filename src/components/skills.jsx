@@ -72,7 +72,7 @@ export function Skills() {
   return (
     <section id="skills" ref={sectionRef} className="md:py-12 lg:py-16">
       <div className="container mx-auto sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center">{t.skills.title}</h2>
+        <h2 className="text-4xl font-bold text-center">{t.skills.title}</h2>
 
         <div className="flex justify-center space-x-8 text-center mt-6">
           <button

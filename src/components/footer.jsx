@@ -1,11 +1,14 @@
 import { SiNextdotjs, SiTailwindcss, SiVercel, SiReact } from 'react-icons/si';
+import { useTranslations } from "../hooks/useTranslations";
 
 export function Footer() {
+  
+  const t = useTranslations();
   return (
     <footer className="bg-primary text-primary-foreground py-6">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
         <div className="flex flex-col md:flex-row items-center gap-x-2">
-          <h3 className="font-semibold">Hecho con:</h3>
+          <h3 className="font-semibold">{t.footer.madeWith}</h3>
           <ul className="flex items-center gap-x-2 text-sm dark:text-zinc-600 text-zinc-400 md:mt-0 mt-3">
           <li>
               <a
@@ -54,6 +57,7 @@ export function Footer() {
           </ul>
         </div>
         <div className="text-right">
+          {/* <h3 className="font-semibold">{t.footer.by}</h3> */}
           <div className="mb-4 md:mb-0">&copy; 2024 Aleff Espinosa Córdova.</div>
         </div>
       </div>

@@ -20,6 +20,8 @@
     --input: 220 15% 90%; /* Light Cool Gray for Inputs */
     --ring: 0 0% 40%; /* Darker Cool Gray for Focus Rings */
     --radius: 0.5rem;
+    --light-gray: 0 0% 95%; /* New light gray for reuse */
+    --text-card: 220 32% 32%;
   }
 
   .dark {
@@ -39,6 +41,7 @@
     --input: 0 0% 80%; /* Darker gray for inputs */
     --ring: 0 0% 60%; /* Lighter gray for focus rings */
     --light-gray: 0 0% 95%; /* New light gray for reuse in dark mode */
+    --text-card: 220 32% 32%;
   }
 }
 

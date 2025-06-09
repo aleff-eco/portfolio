@@ -184,6 +184,8 @@
   "companies": {
     "sectionTitle": "Empresas",
     "description": "He colaborado con diversas organizaciones a lo largo de mi trayectoria.",
+    "velocidad": "Velocidad",
+    "ajustarVelocidad": "Ajustar velocidad",
     "romoTours": {
       "imageUrl": "/experience/romo.png",
       "link": "http://romotours.com/",
@@ -238,6 +240,24 @@
       "name": "San Ángel",
       "title": "Grupo de salud dental"
     },
+    "strappberry": {
+      "imageUrl": "/experience/strappberry.svg",
+      "link": "https://strappberry.com/es",
+      "name": "Strappberry",
+      "title": "Servicios de TI"
+    },
+    "sefina": {
+      "imageUrl": "/experience/sefina.png",
+      "link": "https://sefina.strappberry.com/",
+      "name": "Sefina",
+      "title": "Creditos agricolas"
+    },
+    "sitram": {
+      "imageUrl": "/experience/sitram.png",
+      "link": "https://sitram.strappberry.com/",
+      "name": "Sitram",
+      "title": "Fumigaciones"
+    },
     "dBeefMax": {
       "imageUrl": "/experience/dbeef.png",
       "link": "https://www.facebook.com/profile.php?id=61563282854180",
@@ -262,10 +282,11 @@
         "date": "Julio 2024 - Actualmente",
         "title": "Líder Técnico - Desarrollador Full-Stack",
         "descriptionPoints": [
-          "Dirigí el desarrollo de proyectos web como FLDCH, BNI Chiapas, DBeefMax y Reina Pepiada.",
-          "Rol de desarrollador principal en Rufino Tamayo, Romo Tours y Reichstag.",
-          "Mentoricé a 4 grupos de pasantes, dando charlas y asegurando calidad.",
-          "Dirigí equipos, duplicando eficiencia con metodologías ágiles.",
+          "Dirigí múltiples proyectos web, como: “Universidad FLDCH - INEF”, “BNI Chiapas”, “Romo Tours”, entre otros.",
+          "Desempeñé el rol de desarrollador principal para los sistemas de: “Rufino Tamayo”, “Romo Tours” y “Reichstag”.",
+          "Evalué a 4 grupos de pasantes, impartí charlas y asesorías, asegurando calidad y aportando a su crecimiento profesional.",
+          "Diseñé y normalicé bases de datos, optimizando integridad y rendimiento.",
+          "Dirigí equipos, incrementando la eficiencia mediante el uso de metodologías ágiles.",
           "Desarrollé, desplegué y mantuve apps, optimizando rendimiento, SEO y seguridad.",
           "Diseñé arquitecturas, esquemas de BD, revisiones de código, gestión de riesgos, mentorías y pruebas.",
           "Gestioné tareas con Jira y control de versiones con GitHub/Bitbucket."
@@ -277,14 +298,14 @@
         "date": "Marzo 2024 - Julio 2024",
         "title": "Desarrollador Backend",
         "descriptionPoints": [
-          "Entregué sprints 1 y 2 de Tareas Pro cumpliendo plazos.",
-          "Doble de funcionalidades, mejorando UX en 100%.",
-          "Solucioné bugs de seguridad y optimicé rendimiento en 80%.",
-          "Trabajé en entornos locales y Docker con MVC y arquitectura de tres capas.",
+          "Entregué sprints 1 y 2 de Tareas Pro.",
+          "Multipliqué por dos el alcance funcional de la plataforma, mejorando en un 100% el alcance del proyecto.",
+          "Solucioné errores y optimicé el rendimiento en mas de 150ms en cada consulta de los endpoints .",
+          "Trabajé en entornos locales y Dockerizados con MVC y arquitectura de tres capas.",
           "Escribí tests y documenté APIs con Postman.",
-          "Código limpio y escalable según mejores prácticas.",
-          "Gestioné tickets en Trello, mejorando eficiencia en 100%.",
-          "Participé en dailies aportando soluciones."
+          "Desarrollé codigo limpio, escalable y mantenible.",
+          "Gestioné tickets en Trello, entregando objetivos diarios",
+          "PContribuí en dailys, aportando propuestas, soluciones y trabajando en equipo."
         ]
       },
       "waxIntern": {
@@ -293,10 +314,10 @@
         "date": "2022 - 2023",
         "title": "Desarrollador Full-Stack – Pasante",
         "descriptionPoints": [
-          "Desarrollé módulos de inventarios con validaciones.",
-          "Optimicé consultas para mejorar rendimiento de BD.",
+          "Desarrollé e implementé nuevos módulos al proyecto enfocados en la gestión de inventario.",
+          "Optimicé bases de datos y consultas para mejorar el rendimiento.",
           "Usé GitHub para control de versiones y colaboración.",
-          "Corrigí errores críticos e implementé mejoras continuas."
+          "Corrigí errores críticos e implementé buenas prácticas de desarrollo."
         ]
       },
       "upChiapas": {
@@ -332,5 +353,9 @@
       "messagePlaceholder": "Escriba su mensaje",
       "submitButton": "Enviar Mensaje"
     }
+  },
+  "footer": {
+    "madeWith": "Hecho con: ",
+    "by": "Desarrollador: "
   }
 }

@@ -45,7 +45,7 @@ export default function PortfolioPage() {
           <Experience />
         </div>
 
-        <div data-aos="fade-up lg:fade-right">
+        <div id="contact" data-aos="">
           <Contact />
         </div>
       </main>

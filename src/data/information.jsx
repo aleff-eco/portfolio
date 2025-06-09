@@ -215,6 +215,9 @@ export const companies = [
   { key: "waxRevolution", icon: <RiHomeOfficeLine /> },
   { key: "sanAngel", icon: <RiHomeOfficeLine /> },
   { key: "dBeefMax", icon: <RiHomeOfficeLine /> },
+  { key: "sefina", icon: <RiHomeOfficeLine /> },
+  { key: "sitram", icon: <RiHomeOfficeLine /> },
+  { key: "strappberry", icon: <RiHomeOfficeLine /> },
   { key: "reichstag", icon: <RiHomeOfficeLine /> },
 ];
 

@@ -189,6 +189,8 @@
   "companies": {
     "sectionTitle": "Companies",
     "description": "I've worked with various organizations throughout my career.",
+    "velocidad": "Speed",
+    "ajustarVelocidad": "Adjust speed",
     "romoTours": {
       "imageUrl": "/experience/romo.png",
       "link": "http://romotours.com/",
@@ -243,6 +245,24 @@
       "name": "San Ángel",
       "title": "Dental Health Group"
     },
+    "strappberry": {
+      "imageUrl": "/experience/strappberry.svg",
+      "link": "https://strappberry.com/es",
+      "name": "Strappberry",
+      "title": "IT Services"
+    },
+    "sefina": {
+      "imageUrl": "/experience/sefina.png",
+      "link": "https://sefina.strappberry.com/",
+      "name": "Sefina",
+      "title": "Agricultural Credits"
+    },
+    "sitram": {
+      "imageUrl": "/experience/sitram.png",
+      "link": "https://sitram.strappberry.com/",
+      "name": "Sitram",
+      "title": "Fumigation"
+    },
     "dBeefMax": {
       "imageUrl": "/experience/dbeef.png",
       "link": "https://www.facebook.com/profile.php?id=61563282854180",
@@ -257,39 +277,40 @@
     }
   },
   "experience": {
-    "sectionTitle": "Experience",
-    "showMore": "Show more",
-    "showLess": "Show fewer",
+    "sectionTitle": "My Experience",
+    "showMore": "Show More",
+    "showLess": "Show Less",
     "list": {
       "cybac": {
         "company": "CYBAC - TI",
         "companyUrl": "https://grupocybac.com/",
-        "date": "July 2024 – Present",
-        "title": "Technical Lead - Full-Stack Developer",
+        "date": "July 2024 - Present",
+        "title": "Technical Lead – Full-Stack Developer",
         "descriptionPoints": [
-          "Led web projects like FLDCH, BNI Chiapas, DBeefMax and Reina Pepiada.",
-          "Served as principal developer on Rufino Tamayo, Romo Tours and Reichstag.",
-          "Mentored four intern groups, gave talks, ensured quality.",
-          "Directed teams, doubling efficiency with agile methodologies.",
-          "Built, deployed and maintained apps, optimizing performance, SEO and security.",
-          "Designed architectures, DB schemas, code reviews, risk management, mentoring and testing.",
-          "Managed tasks in Jira and used GitHub/Bitbucket for source control."
+          "Led multiple web projects such as “Universidad FLDCH – INEF”, “BNI Chiapas” and “Romo Tours.”",
+          "Served as lead developer for the “Rufino Tamayo,” “Romo Tours” and “Reichstag” systems.",
+          "Evaluated four intern groups, delivering talks and mentorship to ensure quality and foster professional growth.",
+          "Designed and normalized databases, optimizing data integrity and performance.",
+          "Led teams, increasing efficiency through agile methodologies.",
+          "Developed, deployed and maintained applications, optimizing performance, SEO and security.",
+          "Architected systems and database schemas; conducted code reviews, risk management, mentoring and testing.",
+          "Managed tasks in Jira and version control with GitHub/Bitbucket."
         ]
       },
       "highTech": {
-        "company": "HIGH - TECH",
+        "company": "HIGH – TECH",
         "companyUrl": "https://htpro.dev/",
         "date": "March 2024 – July 2024",
         "title": "Backend Developer",
         "descriptionPoints": [
-          "Delivered sprints 1 & 2 of Tareas Pro under tight deadlines.",
-          "Doubled features, boosting UX by 100%.",
-          "Fixed security bugs and improved performance by 80%.",
-          "Worked locally and in Docker with MVC and three-tier architecture.",
-          "Wrote tests and documented APIs in Postman.",
-          "Produced clean, scalable code following best practices.",
-          "Managed Trello tickets, increasing efficiency by 100%.",
-          "Participated in dailies, offering solutions and support."
+          "Delivered sprints 1 and 2 of Tareas Pro.",
+          "Doubled the platform’s functional scope, achieving a 100% expansion of project coverage.",
+          "Fixed bugs and reduced endpoint query times by over 150 ms.",
+          "Worked in local and Dockerized environments using MVC and three-layer architecture.",
+          "Wrote tests and documented APIs with Postman.",
+          "Developed clean, scalable and maintainable code.",
+          "Managed Trello tickets, meeting daily objectives.",
+          "Contributed in daily stand-ups with proposals, solutions and team collaboration."
         ]
       },
       "waxIntern": {
@@ -298,21 +319,22 @@
         "date": "2022 – 2023",
         "title": "Full-Stack Developer – Intern",
         "descriptionPoints": [
-          "Built inventory modules with validations.",
-          "Optimized database queries for better performance.",
-          "Used GitHub for version control and team collaboration.",
-          "Fixed critical bugs and applied continuous improvements."
+          "Developed and implemented new modules focused on inventory management.",
+          "Optimized databases and queries to improve performance.",
+          "Used GitHub for version control and collaboration.",
+          "Fixed critical bugs and implemented development best practices."
         ]
       },
       "upChiapas": {
         "company": "Universidad Politécnica de Chiapas",
         "companyUrl": "https://www.upchiapas.edu.mx/",
         "date": "2020 – 2023",
-        "title": "Software Engineering Degree",
-        "description": "Graduated in Software Engineering from Universidad Politécnica de Chiapas, with a solid foundation in PHP, Laravel, MySQL, JavaScript and React. Participated in full-cycle projects, applying agile methods from planning to deployment."
+        "title": "Software Engineering",
+        "description": "Graduated in Software Engineering from the Universidad Politécnica de Chiapas, with strong expertise in PHP, Laravel, MySQL, JavaScript and React. Participated in comprehensive projects, applying agile methodologies from planning through deployment."
       }
     }
   },
+
   "notification": {
     "title": "Popular Repos",
     "empty": "No popular repositories.",
@@ -337,5 +359,9 @@
       "messagePlaceholder": "Write your message",
       "submitButton": "Send Message"
     }
+  },
+  "footer": {
+    "madeWith": "Made with: ",
+    "by": "Developer: "
   }
 }

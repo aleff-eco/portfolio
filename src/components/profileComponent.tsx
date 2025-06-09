@@ -1,17 +1,20 @@
-'use client';
+"use client";
 
 import "../app/globals.css";
 import "../styles/ProfileComponent.css";
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Download } from 'lucide-react';
-import { useTranslations } from '@/hooks/useTranslations';
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Download } from "lucide-react";
+import { useTranslations } from "@/hooks/useTranslations";
 
+function easeInOutQuad(t: number) {
+  return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+}
 export function ProfileComponent() {
   const t = useTranslations();
   const words = t.words;
 
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [speed, setSpeed] = useState(150);
@@ -43,17 +46,40 @@ export function ProfileComponent() {
 
   useEffect(() => {
     const onScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const scrollToContact = () => {
-    const section = document.getElementById('contact');
-    section?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const section = document.getElementById("contact");
+    if (!section) return;
+
+    const startY = window.scrollY;
+    const offset = -90;
+    const targetY = section.getBoundingClientRect().top + startY + offset;
+
+    const distance = targetY - startY;
+    const duration = 3600; // ms, ya muy lento
+    let startTime: number | null = null;
+
+    const step = (timestamp: number) => {
+      if (startTime === null) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const ease = easeInOutQuad(progress);
+
+      window.scrollTo(0, startY + distance * ease);
+
+      if (elapsed < duration) {
+        requestAnimationFrame(step);
+      }
+    };
+
+    requestAnimationFrame(step);
   };
 
   const handleDownloadCV = () => {
-    window.open('./Aleff_Espinosa_Cordova.pdf', '_blank');
+    window.open("./Aleff_Espinosa_Cordova.pdf", "_blank");
   };
 
   return (
@@ -106,7 +132,7 @@ export function ProfileComponent() {
           transition={{ delay: 1, duration: 0.6 }}
           className="flex flex-wrap justify-center gap-4 mt-8"
         >
-<motion.button
+          <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollToContact}
