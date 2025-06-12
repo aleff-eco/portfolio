@@ -13,6 +13,8 @@ import { Companies } from '@/components/companies';
 import { Experience } from '@/components/experience';
 import { Contact } from '@/components/contact';
 import { Footer } from '@/components/footer';
+import { About } from '@/components/About';
+import { Soon} from '@/components/Soon'
 
 export default function PortfolioPage() {
   useEffect(() => {
@@ -28,6 +30,14 @@ export default function PortfolioPage() {
       <Navbar />
       <main className="flex-1">
         <ProfileComponent />
+
+        <div data-aos="fade-up">
+          <About />
+        </div>
+
+        <div data-aos="fade-up">
+          <Soon />
+        </div>
 
         <div data-aos="fade-up">
           <Skills />

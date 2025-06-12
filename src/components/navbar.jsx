@@ -6,10 +6,10 @@ import { usePathname } from "next/navigation";
 import { Menu as MenuIcon, X, Sun, Moon, Github, Linkedin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import { useTranslations } from "../hooks/useTranslations";
+import { useLanguage } from "../context/LanguageContext";
 
 export function Navbar() {
-  const t = useTranslations();
+  const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScroll] = useState(false);
   const [theme, setTheme] = useState("light");
@@ -38,13 +38,13 @@ export function Navbar() {
   }, []);
 
   useEffect(() => setIsOpen(false), [pathname]);
-
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
   }, [isOpen]);
 
   const navItems = [
     { name: t.nav.inicio, href: "#inicio" },
+    { name: t.nav.sobreMi, href: "#about" },
     { name: t.nav.habilidades, href: "#skills" },
     { name: t.nav.proyectos, href: "#projects" },
     { name: t.nav.trayectoria, href: "#experience" },
@@ -73,7 +73,7 @@ export function Navbar() {
     >
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
         <Link href="/" className="text-xl font-bold relative z-20">
-          <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+          <span className="bg-clip-text text-transparent">
             <img
               src="/logo.gif"
               alt={t.nav.logoAlt}
@@ -98,7 +98,7 @@ export function Navbar() {
                   {pathname === href && (
                     <motion.span
                       layoutId="underline"
-                      className="absolute left-0 top-full h-0.5 w-full origin-left bg-gradient-to-r from-purple-500 to-pink-500"
+                      className="absolute left-0 top-full h-0.5 w-full"
                     />
                   )}
                 </Link>
@@ -106,7 +106,7 @@ export function Navbar() {
             ))}
           </ul>
 
-          <div className="ml-4 flex items-center gap-3">
+          <div className="flex items-center gap-3">
             {socialLinks.map(({ icon: Icon, href, label }) => (
               <a
                 key={label}
@@ -136,17 +136,30 @@ export function Navbar() {
           </div>
         </div>
 
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden rounded-full p-2 z-50 hover:bg-foreground/10 transition-colors"
-        >
-          {isOpen ? (
-            <X className="h-5 w-5" />
-          ) : (
-            <MenuIcon className="h-5 w-5" />
-          )}
-          <span className="sr-only">{t.nav.menuToggle}</span>
-        </button>
+        <div className="lg:hidden flex items-center gap-4">
+          <button
+            onClick={toggleTheme}
+            className="rounded-full p-2 hover:bg-foreground/10"
+            aria-label={t.nav.themeToggle}
+          >
+            {theme === "light" ? (
+              <Moon className="h-5 w-5" />
+            ) : (
+              <Sun className="h-5 w-5" />
+            )}
+          </button>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="rounded-full p-2 z-50 hover:bg-foreground/10 transition-colors"
+            aria-label={t.nav.menuToggle}
+          >
+            {isOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <MenuIcon className="h-5 w-5" />
+            )}
+          </button>
+        </div>
 
         <AnimatePresence>
           {isOpen && (
@@ -200,13 +213,13 @@ export function Navbar() {
                 <button
                   onClick={toggleTheme}
                   className="px-8 rounded-full p-2 hover:bg-foreground/10 transition-colors"
+                  aria-label={t.nav.themeToggle}
                 >
                   {theme === "light" ? (
                     <Moon className="h-5 w-5" />
                   ) : (
                     <Sun className="h-5 w-5" />
                   )}
-                  <span className="sr-only">Cambiar tema</span>
                 </button>
               </div>
             </motion.div>

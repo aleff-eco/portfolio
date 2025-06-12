@@ -60,7 +60,7 @@ export function Companies() {
             <input
               type="range"
               min="1"
-              max="2"
+              max="5"
               step="0.1"
               value={speed}
               onChange={(e) => setSpeed(parseFloat(e.target.value))}
@@ -75,9 +75,9 @@ export function Companies() {
           ref={scrollRef}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          className="w-[98vw] overflow-x-hidden"
+          className="w-[98vw] overflow-x-auto scrollbar-hide"
         >
-          <div className="flex gap-6 py-6 px-4 md:gap-8 md:px-6">
+          <div className="flex flex-nowrap gap-6 py-6 px-4 md:gap-8 md:px-6">
             {items.map(({ key }, idx) => {
               const data = t.companies[key];
               return (

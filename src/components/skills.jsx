@@ -31,7 +31,7 @@ export function Skills() {
   useEffect(() => {
     let intervalId;
     if (!hasInteracted && isInView)
-      intervalId = setInterval(toggleSkillType, 5000);
+      intervalId = setInterval(toggleSkillType, 10000);
     return () => intervalId && clearInterval(intervalId);
   }, [hasInteracted, isInView]);
 
@@ -105,7 +105,7 @@ export function Skills() {
                 onClick={() => handleCategoryClick(cat.key)}
                 className={`inline-flex items-center justify-center m-2 px-4 py-2 text-sm font-medium rounded-md shadow-2xl border-2 transition-all duration-200 hover:scale-105 ${
                   selectedCategory === cat.key
-                    ? "border-[hsl(var(--foreground))] bg-[hsl(var(--background))]"
+                    ? "border-[hsl(var(--foreground))] bg-[hsla(var(--background-secondary))]"
                     : "border-transparent"
                 }`}
               >
@@ -127,10 +127,10 @@ export function Skills() {
                   return (
                     <div
                       key={skill.key}
-                      className="flex items-center gap-4 mt-4"
+                      className="flex items-center gap-2 mt-2 pl-4 xl:pl-14"
                     >
                       <div className="icon-wrapper">{skill.icon}</div>
-                      <div>
+                      <div className="">
                         <div className="text-lg font-bold">{data.name}</div>
                         <div className="text-sm text-gray-600">
                           {data.level}
@@ -143,7 +143,7 @@ export function Skills() {
               : softSkills.map((skill) => (
                   <div
                     key={skill.key}
-                    className="flex flex-col items-center gap-2 mt-8 text-center"
+                    className="flex flex-col items-center gap-2 mt-8 text-center pr-6"
                   >
                     <div className="bg-muted rounded-md flex items-center justify-center w-12 h-12 icon-wrapper">
                       {skill.icon}

@@ -94,7 +94,7 @@ export function ProfileComponent() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-600"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
         >
           {t.profile.greeting}
         </motion.h2>
@@ -107,7 +107,7 @@ export function ProfileComponent() {
         >
           <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-700 relative">
             <span className="relative">
-              {text}
+              <span className="text-profile">{text}</span>
               <motion.span
                 className="absolute top-0 right-[-8px] w-[2px] h-full bg-gray-700"
                 animate={{ opacity: [1, 0, 1] }}
@@ -136,7 +136,7 @@ export function ProfileComponent() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollToContact}
-            className="connect-button px-6 py-3 rounded-full bg-gradient-to-r from-gray-700 to-gray-900 text-white font-medium shadow-lg flex items-center gap-2"
+            className="connect-button px-6 py-3 text-white font-medium shadow-lg flex items-center gap-2"
           >
             {t.profile.buttonContact}
           </motion.button>
@@ -144,7 +144,7 @@ export function ProfileComponent() {
       </div>
 
       {scrollY <= 10 && (
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center z-10">
+        <div className="absolute bottom-20 md:bottom-4 left-1/2 transform -translate-x-1/2 text-center z-10">
           <p className="text-sm">{t.profile.scrollIndicator}</p>
           <div className="mouse-icon mt-2">
             <div className="mouse-wheel w-4 h-8 bg-gray-600 rounded" />

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useState, useEffect, useRef } from "react";
 import { FaGithub, FaStar } from "react-icons/fa";
@@ -49,13 +49,15 @@ export default function NotificationButton() {
           animate={{ rotate: [0, 15, -15, 0] }}
           transition={{ duration: 0.6, repeat: Infinity, repeatDelay: 1 }}
         >
-          <FaGithub className="w-10 h-10 text-gray-800 dark:text-white" />
+          <FaGithub className="w-10 h-10" />
         </motion.div>
         <span className="absolute w-14 h-14 rounded-full animate-ping" />
         <span
           className="absolute top-0 right-0 flex items-center justify-center h-6 w-6 text-sm font-bold"
           style={{
-            color: repos.length > 0 ? "rgba(255, 0, 0, 0.6)" : "transparent",
+            color: repos.length > 0 ? "rgba(255, 0, 5, 0.9)" : "transparent",
+            backgroundColor: repos.length > 0 ? "#FFFFFF" : "transparent",
+            borderRadius: "50%",
           }}
         >
           {repos.length}
@@ -70,14 +72,14 @@ export default function NotificationButton() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
             className={`
-              absolute top-full mt-3 right-0 w-96 rounded-[20px] shadow-2xl z-10
-              bg-[#f3f4f6]/90 dark:bg-[#1f2937]/90
+              absolute top-full mt-3 right-0 w-84 rounded-[20px] shadow-2xl z-10
+              bg-[hsla(var(--background-secondary))]
             `}
           >
             <div className="text-center text-lg bg-indigo-600 dark:bg-indigo-700 text-white font-bold px-4 py-3">
               {t.notification.title}
             </div>
-            <div className="max-h-72 overflow-y-auto">
+            <div className="max-h-72 overflow-y-auto custom-scrollbar">
               {repos.length === 0 ? (
                 <div className="p-4 text-center text-sm text-gray-600 dark:text-gray-400">
                   {t.notification.empty}
@@ -89,10 +91,10 @@ export default function NotificationButton() {
                     href={repo.html_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center px-5 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                    className="flex items-center px-2 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                   >
-                    <span className="inline-flex items-center bg-red-100 dark:bg-red-800 text-red-600 dark:text-red-400 px-2 py-1 rounded-full mr-4 text-sm font-medium">
-                      <FaStar className="inline-block mx-2 h-4 w-4" />
+                    <span className="inline-flex items-center bg-red-100 dark:bg-red-800 text-red-600 dark:text-red-400 px-2 py-1 rounded-full mr-2 text-sm font-medium">
+                      <FaStar className="inline-block mx-1 h-4 w-4" />
                       {repo.stargazers_count}
                     </span>
                     <div className="flex-grow">

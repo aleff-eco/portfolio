@@ -2,6 +2,7 @@
   "nav": {
     "inicio": "Home",
     "habilidades": "Skills",
+    "sobreMi": "About me",
     "proyectos": "Projects",
     "trayectoria": "Experience",
     "contacto": "Contact",
@@ -11,7 +12,7 @@
   },
   "profile": {
     "greeting": "Hi! I'm Aleff.",
-    "description": "Software engineer with 3 years of experience in web development. I specialize in creating unique experiences and tailor-made solutions.",
+    "description": "I specialize in creating unique experiences and tailor-made solutions.",
     "buttonContact": "Contact me",
     "buttonDownload": "Download my CV",
     "scrollIndicator": "Scroll"
@@ -22,6 +23,35 @@
     "Full-Stack Developer!",
     "(⌐■_■)"
   ],
+
+  "about": {
+    "title": "About Me",
+    "description": "I am a software engineer with more than three years of experience as a full-stack developer. I design, build, and deploy robust, scalable web applications, and I take great pride in leading projects from start to finish—from conception to production release.",
+    "skills": {
+      "backend": {
+        "title": "Backend",
+        "body": "I specialize in backend development with PHP (Laravel v7–v12 and Livewire), JavaScript, and Python, applying MVC patterns, SOLID principles, and agile methodologies."
+      },
+      "frontend": {
+        "title": "Frontend & SPA",
+        "body": "I have experience building frontend projects, landing pages, and single-page applications (SPAs) using Tailwind CSS, React, and Next.js."
+      },
+      "database": {
+        "title": "Databases",
+        "body": "I have extensive experience modeling, normalizing, and optimizing MySQL and PostgreSQL databases."
+      },
+      "mobile": {
+        "title": "Mobile",
+        "body": "Additionally, I have successfully developed mobile applications with Flutter and React Native."
+      }
+    },
+    "closing": "My professional passion centers on leadership, teamwork, organization, and attention to detail. I am committed to continuous learning of new tools and techniques in web development."
+  },
+  "soon": {
+    "title": "COMING SOON",
+    "description": "I'm creating a unique digital experience that blends creativity, security, and dynamism, designed to boost your brand, captivate your audience, and redefine the standards of innovation on the web.",
+    "subtitle": "I'm creating something spectacular"
+  },
   "skills": {
     "title": "Skills",
     "technical": "Technical",
@@ -86,7 +116,7 @@
   },
   "projects": {
     "fldchWebApp": {
-      "imageSrc": "/projects/fldch.png",
+      "imageSrc": "/projects/fldch.webp",
       "link": "https://fldch.edu.mx/",
       "title": "FLDCH Web App",
       "imageAlt": "Full-stack development of a CMS for FLDCH-INEF universities",
@@ -94,7 +124,7 @@
       "occupation": "Technical Lead - Full-Stack Developer"
     },
     "fldchCms": {
-      "imageSrc": "/projects/fldch-inef.png",
+      "imageSrc": "/projects/fldch-inef.webp",
       "link": "",
       "title": "FLDCH-INEF CMS",
       "imageAlt": "Full-stack development of a CMS for FLDCH-INEF universities",
@@ -102,7 +132,7 @@
       "occupation": "Technical Lead - Full-Stack Developer"
     },
     "bniAdmin": {
-      "imageSrc": "/projects/bni.png",
+      "imageSrc": "/projects/bni.webp",
       "link": "https://bnimexico.com/es-MX/index",
       "title": "BNI Chiapas Admin System",
       "imageAlt": "Full-stack development of an admin and sales system for BNI Chiapas",
@@ -110,7 +140,7 @@
       "occupation": "Technical Lead - Full-Stack Developer"
     },
     "reichstagWebApp": {
-      "imageSrc": "/projects/reichstag.png",
+      "imageSrc": "/projects/reichstag.webp",
       "link": "https://reichstag.com.mx/",
       "title": "REICHSTAG Web App",
       "imageAlt": "Next.js website development for reichstag.com.mx",
@@ -118,7 +148,7 @@
       "occupation": "Technical Lead - Full-Stack Developer"
     },
     "romoAdmin": {
-      "imageSrc": "/projects/romo-tours.png",
+      "imageSrc": "/projects/romo-tours.webp",
       "link": "http://romotours.com/",
       "title": "Romo Tours Admin System",
       "imageAlt": "Full-stack development of the Romo Tours admin system",
@@ -126,7 +156,7 @@
       "occupation": "Full-Stack Developer"
     },
     "rufinoAdmin": {
-      "imageSrc": "/projects/rufino-tamayo.png",
+      "imageSrc": "/projects/rufino-tamayo.webp",
       "link": "https://www.rufinotamayo.edu.mx/",
       "title": "Rufino Tamayo Admin System",
       "imageAlt": "Full-stack development of the Rufino Tamayo admin system",
@@ -134,7 +164,7 @@
       "occupation": "Full-Stack Developer"
     },
     "dBeefMaxWebApp": {
-      "imageSrc": "/projects/dbeefmax.png",
+      "imageSrc": "/projects/dbeefmax.webp",
       "link": "https://dbeefmaxboutique.com/",
       "title": "D BeefMax Web App",
       "imageAlt": "Development of a butcher shop website with PHP admin panel",
@@ -142,7 +172,7 @@
       "occupation": "Technical Lead - Full-Stack Developer"
     },
     "reinaPepiada": {
-      "imageSrc": "/projects/reina-pepiada.png",
+      "imageSrc": "/projects/reina-pepiada.webp",
       "link": "https://reinapepiada.com.mx/",
       "title": "REINA PEPIADA Website",
       "imageAlt": "Website for a Venezuelan cuisine restaurant",
@@ -150,7 +180,7 @@
       "occupation": "Technical Lead - Full-Stack Developer"
     },
     "waxWebApp": {
-      "imageSrc": "/projects/wax-revolution.png",
+      "imageSrc": "/projects/wax-revolution.webp",
       "link": "https://waxrevolution.com/",
       "title": "Wax Revolution Web App",
       "imageAlt": "Backend development of new features for the Wax Revolution system",
@@ -158,7 +188,7 @@
       "occupation": "Backend Developer"
     },
     "userCrm": {
-      "imageSrc": "/projects/crmUser.png",
+      "imageSrc": "/projects/crmUser.webp",
       "link": "https://github.com/aleff-eco/Crud-PHP-Laravel",
       "title": "User CRM",
       "imageAlt": "User management CRM project",
@@ -174,7 +204,7 @@
       "occupation": "Technical Lead - Full-Stack Developer"
     },
     "mangoApp": {
-      "imageSrc": "/projects/mangoAnalyzer.png",
+      "imageSrc": "/projects/mangoAnalyzer.webp",
       "link": "https://github.com/aleff-eco/Mobile-App-Ataulfo",
       "title": "Mango Analyzer App",
       "imageAlt": "Mobile app for analyzing Ataulfo mango",
@@ -192,25 +222,25 @@
     "velocidad": "Speed",
     "ajustarVelocidad": "Adjust speed",
     "romoTours": {
-      "imageUrl": "/experience/romo.png",
+      "imageUrl": "/experience/romo.webp",
       "link": "http://romotours.com/",
       "name": "Romo Tours",
       "title": "Transport & Tourism"
     },
     "bniChiapas": {
-      "imageUrl": "/experience/bni-chiapas.png",
+      "imageUrl": "/experience/bni-chiapas.webp",
       "link": "https://bnimexico.com/es-MX/index",
       "name": "BNI Chiapas",
       "title": "Commerce & International Business"
     },
     "fldch": {
-      "imageUrl": "/experience/FLDCH.png",
+      "imageUrl": "/experience/FLDCH.webp",
       "link": "http://inef.edu.mx/",
       "name": "FLDCH",
       "title": "University"
     },
     "inef": {
-      "imageUrl": "/experience/INEF-BLACK.png",
+      "imageUrl": "/experience/INEF-BLACK.webp",
       "link": "http://inef.edu.mx/",
       "name": "INEF",
       "title": "University"
@@ -228,7 +258,7 @@
       "title": "Hosting & IT Solutions"
     },
     "rufinoTamayo": {
-      "imageUrl": "/experience/rufino.png",
+      "imageUrl": "/experience/rufino.webp",
       "link": "https://www.rufinotamayo.edu.mx/",
       "name": "Rufino Tamayo",
       "title": "Educational Institution"
@@ -240,7 +270,7 @@
       "title": "Beauty & Spa Center"
     },
     "sanAngel": {
-      "imageUrl": "/experience/dental.png",
+      "imageUrl": "/experience/dental.webp",
       "link": "https://www.instagram.com/grupodentalsanangel?igsh=bzA1M2R6NWlxdGd5",
       "name": "San Ángel",
       "title": "Dental Health Group"
@@ -252,25 +282,25 @@
       "title": "IT Services"
     },
     "sefina": {
-      "imageUrl": "/experience/sefina.png",
+      "imageUrl": "/experience/sefina.webp",
       "link": "https://sefina.strappberry.com/",
       "name": "Sefina",
       "title": "Agricultural Credits"
     },
     "sitram": {
-      "imageUrl": "/experience/sitram.png",
+      "imageUrl": "/experience/sitram.webp",
       "link": "https://sitram.strappberry.com/",
       "name": "Sitram",
       "title": "Fumigation"
     },
     "dBeefMax": {
-      "imageUrl": "/experience/dbeef.png",
+      "imageUrl": "/experience/dbeef.webp",
       "link": "https://www.facebook.com/profile.php?id=61563282854180",
       "name": "D BeefMax",
       "title": "Meat Shop"
     },
     "reichstag": {
-      "imageUrl": "/experience/reichstag.png",
+      "imageUrl": "/experience/reichstag.webp",
       "link": "https://reichstag.com.mx/",
       "name": "REICHSTAG",
       "title": "Construction"

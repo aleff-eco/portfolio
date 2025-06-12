@@ -1,30 +1,29 @@
-
 .connect-button {
-  background-color: hsl(var(--primary));
-  color: hsl(var(--primary-foreground));
+  background-color: hsl(var(--primary)/70);
+  color: hsl(var(--primary-foreground)/70);
   padding: 12px;
   margin-top: 4%;
   border: none;
   border-radius: var(--radius);
   cursor: pointer;
   text-align: center;
-  transition: background-color 0.3s;
+  transition: background-color 0.5s;
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
 
 .connect-button:hover {
-  background-color: hsl(var(--secondary));
+  background-color: hsl(var(--foreground));
 }
 
 .dark .connect-button {
-  background-color: hsl(225, 3%, 31%);
-  color: hsl(var(--primary-foreground));
+  background-color: hsla(225, 3%, 30%, 0.7);
+  color: hsl(var(--primary-foreground)/70);
 }
 
 .dark .connect-button:hover {
-  background-color: hsl(0, 0%, 60%);
+  background-color: hsla(0, 0%, 60%, 0.7)/70;
 }
 
 
@@ -82,13 +81,40 @@
 }
 
 .mouse-wheel {
-  width: 4px;
-  height: 4px;
-  background-color: hsl(var(--foreground));
-  border-radius: 50%;
   position: absolute;
   top: 4px;
   left: 50%;
   transform: translateX(-50%);
-  animation: scroll 1.5s infinite;
+  width: 4px;
+  height: 4px;
+  background: hsl(var(--foreground));
+  border-radius: 50%;
+  animation: slideDown 1s ease-in-out infinite alternate;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translate(-50%, 0);
+  }
+
+  to {
+    transform: translate(-50%, 8px);
+  }
+}
+
+
+.text-profile {
+  padding: 0 1px 0 0;
+  color: hsl(var(--foreground));
+  display: inline-block;
+  border-right: .13em solid currentColor;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink 1.2s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }

@@ -39,7 +39,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="py-12 md:py-16 lg:py-20 bg-background text-center relative overflow-hidden"
+      className="py-12 md:py-16 lg:py-20 text-center relative overflow-hidden"
     >
       {/* Pop-up de alerta */}
       {alert.show && (
@@ -74,13 +74,13 @@ export function Contact() {
       )}
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-8 text-foreground">
+        <h2 className="text-4xl font-bold mb-8 text-foreground">
           {t.contact.sectionTitle}
         </h2>
-        <p className="text-lg font-medium text-muted-foreground mb-4 max-w-[550px] mx-auto">
+        <p className="text-lg font-medium text-muted-foreground mb-4 max-w-[650px] mx-auto">
           {t.contact.intro1}
         </p>
-        <p className="text-lg font-medium text-muted-foreground mb-8 max-w-[550px] mx-auto">
+        <p className="text-lg font-medium text-muted-foreground mb-8 max-w-[600px] mx-auto">
           {t.contact.intro2}
         </p>
 
@@ -171,7 +171,7 @@ export function Contact() {
                 className="w-full"
               />
             </div>
-            <Button type="submit" className="px-20 py-4">
+            <Button type="submit" className="px-20 py-5 mt-4">
               {t.contact.form.submitButton}
             </Button>
           </form>

@@ -1,76 +1,117 @@
 // src/app/layout.js
-
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import dynamic from "next/dynamic";
+import { ClientProviders } from "@/components/ClientProviders";
+import { headers } from "next/headers";
 
-// Client-only components
-const Analytics = dynamic(
-  () => import("@vercel/analytics/react").then((mod) => mod.Analytics),
-  { ssr: false }
-);
-const MouseMoveEffect = dynamic(
-  () => import("@/components/MouseMoveEffect"),
-  { ssr: false }
-);
-const LanguageProvider = dynamic(
-  () =>
-    import("@/context/LanguageContext").then((mod) => mod.LanguageProvider),
-  { ssr: false }
-);
-const ScrollToTop = dynamic(
-  () => import("@/components/ScrollToTop"),
-  { ssr: false }
-);
+export const dynamic = "force-dynamic";
+export const viewport = { width: "device-width", initialScale: 1 };
 
-// Google Font
-const InterPetch = Inter({
+const inter = Inter({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
 });
 
-export const metadata = {
-  title: "Aleff - Portfolio",
-  description:
-    "Mi sitio web personal que presenta mi trayectoria profesional, proyectos destacados y habilidades. Desarrollado con Next.js y Tailwind CSS.",
-  keywords:
-    "web development, portfolio, projects, Aleff Espinosa Cordova, developer, software engineer, software, engineering",
-  author: "Aleff Espinosa Cordova",
-  openGraph: {
-    title: "Aleff Espinosa Cordova - Portfolio",
-    description:
-      "Mi sitio web personal que presenta mi trayectoria profesional, proyectos destacados y habilidades. Desarrollado con Next.js y Tailwind CSS.",
-    url: "https://aleff.vercel.app/",
-    siteName: "Aleff Espinosa Cordova",
-  },
-  twitter: {
-    card: "summary_large_image",
-  },
-  robots: "index, follow",
-  alternates: {
-    canonical: "https://aleff.vercel.app/",
-  },
-};
+async function getLocale() {
+  const hdrs = await headers();
+  const acceptLang = hdrs.get("accept-language") || "";
+  return acceptLang.startsWith("es") ? "es" : "en";
+}
 
-export const viewport = {
-  width: "device-width",
-  initialScale: 1,
-};
+export async function generateMetadata() {
+  const locale = await getLocale();
 
-export default function RootLayout({ children }) {
+  const titles = {
+    es: "Aleff – Portafolio",
+    en: "Aleff – Portfolio",
+  };
+  const descriptions = {
+    es: "Aleff Espinosa Cordova: portafolio que muestra proyectos Web, Mobile, Backend y Rest Apis.",
+    en: "Aleff Espinosa Cordova: portfolio showcasing Web, Mobile, Backend and Rest Apis projects.",
+  };
+  const keywords = {
+    es: [
+      "portafolio Full Stack",
+      "Full Stack",
+      "PHP",
+      "Laravel",
+      "SQL",
+      "Tailwind CSS",
+      "React.js",
+      "Next.js",
+      "desarrollador web",
+      "Consultor TI",
+      "Lider Técnico",
+      "UI UX",
+      "JavaScript",
+      "TypeScript",
+    ],
+    en: [
+      "Full Stack Portfolio",
+      "Full Stack",
+      "PHP",
+      "Laravel",
+      "SQL",
+      "Tailwind CSS",
+      "React.js",
+      "Next.js",
+      "web developer",
+      "TI Consultant",
+      "Technical Leader",
+      "UI UX",
+      "JavaScript",
+      "TypeScript",
+    ],
+  };
+
+  return {
+    title: titles[locale],
+    description: descriptions[locale],
+    keywords: keywords[locale],
+    authors: [{ name: "Aleff Espinosa", url: "https://aleff.vercel.app" }],
+    publisher: "Aleff Espinosa",
+    robots: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+    alternates: {
+      canonical: "https://aleff.vercel.app/",
+      languages: {
+        es: "https://aleff.vercel.app/",
+        en: "https://aleff.vercel.app/",
+      },
+    },
+    openGraph: {
+      title: titles[locale],
+      description: descriptions[locale],
+      url: "https://aleff.vercel.app",
+      siteName: "Aleff Portfolio",
+      locale: locale === "es" ? "es_ES" : "en_US",
+      type: "website",
+    },
+    // twitter: {
+    //   card: "summary_large_image",
+    //   title: titles[locale],
+    //   description: descriptions[locale],
+    //   site: "@aleff-espinosa-cordova",
+    //   creator: "@aleff-espinosa-cordova",
+    // },
+  };
+}
+
+export default async function RootLayout({ children }) {
+  const locale = await getLocale();
   return (
-    <html lang="es">
-      <Analytics />
-      <SpeedInsights />
-      <MouseMoveEffect />
-      <body className={InterPetch.className}>
-        <LanguageProvider>
-          {children}
-        </LanguageProvider>
-        <ScrollToTop />
+    <html lang={locale}>
+      <body className={inter.className}>
+        <SpeedInsights />
+        <ClientProviders>{children}</ClientProviders>
       </body>
     </html>
   );

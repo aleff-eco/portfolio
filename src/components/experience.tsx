@@ -29,7 +29,7 @@ export function Experience() {
   return (
     <section
       id="experience"
-      className="py-20 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-950"
+      className="py-20"
     >
       <div className="max-w-5xl mx-auto px-4">
         <motion.h2
@@ -40,10 +40,10 @@ export function Experience() {
         >
           {t.experience.sectionTitle}
         </motion.h2>
-        <div className="h-1 w-32 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mb-16 rounded-full" />
+        <div className="h-1 w-32 mx-auto mb-16 rounded-full" />
 
         <div className="relative">
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-px bg-indigo-200 dark:bg-indigo-900" />
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-px" />
 
           <div className="space-y-16">
             {shownKeys.map((key, idx) => {
@@ -58,8 +58,7 @@ export function Experience() {
                   transition={{ delay: idx * 0.1, duration: 0.6 }}
                   className="relative"
                 >
-                  <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-8 w-4 h-4 bg-indigo-500 rounded-full border-4 border-white dark:border-gray-900" />
-
+                  <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-8 w-4 h-4 border-4 border-white dark:border-gray-900" />
                   <div
                     className={`flex flex-col md:flex-row items-start gap-8 ${
                       alignRight ? 'md:flex-row-reverse' : ''
@@ -70,17 +69,17 @@ export function Experience() {
                         alignRight ? 'justify-start' : 'justify-end'
                       } md:px-12`}
                     >
-                      <div className="bg-white dark:bg-gray-800 p-2 rounded-lg shadow-lg border-l-4 border-indigo-500">
+                      <div className="p-2 rounded-lg shadow-lg border-l-4 border-indigo-500 bg-[hsla(var(--background-secondary))]">
                         <div className="flex items-center justify-between mx-2">
                           <div className="flex items-center gap-4">
-                            <div className="p-2 bg-indigo-100 dark:bg-indigo-900 rounded-full text-indigo-600 dark:text-indigo-300">
+                            <div className="p-2 rounded-full text-indigo-600 ">
                               {item.icon}
                             </div>
                             <a
                               href={item.companyUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="text-lg font-semibold text-gray-800 dark:text-white hover:text-indigo-600 transition"
+                              className="text-lg font-semibold transition"
                             >
                               {item.company}
                             </a>
@@ -93,7 +92,7 @@ export function Experience() {
                     </div>
 
                     <div className="md:w-1/2">
-                      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg bg-[hsla(var(--background-secondary))]">
                         <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">
                           {item.title}
                         </h3>
