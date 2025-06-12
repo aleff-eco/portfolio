@@ -231,9 +231,9 @@ export const projects = [
   { key: "dBeefMaxWebApp", icon: <RiHomeOfficeLine /> },
   { key: "reinaPepiada", icon: <RiHomeOfficeLine /> },
   { key: "waxWebApp", icon: <RiHomeOfficeLine /> },
-  { key: "userCrm", icon: <RiHomeOfficeLine /> },
-  { key: "quoware", icon: <RiHomeOfficeLine /> },
-  { key: "mangoApp", icon: <RiHomeOfficeLine /> },
+  // { key: "userCrm", icon: <RiHomeOfficeLine /> },
+  // { key: "quoware", icon: <RiHomeOfficeLine /> },
+  // { key: "mangoApp", icon: <RiHomeOfficeLine /> },
 ];
 
 export const experience = [
