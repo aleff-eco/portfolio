@@ -1,39 +1,46 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { Input } from '@/components/input';
-import { Textarea } from '@/components/textarea';
-import { Button } from '@/components/button';
-import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope } from 'react-icons/fa';
-import emailjs from 'emailjs-com';
-import { useTranslations } from '../hooks/useTranslations';
-import '../styles/Contact.css';
+import React, { useState, useRef } from "react";
+import { Input } from "@/components/input";
+import { Textarea } from "@/components/textarea";
+import { Button } from "@/components/button";
+import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { useTranslations } from "../hooks/useTranslations";
+import "../styles/Contact.css";
 
 export function Contact() {
   const t = useTranslations();
+  const formRef = useRef();
   const [alert, setAlert] = useState({ show: false, success: false });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const form = e.target;
-    emailjs
-      .sendForm(
-        'service_csqiijl',
-        'template_pn6h37g',
-        form,
-        'eS3eJmL0p51KdFT17'
-      )
-      .then(
-        () => {
-          setAlert({ show: true, success: true });
-          setTimeout(() => setAlert({ show: false, success: false }), 6000);
-        },
-        () => {
-          setAlert({ show: true, success: false });
-          setTimeout(() => setAlert({ show: false, success: false }), 6000);
+    const form = formRef.current;
+
+    try {
+      const formData = new FormData(form);
+      const res = await fetch(
+        "https://formsubmit.co/dev.aleffec@gmail.com",
+        {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
         }
       );
-    form.reset();
+
+      if (res.ok) {
+        setAlert({ show: true, success: true });
+        form.reset();
+      } else {
+        throw new Error("Error de envío");
+      }
+    } catch (error) {
+      setAlert({ show: true, success: false });
+    }
+
+    setTimeout(() => setAlert({ show: false, success: false }), 6000);
   };
 
   return (
@@ -41,32 +48,38 @@ export function Contact() {
       id="contact"
       className="py-12 md:py-16 lg:py-20 text-center relative overflow-hidden"
     >
-      {/* Pop-up de alerta */}
       {alert.show && (
         <div
           className={`
-            fixed bottom-4 right-4 left-4 z-50 flex items-start space-x-3
-            px-4 py-6 rounded-lg shadow-lg 
-            ${alert.success
-              ? 'bg-[#22c55e]/90 text-white'
-              : 'bg-[#ef4444]/90 text-white'}
-            animate-slide-in
-          `}
+          fixed bottom-[5.5rem] right-2 z-50
+          max-w-md w-full sm:w-auto
+          px-6 py-4 rounded-xl shadow-lg
+          flex items-center justify-between gap-4
+          ${
+            alert.success
+              ? "bg-[#22c55e]/90 text-white"
+              : "bg-[#ef4444]/90 text-white"
+          }
+          animate-slide-in
+        `}
           role="alert"
         >
-          <strong className="font-semibold">
-            {alert.success
-              ? t.contact.alertSuccessTitle
-              : t.contact.alertErrorTitle}
-          </strong>
-          <span className="ml-2">
-            {alert.success
-              ? t.contact.alertSuccessMessage
-              : t.contact.alertErrorMessage}
-          </span>
+          <div className="flex flex-col text-left">
+            <strong className="font-semibold text-base">
+              {alert.success
+                ? t.contact.alertSuccessTitle
+                : t.contact.alertErrorTitle}
+            </strong>
+            <span className="text-sm mt-1">
+              {alert.success
+                ? t.contact.alertSuccessMessage
+                : t.contact.alertErrorMessage}
+            </span>
+          </div>
           <button
-            className="ml-4 text-xl leading-none focus:outline-none"
+            className="text-xl leading-none focus:outline-none"
             onClick={() => setAlert({ ...alert, show: false })}
+            aria-label="Cerrar notificación"
           >
             ×
           </button>
@@ -122,7 +135,10 @@ export function Contact() {
         </div>
 
         <div className="max-w-md mx-auto">
-          <form onSubmit={handleSubmit}>
+          <form ref={formRef} onSubmit={handleSubmit}>
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="box" />
+
             <div className="mb-4 text-left">
               <label
                 htmlFor="name"
