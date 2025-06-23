@@ -82,10 +82,10 @@ export const metadata = {
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    apple: "/favicon.ico",
     other: [
-      { rel: "icon", url: "/favicon-32x32.png", sizes: "32x32" },
-      { rel: "icon", url: "/favicon-16x16.png", sizes: "16x16" },
+      { rel: "icon", url: "/favicon.ico", sizes: "32x32" },
+      { rel: "icon", url: "/favicon.ico", sizes: "16x16" },
     ],
   },
 };
