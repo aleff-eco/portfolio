@@ -110,20 +110,28 @@
     "idioma": "🌐 Idiomas"
   },
   "projects": {
+    "mexicoApi": {
+      "imageSrc": "/projects/mexicoapi.webp",
+      "link": "https://mexico-api.devaleff.com/",
+      "title": "Open Source México - API",
+      "imageAlt": "Desarrollo del proyecto Open Source MexicoAPI",
+      "description": "Atendiendo un error muy común en los formularios de dirección, desarrollé el proyecto Open Source \"México API\". Este proyecto permite obtener información de direcciones de todo México de manera fácil y rápida.",
+      "occupation": "Desarrollador independiente - Full-Stack"
+    },
     "fldchWebApp": {
       "imageSrc": "/projects/fldch.webp",
       "link": "https://fldch.edu.mx/",
       "title": "Aplicación web FLDCH",
       "imageAlt": "Desarrollo full-stack de un gestor de contenidos para las universidades FLDCH-INEF",
-      "description": "Lideré el sitio para la Universidad Facultad Libre de Derecho de Chiapas (FLDCH), desarrollando además el 80% del proyecto e implementando las mejores prácticas de SEO.",
+      "description": "Lideré el desarrollo del proyecto de la Universidad Facultad Libre de Derecho de Chiapas (FLDCH), implementando el 80% del sistema e incorporando buenas prácticas de SEO.",
       "occupation": "Líder Técnico - Desarrollador Full-Stack"
     },
     "fldchCms": {
       "imageSrc": "/projects/fldch-inef.webp",
       "link": "",
-      "title": "Gestor de contenidos FLDCH - INEF",
+      "title": "CMS FLDCH - INEF",
       "imageAlt": "Desarrollo full-stack de un gestor de contenidos para las universidades FLDCH-INEF",
-      "description": "Desarrollé un gestor de contenidos para las universidades FLDCH-INEF, con el objetivo de facilitar la administración de los contenidos en sus sitios web.",
+      "description": "Desarrollé un gestor de contenidos para las universidades FLDCH-INEF, con el objetivo de facilitar la administración de contenidos en sus sitios web.",
       "occupation": "Líder Técnico - Desarrollador Full-Stack"
     },
     "bniAdmin": {
@@ -131,47 +139,47 @@
       "link": "https://bnimexico.com/es-MX/index",
       "title": "Sistema administrativo BNI Chiapas",
       "imageAlt": "Desarrollo full-stack de un sistema administrativo y de ventas para BNI Chiapas",
-      "description": "Lideré el desarrollo del proyecto \"BNI Chiapas\". Encargado del desarrollo y despliegue del proyecto. Finalizando la entrega con una exposición ante el equipo BNI.",
+      "description": "Lideré el desarrollo y despliegue del proyecto \"BNI Chiapas\", concluyendo con una presentación final ante el equipo BNI.",
       "occupation": "Líder Técnico - Desarrollador Full-Stack"
     },
     "reichstagWebApp": {
       "imageSrc": "/projects/reichstag.webp",
       "link": "https://reichstag.com.mx/",
-      "title": "Aplicación Web REICHSTAG",
+      "title": "Aplicación web REICHSTAG",
       "imageAlt": "Desarrollo de un sitio web con Next.js para reichstag.com.mx",
-      "description": "Dirigí el desarrollo y despliegue del proyecto \"REICHSTAG\" siendo también el desarrollador principal.",
+      "description": "Dirigí el desarrollo y despliegue del sitio web \"REICHSTAG\", participando también como desarrollador principal.",
       "occupation": "Líder Técnico - Desarrollador Full-Stack"
     },
     "romoAdmin": {
       "imageSrc": "/projects/romo-tours.webp",
       "link": "http://romotours.com/",
       "title": "Sistema administrativo Romo Tours",
-      "imageAlt": "Desarrollo full-stack de un sistema administrativo Romo Tours",
-      "description": "Cumplí el rol de desarrollador encargado de construir el 3er sprint del proyecto \"Romo Tours\".",
+      "imageAlt": "Desarrollo full-stack de un sistema administrativo para Romo Tours",
+      "description": "Desarrollé el tercer sprint del sistema administrativo \"Romo Tours\", cumpliendo los objetivos funcionales solicitados.",
       "occupation": "Desarrollador Full-Stack"
     },
     "rufinoAdmin": {
       "imageSrc": "/projects/rufino-tamayo.webp",
       "link": "https://www.rufinotamayo.edu.mx/",
       "title": "Sistema administrativo Rufino Tamayo",
-      "imageAlt": "Desarrollo full-stack de un sistema administrativo Rufino Tamayo",
-      "description": "Tomé el rol de desarrollador encargado del mantenimiento e integración de nuevas funcionalidades para el sistema administrativo \"Rufino Tamayo\".",
+      "imageAlt": "Desarrollo full-stack de un sistema administrativo para Rufino Tamayo",
+      "description": "Encargado del mantenimiento e integración de nuevas funcionalidades en el sistema administrativo \"Rufino Tamayo\".",
       "occupation": "Desarrollador Full-Stack"
     },
     "dBeefMaxWebApp": {
       "imageSrc": "/projects/dbeefmax.webp",
       "link": "https://dbeefmaxboutique.com/",
-      "title": "Aplicación Web D BeefMax",
+      "title": "Aplicación web D BeefMax",
       "imageAlt": "Desarrollo de un sitio web para una carnicería con panel administrativo en PHP",
-      "description": "Me encargué del desarrollo, despliegue y mantenimiento del proyecto \"D BeefMax\", siendo el desarrollador principal del proyecto en sus dos versiones.",
+      "description": "Encargado del desarrollo, despliegue y mantenimiento del sitio web \"D BeefMax\" en sus dos versiones.",
       "occupation": "Líder Técnico - Desarrollador Full-Stack"
     },
     "reinaPepiada": {
       "imageSrc": "/projects/reina-pepiada.webp",
       "link": "https://reinapepiada.com.mx/",
-      "title": "Sitio web REINA PEPIADA",
+      "title": "Sitio web Reina Pepiada",
       "imageAlt": "Sitio web para un restaurante de comida venezolana",
-      "description": "Desarrollé el proyecto \"REINA PEPIADA\", junto a un equipo de 4 estudiantes que realizaban su servicio social.",
+      "description": "Liderpe y desarrollé el sitio web \"Reina Pepiada\" junto a un equipo de 4 estudiantes en proceso de pasantias.",
       "occupation": "Líder Técnico - Desarrollador Full-Stack"
     },
     "waxWebApp": {
@@ -179,7 +187,7 @@
       "link": "https://waxrevolution.com/",
       "title": "Aplicación web Wax Revolution",
       "imageAlt": "Desarrollo backend de funcionalidades para el sistema Wax Revolution",
-      "description": "Cumplí el rol de desarrollador backend encargado de integrar nuevas funcionalidades para el sistema \"Wax Revolution\".",
+      "description": "Desarrollador backend encargado de integrar nuevas funcionalidades al sistema \"Wax Revolution\".",
       "occupation": "Desarrollador Backend"
     },
     "userCrm": {
@@ -187,23 +195,23 @@
       "link": "https://github.com/aleff-eco/Crud-PHP-Laravel",
       "title": "CRM de usuarios",
       "imageAlt": "Proyecto CRM para gestión de usuarios",
-      "description": "Desarrollé un sistema de gestión de usuarios como FreeLancer.",
+      "description": "Desarrollé un sistema CRM para gestión de usuarios como freelancer.",
       "occupation": "Desarrollador Full-Stack"
     },
     "quoware": {
       "imageSrc": "/projects/quoware.webp",
       "link": "https://github.com/usuario/ecommerce_project",
-      "title": "QUOWARE gestor de negocios",
+      "title": "Quoware - Gestor de negocios",
       "imageAlt": "Aplicación móvil disponible en PlayStore",
-      "description": "Lideré un equipo de desarrollo y un equipo de diseñadores para crear el proyecto \"QUOWARE\", lanzado en PlayStore.",
+      "description": "Lideré un equipo de desarrollo y diseño para crear el proyecto \"Quoware\", publicado en PlayStore.",
       "occupation": "Líder Técnico - Desarrollador Full-Stack"
     },
     "mangoApp": {
       "imageSrc": "/projects/mangoAnalyzer.webp",
       "link": "https://github.com/aleff-eco/Mobile-App-Ataulfo",
-      "title": "Aplicación móvil",
-      "imageAlt": "Aplicación móvil para consumir una API destinada al análisis del mango ataulfo",
-      "description": "Desarrollé una aplicación móvil enfocada en el análisis del mango ataulfo, con tiempos de respuesta cortos y óptimo rendimiento.",
+      "title": "Aplicación móvil Mango Analyzer",
+      "imageAlt": "Aplicación móvil para consumir una API destinada al análisis del mango Ataulfo",
+      "description": "Desarrollé una aplicación móvil para analizar el mango Ataulfo, optimizando rendimiento y tiempos de respuesta.",
       "occupation": "Desarrollador Full-Stack"
     },
     "sectionTitle": "Proyectos",
@@ -215,6 +223,12 @@
     "description": "He colaborado con diversas organizaciones a lo largo de mi trayectoria.",
     "velocidad": "Velocidad",
     "ajustarVelocidad": "Ajustar velocidad",
+    "mexicoApi": {
+      "imageUrl": "/experience/mexicoapi.webp",
+      "link": "https://mexico-api.devaleff.com/",
+      "name": "México - API",
+      "title": "Proyecto Open Source"
+    },
     "romoTours": {
       "imageUrl": "/experience/romo.webp",
       "link": "http://romotours.com/",

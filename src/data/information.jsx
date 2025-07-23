@@ -205,6 +205,7 @@ export const categories = [
 ];
 
 export const companies = [
+  { key: "mexicoApi", icon: <RiHomeOfficeLine /> },
   { key: "romoTours", icon: <RiHomeOfficeLine /> },
   { key: "bniChiapas", icon: <RiHomeOfficeLine /> },
   { key: "fldch", icon: <RiHomeOfficeLine /> },
@@ -222,6 +223,7 @@ export const companies = [
 ];
 
 export const projects = [
+  { key: "mexicoApi", icon: <RiHomeOfficeLine /> },
   { key: "fldchWebApp", icon: <RiHomeOfficeLine /> },
   { key: "fldchCms", icon: <RiHomeOfficeLine /> },
   { key: "bniAdmin", icon: <RiHomeOfficeLine /> },

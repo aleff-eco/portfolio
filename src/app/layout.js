@@ -20,7 +20,7 @@ const ABSOLUTE_URL = "https://www.devaleff.com";
 export const metadataBase = new URL(ABSOLUTE_URL);
 
 async function getLocale() {
-  const hdrs = headers();
+  const hdrs = await headers();
   const acceptLang = hdrs.get("accept-language") || "";
   return acceptLang.startsWith("es") ? "es" : "en";
 }
@@ -48,7 +48,13 @@ export const metadata = {
   ],
   authors: [{ name: "Aleff Espinosa Córdova", url: ABSOLUTE_URL }],
   publisher: "Aleff Espinosa Córdova",
-  robots: { index: true, follow: true, "max-snippet": -1, "max-image-preview": "large", "max-video-preview": -1 },
+  robots: {
+    index: true,
+    follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    "max-video-preview": -1,
+  },
   alternates: {
     canonical: `${ABSOLUTE_URL}/`,
     languages: { es: `${ABSOLUTE_URL}/` },
@@ -90,9 +96,11 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const lang = await getLocale();
+
   return (
-    <html lang={getLocale()} suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <body className={inter.className}>
         <SpeedInsights />
         <ClientProviders>{children}</ClientProviders>

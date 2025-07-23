@@ -67,7 +67,7 @@ export function Navbar() {
       transition={{ duration: 0.4, ease: [0.23, 0.86, 0.39, 0.96] }}
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled || isOpen
-          ? "bg-background/90 dark:bg-background/90 shadow-sm"
+          ? "bg-background/50 dark:bg-background/40 shadow-sm backdrop-blur-md border-b border-background/10"
           : "bg-transparent"
       }`}
     >
