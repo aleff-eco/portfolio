@@ -325,10 +325,24 @@
     "showMore": "Show More",
     "showLess": "Show Less",
     "list": {
+      "freelance": {
+        "company": "Freelance",
+        "companyUrl": "",
+        "date": "March 2025 - Present",
+        "title": "Full-Stack Developer – Mobile",
+        "descriptionPoints": [
+          "Full‑stack development of different web applications using PHP, Laravel, and Livewire.",
+          "Development of mobile applications with Flutter and React Native.",
+          "Deployment of projects to servers and publishing apps to the Play Store.",
+          "Design and standardize MySQL databases.",
+          "Maintenance and continuous improvement of existing applications.",
+          "Daily stand‑ups and client meetings to define requirements and objectives."
+        ]
+      },
       "cybac": {
         "company": "CYBAC - TI",
         "companyUrl": "https://grupocybac.com/",
-        "date": "July 2024 - Present",
+        "date": "July 2024 - March 2025",
         "title": "Technical Lead – Full-Stack Developer",
         "descriptionPoints": [
           "Led multiple web projects such as “Universidad FLDCH – INEF”, “BNI Chiapas” and “Romo Tours.”",

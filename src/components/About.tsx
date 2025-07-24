@@ -14,7 +14,7 @@ export function About() {
   const skills = Object.values(t.about.skills);
 
   return (
-    <section id="about" className="relative overflow-hidden py-1 md:py-12 text-white">
+    <section id="about" className="relative overflow-hidden md:py-12 lg:py-16 text-white">
       <motion.div
         className="pointer-events-none absolute blur-3xl"
         animate={{ scale: [1, 1.2, 1] }}
@@ -26,7 +26,7 @@ export function About() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.6 }}
-          className="text-4xl font-bold text-center"
+          className="text-4xl font-bold text-center pt-10"
         >
           {t.about.title}
         </motion.h2>

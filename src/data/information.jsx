@@ -158,7 +158,7 @@ export const technicalSkills = [
     icon: <NextjsIcon className="w-8 h-8" />,
     category: "framework",
     subcategory: "frontend",
-    favorite: false,
+    favorite: true,
   },
   {
     key: "español",
@@ -239,6 +239,7 @@ export const projects = [
 ];
 
 export const experience = [
+  { key: "freelance", icon: <MdOutlineWork /> },
   { key: "cybac", icon: <MdOutlineWork /> },
   { key: "highTech", icon: <MdOutlineWork /> },
   { key: "waxIntern", icon: <MdOutlineWork /> },

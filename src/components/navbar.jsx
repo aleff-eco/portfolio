@@ -77,18 +77,18 @@ export function Navbar() {
             <img
               src="/logo.gif"
               alt={t.nav.logoAlt}
-              className="inline-block h-8 w-8 mr-2"
+              className="inline-block h-8 w-8 m-2"
             />
           </span>
         </Link>
 
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-8 w-full justify-center md:justify-end">
           <ul className="flex gap-1">
             {navItems.map(({ name, href }) => (
               <li key={href} className="relative">
                 <Link
                   href={href}
-                  className={`py-2 px-5 hover:text-gray-50 hover:bg-foreground/10 transition-colors ${
+                  className={`py-2 px-2 md:px-4 lg:px-5 relative hover:text-gray-50 hover:bg-foreground/10 transition-colors ${
                     pathname === href
                       ? "text-foreground font-medium"
                       : "text-foreground"
