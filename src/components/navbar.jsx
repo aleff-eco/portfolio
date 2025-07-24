@@ -67,7 +67,7 @@ export function Navbar() {
       transition={{ duration: 0.4, ease: [0.23, 0.86, 0.39, 0.96] }}
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled || isOpen
-          ? "bg-background/50 dark:bg-background/40 shadow-sm backdrop-blur-md border-b border-background/10"
+          ? "bg-background/50 dark:bg-background/40 shadow-sm backdrop-blur-md"
           : "bg-transparent"
       }`}
     >
@@ -168,9 +168,9 @@ export function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.2 }}
-              className="fixed inset-0 z-40 flex flex-col bg-background pt-24 px-8"
+              className="fixed inset-0 z-40 flex flex-col bg-background h-[100dvh] overflow-y-auto pt-28 px-8 lg:hidden"
             >
-              <ul className="flex flex-col gap-6">
+              <ul className="flex flex-col gap-6 justify-center text-center">
                 {navItems.map(({ name, href }, i) => (
                   <motion.li
                     key={href}
@@ -193,8 +193,8 @@ export function Navbar() {
                 ))}
               </ul>
 
-              <div className="mt-auto pb-10 flex items-center justify-between">
-                <div className="flex gap-4">
+              <div className="mt-auto pb-16 px-2 flex items-center justify-between">
+                <div className="flex gap-2 md:gap-4">
                   {socialLinks.map(({ icon: Icon, href, label }) => (
                     <a
                       key={label}
@@ -212,7 +212,7 @@ export function Navbar() {
                 <LanguageSwitcher />
                 <button
                   onClick={toggleTheme}
-                  className="px-8 rounded-full p-2 hover:bg-foreground/10 transition-colors"
+                  className="rounded-full p-2 hover:bg-foreground/10 transition-colors"
                   aria-label={t.nav.themeToggle}
                 >
                   {theme === "light" ? (
