@@ -2,7 +2,7 @@
   "nav": {
     "inicio": "Inicio",
     "habilidades": "Habilidades",
-    "sobreMi": "Sobre mi",
+    "sobreMi": "Sobre mí",
     "proyectos": "Proyectos",
     "trayectoria": "Trayectoria",
     "contacto": "Contacto",
@@ -15,17 +15,17 @@
     "description": "Me especializo en crear experiencias únicas y soluciones a la medida.",
     "buttonContact": "Contáctame",
     "buttonDownload": "Descarga mi CV",
-    "scrollIndicator": "Deslizar"
+    "scrollIndicator": "Desliza"
   },
   "words": [
-    "¡Ingeniero de software!",
+    "¡Ingeniero en software!",
     "¡Desarrollador web!",
     "¡Desarrollador Full-Stack!",
     "(⌐■_■)"
   ],
   "about": {
     "title": "Sobre mí",
-    "description": "Soy ingeniero en software con más de tres años de experiencia como desarrollador full-stack. Diseño, construyo y despliego aplicaciones web robustas y escalables, Estoy muy orgulloso de liderar proyectos de principio a fin, desde su concepción hasta su lanzamiento en producción.",
+    "description": "Soy ingeniero en software con más de tres años de experiencia como desarrollador full-stack. Diseño, construyo y despliego aplicaciones web robustas y escalables. Me enorgullece liderar proyectos de principio a fin, desde su concepción hasta su lanzamiento en producción.",
     "skills": {
       "backend": {
         "title": "Backend",
@@ -33,18 +33,18 @@
       },
       "frontend": {
         "title": "Frontend y SPA",
-        "body": "Tengo experiencia en el desarrollo de proyectos frontend, landing pages y SPAs con Tailwind CSS, React y Next.js."
+        "body": "Tengo experiencia en el desarrollo de frontends, landing pages y SPAs con Tailwind CSS, React y Next.js."
       },
       "database": {
         "title": "Bases de datos",
-        "body": "Cuento con amplia experiencia en el modelado, normalización y optimización de bases de datos MySQL y PostgreSQL."
+        "body": "Amplia experiencia en modelado, normalización y optimización de bases de datos MySQL y PostgreSQL."
       },
       "mobile": {
         "title": "Móvil",
-        "body": "Además, me he desempeñado exitosamente como desarrollo de aplicaciones móviles con Flutter y React Native."
+        "body": "También me desempeño en el desarrollo de aplicaciones móviles con Flutter y React Native."
       }
     },
-    "closing": "Mi pasión profesional se centra en el liderazgo, el trabajo en equipo, la organización y la atención al detalle. Me mantengo en constante aprendizaje de nuevas herramientas y nuevas técnicas en el desarrollo web."
+    "closing": "Mi pasión profesional se centra en el liderazgo, el trabajo en equipo, la organización y la atención al detalle. Me mantengo en constante aprendizaje de nuevas herramientas y técnicas de desarrollo web."
   },
   "soon": {
     "title": "PRÓXIMAMENTE",
@@ -57,32 +57,20 @@
     "soft": "Blandas"
   },
   "technicalSkills": {
-    "javascript": {
-      "name": "JavaScript",
-      "level": "Avanzado",
-      "years": "4 años"
-    },
+    "javascript": { "name": "JavaScript", "level": "Avanzado", "years": "4 años" },
     "python": { "name": "Python", "level": "Intermedio", "years": "4 años" },
     "php": { "name": "PHP", "level": "Avanzado", "years": "4 años" },
     "java": { "name": "Java", "level": "Intermedio", "years": "4 años" },
     "github": { "name": "GitHub", "level": "Avanzado", "years": "4 años" },
     "gitlab": { "name": "GitLab", "level": "Avanzado", "years": "4 años" },
-    "bitbucket": {
-      "name": "Bitbucket",
-      "level": "Avanzado",
-      "years": "4 años"
-    },
+    "bitbucket": { "name": "Bitbucket", "level": "Avanzado", "years": "4 años" },
     "postman": { "name": "Postman", "level": "Avanzado", "years": "4 años" },
     "nodejs": { "name": "Node.js", "level": "Avanzado", "years": "4 años" },
     "docker": { "name": "Docker", "level": "Avanzado", "years": "4 años" },
     "sql": { "name": "SQL", "level": "Avanzado", "years": "4 años" },
     "css": { "name": "CSS", "level": "Intermedio", "years": "4 años" },
     "react": { "name": "React", "level": "Intermedio", "years": "4 años" },
-    "bootstrap": {
-      "name": "Bootstrap",
-      "level": "Intermedio",
-      "years": "4 años"
-    },
+    "bootstrap": { "name": "Bootstrap", "level": "Intermedio", "years": "4 años" },
     "laravel": { "name": "Laravel", "level": "Avanzado", "years": "4 años" },
     "tailwind": { "name": "Tailwind", "level": "Avanzado", "years": "4 años" },
     "nextjs": { "name": "Next.js", "level": "Intermedio", "years": "4 años" },
@@ -115,7 +103,7 @@
       "link": "https://mexico-api.devaleff.com/",
       "title": "Open Source México - API",
       "imageAlt": "Desarrollo del proyecto Open Source MexicoAPI",
-      "description": "Atendiendo un error muy común en los formularios de dirección, desarrollé el proyecto Open Source \"México API\". Este proyecto permite obtener información de direcciones de todo México de manera fácil y rápida.",
+      "description": "Atendiendo un problema común en formularios de dirección, desarrollé el proyecto Open Source \"México API\". Permite obtener información geográfica y postal de todo México de forma fácil y rápida.",
       "occupation": "Desarrollador independiente - Full-Stack"
     },
     "fldchWebApp": {
@@ -123,7 +111,7 @@
       "link": "https://fldch.edu.mx/",
       "title": "Aplicación web FLDCH",
       "imageAlt": "Desarrollo full-stack de un gestor de contenidos para las universidades FLDCH-INEF",
-      "description": "Lideré el desarrollo del proyecto de la Universidad Facultad Libre de Derecho de Chiapas (FLDCH), implementando el 80% del sistema e incorporando buenas prácticas de SEO.",
+      "description": "Lideré el desarrollo para la Facultad Libre de Derecho de Chiapas (FLDCH), implementando cerca del 80% del sistema e incorporando buenas prácticas de SEO.",
       "occupation": "Líder Técnico - Desarrollador Full-Stack"
     },
     "fldchCms": {
@@ -131,7 +119,7 @@
       "link": "",
       "title": "CMS FLDCH - INEF",
       "imageAlt": "Desarrollo full-stack de un gestor de contenidos para las universidades FLDCH-INEF",
-      "description": "Desarrollé un gestor de contenidos para las universidades FLDCH-INEF, con el objetivo de facilitar la administración de contenidos en sus sitios web.",
+      "description": "Desarrollé un gestor de contenidos para las universidades FLDCH-INEF, facilitando la administración de contenidos en sus sitios web.",
       "occupation": "Líder Técnico - Desarrollador Full-Stack"
     },
     "bniAdmin": {
@@ -179,7 +167,7 @@
       "link": "https://reinapepiada.com.mx/",
       "title": "Sitio web Reina Pepiada",
       "imageAlt": "Sitio web para un restaurante de comida venezolana",
-      "description": "Liderpe y desarrollé el sitio web \"Reina Pepiada\" junto a un equipo de 4 estudiantes en proceso de pasantias.",
+      "description": "Lideré y desarrollé el sitio web \"Reina Pepiada\" junto a un equipo de cuatro pasantes.",
       "occupation": "Líder Técnico - Desarrollador Full-Stack"
     },
     "waxWebApp": {
@@ -202,8 +190,8 @@
       "imageSrc": "/projects/quoware.webp",
       "link": "https://github.com/usuario/ecommerce_project",
       "title": "Quoware - Gestor de negocios",
-      "imageAlt": "Aplicación móvil disponible en PlayStore",
-      "description": "Lideré un equipo de desarrollo y diseño para crear el proyecto \"Quoware\", publicado en PlayStore.",
+      "imageAlt": "Aplicación móvil disponible en Play Store",
+      "description": "Lideré un equipo de desarrollo y diseño para crear el proyecto \"Quoware\", publicado en Play Store.",
       "occupation": "Líder Técnico - Desarrollador Full-Stack"
     },
     "mangoApp": {
@@ -211,7 +199,7 @@
       "link": "https://github.com/aleff-eco/Mobile-App-Ataulfo",
       "title": "Aplicación móvil Mango Analyzer",
       "imageAlt": "Aplicación móvil para consumir una API destinada al análisis del mango Ataulfo",
-      "description": "Desarrollé una aplicación móvil para analizar el mango Ataulfo, optimizando rendimiento y tiempos de respuesta.",
+      "description": "Desarrollé una app móvil para analizar el mango Ataulfo, optimizando rendimiento y tiempos de respuesta.",
       "occupation": "Desarrollador Full-Stack"
     },
     "sectionTitle": "Proyectos",
@@ -239,7 +227,7 @@
       "imageUrl": "/experience/bni-chiapas.webp",
       "link": "https://bnimexico.com/es-MX/index",
       "name": "BNI Chiapas",
-      "title": "Comercio y Negocios internacionales"
+      "title": "Comercio y Negocios Internacionales"
     },
     "fldch": {
       "imageUrl": "/experience/FLDCH.webp",
@@ -275,7 +263,7 @@
       "imageUrl": "/experience/wax.avif",
       "link": "https://waxrevolution.com/",
       "name": "Wax Revolution",
-      "title": "Centro de belleza, Spa"
+      "title": "Centro de belleza y spa"
     },
     "sanAngel": {
       "imageUrl": "/experience/dental.webp",
@@ -293,7 +281,7 @@
       "imageUrl": "/experience/sefina.webp",
       "link": "https://sefina.strappberry.com/",
       "name": "Sefina",
-      "title": "Creditos agricolas"
+      "title": "Créditos agrícolas"
     },
     "sitram": {
       "imageUrl": "/experience/sitram.webp",
@@ -319,62 +307,58 @@
     "showMore": "Ver más",
     "showLess": "Ver menos",
     "list": {
-      "freelance": {
-        "company": "Freelance",
-        "companyUrl": "",
-        "date": "Marzo 2025 - Actualmente",
-        "title": "Desarrollador Full-Stack - Mobile",
+      "strappberry": {
+        "company": "Strappberry",
+        "companyUrl": "https://strappberry.com/es",
+        "date": "Marzo 2025 - Actualidad",
+        "title": "Desarrollador Mobile | Desarrollador Full Stack",
         "descriptionPoints": [
-          "Desarrollo Full-Stack de diferentes aplicaciones web con PHP, Laravel y Livewire.",
-          "Desarrollo de aplicaciones móviles con Flutter y React Native.",
-          "Despliegue de proyectos a servidores y subida de aplicaciones a PlayStore.",
-          "Diseño y normalización de bases de datos MySQL.",
-          "Mantenimiento y mejora continua de aplicaciones existentes.",
-          "Dailys y reuniones con clientes para definir requerimientos y objetivos."
+          "Desarrollo proyectos web, sistemas backend y APIs REST para proyectos móviles usando TALL Stack (Tailwind, Alpine, Laravel, Livewire).",
+          "Realizo mantenimiento e integración de nuevos módulos en proyectos legacy.",
+          "Diseño, normalizo y doy mantenimiento a bases de datos SQL en entornos de producción.",
+          "Desarrollo soluciones para sectores crediticios, gestión de flotas, salud y fumigación, entre otros.",
+          "Creo interfaces con Livewire, Tailwind y CSS, alineadas con principios UX/UI modernos.",
+          "Desarrollo apps móviles con Flutter y React Native, publicadas en Google Play y App Store.",
+          "Realizo entregas, revisiones y seguimiento diario bajo metodología SCRUM."
         ]
       },
       "cybac": {
-        "company": "CYBAC - TI",
+        "company": "CYBAC TI",
         "companyUrl": "https://grupocybac.com/",
-        "date": "Julio 2024 - Marzo 2025",
-        "title": "Líder Técnico - Desarrollador Full-Stack",
+        "date": "Abril 2024 - Marzo 2025",
+        "title": "Líder Técnico | Desarrollador Full Stack",
         "descriptionPoints": [
-          "Dirigí múltiples proyectos web, como: “Universidad FLDCH - INEF”, “BNI Chiapas”, “Romo Tours”, entre otros.",
-          "Desempeñé el rol de desarrollador principal para los sistemas de: “Rufino Tamayo”, “Romo Tours” y “Reichstag”.",
-          "Evalué a 4 grupos de pasantes, impartí charlas y asesorías, asegurando calidad y aportando a su crecimiento profesional.",
-          "Diseñé y normalicé bases de datos, optimizando integridad y rendimiento.",
-          "Dirigí equipos, incrementando la eficiencia mediante el uso de metodologías ágiles.",
-          "Desarrollé, desplegué y mantuve apps, optimizando rendimiento, SEO y seguridad.",
-          "Diseñé arquitecturas, esquemas de BD, revisiones de código, gestión de riesgos, mentorías y pruebas.",
-          "Gestioné tareas con Jira y control de versiones con GitHub/Bitbucket."
+          "Lideré el desarrollo de sistemas web robustos, desde la planificación hasta presentaciones con clientes, incluyendo proyectos para escuelas, universidades, agencias de transporte y PYMES.",
+          "Diseñé arquitecturas escalables, normalicé bases de datos y optimicé la integridad de los sistemas.",
+          "Coordiné un equipo de desarrollo bajo metodologías ágiles, implementando revisiones de código y flujos CI/CD.",
+          "Aseguré calidad, seguridad y rendimiento en producción, mejorando la eficiencia del equipo y la estabilidad del software.",
+          "Colaboré con clientes, áreas internas y stakeholders, garantizando entregas de calidad dentro de los plazos establecidos."
         ]
       },
-      "highTech": {
-        "company": "HIGH - TECH",
+      "highTechIntern": {
+        "company": "HighTech",
         "companyUrl": "https://htpro.dev/",
         "date": "Marzo 2024 - Julio 2024",
-        "title": "Desarrollador Backend",
+        "title": "Desarrollador Backend (Prácticas)",
         "descriptionPoints": [
-          "Entregué sprints 1 y 2 de Tareas Pro.",
-          "Multipliqué por dos el alcance funcional de la plataforma, mejorando en un 100% el alcance del proyecto.",
-          "Solucioné errores y optimicé el rendimiento en mas de 150ms en cada consulta de los endpoints .",
-          "Trabajé en entornos locales y Dockerizados con MVC y arquitectura de tres capas.",
-          "Escribí tests y documenté APIs con Postman.",
-          "Desarrollé codigo limpio, escalable y mantenible.",
-          "Gestioné tickets en Trello, entregando objetivos diarios",
-          "PContribuí en dailys, aportando propuestas, soluciones y trabajando en equipo."
+          "Desarrollé y optimicé el backend corporativo principal utilizando Laravel, Livewire y MySQL.",
+          "Implementé arquitectura MVC y principios SOLID para mejorar escalabilidad, mantenibilidad y rendimiento.",
+          "Participé en pruebas QA y documenté APIs con Postman, garantizando estabilidad en producción.",
+          "Integré soluciones en entornos Docker y gestioné flujos de trabajo con Trello y GitHub.",
+          "Colaboré en sprints ágiles, aportando propuestas técnicas y resolviendo incidencias en equipo."
         ]
       },
-      "waxIntern": {
+      "waxRevo": {
         "company": "Wax Revolution",
         "companyUrl": "https://waxrevolution.com/",
-        "date": "2022 - 2023",
-        "title": "Desarrollador Full-Stack – Pasante",
+        "date": "2022 - 2024",
+        "title": "Desarrollador Full Stack",
         "descriptionPoints": [
-          "Desarrollé e implementé nuevos módulos al proyecto enfocados en la gestión de inventario.",
-          "Optimicé bases de datos y consultas para mejorar el rendimiento.",
-          "Usé GitHub para control de versiones y colaboración.",
-          "Corrigí errores críticos e implementé buenas prácticas de desarrollo."
+          "Desarrollé e integré nuevos módulos para el sistema interno, ampliando funcionalidades para la gestión de información del proyecto.",
+          "Mantuve y actualicé módulos existentes, asegurando la visualización correcta de datos en tiempo real.",
+          "Asistí a reuniones técnicas con el equipo de desarrollo, aportando ideas y mejoras para el sistema.",
+          "Apliqué arquitectura MVC y principios SOLID para mejorar la mantenibilidad y la estructura del código.",
+          "Colaboré en pruebas QA, despliegues y actualizaciones a producción, gestionando cambios mediante GitHub."
         ]
       },
       "upChiapas": {
@@ -382,7 +366,7 @@
         "companyUrl": "https://www.upchiapas.edu.mx/",
         "date": "2020 - 2023",
         "title": "Ingeniería en Software",
-        "description": "Egresé en Software Engineering de la Universidad Politécnica de Chiapas, con sólidos conocimientos en PHP, Laravel, MySQL, JavaScript y React. Participé en proyectos integrales, aplicando metodologías ágiles desde la planificación hasta el despliegue."
+        "description": "Egresé de Ingeniería en Software en la Universidad Politécnica de Chiapas, con base sólida en PHP, Laravel, MySQL, JavaScript y React. Participé en proyectos integrales, aplicando metodologías ágiles desde la planificación hasta el despliegue."
       }
     }
   },
@@ -400,15 +384,15 @@
     "alertSuccessTitle": "¡Éxito! ",
     "alertSuccessMessage": "Tu mensaje ha sido enviado correctamente.",
     "alertErrorTitle": "¡Error! ",
-    "alertErrorMessage": "Ocurrió un error al enviar tu mensaje. Inténtelo de nuevo.",
+    "alertErrorMessage": "Ocurrió un error al enviar tu mensaje. Inténtalo de nuevo.",
     "form": {
       "nameLabel": "Nombre",
-      "namePlaceholder": "Ingrese su nombre",
-      "emailLabel": "Correo Electrónico",
-      "emailPlaceholder": "Ingrese su correo",
+      "namePlaceholder": "Ingresa tu nombre",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "Ingresa tu correo",
       "messageLabel": "Mensaje",
-      "messagePlaceholder": "Escriba su mensaje",
-      "submitButton": "Enviar Mensaje"
+      "messagePlaceholder": "Escribe tu mensaje",
+      "submitButton": "Enviar mensaje"
     }
   },
   "footer": {

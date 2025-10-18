@@ -239,9 +239,9 @@ export const projects = [
 ];
 
 export const experience = [
-  { key: "freelance", icon: <MdOutlineWork /> },
+  { key: "strappberry", icon: <MdOutlineWork /> },
   { key: "cybac", icon: <MdOutlineWork /> },
-  { key: "highTech", icon: <MdOutlineWork /> },
-  { key: "waxIntern", icon: <MdOutlineWork /> },
+  { key: "highTechIntern", icon: <MdOutlineWork /> },
+  { key: "waxRevo", icon: <MdOutlineWork /> },
   { key: "upChiapas", icon: <LuSchool /> },
 ];

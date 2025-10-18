@@ -101,7 +101,8 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang={lang} suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={inter.className} 
+        suppressHydrationWarning >
         <SpeedInsights />
         <ClientProviders>{children}</ClientProviders>
         <Script

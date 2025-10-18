@@ -2,18 +2,18 @@
   "nav": {
     "inicio": "Home",
     "habilidades": "Skills",
-    "sobreMi": "About me",
+    "sobreMi": "About Me",
     "proyectos": "Projects",
     "trayectoria": "Experience",
     "contacto": "Contact",
-    "logoAlt": "Aleff's Logo",
+    "logoAlt": "Aleff's logo",
     "themeToggle": "Toggle theme",
     "menuToggle": "Toggle menu"
   },
   "profile": {
-    "greeting": "Hi! I'm Aleff.",
-    "description": "I specialize in creating unique experiences and tailor-made solutions.",
-    "buttonContact": "Contact me",
+    "greeting": "Hi! I’m Aleff.",
+    "description": "I specialize in crafting unique experiences and tailor-made solutions.",
+    "buttonContact": "Contact Me",
     "buttonDownload": "Download my CV",
     "scrollIndicator": "Scroll"
   },
@@ -23,10 +23,9 @@
     "Full-Stack Developer!",
     "(⌐■_■)"
   ],
-
   "about": {
     "title": "About Me",
-    "description": "I am a software engineer with more than three years of experience as a full-stack developer. I design, build, and deploy robust, scalable web applications, and I take great pride in leading projects from start to finish—from conception to production release.",
+    "description": "I’m a software engineer with 3+ years of experience as a full-stack developer. I design, build, and deploy robust, scalable web applications. I’m proud to lead projects end-to-end—from concept to production launch.",
     "skills": {
       "backend": {
         "title": "Backend",
@@ -34,26 +33,26 @@
       },
       "frontend": {
         "title": "Frontend & SPA",
-        "body": "I have experience building frontend projects, landing pages, and single-page applications (SPAs) using Tailwind CSS, React, and Next.js."
+        "body": "I have experience building frontends, landing pages, and SPAs with Tailwind CSS, React, and Next.js."
       },
       "database": {
         "title": "Databases",
-        "body": "I have extensive experience modeling, normalizing, and optimizing MySQL and PostgreSQL databases."
+        "body": "Extensive experience in modeling, normalization, and optimization for MySQL and PostgreSQL."
       },
       "mobile": {
         "title": "Mobile",
-        "body": "Additionally, I have successfully developed mobile applications with Flutter and React Native."
+        "body": "I also develop mobile applications with Flutter and React Native."
       }
     },
-    "closing": "My professional passion centers on leadership, teamwork, organization, and attention to detail. I am committed to continuous learning of new tools and techniques in web development."
+    "closing": "My professional passion centers on leadership, teamwork, organization, and attention to detail. I continuously learn new tools and techniques in modern web development."
   },
   "soon": {
     "title": "COMING SOON",
-    "description": "I'm creating a unique digital experience that blends creativity, security, and dynamism, designed to boost your brand, captivate your audience, and redefine the standards of innovation on the web.",
-    "subtitle": "I'm creating something spectacular"
+    "description": "I’m crafting a unique digital experience that blends creativity, security, and dynamism—designed to boost your brand, captivate your audience, and redefine innovation on the web.",
+    "subtitle": "I’m building something spectacular"
   },
   "skills": {
-    "title": "Skills",
+    "title": "My Skills",
     "technical": "Technical",
     "soft": "Soft"
   },
@@ -86,11 +85,7 @@
     },
     "laravel": { "name": "Laravel", "level": "Advanced", "years": "4 years" },
     "tailwind": { "name": "Tailwind", "level": "Advanced", "years": "4 years" },
-    "nextjs": {
-      "name": "Next.js",
-      "level": "Intermediate",
-      "years": "4 years"
-    },
+    "nextjs": { "name": "Next.js", "level": "Intermediate", "years": "4 years" },
     "español": { "name": "Spanish", "level": "Native", "years": "4 years" },
     "ingles": { "name": "English", "level": "Advanced", "years": "4 years" }
   },
@@ -110,89 +105,89 @@
   "categories": {
     "": "🌌 All",
     "favorites": "⭐ Favorites",
-    "frontend": "🖼️ Front-end",
-    "backend": "⚙️ Back-end",
+    "frontend": "🖼️ Frontend",
+    "backend": "⚙️ Backend",
     "idioma": "🌐 Languages"
   },
   "projects": {
     "mexicoApi": {
       "imageSrc": "/projects/mexicoapi.webp",
       "link": "https://mexico-api.devaleff.com/",
-      "title": "Open Source Mexico - API",
-      "imageAlt": "Development of the MexicoAPI Open Source project",
-      "description": "To address a common issue in address forms, I developed the Open Source project \"Mexico API.\" This tool allows easy and fast access to address information across Mexico.",
-      "occupation": "Independent Developer - Full-Stack"
+      "title": "Open Source Mexico — API",
+      "imageAlt": "Open Source MexicoAPI project development",
+      "description": "Addressing a common issue in address forms, I built the Open Source “Mexico API”. It lets you quickly retrieve geographic and postal data across Mexico in a simple, reliable way.",
+      "occupation": "Independent Developer — Full-Stack"
     },
     "fldchWebApp": {
       "imageSrc": "/projects/fldch.webp",
       "link": "https://fldch.edu.mx/",
       "title": "FLDCH Web Application",
-      "imageAlt": "Full-stack development of a content manager for FLDCH-INEF universities",
-      "description": "I led the development of the Universidad Facultad Libre de Derecho de Chiapas (FLDCH) project, implementing 80% of the system and applying best SEO practices.",
-      "occupation": "Technical Lead – Full-Stack Developer"
+      "imageAlt": "Full-stack content manager for FLDCH-INEF universities",
+      "description": "I led the development for the Facultad Libre de Derecho de Chiapas (FLDCH), delivering ~80% of the system and implementing strong SEO practices.",
+      "occupation": "Technical Lead — Full-Stack Developer"
     },
     "fldchCms": {
       "imageSrc": "/projects/fldch-inef.webp",
       "link": "",
-      "title": "FLDCH - INEF CMS",
-      "imageAlt": "Full-stack development of a content manager for FLDCH-INEF universities",
-      "description": "I developed a content management system for the FLDCH-INEF universities to streamline website content administration.",
-      "occupation": "Technical Lead – Full-Stack Developer"
+      "title": "FLDCH — INEF CMS",
+      "imageAlt": "Full-stack content manager for FLDCH-INEF universities",
+      "description": "I built a CMS for the FLDCH-INEF universities to streamline website content administration.",
+      "occupation": "Technical Lead — Full-Stack Developer"
     },
     "bniAdmin": {
       "imageSrc": "/projects/bni.webp",
       "link": "https://bnimexico.com/es-MX/index",
       "title": "BNI Chiapas Admin System",
-      "imageAlt": "Full-stack development of an administrative and sales system for BNI Chiapas",
-      "description": "I led the development and deployment of the \"BNI Chiapas\" project, culminating in a final presentation to the BNI team.",
-      "occupation": "Technical Lead – Full-Stack Developer"
+      "imageAlt": "Full-stack admin and sales system for BNI Chiapas",
+      "description": "I led the development and deployment of the “BNI Chiapas” project and delivered the final presentation to the BNI team.",
+      "occupation": "Technical Lead — Full-Stack Developer"
     },
     "reichstagWebApp": {
       "imageSrc": "/projects/reichstag.webp",
       "link": "https://reichstag.com.mx/",
       "title": "REICHSTAG Web Application",
-      "imageAlt": "Next.js website development for reichstag.com.mx",
-      "description": "I directed the development and deployment of the \"REICHSTAG\" website, also acting as the main developer.",
-      "occupation": "Technical Lead – Full-Stack Developer"
+      "imageAlt": "Next.js website for reichstag.com.mx",
+      "description": "I led the development and deployment of the “REICHSTAG” website, also serving as principal developer.",
+      "occupation": "Technical Lead — Full-Stack Developer"
     },
     "romoAdmin": {
       "imageSrc": "/projects/romo-tours.webp",
       "link": "http://romotours.com/",
       "title": "Romo Tours Admin System",
-      "imageAlt": "Full-stack development of an admin system for Romo Tours",
-      "description": "I developed the third sprint of the \"Romo Tours\" admin system, meeting all assigned functional objectives.",
+      "imageAlt": "Full-stack admin system for Romo Tours",
+      "description": "I delivered the third sprint of the “Romo Tours” admin system, meeting all functional goals.",
       "occupation": "Full-Stack Developer"
     },
     "rufinoAdmin": {
       "imageSrc": "/projects/rufino-tamayo.webp",
       "link": "https://www.rufinotamayo.edu.mx/",
       "title": "Rufino Tamayo Admin System",
-      "imageAlt": "Full-stack development of an admin system for Rufino Tamayo",
-      "description": "Responsible for maintenance and integration of new features for the \"Rufino Tamayo\" administrative system.",
+      "imageAlt": "Full-stack admin system for Rufino Tamayo",
+      "description": "Responsible for maintenance and integration of new features in the “Rufino Tamayo” admin system.",
       "occupation": "Full-Stack Developer"
     },
     "dBeefMaxWebApp": {
       "imageSrc": "/projects/dbeefmax.webp",
       "link": "https://dbeefmaxboutique.com/",
       "title": "D BeefMax Web Application",
-      "imageAlt": "Website development for a butcher shop with a PHP admin panel",
-      "description": "I handled development, deployment, and maintenance of the \"D BeefMax\" website in both of its released versions.",
-      "occupation": "Technical Lead – Full-Stack Developer"
+      "imageAlt": "Website development with an admin panel in PHP",
+      "description": "In charge of development, deployment, and maintenance for both versions of the “D BeefMax” website.",
+      "occupation": "Technical Lead — Full-Stack Developer"
     },
     "reinaPepiada": {
       "imageSrc": "/projects/reina-pepiada.webp",
       "link": "https://reinapepiada.com.mx/",
       "title": "Reina Pepiada Website",
-      "imageAlt": "Website for a Venezuelan food restaurant",
-      "description": "I led and developed the \"Reina Pepiada\" website alongside a team of four students completing their internships.",
-      "occupation": "Technical Lead – Full-Stack Developer"
+      "imageAlt": "Website for a Venezuelan cuisine restaurant",
+      "description": "I led and developed the “Reina Pepiada” website alongside a team of four student interns.",
+      "occupation": "Technical Lead — Full-Stack Developer"
     },
     "waxWebApp": {
       "imageSrc": "/projects/wax-revolution.webp",
       "link": "https://waxrevolution.com/",
-      "title": "Wax Revolution Web App",
-      "imageAlt": "Backend development for the Wax Revolution system",
-      "description": "Backend developer responsible for integrating new features into the \"Wax Revolution\" system.",
+      "title": "Wax Revolution Web Application",
+      "imageAlt": "Backend development of features for the Wax Revolution system",
+      "description": "Backend developer responsible for integrating new features into the “Wax Revolution” system.",
       "occupation": "Backend Developer"
     },
     "userCrm": {
@@ -200,39 +195,38 @@
       "link": "https://github.com/aleff-eco/Crud-PHP-Laravel",
       "title": "User CRM",
       "imageAlt": "CRM project for user management",
-      "description": "I developed a CRM system for user management as a freelance developer.",
+      "description": "I built a CRM system for user management as a freelancer.",
       "occupation": "Full-Stack Developer"
     },
     "quoware": {
       "imageSrc": "/projects/quoware.webp",
       "link": "https://github.com/usuario/ecommerce_project",
-      "title": "Quoware – Business Manager",
-      "imageAlt": "Mobile application available on PlayStore",
-      "description": "I led both the development and design teams to build the \"Quoware\" project, published on the PlayStore.",
-      "occupation": "Technical Lead – Full-Stack Developer"
+      "title": "Quoware — Business Manager",
+      "imageAlt": "Mobile app available on Play Store",
+      "description": "I led a development and design team to build the “Quoware” project, published on the Play Store.",
+      "occupation": "Technical Lead — Full-Stack Developer"
     },
     "mangoApp": {
       "imageSrc": "/projects/mangoAnalyzer.webp",
       "link": "https://github.com/aleff-eco/Mobile-App-Ataulfo",
       "title": "Mango Analyzer Mobile App",
       "imageAlt": "Mobile app consuming an API for Ataulfo mango analysis",
-      "description": "I developed a mobile app for analyzing Ataulfo mangoes, with optimized performance and fast response times.",
+      "description": "I developed a mobile app to analyze the Ataulfo mango, optimizing performance and response times.",
       "occupation": "Full-Stack Developer"
     },
     "sectionTitle": "Projects",
     "showMore": "Show more projects",
     "showLess": "Show fewer projects"
   },
-
   "companies": {
     "sectionTitle": "Companies",
-    "description": "I've worked with various organizations throughout my career.",
+    "description": "I have collaborated with various organizations throughout my career.",
     "velocidad": "Speed",
     "ajustarVelocidad": "Adjust speed",
     "mexicoApi": {
       "imageUrl": "/experience/mexicoapi.webp",
       "link": "https://mexico-api.devaleff.com/",
-      "name": "Mexico - API",
+      "name": "Mexico — API",
       "title": "Open Source Project"
     },
     "romoTours": {
@@ -269,7 +263,7 @@
       "imageUrl": "/experience/cybac.svg",
       "link": "https://grupocybac.com/",
       "name": "CYBAC",
-      "title": "Hosting & IT Solutions"
+      "title": "Hosting — IT Solutions"
     },
     "rufinoTamayo": {
       "imageUrl": "/experience/rufino.webp",
@@ -299,7 +293,7 @@
       "imageUrl": "/experience/sefina.webp",
       "link": "https://sefina.strappberry.com/",
       "name": "Sefina",
-      "title": "Agricultural Credits"
+      "title": "Agricultural Credit"
     },
     "sitram": {
       "imageUrl": "/experience/sitram.webp",
@@ -311,7 +305,7 @@
       "imageUrl": "/experience/dbeef.webp",
       "link": "https://www.facebook.com/profile.php?id=61563282854180",
       "name": "D BeefMax",
-      "title": "Meat Shop"
+      "title": "Butcher Shop"
     },
     "reichstag": {
       "imageUrl": "/experience/reichstag.webp",
@@ -322,96 +316,91 @@
   },
   "experience": {
     "sectionTitle": "My Experience",
-    "showMore": "Show More",
-    "showLess": "Show Less",
+    "showMore": "Show more",
+    "showLess": "Show less",
     "list": {
-      "freelance": {
-        "company": "Freelance",
-        "companyUrl": "",
+      "strappberry": {
+        "company": "Strappberry",
+        "companyUrl": "https://strappberry.com/es",
         "date": "March 2025 - Present",
-        "title": "Full-Stack Developer – Mobile",
+        "title": "Mobile Developer | Full Stack Developer",
         "descriptionPoints": [
-          "Full‑stack development of different web applications using PHP, Laravel, and Livewire.",
-          "Development of mobile applications with Flutter and React Native.",
-          "Deployment of projects to servers and publishing apps to the Play Store.",
-          "Design and standardize MySQL databases.",
-          "Maintenance and continuous improvement of existing applications.",
-          "Daily stand‑ups and client meetings to define requirements and objectives."
+          "Develop web projects, backend systems, and REST APIs for mobile applications using the TALL Stack (Tailwind, Alpine, Laravel, Livewire).",
+          "Maintain and integrate new modules into legacy projects.",
+          "Design, normalize, and maintain SQL databases for production environments.",
+          "Build solutions for credit, fleet management, health, and fumigation sectors, among others.",
+          "Create interfaces with Livewire, Tailwind, and CSS, aligned with modern UX/UI principles.",
+          "Develop mobile apps with Flutter and React Native, published on Google Play and the App Store.",
+          "Perform daily deliveries, reviews, and follow-ups under the SCRUM methodology."
         ]
       },
       "cybac": {
-        "company": "CYBAC - TI",
+        "company": "CYBAC TI",
         "companyUrl": "https://grupocybac.com/",
-        "date": "July 2024 - March 2025",
-        "title": "Technical Lead – Full-Stack Developer",
+        "date": "April 2024 - March 2025",
+        "title": "Technical Lead | Full Stack Developer",
         "descriptionPoints": [
-          "Led multiple web projects such as “Universidad FLDCH – INEF”, “BNI Chiapas” and “Romo Tours.”",
-          "Served as lead developer for the “Rufino Tamayo,” “Romo Tours” and “Reichstag” systems.",
-          "Evaluated four intern groups, delivering talks and mentorship to ensure quality and foster professional growth.",
-          "Designed and normalized databases, optimizing data integrity and performance.",
-          "Led teams, increasing efficiency through agile methodologies.",
-          "Developed, deployed and maintained applications, optimizing performance, SEO and security.",
-          "Architected systems and database schemas; conducted code reviews, risk management, mentoring and testing.",
-          "Managed tasks in Jira and version control with GitHub/Bitbucket."
+          "Led the development of robust web systems—from planning to client presentations—including projects for schools, universities, transport agencies, and SMBs.",
+          "Designed scalable architectures, normalized databases, and optimized overall system integrity.",
+          "Coordinated a development team under agile methodologies, implementing code reviews and CI/CD pipelines.",
+          "Ensured quality, security, and performance in production, improving team efficiency and software stability.",
+          "Collaborated with clients, stakeholders, and internal teams to deliver high-quality solutions on schedule."
         ]
       },
-      "highTech": {
-        "company": "HIGH – TECH",
+      "highTechIntern": {
+        "company": "HighTech",
         "companyUrl": "https://htpro.dev/",
-        "date": "March 2024 – July 2024",
-        "title": "Backend Developer",
+        "date": "March 2024 - July 2024",
+        "title": "Backend Developer (Internship)",
         "descriptionPoints": [
-          "Delivered sprints 1 and 2 of Tareas Pro.",
-          "Doubled the platform’s functional scope, achieving a 100% expansion of project coverage.",
-          "Fixed bugs and reduced endpoint query times by over 150 ms.",
-          "Worked in local and Dockerized environments using MVC and three-layer architecture.",
-          "Wrote tests and documented APIs with Postman.",
-          "Developed clean, scalable and maintainable code.",
-          "Managed Trello tickets, meeting daily objectives.",
-          "Contributed in daily stand-ups with proposals, solutions and team collaboration."
+          "Developed and optimized the company’s main corporate backend using Laravel, Livewire, and MySQL.",
+          "Implemented MVC architecture and SOLID principles to improve scalability, maintainability, and performance.",
+          "Participated in QA testing and documented APIs with Postman, ensuring production stability.",
+          "Integrated solutions within Docker environments and managed workflows using Trello and GitHub.",
+          "Collaborated in agile sprints, contributing technical proposals and resolving issues as a team."
         ]
       },
-      "waxIntern": {
+      "waxRevo": {
         "company": "Wax Revolution",
         "companyUrl": "https://waxrevolution.com/",
-        "date": "2022 – 2023",
-        "title": "Full-Stack Developer – Intern",
+        "date": "2022 - 2024",
+        "title": "Full Stack Developer",
         "descriptionPoints": [
-          "Developed and implemented new modules focused on inventory management.",
-          "Optimized databases and queries to improve performance.",
-          "Used GitHub for version control and collaboration.",
-          "Fixed critical bugs and implemented development best practices."
+          "Developed and integrated new modules into the internal system, expanding functionalities for project information management.",
+          "Maintained and updated existing modules to ensure accurate real-time data visualization.",
+          "Attended technical meetings with the development team, contributing ideas and improvements.",
+          "Applied MVC architecture and SOLID principles to enhance code maintainability and structure.",
+          "Collaborated on QA testing, deployments, and production updates, managing changes through GitHub."
         ]
       },
       "upChiapas": {
         "company": "Universidad Politécnica de Chiapas",
         "companyUrl": "https://www.upchiapas.edu.mx/",
-        "date": "2020 – 2023",
+        "date": "2020 - 2023",
         "title": "Software Engineering",
-        "description": "Graduated in Software Engineering from the Universidad Politécnica de Chiapas, with strong expertise in PHP, Laravel, MySQL, JavaScript and React. Participated in comprehensive projects, applying agile methodologies from planning through deployment."
+        "description": "Graduated in Software Engineering from the Universidad Politécnica de Chiapas, with solid knowledge of PHP, Laravel, MySQL, JavaScript, and React. Participated in end-to-end projects, applying agile methodologies from planning to deployment."
       }
     }
   },
-
   "notification": {
-    "title": "Popular Repos",
+    "title": "Popular Projects",
     "empty": "No popular repositories.",
     "noDescription": "No description",
-    "viewAll": "View all",
+    "viewAll": "View more",
     "starsIcon": "stars"
   },
   "contact": {
     "sectionTitle": "Contact Me",
-    "intro1": "Would you like to learn more about my work or get a quote for your next project?",
-    "intro2": "Feel free to reach out! I’d love to chat and bring your ideas to life. 📨",
+    "intro1": "Would you like to learn more about my work or get a quote for your project?",
+    "intro2": "Don’t hesitate to reach out! I’d be happy to chat and help bring your ideas to life. 📨",
     "alertSuccessTitle": "Success! ",
     "alertSuccessMessage": "Your message has been sent successfully.",
     "alertErrorTitle": "Error! ",
-    "alertErrorMessage": "There was an error sending your message. Please try again.",
+    "alertErrorMessage": "An error occurred while sending your message. Please try again.",
     "form": {
       "nameLabel": "Name",
       "namePlaceholder": "Enter your name",
-      "emailLabel": "Email Address",
+      "emailLabel": "Email",
       "emailPlaceholder": "Enter your email",
       "messageLabel": "Message",
       "messagePlaceholder": "Write your message",
