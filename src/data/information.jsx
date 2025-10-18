@@ -225,6 +225,7 @@ export const companies = [
 export const projects = [
   { key: "mexicoApi", icon: <RiHomeOfficeLine /> },
   { key: "fldchWebApp", icon: <RiHomeOfficeLine /> },
+  { key: "inefWebApp", icon: <RiHomeOfficeLine /> },
   { key: "fldchCms", icon: <RiHomeOfficeLine /> },
   { key: "bniAdmin", icon: <RiHomeOfficeLine /> },
   { key: "reichstagWebApp", icon: <RiHomeOfficeLine /> },

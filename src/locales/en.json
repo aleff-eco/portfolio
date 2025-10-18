@@ -85,7 +85,11 @@
     },
     "laravel": { "name": "Laravel", "level": "Advanced", "years": "4 years" },
     "tailwind": { "name": "Tailwind", "level": "Advanced", "years": "4 years" },
-    "nextjs": { "name": "Next.js", "level": "Intermediate", "years": "4 years" },
+    "nextjs": {
+      "name": "Next.js",
+      "level": "Intermediate",
+      "years": "4 years"
+    },
     "español": { "name": "Spanish", "level": "Native", "years": "4 years" },
     "ingles": { "name": "English", "level": "Advanced", "years": "4 years" }
   },
@@ -122,8 +126,16 @@
       "imageSrc": "/projects/fldch.webp",
       "link": "https://fldch.edu.mx/",
       "title": "FLDCH Web Application",
-      "imageAlt": "Full-stack content manager for FLDCH-INEF universities",
-      "description": "I led the development for the Facultad Libre de Derecho de Chiapas (FLDCH), delivering ~80% of the system and implementing strong SEO practices.",
+      "imageAlt": "Full-stack development of a content manager for FLDCH",
+      "description": "I led development for the Facultad Libre de Derecho de Chiapas (FLDCH), delivering over 80% of the system and implementing SEO best practices.",
+      "occupation": "Technical Lead — Full-Stack Developer"
+    },
+    "inefWebApp": {
+      "imageSrc": "/projects/inef.webp",
+      "link": "https://inef.edu.mx/",
+      "title": "INEF Web Application",
+      "imageAlt": "Full-stack development of a content manager for the National Institute of Fiscal Studies (INEF)",
+      "description": "I led development for the National Institute of Fiscal Studies (INEF), implementing the core system logic and SEO best practices.",
       "occupation": "Technical Lead — Full-Stack Developer"
     },
     "fldchCms": {

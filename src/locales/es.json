@@ -57,20 +57,32 @@
     "soft": "Blandas"
   },
   "technicalSkills": {
-    "javascript": { "name": "JavaScript", "level": "Avanzado", "years": "4 años" },
+    "javascript": {
+      "name": "JavaScript",
+      "level": "Avanzado",
+      "years": "4 años"
+    },
     "python": { "name": "Python", "level": "Intermedio", "years": "4 años" },
     "php": { "name": "PHP", "level": "Avanzado", "years": "4 años" },
     "java": { "name": "Java", "level": "Intermedio", "years": "4 años" },
     "github": { "name": "GitHub", "level": "Avanzado", "years": "4 años" },
     "gitlab": { "name": "GitLab", "level": "Avanzado", "years": "4 años" },
-    "bitbucket": { "name": "Bitbucket", "level": "Avanzado", "years": "4 años" },
+    "bitbucket": {
+      "name": "Bitbucket",
+      "level": "Avanzado",
+      "years": "4 años"
+    },
     "postman": { "name": "Postman", "level": "Avanzado", "years": "4 años" },
     "nodejs": { "name": "Node.js", "level": "Avanzado", "years": "4 años" },
     "docker": { "name": "Docker", "level": "Avanzado", "years": "4 años" },
     "sql": { "name": "SQL", "level": "Avanzado", "years": "4 años" },
     "css": { "name": "CSS", "level": "Intermedio", "years": "4 años" },
     "react": { "name": "React", "level": "Intermedio", "years": "4 años" },
-    "bootstrap": { "name": "Bootstrap", "level": "Intermedio", "years": "4 años" },
+    "bootstrap": {
+      "name": "Bootstrap",
+      "level": "Intermedio",
+      "years": "4 años"
+    },
     "laravel": { "name": "Laravel", "level": "Avanzado", "years": "4 años" },
     "tailwind": { "name": "Tailwind", "level": "Avanzado", "years": "4 años" },
     "nextjs": { "name": "Next.js", "level": "Intermedio", "years": "4 años" },
@@ -110,8 +122,16 @@
       "imageSrc": "/projects/fldch.webp",
       "link": "https://fldch.edu.mx/",
       "title": "Aplicación web FLDCH",
-      "imageAlt": "Desarrollo full-stack de un gestor de contenidos para las universidades FLDCH-INEF",
-      "description": "Lideré el desarrollo para la Facultad Libre de Derecho de Chiapas (FLDCH), implementando cerca del 80% del sistema e incorporando buenas prácticas de SEO.",
+      "imageAlt": "Desarrollo full-stack de un gestor de contenidos para la universidad FLDCH",
+      "description": "Lideré el desarrollo para la Facultad Libre de Derecho de Chiapas (FLDCH), implementando más del 80 % del sistema e incorporando buenas prácticas de SEO.",
+      "occupation": "Líder Técnico - Desarrollador Full-Stack"
+    },
+    "inefWebApp": {
+      "imageSrc": "/projects/inef.webp",
+      "link": "https://inef.edu.mx/",
+      "title": "Aplicación web INEF",
+      "imageAlt": "Desarrollo full-stack de un gestor de contenidos para la universidad INEF",
+      "description": "Lideré el desarrollo del Instituto Nacional de Estudios Fiscales (INEF), implementando la lógica del sistema e incorporando buenas prácticas de SEO.",
       "occupation": "Líder Técnico - Desarrollador Full-Stack"
     },
     "fldchCms": {
