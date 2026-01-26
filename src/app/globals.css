@@ -54,3 +54,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Se desactiva la animación en dispositivos móviles para evitar el triple Zoom */
+
+@media (max-width: 768px) {
+  [data-aos],
+  .aos-init,
+  .aos-animate {
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
