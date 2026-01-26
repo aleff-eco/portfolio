@@ -1,13 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import "../app/globals.css";
-import {
-  technicalSkills,
-  softSkills,
-  categories,
-  wordsKeys,
-} from "@/data/information";
+import { technicalSkills, softSkills, categories } from "@/data/information";
 import { useTranslations } from "../hooks/useTranslations";
 
 export function Skills() {
@@ -70,7 +64,11 @@ export function Skills() {
     : technicalSkills;
 
   return (
-    <section id="skills" ref={sectionRef} className="md:py-12 lg:py-16">
+    <section
+      id="skills"
+      ref={sectionRef}
+      className="md:py-12 lg:py-16 bg-background text-foreground"
+    >
       <div className="container mx-auto sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center">{t.skills.title}</h2>
 
@@ -79,18 +77,19 @@ export function Skills() {
             onClick={() => handleSkillTypeClick("technical")}
             className={`relative text-xl font-medium pb-2 transition-transform duration-300 hover:scale-105 ${
               selectedSkillType === "technical"
-                ? "border-b-2 border-[hsl(var(--foreground))]"
-                : ""
+                ? "border-b-2 border-foreground"
+                : "border-b-2 border-transparent"
             }`}
           >
             {t.skills.technical}
           </button>
+
           <button
             onClick={() => handleSkillTypeClick("soft")}
             className={`relative text-xl font-medium pb-2 transition-transform duration-300 hover:scale-105 ${
               selectedSkillType === "soft"
-                ? "border-b-2 border-[hsl(var(--foreground))]"
-                : ""
+                ? "border-b-2 border-foreground"
+                : "border-b-2 border-transparent"
             }`}
           >
             {t.skills.soft}
@@ -103,10 +102,10 @@ export function Skills() {
               <button
                 key={cat.key}
                 onClick={() => handleCategoryClick(cat.key)}
-                className={`inline-flex items-center justify-center m-2 px-4 py-2 text-sm font-medium rounded-md shadow-2xl border-2 transition-all duration-200 hover:scale-105 ${
+                className={`inline-flex items-center justify-center m-2 px-4 py-2 text-sm font-medium rounded-md border transition-all duration-200 hover:scale-105 ${
                   selectedCategory === cat.key
-                    ? "border-[hsl(var(--foreground))] bg-[hsla(var(--background-secondary))]"
-                    : "border-transparent"
+                    ? "border-foreground bg-[hsl(var(--background-secondary))]"
+                    : "border-border/40 hover:border-border"
                 }`}
               >
                 {t.categories[cat.key]}
@@ -130,9 +129,10 @@ export function Skills() {
                       className="flex items-center gap-2 mt-2 pl-4 xl:pl-14"
                     >
                       <div className="icon-wrapper">{skill.icon}</div>
-                      <div className="">
+
+                      <div>
                         <div className="text-lg font-bold">{data.name}</div>
-                        <div className="text-sm text-gray-600">
+                        <div className="text-sm text-foreground/70">
                           {data.level}
                           {/* • {data.years} */}
                         </div>
@@ -148,6 +148,7 @@ export function Skills() {
                     <div className="bg-muted rounded-md flex items-center justify-center w-12 h-12 icon-wrapper">
                       {skill.icon}
                     </div>
+
                     <span className="text-sm font-medium">
                       {t.softSkills[skill.key]}
                     </span>

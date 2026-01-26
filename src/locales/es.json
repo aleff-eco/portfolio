@@ -110,6 +110,14 @@
     "idioma": "🌐 Idiomas"
   },
   "projects": {
+    "drabere": {
+      "imageSrc": "/projects/drabere.webp",
+      "link": "https://drabere.com/",
+      "title": "Aplicación web Drabere",
+      "imageAlt": "Desarrollo del proyecto Dra Bere",
+      "description": "Realicé el desarrollo completo del sitio web \"Drabere\", una plataforma con un panel administrativo que permite gestionar el 100% de la información de la empresa.",
+      "occupation": "Líder Técnico - Desarrollador Full-Stack"
+    },
     "mexicoApi": {
       "imageSrc": "/projects/mexicoapi.webp",
       "link": "https://mexico-api.devaleff.com/",
@@ -231,6 +239,12 @@
     "description": "He colaborado con diversas organizaciones a lo largo de mi trayectoria.",
     "velocidad": "Velocidad",
     "ajustarVelocidad": "Ajustar velocidad",
+    "drabere": {
+      "imageUrl": "/experience/drabere.webp",
+      "link": "https://drabere.com/",
+      "name": "Dra Bere",
+      "title": "Clínica de salud dental"
+    },
     "mexicoApi": {
       "imageUrl": "/experience/mexicoapi.webp",
       "link": "https://mexico-api.devaleff.com/",

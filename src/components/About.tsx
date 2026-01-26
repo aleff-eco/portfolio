@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from "react";
@@ -14,12 +15,16 @@ export function About() {
   const skills = Object.values(t.about.skills);
 
   return (
-    <section id="about" className="relative overflow-hidden md:py-12 lg:py-16 text-white">
+    <section
+      id="about"
+      className="relative overflow-hidden md:py-12 lg:py-16 bg-background text-foreground"
+    >
       <motion.div
-        className="pointer-events-none absolute blur-3xl"
+        className="pointer-events-none absolute inset-0 blur-3xl opacity-30"
         animate={{ scale: [1, 1.2, 1] }}
         transition={{ duration: 12, repeat: Infinity }}
       />
+
       <div className="container mx-auto max-w-6xl lg:px-8 space-y-10 px-6">
         <motion.h2
           variants={variants}
@@ -36,7 +41,7 @@ export function About() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.6 }}
-          className="mx-auto max-w-5xl text-lg leading-relaxed"
+          className="mx-auto max-w-5xl text-lg leading-relaxed text-foreground/80"
         >
           {t.about.description}
         </motion.p>
@@ -49,10 +54,10 @@ export function About() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: false, amount: 0.6 }}
-              className="rounded-2xl px-6 py-2 backdrop-blur-lg"
+              className="rounded-2xl px-6 py-4 bg-card/70 text-card-foreground backdrop-blur-lg border border-border/50"
             >
               <h3 className="mb-2 text-2xl font-semibold">* {title}</h3>
-              <p className="text-base leading-relaxed">{body}</p>
+              <p className="text-base leading-relaxed text-card-foreground/80">{body}</p>
             </motion.li>
           ))}
         </ul>
@@ -62,7 +67,7 @@ export function About() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.6 }}
-          className="mx-auto max-w-5xl text-lg leading-relaxed"
+          className="mx-auto max-w-5xl text-lg leading-relaxed text-foreground/80"
         >
           {t.about.closing}
         </motion.p>

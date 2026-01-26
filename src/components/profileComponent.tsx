@@ -107,12 +107,7 @@ export function ProfileComponent() {
         >
           <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-700 relative">
             <span className="relative">
-              <span className="text-profile">{text}</span>
-              <motion.span
-                className="absolute top-0 right-[-8px] w-[2px] h-full bg-gray-700"
-                animate={{ opacity: [1, 0, 1] }}
-                transition={{ duration: 0.8, repeat: Infinity }}
-              />
+              <span className="text-profile border-r-0 after:content-none">{text}</span>
             </span>
           </h2>
         </motion.div>

@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import NotificationButton from "./githubalert";
 import { projects } from "@/data/information";
 import { useTranslations } from "../hooks/useTranslations";
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 export function Projects({ children }: { children?: React.ReactNode }) {
   const t = useTranslations();
@@ -102,8 +102,8 @@ export function Projects({ children }: { children?: React.ReactNode }) {
             className="flex justify-center mt-12"
           >
             <button
-              onClick={() => setShowAll(prev => !prev)}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
+              onClick={() => setShowAll((prev) => !prev)}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#263a92] text-white hover:bg-[#1f2f76] focus:outline-none focus:ring-2 focus:ring-[#263a92] transition"
             >
               {showAll ? t.experience.showLess : t.experience.showMore}
               {showAll ? (

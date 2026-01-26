@@ -205,6 +205,7 @@ export const categories = [
 ];
 
 export const companies = [
+  { key: "drabere", icon: <RiHomeOfficeLine /> },
   { key: "mexicoApi", icon: <RiHomeOfficeLine /> },
   { key: "romoTours", icon: <RiHomeOfficeLine /> },
   { key: "bniChiapas", icon: <RiHomeOfficeLine /> },
@@ -216,13 +217,14 @@ export const companies = [
   { key: "waxRevolution", icon: <RiHomeOfficeLine /> },
   { key: "sanAngel", icon: <RiHomeOfficeLine /> },
   { key: "dBeefMax", icon: <RiHomeOfficeLine /> },
-  { key: "sefina", icon: <RiHomeOfficeLine /> },
-  { key: "sitram", icon: <RiHomeOfficeLine /> },
+  //{ key: "sefina", icon: <RiHomeOfficeLine /> },
+  //{ key: "sitram", icon: <RiHomeOfficeLine /> },
   { key: "strappberry", icon: <RiHomeOfficeLine /> },
   { key: "reichstag", icon: <RiHomeOfficeLine /> },
 ];
 
 export const projects = [
+  { key: "drabere", icon: <RiHomeOfficeLine /> },
   { key: "mexicoApi", icon: <RiHomeOfficeLine /> },
   { key: "fldchWebApp", icon: <RiHomeOfficeLine /> },
   { key: "inefWebApp", icon: <RiHomeOfficeLine /> },

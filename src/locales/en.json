@@ -114,6 +114,14 @@
     "idioma": "🌐 Languages"
   },
   "projects": {
+    "drabere": {
+      "imageSrc": "/projects/drabere.webp",
+      "link": "https://drabere.com/",
+      "title": "Drabere Web Application",
+      "imageAlt": "Drabere project development",
+      "description": "I developed the complete “Drabere” website, a platform with an admin panel that allows managing 100% of the company’s information.",
+      "occupation": "Technical Lead — Full-Stack Developer"
+    },
     "mexicoApi": {
       "imageSrc": "/projects/mexicoapi.webp",
       "link": "https://mexico-api.devaleff.com/",
@@ -235,6 +243,12 @@
     "description": "I have collaborated with various organizations throughout my career.",
     "velocidad": "Speed",
     "ajustarVelocidad": "Adjust speed",
+    "drabere": {
+      "imageUrl": "/experience/drabere.webp",
+      "link": "https://drabere.com/",
+      "name": "Dra Bere",
+      "title": "Dental Health Clinic"
+    },
     "mexicoApi": {
       "imageUrl": "/experience/mexicoapi.webp",
       "link": "https://mexico-api.devaleff.com/",
