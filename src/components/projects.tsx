@@ -26,7 +26,7 @@ export function Projects({ children }: { children?: React.ReactNode }) {
   const visibleKeys = showAll ? projectKeys : projectKeys.slice(0, count);
   return (
     <section id="projects" className="relative py-20">
-      <div className="absolute top-4 right-6 z-50">
+      <div className="absolute top-4 right-6">
         <NotificationButton />
       </div>
 

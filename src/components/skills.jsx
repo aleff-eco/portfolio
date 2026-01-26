@@ -14,12 +14,21 @@ export function Skills() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+
     const observer = new IntersectionObserver(
-      ([entry]) => setIsInView(entry.isIntersecting),
-      { threshold: 0.1 }
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15 }
     );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => sectionRef.current && observer.unobserve(sectionRef.current);
+
+    observer.observe(el);
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -63,13 +72,19 @@ export function Skills() {
       )
     : technicalSkills;
 
+  const enterClass = isInView
+    ? "opacity-100 translate-y-0"
+    : "opacity-0 translate-y-6";
+
   return (
     <section
       id="skills"
       ref={sectionRef}
       className="md:py-12 lg:py-16 bg-background text-foreground"
     >
-      <div className="container mx-auto sm:px-6 lg:px-8">
+      <div
+        className={`container mx-auto sm:px-6 lg:px-8 transition-all duration-700 ease-out ${enterClass}`}
+      >
         <h2 className="text-4xl font-bold text-center">{t.skills.title}</h2>
 
         <div className="flex justify-center space-x-8 text-center mt-6">
@@ -134,7 +149,6 @@ export function Skills() {
                         <div className="text-lg font-bold">{data.name}</div>
                         <div className="text-sm text-foreground/70">
                           {data.level}
-                          {/* • {data.years} */}
                         </div>
                       </div>
                     </div>

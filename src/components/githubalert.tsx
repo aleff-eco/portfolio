@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { FaGithub, FaStar } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "../hooks/useTranslations";
@@ -13,75 +13,155 @@ interface Repo {
   stargazers_count: number;
 }
 
+function useOnClickOutside<T extends HTMLElement>(
+  ref: React.RefObject<T>,
+  handler: () => void,
+) {
+  useEffect(() => {
+    const onDown = (e: MouseEvent | TouchEvent) => {
+      const el = ref.current;
+      if (!el) return;
+      const target = e.target as Node | null;
+      if (target && el.contains(target)) return;
+      handler();
+    };
+
+    document.addEventListener("mousedown", onDown);
+    document.addEventListener("touchstart", onDown, { passive: true });
+
+    return () => {
+      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("touchstart", onDown);
+    };
+  }, [ref, handler]);
+}
+
 export default function NotificationButton() {
   const t = useTranslations();
   const [open, setOpen] = useState(false);
   const [repos, setRepos] = useState<Repo[]>([]);
   const [totalStars, setTotalStars] = useState(0);
-  const prevCountRef = useRef(0);
+  const wrapRef = useRef<HTMLDivElement>(null);
+
+  useOnClickOutside(wrapRef, () => setOpen(false));
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   useEffect(() => {
     async function fetchRepos() {
       try {
-        const res = await fetch("https://api.github.com/users/aleff-eco/repos");
+        const res = await fetch(
+          "https://api.github.com/users/aleff-eco/repos",
+          {
+            headers: { Accept: "application/vnd.github+json" },
+          },
+        );
+
+        if (!res.ok) return;
+
         const data: Repo[] = await res.json();
+
         const popular = data
           .filter((r) => r.stargazers_count >= 3)
           .sort((a, b) => b.stargazers_count - a.stargazers_count);
+
         setRepos(popular);
-        const total = data.reduce((sum, r) => sum + r.stargazers_count, 0);
-        setTotalStars(total);
-        prevCountRef.current = popular.length;
+        setTotalStars(data.reduce((sum, r) => sum + r.stargazers_count, 0));
       } catch (e) {
         console.error(e);
       }
     }
+
     fetchRepos();
   }, []);
 
+  const count = repos.length;
+
+  const containerClass = "relative z-10 md:fixed md:top-8 md:right-8";
+
+  const panelMotion = useMemo(
+    () => ({
+      initial: { opacity: 0, y: -10, scale: 0.98 },
+      animate: { opacity: 1, y: 0, scale: 1 },
+      exit: { opacity: 0, y: -10, scale: 0.98 },
+      transition: { type: "spring", stiffness: 260, damping: 22 },
+    }),
+    [],
+  );
+
   return (
-    <div className="fixed top-4 md:top-8 lg:top-12 right-4 md:right-8 lg:right-16 z-50">
-      <motion.button
-        onClick={() => setOpen((o) => !o)}
-        className="relative w-16 h-16 flex items-center justify-center bg-gray-100 dark:bg-gray-800 focus:outline-none rounded-full"
+    <div ref={wrapRef} className={containerClass}>
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        aria-haspopup="dialog"
+        className="
+          relative inline-flex items-center justify-center
+          h-12 w-12 rounded-full
+          bg-card text-card-foreground
+          border border-border/60 shadow-sm
+          hover:shadow-md transition
+          focus:outline-none focus:ring-2 focus:ring-ring/40
+        "
       >
-        <motion.div
-          animate={{ rotate: [0, 15, -15, 0] }}
-          transition={{ duration: 0.6, repeat: Infinity, repeatDelay: 1 }}
-        >
-          <FaGithub className="w-10 h-10" />
-        </motion.div>
-        <span className="absolute w-14 h-14 rounded-full animate-ping" />
-        <span
-          className="absolute top-0 right-0 flex items-center justify-center h-6 w-6 text-sm font-bold"
-          style={{
-            color: repos.length > 0 ? "rgba(255, 0, 5, 0.9)" : "transparent",
-            backgroundColor: repos.length > 0 ? "#FFFFFF" : "transparent",
-            borderRadius: "50%",
-          }}
-        >
-          {repos.length}
-        </span>
-      </motion.button>
+        <FaGithub className="h-6 w-6" />
+
+        {count > 0 && (
+          <span
+            className="
+              absolute -top-1 -right-1
+              min-w-5 h-5 px-1
+              rounded-full
+              text-[11px] leading-5 font-semibold
+              bg-background text-foreground
+              border border-border/60
+              shadow
+              text-center
+            "
+          >
+            {count}
+          </span>
+        )}
+      </button>
 
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className={`
-              absolute top-full mt-3 right-0 w-84 rounded-[20px] shadow-2xl z-10
-              bg-[hsla(var(--background-secondary))]
-            `}
+            {...panelMotion}
+            role="dialog"
+            aria-label={t.notification.title}
+            className="
+              absolute right-0 mt-3 w-80
+              rounded-2xl overflow-hidden
+              border border-border/60 shadow-xl
+              bg-[hsl(var(--background-secondary))]
+              text-foreground
+            "
           >
-            <div className="text-center text-lg bg-indigo-600 dark:bg-indigo-700 text-white font-bold px-4 py-3">
-              {t.notification.title}
+            <div className="px-4 py-3 border-b border-border/50 bg-card/70 backdrop-blur">
+              <div className="flex items-center justify-between gap-3">
+                <div className="font-semibold">{t.notification.title}</div>
+                <a
+                  href="https://github.com/aleff-eco"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-foreground/70 hover:text-foreground underline underline-offset-4 transition"
+                >
+                  {totalStars} {t.notification.starsIcon}
+                </a>
+              </div>
             </div>
+
             <div className="max-h-72 overflow-y-auto custom-scrollbar">
               {repos.length === 0 ? (
-                <div className="p-4 text-center text-sm text-gray-600 dark:text-gray-400">
+                <div className="p-4 text-center text-sm text-foreground/70">
                   {t.notification.empty}
                 </div>
               ) : (
@@ -91,21 +171,32 @@ export default function NotificationButton() {
                     href={repo.html_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center px-2 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                    className="
+                      flex items-start gap-3 px-4 py-3
+                      hover:bg-card/60 transition-colors
+                      border-b border-border/30 last:border-b-0
+                    "
                   >
-                    <span className="inline-flex items-center bg-red-100 dark:bg-red-800 text-red-600 dark:text-red-400 px-2 py-1 rounded-full mr-2 text-sm font-medium">
-                      <FaStar className="inline-block mx-1 h-4 w-4" />
+                    <span
+                      className="
+                        inline-flex items-center gap-1
+                        px-2 py-1 rounded-full
+                        text-xs font-semibold
+                        border border-border/50
+                        bg-card/60
+                        text-foreground
+                        shrink-0
+                      "
+                    >
+                      <FaStar className="h-3.5 w-3.5" />
                       {repo.stargazers_count}
                     </span>
-                    <div className="flex-grow">
-                      <h3 className="font-medium text-gray-900 dark:text-white">
-                        {repo.name}
-                      </h3>
-                      <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+
+                    <div className="min-w-0">
+                      <div className="font-medium truncate">{repo.name}</div>
+                      <p className="text-xs text-foreground/70 mt-1 line-clamp-2">
                         {repo.description
-                          ? repo.description.length > 80
-                            ? `${repo.description.slice(0, 80)}...`
-                            : repo.description
+                          ? repo.description
                           : t.notification.noDescription}
                       </p>
                     </div>
@@ -113,14 +204,25 @@ export default function NotificationButton() {
                 ))
               )}
             </div>
-            <a
-              href="https://github.com/aleff-eco"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-4 block text-center bg-indigo-50 dark:bg-gray-800 text-indigo-600 dark:text-indigo-400 font-medium py-3 hover:bg-indigo-100 dark:hover:bg-gray-700 transition-colors"
-            >
-              {t.notification.viewAll} ({totalStars} {t.notification.starsIcon})
-            </a>
+
+            <div className="p-3 bg-card/50 border-t border-border/40">
+              <a
+                href="https://github.com/aleff-eco"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  block text-center
+                  rounded-xl
+                  px-4 py-2
+                  font-medium
+                  bg-card text-card-foreground
+                  border border-border/60
+                  hover:shadow-md transition
+                "
+              >
+                {t.notification.viewAll}
+              </a>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
