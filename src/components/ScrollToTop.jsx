@@ -23,7 +23,9 @@ export default function ScrollToTop() {
       onClick={scrollToTop}
       className={`
         fixed bottom-6 right-6 z-50 flex items-center justify-center
-        h-10 w-10 rounded-md bg-primary text-white shadow-lg
+        h-10 w-10 rounded-md text-white shadow-sm hover:shadow-primary hover:cursor-pointer
+        bg-[color-mix(in_oklab,hsl(var(--primary)),white_8%)]
+        hover:bg-[color-mix(in_oklab,hsl(var(--primary)),white_14%)]
         transition-opacity duration-300
         ${visible ? "opacity-100" : "opacity-0 pointer-events-none"}
       `}
