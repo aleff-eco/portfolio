@@ -1,6 +1,6 @@
 .connect-button {
-  background-color: hsl(var(--primary)/70);
-  color: hsl(var(--primary-foreground)/70);
+  background-color: hsl(var(--primary) / 80%);
+  color: hsl(var(--primary-foreground) / 90%);
   padding: 12px;
   margin-top: 4%;
   border: none;
@@ -14,16 +14,16 @@
 }
 
 .connect-button:hover {
-  background-color: hsl(var(--foreground));
+  background-color: hsl(var(--primary) / 65%);
 }
 
 .dark .connect-button {
-  background-color: hsla(225, 3%, 30%, 0.7);
-  color: hsl(var(--primary-foreground)/70);
+  background-color: hsl(var(--primary) / 55%);
+  color: hsl(var(--primary-foreground) / 95%);
 }
 
 .dark .connect-button:hover {
-  background-color: hsla(0, 0%, 60%, 0.7)/70;
+  background-color: hsl(var(--foreground) / 75%);
 }
 
 

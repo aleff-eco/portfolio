@@ -11,9 +11,6 @@ const MouseMoveEffect = dynamic(() => import("@/components/MouseMoveEffect"), {
   ssr: false,
 });
 import { LanguageProvider } from '@/context/LanguageContext'
-const ScrollToTop = dynamic(() => import("@/components/ScrollToTop"), {
-  ssr: false,
-});
 
 export function ClientProviders({ children }) {
   return (
@@ -21,7 +18,6 @@ export function ClientProviders({ children }) {
       <Analytics />
       <MouseMoveEffect />
       <LanguageProvider>{children}</LanguageProvider>
-      <ScrollToTop />
     </>
   );
 }

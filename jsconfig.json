@@ -3,7 +3,7 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "jsx": "preserve",           // O "react-jsx" si usas la nueva transformación
-    "jsxImportSource": "react",  // Sólo si eliges "react-jsx"
+    "jsx": "preserve",
+    "jsxImportSource": "react"
   }
 }

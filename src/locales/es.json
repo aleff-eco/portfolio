@@ -240,7 +240,7 @@
     "velocidad": "Velocidad",
     "ajustarVelocidad": "Ajustar velocidad",
     "drabere": {
-      "imageUrl": "/experience/drabere.webp",
+      "imageUrl": "/experience/bere.svg",
       "link": "https://drabere.com/",
       "name": "Dra Bere",
       "title": "Clínica de salud dental"
@@ -420,6 +420,7 @@
     "alertErrorTitle": "¡Error! ",
     "alertErrorMessage": "Ocurrió un error al enviar tu mensaje. Inténtalo de nuevo.",
     "form": {
+      "sendingButton": "Enviando...",
       "nameLabel": "Nombre",
       "namePlaceholder": "Ingresa tu nombre",
       "emailLabel": "Correo electrónico",

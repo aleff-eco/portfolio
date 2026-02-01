@@ -83,7 +83,7 @@ export function Companies() {
               return (
                 <div
                   key={`${key}-${idx}`}
-                  className="relative group flex-shrink-0 w-64 h-32 rounded-lg bg-[hsl(var(--secondary-card))] transition-transform duration-300 hover:scale-110"
+                  className="relative group shrink-0 w-64 h-32 rounded-lg bg-[hsl(var(--secondary-card))] transition-transform duration-300 hover:scale-110"
                 >
                   <img
                     src={data.imageUrl}

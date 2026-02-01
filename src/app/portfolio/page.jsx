@@ -16,6 +16,7 @@ import { Footer } from '@/components/footer';
 import { About } from '@/components/About';
 import { Soon} from '@/components/Soon'
 
+
 export default function PortfolioPage() {
   useEffect(() => {
     AOS.init({
@@ -26,7 +27,7 @@ export default function PortfolioPage() {
   }, []);
 
   return (
-    <div className="flex flex-col text-foreground">
+    <div className="text-foreground">
       <Navbar />
       <main className="flex-1">
         <ProfileComponent />

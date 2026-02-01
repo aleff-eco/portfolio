@@ -1,7 +1,5 @@
-
 "use client";
 
-import React from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "@/hooks/useTranslations";
 
@@ -17,7 +15,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden md:py-12 lg:py-16 bg-background text-foreground"
+      className="relative overflow-hidden md:py-12 lg:py-16 bg-[hsl(var(--background))] text-[hsl(var(--foreground))]"
     >
       <motion.div
         className="pointer-events-none absolute inset-0 blur-3xl opacity-30"
@@ -41,7 +39,7 @@ export function About() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.6 }}
-          className="mx-auto max-w-5xl text-lg leading-relaxed text-foreground/80"
+          className="mx-auto max-w-5xl text-lg leading-relaxed text-[hsl(var(--card-foreground)/0.8)]"
         >
           {t.about.description}
         </motion.p>
@@ -54,10 +52,20 @@ export function About() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: false, amount: 0.6 }}
-              className="rounded-2xl px-6 py-4 bg-card/70 text-card-foreground backdrop-blur-lg border border-border/50"
+              className="
+                rounded-2xl px-6 py-4 backdrop-blur-lg
+                bg-[hsl(var(--card)/0.45)]
+                text-[hsl(var(--card-foreground))]
+                border border-[hsl(var(--border)/0.5)]
+              "
             >
-              <h3 className="mb-2 text-2xl font-semibold">* {title}</h3>
-              <p className="text-base leading-relaxed text-card-foreground/80">{body}</p>
+              <h3 className="mb-2 text-2xl font-semibold">
+                * {title}
+              </h3>
+
+              <p className="text-base leading-relaxed text-[hsl(var(--card-foreground)/0.8)]">
+                {body}
+              </p>
             </motion.li>
           ))}
         </ul>
@@ -67,7 +75,7 @@ export function About() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.6 }}
-          className="mx-auto max-w-5xl text-lg leading-relaxed text-foreground/80"
+          className="mx-auto max-w-5xl text-lg leading-relaxed text-[hsl(var(--card-foreground)/0.8)]"
         >
           {t.about.closing}
         </motion.p>

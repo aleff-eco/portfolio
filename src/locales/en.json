@@ -244,7 +244,7 @@
     "velocidad": "Speed",
     "ajustarVelocidad": "Adjust speed",
     "drabere": {
-      "imageUrl": "/experience/drabere.webp",
+      "imageUrl": "/experience/bere.svg",
       "link": "https://drabere.com/",
       "name": "Dra Bere",
       "title": "Dental Health Clinic"
@@ -424,6 +424,7 @@
     "alertErrorTitle": "Error! ",
     "alertErrorMessage": "An error occurred while sending your message. Please try again.",
     "form": {
+      "sendingButton": "Sending...",
       "nameLabel": "Name",
       "namePlaceholder": "Enter your name",
       "emailLabel": "Email",

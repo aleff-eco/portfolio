@@ -1,6 +1,10 @@
 // src/app/layout.js
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "../styles/ProfileComponent.css";
+import "../styles/Experience.css";
+import "../styles/Contact.css";
+import "../styles/Skills.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ClientProviders } from "@/components/ClientProviders";
 import Script from "next/script";

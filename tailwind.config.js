@@ -1,6 +1,5 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class", // Añade esta línea para habilitar el modo oscuro basado en clases
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,44 +8,35 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
+        navbar: "hsl(var(--navbar) / <alpha-value>)",
+        background: "hsl(var(--background) / <alpha-value>)",
+        "background-secondary":
+          "hsl(var(--background-secondary) / <alpha-value>)",
+        foreground: "hsl(var(--foreground) / <alpha-value>)",
+
+        card: "hsl(var(--card) / <alpha-value>)",
+        "secondary-card": "hsl(var(--secondary-card) / <alpha-value>)",
+        "card-foreground": "hsl(var(--card-foreground) / <alpha-value>)",
+
+        primary: "hsl(var(--primary) / <alpha-value>)",
+        "primary-foreground": "hsl(var(--primary-foreground) / <alpha-value>)",
+        secondary: "hsl(var(--secondary) / <alpha-value>)",
+        "secondary-foreground":
+          "hsl(var(--secondary-foreground) / <alpha-value>)",
+
+        destructive: "hsl(var(--destructive) / <alpha-value>)",
+        "destructive-foreground":
+          "hsl(var(--destructive-foreground) / <alpha-value>)",
+
+        border: "hsl(var(--border) / <alpha-value>)",
+        input: "hsl(var(--input) / <alpha-value>)",
+        ring: "hsl(var(--ring) / <alpha-value>)",
+
+        "light-gray": "hsl(var(--light-gray) / <alpha-value>)",
+        "text-card": "hsl(var(--text-card) / <alpha-value>)",
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        DEFAULT: "var(--radius)",
       },
       keyframes: {
         "accordion-down": {
@@ -59,20 +49,5 @@ module.exports = {
         },
       },
     },
-  },
-  plugins: [
-    require("tailwindcss-animate"),
-    function ({ addUtilities }) {
-      addUtilities({
-        ".scrollbar-hide": {
-          "&::-webkit-scrollbar": { display: "none" },
-          "scrollbar-width": "none",
-          "-ms-overflow-style": "none",
-        },
-      });
-    },
-  ],
-  future: {
-    hoverOnlyWhenSupported: true,
   },
 };

@@ -1,7 +1,4 @@
 "use client";
-
-import "../app/globals.css";
-import "../styles/ProfileComponent.css";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
@@ -84,6 +81,7 @@ export function ProfileComponent() {
 
   return (
     <motion.section
+      id="inicio"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -116,7 +114,7 @@ export function ProfileComponent() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="text-md sm:text-lg md:text-xl lg:text-xl font-medium text-gray-600 max-w-2xl mx-auto leading-relaxed"
+          className="text-md sm:text-lg md:text-xl lg:text-xl font-medium  max-w-2xl mx-auto leading-relaxed"
         >
           {t.profile.description}
         </motion.p>
@@ -131,7 +129,7 @@ export function ProfileComponent() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollToContact}
-            className="connect-button px-6 py-3 text-white font-medium shadow-lg flex items-center gap-2"
+            className="connect-button px-6 py-3 font-medium shadow-lg flex items-center gap-2"
           >
             {t.profile.buttonContact}
           </motion.button>

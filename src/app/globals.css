@@ -1,61 +1,58 @@
 @import "tailwindcss";
-@config "../../tailwind.config.js";
-@reference "tailwindcss";
 
+:root {
+  --navbar: 220 22% 12%;
+  --background: 220 15% 95%;
+  --background-secondary: 220 10% 92%;
+  --foreground: 220 22% 20%;
+  --card: 50 0% 99%;
+  --secondary-card: 0 0% 100%;
+  --card-foreground: 220 15% 15%;
+  --primary: 220 12% 20%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 0 0% 50%;
+  --secondary-foreground: 0 0% 98%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 220 15% 80%;
+  --input: 220 15% 90%;
+  --ring: 0 0% 40%;
+  --radius: 0.5rem;
+  --light-gray: 0 0% 95%;
+  --text-card: 220 32% 32%;
+}
+
+.dark {
+  --navbar: 220 15% 25%;
+  --background: 220 22% 13%;
+  --background-secondary: 220 22% 16%;
+  --foreground: 0 0% 92%;
+  --card: 220 15% 25%;
+  --secondary-card: 220 20% 90%;
+  --card-foreground: 0 0% 90%;
+  --primary: 0 0% 20%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 0 0% 60%;
+  --secondary-foreground: 0 0% 98%;
+  --destructive: 0 65% 42%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 40%;
+  --input: 0 0% 80%;
+  --ring: 0 0% 60%;
+  --light-gray: 0 0% 95%;
+  --text-card: 220 32% 32%;
+}
 
 @layer base {
-  :root {
-    --navbar: 220 22% 12%;
-    --background: 220 15% 95%;
-    --background-secondary: 220 10% 92%;
-    --foreground: 220 22% 20%;
-    --card: 0 0% 100%;
-    --secondary-card: 0 0% 100%;
-    --card-foreground: 220 15% 15%;
-    --primary: 220 0% 20%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 50%;
-    --secondary-foreground: 0 0% 98%;
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 220 15% 80%;
-    --input: 220 15% 90%;
-    --ring: 0 0% 40%;
-    --radius: 0.5rem;
-    --light-gray: 0 0% 95%;
-    --text-card: 220 32% 32%;
-  }
-
-  .dark {
-    --navbar: 220 15% 25%;
-    --background: 220 22% 13%;
-    --background-secondary: 220 22% 16%;
-    --foreground: 0 0% 92%;
-    --card: 220 15% 25%;
-    --secondary-card: 220 20% 90%;
-    --card-foreground: 0 0% 90%;
-    --primary: 0 0% 20%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 60%;
-    --secondary-foreground: 0 0% 98%;
-    --destructive: 0 65% 42%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 40%;
-    --input: 0 0% 80%;
-    --ring: 0 0% 60%;
-    --light-gray: 0 0% 95%;
-    --text-card: 220 32% 32%;
-  }
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
 
   body {
-    @apply bg-background text-foreground;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
   }
 }
-
-/* Se desactiva la animación en dispositivos móviles para evitar el triple Zoom */
 
 @media (max-width: 768px) {
   [data-aos],
@@ -66,3 +63,11 @@
   }
 }
 
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
