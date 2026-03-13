@@ -3,18 +3,20 @@ import { CiStar } from "react-icons/ci";
 import {
   FaComments as CommunicationIcon,
   FaUsers as TeamworkIcon,
-  FaLightbulb as LeadershipIcon,
+  FaCrown as LeadershipIcon,
   FaPalette as CreativityIcon,
-  FaCogs as ProblemSolvingIcon,
-  FaSyncAlt as AdaptabilityIcon,
+  FaPuzzlePiece as ProblemSolvingIcon,
+  FaExchangeAlt as AdaptabilityIcon,
   FaClock as TimeManagementIcon,
   FaBrain as CriticalThinkingIcon,
   FaUserCheck as SelfManagementIcon,
   FaCheckCircle as ResponsibilityIcon,
   AiFillPushpin as CommitmentIcon,
+  FaServer as ServerIcon,
+  FaThLarge as AllIcon,
+  FaSearch as AttentionToDetailIcon2,
 } from "react-icons/fa";
 import { SiPostman as PostmanIcon } from "react-icons/si";
-import { FaPaintbrush as AttentionToDetailIcon } from "react-icons/fa6";
 import {
   FaJs as JavascriptIcon,
   FaPython as PythonIcon,
@@ -33,7 +35,7 @@ import {
 } from "react-icons/fa";
 import { SiNextdotjs as NextjsIcon } from "react-icons/si";
 import { RiTailwindCssFill as TailwindIcon } from "react-icons/ri";
-import { MdLanguage } from "react-icons/md";
+import { MdLanguage, MdMonitor } from "react-icons/md";
 import { RiHomeOfficeLine } from "react-icons/ri";
 import { MdOutlineWork } from "react-icons/md";
 import { LuSchool } from "react-icons/lu";
@@ -191,17 +193,17 @@ export const softSkills = [
   },
   {
     key: "attentionToDetail",
-    icon: <AttentionToDetailIcon className="w-8 h-8" />,
+    icon: <AttentionToDetailIcon2 className="w-8 h-8" />,
   },
   { key: "selfManagement", icon: <SelfManagementIcon className="w-8 h-8" /> },
 ];
 
 export const categories = [
-  { key: "", icon: <CiStar /> },
+  { key: "", icon: <AllIcon /> },
   { key: "favorites", icon: <CiStar /> },
-  { key: "frontend", icon: <CiStar /> },
-  { key: "backend", icon: <CiStar /> },
-  { key: "idioma", icon: <CiStar /> },
+  { key: "frontend", icon: <MdMonitor /> },
+  { key: "backend", icon: <ServerIcon /> },
+  { key: "idioma", icon: <MdLanguage /> },
 ];
 
 export const companies = [

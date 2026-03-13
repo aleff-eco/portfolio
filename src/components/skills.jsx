@@ -10,6 +10,7 @@ export function Skills() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
+  const [hasEntered, setHasEntered] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const sectionRef = useRef(null);
 
@@ -19,10 +20,8 @@ export function Skills() {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
+        if (entry.isIntersecting) setHasEntered(true);
+        setIsInView(entry.isIntersecting);
       },
       { threshold: 0.15 }
     );
@@ -72,7 +71,7 @@ export function Skills() {
       )
     : technicalSkills;
 
-  const enterClass = isInView
+  const enterClass = hasEntered
     ? "opacity-100 translate-y-0"
     : "opacity-0 translate-y-6";
 
@@ -117,12 +116,13 @@ export function Skills() {
               <button
                 key={cat.key}
                 onClick={() => handleCategoryClick(cat.key)}
-                className={`inline-flex items-center justify-center m-2 px-4 py-2 text-sm font-medium rounded-md border transition-all duration-200 hover:scale-105 ${
+                className={`inline-flex items-center gap-2 m-2 px-4 py-2 text-sm font-medium rounded-md border transition-all duration-200 hover:scale-105 ${
                   selectedCategory === cat.key
                     ? "border-foreground bg-[hsl(var(--background-secondary))]"
                     : "border-border/40 hover:border-border"
                 }`}
               >
+                <span className="text-base">{cat.icon}</span>
                 {t.categories[cat.key]}
               </button>
             ))}
@@ -134,41 +134,43 @@ export function Skills() {
             isTransitioning ? "opacity-0" : "opacity-100"
           }`}
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-center m-8 lg:pl-20">
-            {selectedSkillType === "technical"
-              ? filteredTechnical.map((skill) => {
-                  const data = t.technicalSkills[skill.key];
-                  return (
-                    <div
-                      key={skill.key}
-                      className="flex items-center gap-2 mt-2 pl-4 xl:pl-14"
-                    >
-                      <div className="icon-wrapper">{skill.icon}</div>
-
-                      <div>
-                        <div className="text-lg font-bold">{data.name}</div>
-                        <div className="text-sm text-foreground/70">
-                          {data.level}
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })
-              : softSkills.map((skill) => (
+          {selectedSkillType === "technical" ? (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 m-8 lg:pl-20">
+              {filteredTechnical.map((skill) => {
+                const data = t.technicalSkills[skill.key];
+                return (
                   <div
                     key={skill.key}
-                    className="flex flex-col items-center gap-2 mt-8 text-center pr-6"
+                    className="flex items-center gap-2 mt-2 pl-4 xl:pl-14 rounded-lg p-2 hover:scale-105 hover:bg-muted transition-all duration-200 cursor-default"
                   >
-                    <div className="bg-muted rounded-md flex items-center justify-center w-12 h-12 icon-wrapper">
-                      {skill.icon}
+                    <div className="icon-wrapper">{skill.icon}</div>
+                    <div>
+                      <div className="text-lg font-bold">{data.name}</div>
+                      <div className="text-sm text-foreground/70">
+                        {data.level}
+                      </div>
                     </div>
-
-                    <span className="text-sm font-medium">
-                      {t.softSkills[skill.key]}
-                    </span>
                   </div>
-                ))}
-          </div>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 m-8">
+              {softSkills.map((skill) => (
+                <div
+                  key={skill.key}
+                  className="flex flex-col items-center gap-3 p-4 rounded-xl hover:scale-105 transition-all duration-200 text-center cursor-default"
+                >
+                  <div className="bg-muted rounded-xl flex items-center justify-center w-14 h-14 icon-wrapper text-foreground/80">
+                    {skill.icon}
+                  </div>
+                  <span className="text-sm font-semibold leading-tight">
+                    {t.softSkills[skill.key]}
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </section>

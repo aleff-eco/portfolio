@@ -103,11 +103,11 @@
     "selfManagement": "Autogestión"
   },
   "categories": {
-    "": "🌌 Todo",
-    "favorites": "⭐ Favoritos",
-    "frontend": "🖼️ Frontend",
-    "backend": "⚙️ Backend",
-    "idioma": "🌐 Idiomas"
+    "": "Todo",
+    "favorites": "Favoritos",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "idioma": "Idiomas"
   },
   "projects": {
     "drabere": {
@@ -414,7 +414,7 @@
   "contact": {
     "sectionTitle": "Contáctame",
     "intro1": "¿Te gustaría conocer más sobre mi trabajo o estás interesado en obtener una cotización para ese proyecto que tienes en mente?",
-    "intro2": "¡No dudes en contactarme! Estaré encantado de conversar contigo y hacer realidad tus ideas. 📨",
+    "intro2": "¡No dudes en contactarme! Estaré encantado de conversar contigo y hacer realidad tus ideas.",
     "alertSuccessTitle": "¡Éxito! ",
     "alertSuccessMessage": "Tu mensaje ha sido enviado correctamente.",
     "alertErrorTitle": "¡Error! ",

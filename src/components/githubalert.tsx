@@ -120,8 +120,7 @@ export default function NotificationButton() {
               min-w-5 h-5 px-1
               rounded-full
               text-[11px] leading-5 font-semibold
-              bg-background text-foreground
-              border border-border/60
+              bg-red-500/70 text-white
               shadow
               text-center
             "
@@ -138,7 +137,7 @@ export default function NotificationButton() {
             role="dialog"
             aria-label={t.notification.title}
             className="
-              absolute right-0 mt-3 w-80
+              absolute right-0 mt-3 w-80 md:w-[26rem] lg:w-[30rem]
               rounded-2xl overflow-hidden
               border border-border/60 shadow-xl
               bg-[hsl(var(--background-secondary))]
@@ -159,7 +158,7 @@ export default function NotificationButton() {
               </div>
             </div>
 
-            <div className="max-h-72 overflow-y-auto custom-scrollbar">
+            <div className="max-h-72 md:max-h-96 overflow-y-auto overflow-x-hidden custom-scrollbar">
               {repos.length === 0 ? (
                 <div className="p-4 text-center text-sm text-foreground/70">
                   {t.notification.empty}

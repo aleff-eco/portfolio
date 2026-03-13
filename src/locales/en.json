@@ -107,11 +107,11 @@
     "selfManagement": "Self-Management"
   },
   "categories": {
-    "": "🌌 All",
-    "favorites": "⭐ Favorites",
-    "frontend": "🖼️ Frontend",
-    "backend": "⚙️ Backend",
-    "idioma": "🌐 Languages"
+    "": "All",
+    "favorites": "Favorites",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "idioma": "Languages"
   },
   "projects": {
     "drabere": {
@@ -418,7 +418,7 @@
   "contact": {
     "sectionTitle": "Contact Me",
     "intro1": "Would you like to learn more about my work or get a quote for your project?",
-    "intro2": "Don’t hesitate to reach out! I’d be happy to chat and help bring your ideas to life. 📨",
+    "intro2": "Don’t hesitate to reach out! I’d be happy to chat and help bring your ideas to life.",
     "alertSuccessTitle": "Success! ",
     "alertSuccessMessage": "Your message has been sent successfully.",
     "alertErrorTitle": "Error! ",
