@@ -7,9 +7,7 @@ import "../styles/Contact.css";
 import "../styles/Skills.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ClientProviders } from "@/components/ClientProviders";
-import { headers } from "next/headers";
 
-export const dynamic = "force-dynamic";
 export const viewport = { width: "device-width", initialScale: 1 };
 
 const inter = Inter({
@@ -21,12 +19,6 @@ const inter = Inter({
 
 const ABSOLUTE_URL = "https://www.devaleff.com";
 export const metadataBase = new URL(ABSOLUTE_URL);
-
-async function getLocale() {
-  const hdrs = await headers();
-  const acceptLang = hdrs.get("accept-language") || "";
-  return acceptLang.startsWith("es") ? "es" : "en";
-}
 
 export const metadata = {
   title: {
@@ -227,11 +219,9 @@ const jsonLdSchemas = [
   },
 ];
 
-export default async function RootLayout({ children }) {
-  const lang = await getLocale();
-
+export default function RootLayout({ children }) {
   return (
-    <html lang={lang} suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"

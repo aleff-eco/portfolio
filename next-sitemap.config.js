@@ -9,4 +9,8 @@ module.exports = {
   robotsTxtOptions: {
     policies: [{ userAgent: '*', allow: '/' }],
   },
+  additionalPaths: async (config) => [
+    await config.transform(config, '/'),
+    await config.transform(config, '/portfolio'),
+  ],
 }
