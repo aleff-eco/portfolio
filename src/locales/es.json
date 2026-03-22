@@ -25,7 +25,7 @@
   ],
   "about": {
     "title": "Sobre mí",
-    "description": "Soy ingeniero en software con más de tres años de experiencia como desarrollador full-stack. Diseño, construyo y despliego aplicaciones web robustas y escalables. Me enorgullece liderar proyectos de principio a fin, desde su concepción hasta su lanzamiento en producción.",
+    "description": "Soy ingeniero en software con más de cuatro años de experiencia como desarrollador full-stack. Diseño, construyo y despliego aplicaciones web robustas y escalables. Me enorgullece liderar proyectos de principio a fin, desde su concepción hasta su lanzamiento en producción.",
     "skills": {
       "backend": {
         "title": "Backend",
@@ -385,7 +385,7 @@
       "waxRevo": {
         "company": "Wax Revolution",
         "companyUrl": "https://waxrevolution.com/",
-        "date": "2022 - 2024",
+        "date": "2022 - 2023",
         "title": "Desarrollador Full Stack",
         "descriptionPoints": [
           "Desarrollé e integré nuevos módulos para el sistema interno, ampliando funcionalidades para la gestión de información del proyecto.",

@@ -25,7 +25,7 @@
   ],
   "about": {
     "title": "About Me",
-    "description": "I’m a software engineer with 3+ years of experience as a full-stack developer. I design, build, and deploy robust, scalable web applications. I’m proud to lead projects end-to-end—from concept to production launch.",
+    "description": "I’m a software engineer with 4+ years of experience as a full-stack developer. I design, build, and deploy robust, scalable web applications. I’m proud to lead projects end-to-end—from concept to production launch.",
     "skills": {
       "backend": {
         "title": "Backend",
@@ -379,7 +379,7 @@
         "date": "March 2024 - July 2024",
         "title": "Backend Developer (Internship)",
         "descriptionPoints": [
-          "Developed and optimized the company’s main corporate backend using Laravel, Livewire, and MySQL.",
+          "Developed and optimized the company's main corporate backend using Laravel, Livewire, and MySQL.",
           "Implemented MVC architecture and SOLID principles to improve scalability, maintainability, and performance.",
           "Participated in QA testing and documented APIs with Postman, ensuring production stability.",
           "Integrated solutions within Docker environments and managed workflows using Trello and GitHub.",
@@ -389,7 +389,7 @@
       "waxRevo": {
         "company": "Wax Revolution",
         "companyUrl": "https://waxrevolution.com/",
-        "date": "2022 - 2024",
+        "date": "2022 - 2023",
         "title": "Full Stack Developer",
         "descriptionPoints": [
           "Developed and integrated new modules into the internal system, expanding functionalities for project information management.",
