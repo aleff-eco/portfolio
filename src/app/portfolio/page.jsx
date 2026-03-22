@@ -1,10 +1,5 @@
 // src/app/portfolio/page.jsx
-'use client';
-
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
+import { AOSInit } from '@/components/AOSInit';
 import { Navbar } from '@/components/navbar';
 import { ProfileComponent } from '@/components/profileComponent';
 import { Skills } from '@/components/skills';
@@ -14,20 +9,22 @@ import { Experience } from '@/components/experience';
 import { Contact } from '@/components/contact';
 import { Footer } from '@/components/footer';
 import { About } from '@/components/About';
-import { Soon} from '@/components/Soon'
+import { Soon } from '@/components/Soon';
 
+export const metadata = {
+  title: 'Aleff Espinosa | Desarrollador Full-Stack · Chiapas, México',
+  description:
+    'Portafolio de Aleff Espinosa Córdova — desarrollador web full-stack en Chiapas, México. Proyectos con Laravel, React y Next.js.',
+  alternates: {
+    canonical: 'https://www.devaleff.com/',
+  },
+};
 
 export default function PortfolioPage() {
-  useEffect(() => {
-    AOS.init({
-      offset: 100,
-      duration: 400,
-      easing: 'ease-in-out-sine',
-    });
-  }, []);
 
   return (
     <div className="text-foreground">
+      <AOSInit />
       <Navbar />
       <main className="flex-1">
         <ProfileComponent />

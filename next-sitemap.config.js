@@ -11,6 +11,5 @@ module.exports = {
   },
   additionalPaths: async (config) => [
     await config.transform(config, '/'),
-    await config.transform(config, '/portfolio'),
   ],
 }
