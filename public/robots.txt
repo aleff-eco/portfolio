@@ -4,6 +4,3 @@ Allow: /
 
 # Host
 Host: https://www.devaleff.com
-
-# Sitemaps
-Sitemap: https://www.devaleff.com/sitemap.xml

@@ -7,7 +7,6 @@ import "../styles/Contact.css";
 import "../styles/Skills.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ClientProviders } from "@/components/ClientProviders";
-import Script from "next/script";
 import { headers } from "next/headers";
 
 export const dynamic = "force-dynamic";
@@ -15,8 +14,8 @@ export const viewport = { width: "device-width", initialScale: 1 };
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["300","400","500","600","700"],
-  style: ["normal","italic"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -30,64 +29,98 @@ async function getLocale() {
 }
 
 export const metadata = {
-  title: "Aleff Espinosa Córdova | Desarrollador Web Mexicano",
+  title: {
+    default: "Aleff Espinosa | Desarrollador Full-Stack · Chiapas, México",
+    template: "%s | Aleff Espinosa · Desarrollador Web",
+  },
   description:
-    "Soy un ingeniero en software con más de tres años de experiencia como desarrollador full-stack. Diseño, construyo y despliego aplicaciones web robustas y escalables, Estoy muy orgulloso de liderar proyectos de principio a fin, desde su concepción hasta su lanzamiento en producción. ¡Contáctame para tu próximo proyecto!",
+    "Desarrollador web full-stack en Chiapas, México. +3 años liderando proyectos con Laravel, React y Next.js. Soluciones escalables y a medida. ¡Contáctame!",
   keywords: [
-    "desarrollador web",
-    "portafolio full stack",
+    "desarrollador web Chiapas",
+    "programador web Chiapas",
+    "desarrollador full-stack México",
+    "desarrollador web México",
+    "desarrollador Laravel Chiapas",
+    "desarrollador React México",
+    "ingeniero en software Chiapas",
+    "desarrollador freelance México",
+    "Next.js developer Mexico",
+    "desarrollo de aplicaciones web México",
+    "consultor TI México",
+    "Tuxtla Gutiérrez desarrollador",
+    "Aleff Espinosa",
+    "devaleff",
+    "portafolio desarrollador web",
     "Laravel",
     "React",
     "Next.js",
+    "PHP",
     "JavaScript",
     "TypeScript",
     "Tailwind CSS",
-    "Consultor TI",
-    "Líder técnico",
-    "aplicaciones a medida",
-    "Chiapas",
-    "México",
-    "Proyectos de software",
-    "Desarrollo web",
+    "Node.js",
+    "Docker",
+    "líder técnico",
+    "desarrollo web profesional",
   ],
   authors: [{ name: "Aleff Espinosa Córdova", url: ABSOLUTE_URL }],
   publisher: "Aleff Espinosa Córdova",
+  creator: "Aleff Espinosa Córdova",
+  applicationName: "Portafolio de Aleff Espinosa",
+  category: "technology",
   robots: {
     index: true,
     follow: true,
     "max-snippet": -1,
     "max-image-preview": "large",
     "max-video-preview": -1,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
   },
   alternates: {
     canonical: `${ABSOLUTE_URL}/`,
-    languages: { es: `${ABSOLUTE_URL}/` },
+    languages: {
+      "es-MX": `${ABSOLUTE_URL}/`,
+      "en-US": `${ABSOLUTE_URL}/`,
+      "x-default": `${ABSOLUTE_URL}/`,
+    },
   },
   openGraph: {
-    title: "Aleff Espinosa Córdova | Desarrollador Web",
+    title: "Aleff Espinosa | Desarrollador Full-Stack · Chiapas, México",
     description:
-      "Soy un ingeniero en software Mexicano con más de tres años de experiencia como desarrollador full-stack. Diseño, construyo y despliego aplicaciones web robustas y escalables. ¡Contáctame para tu próximo proyecto!",
+      "Desarrollador web full-stack en Chiapas, México. +3 años liderando proyectos con Laravel, React y Next.js. ¡Contáctame para tu próximo proyecto!",
     url: `${ABSOLUTE_URL}/`,
-    siteName: "Portafolio de Aleff Espinosa",
-    locale: "es_ES",
+    siteName: "Aleff Espinosa · Desarrollador Web",
+    locale: "es_MX",
     type: "website",
     images: [
       {
         url: `${ABSOLUTE_URL}/image.png`,
         width: 1200,
         height: 630,
-        alt: "Vista previa del portafolio de Aleff Espinosa",
+        alt: "Aleff Espinosa Córdova — Desarrollador Full-Stack en Chiapas, México",
+        type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aleff Espinosa Córdova | Desarrollador Web",
+    title: "Aleff Espinosa | Desarrollador Full-Stack · Chiapas, México",
     description:
-      "Soy un ingeniero en software Mexicano con más de tres años de experiencia como desarrollador full-stack. Diseño, construyo y despliego aplicaciones web robustas y escalables. ¡Contáctame para tu próximo proyecto!",
+      "Desarrollador web full-stack en Chiapas, México. +3 años liderando proyectos con Laravel, React y Next.js. ¡Contáctame!",
     site: "@aleffespinosa",
     creator: "@aleffespinosa",
-    images: [`${ABSOLUTE_URL}/image.png`],
+    images: [
+      {
+        url: `${ABSOLUTE_URL}/image.png`,
+        alt: "Aleff Espinosa Córdova — Desarrollador Full-Stack en Chiapas, México",
+      },
+    ],
   },
   icons: {
     icon: "/favicon.ico",
@@ -96,39 +129,118 @@ export const metadata = {
     other: [
       { rel: "icon", url: "/favicon.ico", sizes: "32x32" },
       { rel: "icon", url: "/favicon.ico", sizes: "16x16" },
+      { rel: "manifest", url: "/site.webmanifest" },
     ],
   },
 };
+
+const jsonLdSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${ABSOLUTE_URL}/#person`,
+    name: "Aleff Espinosa Córdova",
+    givenName: "Aleff",
+    familyName: "Espinosa Córdova",
+    jobTitle: "Desarrollador Web Full-Stack",
+    description:
+      "Ingeniero en software con más de 3 años de experiencia como desarrollador full-stack en México. Especialista en Laravel, React, Next.js y PHP.",
+    url: ABSOLUTE_URL,
+    image: {
+      "@type": "ImageObject",
+      url: `${ABSOLUTE_URL}/image.png`,
+      width: 1200,
+      height: 630,
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Tuxtla Gutiérrez",
+      addressRegion: "Chiapas",
+      addressCountry: "MX",
+    },
+    nationality: {
+      "@type": "Country",
+      name: "México",
+    },
+    knowsLanguage: ["es", "en"],
+    knowsAbout: [
+      "Desarrollo Web",
+      "Laravel",
+      "React",
+      "Next.js",
+      "PHP",
+      "JavaScript",
+      "TypeScript",
+      "Node.js",
+      "Docker",
+      "MySQL",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Flutter",
+      "React Native",
+      "Metodologías Ágiles",
+      "SOLID",
+    ],
+    sameAs: [
+      "https://github.com/aleff-eco",
+      "https://www.linkedin.com/in/aleff-espinosa-cordova/",
+    ],
+    worksFor: {
+      "@type": "Organization",
+      name: "Strappberry",
+      url: "https://strappberry.com/es",
+    },
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: "Universidad Politécnica de Chiapas",
+      url: "https://www.upchiapas.edu.mx/",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${ABSOLUTE_URL}/#website`,
+    name: "Aleff Espinosa · Desarrollador Web",
+    url: ABSOLUTE_URL,
+    description:
+      "Portafolio profesional de Aleff Espinosa Córdova, desarrollador web full-stack en Chiapas, México.",
+    author: { "@id": `${ABSOLUTE_URL}/#person` },
+    inLanguage: ["es-MX", "en-US"],
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${ABSOLUTE_URL}/?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": `${ABSOLUTE_URL}/#profilepage`,
+    name: "Portafolio de Aleff Espinosa",
+    url: ABSOLUTE_URL,
+    isPartOf: { "@id": `${ABSOLUTE_URL}/#website` },
+    about: { "@id": `${ABSOLUTE_URL}/#person` },
+    mainEntity: { "@id": `${ABSOLUTE_URL}/#person` },
+  },
+];
 
 export default async function RootLayout({ children }) {
   const lang = await getLocale();
 
   return (
     <html lang={lang} suppressHydrationWarning>
-      <body className={inter.className} 
-        suppressHydrationWarning >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchemas) }}
+        />
+      </head>
+      <body className={inter.className} suppressHydrationWarning>
         <SpeedInsights />
         <ClientProviders>{children}</ClientProviders>
-        <Script
-          id="json-ld"
-          type="application/ld+json"
-          strategy="afterInteractive"
-        >
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Aleff Espinosa Córdova",
-            jobTitle: "Full-Stack Developer",
-            url: ABSOLUTE_URL,
-            sameAs: [
-              //NO LO PUEDO CREER. .   .      .
-              //Duerman bien, amigos.
-              "https://github.com/aleff-eco",
-              "https://www.linkedin.com/in/aleff-espinosa-cordova/",
-              "https://aleff.vercel.app",
-            ],
-          })}
-        </Script>
       </body>
     </html>
   );
